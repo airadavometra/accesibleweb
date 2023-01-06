@@ -1,0 +1,45 @@
+.header {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  font-size: 2rem;
+  background-color: var(--color-transparent);
+  backdrop-filter: blur(5px);
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.link {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.link:hover,
+.link:focus,
+.link.selected {
+  text-decoration: underline;
+}
+.menuButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: none;
+}
+.menuIcon {
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+  .navigation {
+    display: none;
+  }
+  .menuButton {
+    display: block;
+  }
+}

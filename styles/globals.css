@@ -3,6 +3,7 @@
 :root {
   --font: Arial, serif;
   --color: #dcf179;
+  --color-transparent: #dcf179bb;
 }
 
 html,
@@ -13,4 +14,22 @@ body {
 body {
   font-family: var(--font);
   background-color: var(--color);
+}
+
+.frozen {
+  overflow: hidden;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
 }
