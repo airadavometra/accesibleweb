@@ -16,6 +16,12 @@ body {
   background-color: var(--color);
 }
 
+html,
+body,
+#__next {
+  height: 100%;
+}
+
 .frozen {
   overflow: hidden;
 }
