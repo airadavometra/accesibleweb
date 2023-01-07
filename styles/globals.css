@@ -1,9 +1,10 @@
 @import "./reset.css";
 
 :root {
-  --font: Arial, serif;
+  --font: Verdana, serif;
+  --title-font: Arial, serif;
   --color: #dcf179;
-  --color-transparent: #dcf179bb;
+  --color-transparent: #dcf179cc;
 }
 
 html,

@@ -51,9 +51,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           onOpenMenu={openMenu}
           selectedMenuItemId={selectedMenuItemId}
         />
-        <div className={s.pageContainer} key={router.pathname}>
-          {children}
-        </div>
+        {children}
       </div>
     </>
   );
