@@ -46,3 +46,11 @@
   font-weight: 400;
   text-transform: uppercase;
 }
+@media (max-width: 768px) {
+  .descriptionContent {
+    columns: 1;
+  }
+  .libraryLink {
+    font-size: 2rem;
+  }
+}
