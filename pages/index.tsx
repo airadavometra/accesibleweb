@@ -1,19 +1,23 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
+import classnames from "classnames";
 import s from "../styles/Home.module.css";
 
 export default function Home() {
   return (
     <>
       <main className={s.main}>
-        <WidthContainer className={s.height100}>
-          <section className={s.hero}>
-            <span className={s.boldHeroText}>access</span>
-            <div>
-              <span>denied</span>
-              <span>?</span>
+        <section className={s.hero}>
+          <div className={s.runningTextContainer}>
+            <div
+              className={classnames(s.boldHeroText, s.runningTextRightToLeft)}
+            >
+              access
             </div>
-          </section>
-        </WidthContainer>
+          </div>
+          <div className={s.runningTextContainer}>
+            <div className={s.runningTextLeftToRight}>denied?</div>
+          </div>
+        </section>
         <WidthContainer>
           <section className={s.description}>
             <h2 className={s.descriptionHeading}>what is it about</h2>
