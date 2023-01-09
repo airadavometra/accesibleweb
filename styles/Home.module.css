@@ -20,13 +20,15 @@
 }
 .runningTextContainer {
   width: 100%;
+  margin-top: -8rem;
   display: flex;
   transform: skewY(-5deg);
 }
 .runningText {
-  animation: running-animation 20s linear infinite;
+  animation: running-animation 25s linear infinite;
 }
 .runningLeft {
+  margin-top: 4rem;
   animation-direction: reverse;
 }
 @keyframes running-animation {
