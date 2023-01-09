@@ -32,8 +32,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <WidthContainer>
-          <section className={s.description}>
+
+        <section className={s.description}>
+          <WidthContainer>
             <h2 className={s.descriptionHeading}>what is it about</h2>
             <div className={s.descriptionContent}>
               <p>
@@ -55,17 +56,19 @@ export default function Home() {
                 corrupti tenetur totam dignissimos?
               </p>
             </div>
-          </section>
-        </WidthContainer>
+          </WidthContainer>
+        </section>
+
         <section></section>
-        <WidthContainer>
-          <section className={s.libraryLinkSection}>
+
+        <section className={s.libraryLinkSection}>
+          <WidthContainer>
             <span className={s.libraryLink}>
               check out <br />
               our accessibility library
             </span>
-          </section>
-        </WidthContainer>
+          </WidthContainer>
+        </section>
       </main>
     </>
   );
