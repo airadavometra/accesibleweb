@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: var(--title-font);
-  font-size: 12rem;
+  font-size: 192px;
   text-transform: uppercase;
 }
 .height100 {
@@ -20,32 +20,21 @@
 }
 .runningTextContainer {
   width: 100%;
-  overflow: hidden;
+  display: flex;
+  transform: skewY(-5deg);
 }
-.runningTextRightToLeft {
-  width: fit-content;
-  transform: translateX(100vw);
-  animation: running-animation-right-to-left 10s linear infinite;
+.runningText {
+  animation: running-animation 20s linear infinite;
 }
-@keyframes running-animation-right-to-left {
+.runningLeft {
+  animation-direction: reverse;
+}
+@keyframes running-animation {
   from {
-    transform: translateX(100vw);
+    transform: translateX(-50%);
   }
   to {
-    transform: translateX(-100%);
-  }
-}
-.runningTextLeftToRight {
-  width: fit-content;
-  transform: translateX(-100%);
-  animation: running-animation-left-to-right 8s linear infinite;
-}
-@keyframes running-animation-left-to-right {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100vw);
+    transform: translateX(0%);
   }
 }
 

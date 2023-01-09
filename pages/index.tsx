@@ -8,14 +8,28 @@ export default function Home() {
       <main className={s.main}>
         <section className={s.hero}>
           <div className={s.runningTextContainer}>
-            <div
-              className={classnames(s.boldHeroText, s.runningTextRightToLeft)}
-            >
-              access
+            <div className={classnames(s.boldHeroText, s.runningText)}>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
+              <span>access&nbsp;&nbsp;&nbsp;</span>
             </div>
           </div>
           <div className={s.runningTextContainer}>
-            <div className={s.runningTextLeftToRight}>denied?</div>
+            <div className={classnames(s.runningText, s.runningLeft)}>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+              <span>denied?&nbsp;&nbsp;&nbsp;</span>
+            </div>
           </div>
         </section>
         <WidthContainer>
