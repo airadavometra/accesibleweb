@@ -1,0 +1,7 @@
+.blobsSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  --transitionStep: 4px;
+  --skewStep: 4deg;
+}
