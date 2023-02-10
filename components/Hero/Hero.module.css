@@ -10,6 +10,8 @@
 }
 .boldHeroText {
   font-weight: 600;
+  cursor: default;
+  user-select: none;
 }
 .runningTextContainer {
   width: 100%;
