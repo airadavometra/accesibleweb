@@ -3,7 +3,7 @@
 .descriptionHeading {
   font-family: var(--title-font);
   font-size: 6.5rem;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
 }
 .descriptionContent {

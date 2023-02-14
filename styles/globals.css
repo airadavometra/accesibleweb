@@ -1,8 +1,9 @@
 @import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
   --font: Verdana, serif;
-  --title-font: Arial, serif;
+  --title-font: "Raleway", Arial, serif;
   --color: #dcf179;
   --color-transparent: #dcf179cc;
 }
