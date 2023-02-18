@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: var(--title-font);
-  font-size: 192px;
+  font-size: clamp(6rem, 20vw + 1rem, 12rem);
   text-transform: uppercase;
   overflow: hidden;
 }
@@ -23,6 +23,13 @@
 .runningLeft {
   margin-top: 4rem;
 }
+
+@media (max-width: 48rem) {
+  .runningLeft {
+    margin-top: 8rem;
+  }
+}
+
 @keyframes running-animation {
   from {
     transform: translateX(-50%);

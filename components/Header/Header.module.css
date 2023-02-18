@@ -36,7 +36,7 @@
 }
 .menuIcon {
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .header {
     padding: 1.5rem;
   }

@@ -19,7 +19,7 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .libraryLink {
     font-size: 2rem;
   }
