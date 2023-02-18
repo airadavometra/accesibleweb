@@ -11,11 +11,11 @@ export default function Home() {
       <Description />
       <Blobs />
       <section className={s.libraryLinkSection}>
-        <WidthContainer>
-          <span className={s.libraryLink}>
+        <WidthContainer className={s.libraryLinkContainer}>
+          <a className={s.libraryLink}>
             check out <br />
             our accessibility library
-          </span>
+          </a>
         </WidthContainer>
       </section>
     </main>

@@ -8,13 +8,16 @@
   padding-bottom: 2rem;
   display: flex;
 }
-.libraryLink {
-  margin: auto;
+.libraryLinkContainer {
+  width: fit-content;
+}
+.libraryLinkContainer {
   text-align: center;
   font-family: var(--title-font);
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .libraryLink {
