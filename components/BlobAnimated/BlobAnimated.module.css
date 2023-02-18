@@ -63,18 +63,19 @@
     transform: skew(0deg, 0deg);
   }
 }
-
-.translateBlob {
-  --transitionStep: 4px;
-  --skewStep: 4deg;
-  animation: 5s infinite linear translate;
-}
-.scaleBlob {
-  animation: 3s infinite ease-in-out alternate scale;
-}
-.skewBlob {
-  animation: 7s infinite linear skew;
-}
-.rotateBlob {
-  animation: 11s infinite linear rotate;
+@media (prefers-reduced-motion: no-preference) {
+  .translateBlob {
+    --transitionStep: 4px;
+    --skewStep: 4deg;
+    animation: 5s infinite linear translate;
+  }
+  .scaleBlob {
+    animation: 3s infinite ease-in-out alternate scale;
+  }
+  .skewBlob {
+    animation: 7s infinite linear skew;
+  }
+  .rotateBlob {
+    animation: 11s infinite linear rotate;
+  }
 }
