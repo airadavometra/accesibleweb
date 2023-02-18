@@ -4,7 +4,7 @@ import s from "./Description.module.css";
 
 export default function Description() {
   return (
-    <section className={s.description}>
+    <section className={s.description} id="about">
       <WidthContainer>
         <h2 className={s.descriptionHeading}>what is it about</h2>
         <div className={s.descriptionContent}>

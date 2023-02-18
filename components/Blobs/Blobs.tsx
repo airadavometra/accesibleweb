@@ -10,18 +10,19 @@ import { Blob6 } from "@/icons/Blob6";
 import { Blob7 } from "@/icons/Blob7";
 import { Blob8 } from "@/icons/Blob8";
 import s from "./Blobs.module.css";
+import Link from "next/link";
 
 export default function Blobs() {
   return (
-    <section className={s.blobsSection}>
+    <section id="try" className={s.blobsSection}>
       <div className={classnames(s.blobsGroup, s.right)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
             <Blob1 />
           </BlobAnimated>
-          <a className={s.link} href="/blurredvision">
+          <Link className={s.link} href="/blurredvision">
             BLURRED VISION
-          </a>
+          </Link>
         </div>
         <BlobSmall top={"55%"} left={"-10%"} size={"l"}>
           <Blob5 />
@@ -38,9 +39,9 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob2 />
           </BlobAnimated>
-          <a className={s.link} href="/tremor">
+          <Link className={s.link} href="/tremor">
             TREMOR
-          </a>
+          </Link>
         </div>
         <BlobSmall top={"10%"} right={"15%"} size={"s"}>
           <Blob5 />
@@ -57,9 +58,9 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob3 />
           </BlobAnimated>
-          <a className={s.link} href="/blindness">
+          <Link className={s.link} href="/blindness">
             BLINDNESS
-          </a>
+          </Link>
         </div>
         <BlobSmall top={"35%"} left={"-15%"} size={"xl"}>
           <Blob1 />
@@ -70,9 +71,9 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob4 />
           </BlobAnimated>
-          <a className={s.link} href="/dyslexia">
+          <Link className={s.link} href="/dyslexia">
             DYSLEXIA
-          </a>
+          </Link>
         </div>
         <BlobSmall top={"-12%"} left={"30%"} size={"s"}>
           <Blob6 />
@@ -95,9 +96,9 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob6 />
           </BlobAnimated>
-          <a className={s.link} href="/colourblindness">
+          <Link className={s.link} href="/colourblindness">
             COLOUR BLINDNESS
-          </a>
+          </Link>
         </div>
         <BlobSmall top={"-2%"} right={"40%"} size={"s"}>
           <Blob5 />

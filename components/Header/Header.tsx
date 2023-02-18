@@ -7,33 +7,40 @@ import s from "./Header.module.css";
 
 type HeaderProps = {
   navigation: NavigationItem[];
-  selectedMenuItemId: number;
+  selectedMenuItemId?: number;
   onOpenMenu(): void;
+  onMenuItemClick: (newMenuItemId: number) => void;
 };
 
 const Header: FC<HeaderProps> = ({
   navigation,
   selectedMenuItemId,
   onOpenMenu,
+  onMenuItemClick,
 }) => {
   return (
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
-        <nav className={s.navigation}>
-          {navigation.map(({ id, title, path }) => (
-            <Link
-              key={id}
-              href={path}
-              className={classNames(s.link, {
-                [s.selected]: id === selectedMenuItemId,
-              })}
-            >
-              {title}
-            </Link>
-          ))}
+        <nav>
+          <ul className={s.navigation}>
+            {navigation.map(({ id, title, path }) => (
+              <li key={id}>
+                <Link
+                  data-text={title}
+                  href={path}
+                  onClick={() => onMenuItemClick(id)}
+                  className={classNames(s.link, {
+                    [s.selected]: id === selectedMenuItemId,
+                  })}
+                >
+                  {title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </nav>
         <button className={s.menuButton} onClick={onOpenMenu}>
-          {/* <Burger className={s.menuIcon} /> */}
+          Menu
         </button>
       </WidthContainer>
     </header>
