@@ -11,10 +11,11 @@
 .libraryLinkContainer {
   width: fit-content;
 }
-.libraryLinkContainer {
+.libraryLink {
+  display: block;
   text-align: center;
   font-family: var(--title-font);
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
   font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;

@@ -2,13 +2,13 @@
 }
 .descriptionHeading {
   font-family: var(--title-font);
-  font-size: 6.5rem;
+  font-size: clamp(2rem, 5vw + 1rem, 6.5rem);
   font-weight: 600;
   text-transform: uppercase;
 }
 .descriptionContent {
   margin: 2rem 0;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
   columns: 2;
   column-gap: 4rem;
 }

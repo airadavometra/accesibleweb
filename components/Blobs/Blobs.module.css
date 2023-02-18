@@ -40,3 +40,12 @@
 .middle {
   align-self: center;
 }
+
+@media (max-width: 48rem) {
+  .blobsGroup:first-child {
+    margin-top: 8rem;
+  }
+  .blobsGroup:not(:first-child) {
+    margin-top: 0;
+  }
+}

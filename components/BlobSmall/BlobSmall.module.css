@@ -1,3 +1,9 @@
 .blob {
   position: absolute;
 }
+
+@media (max-width: 48rem) {
+  .blob {
+    transform: scale(0.7);
+  }
+}
