@@ -1,0 +1,19 @@
+.blobContainer {
+  width: clamp(280px, 60%, 1000px);
+  margin: auto;
+  position: relative;
+}
+.notFoundText {
+  width: fit-content;
+  max-width: 60%;
+  height: fit-content;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  color: var(--color);
+  font-family: var(--title-font);
+  font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
