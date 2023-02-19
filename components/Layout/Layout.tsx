@@ -1,5 +1,6 @@
 import { NavigationItem } from "@/types/navigationItem";
 import { toggleFreezePage } from "@/utils/toggleFreezePage";
+import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { FC, ReactNode, useEffect, useState } from "react";
 import Header from "../Header/Header";
@@ -62,15 +63,17 @@ const Layout: FC<LayoutProps> = ({ children }) => {
         />
         {children}
       </div>
-      {isMenuOpen && (
-        <MobileMenu
-          isOpen={isMenuOpen}
-          navigation={navigation}
-          onMenuItemClick={onMenuItemClick}
-          onCloseMenu={closeMenu}
-          selectedMenuItemId={selectedMenuItemId}
-        ></MobileMenu>
-      )}
+      <AnimatePresence mode="wait">
+        {isMenuOpen && (
+          <MobileMenu
+            isOpen={isMenuOpen}
+            navigation={navigation}
+            onMenuItemClick={onMenuItemClick}
+            onCloseMenu={closeMenu}
+            selectedMenuItemId={selectedMenuItemId}
+          ></MobileMenu>
+        )}
+      </AnimatePresence>
     </>
   );
 };
