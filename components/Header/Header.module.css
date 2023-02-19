@@ -20,19 +20,21 @@
   gap: min(4rem, 96px);
   list-style-type: none;
 }
-.link {
+.linkContainer {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+}
+.link {
   cursor: pointer;
   font-weight: 500;
   text-transform: uppercase;
   transition: font-weight 100ms ease-in-out;
 }
-.link:after {
-  content: attr(data-text);
+.hidden {
   height: 0;
   visibility: hidden;
+  text-transform: uppercase;
   font-weight: 900;
 }
 .link:hover,

@@ -24,15 +24,22 @@ const Header: FC<HeaderProps> = ({
         <nav>
           <ul className={s.navigation}>
             {navigation.map(({ id, title, path }) => (
-              <motion.li key={id} variants={navLinkVariants} whileHover="hover">
+              <motion.li
+                className={s.linkContainer}
+                key={id}
+                variants={navLinkVariants}
+                whileHover="hover"
+              >
                 <Link
-                  data-text={title}
                   href={path}
                   onClick={() => onMenuItemClick(id)}
                   className={classNames(s.link)}
                 >
                   {title}
                 </Link>
+                <div aria-hidden="true" className={s.hidden}>
+                  {title}
+                </div>
               </motion.li>
             ))}
           </ul>
