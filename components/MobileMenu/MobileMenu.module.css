@@ -16,7 +16,6 @@
 .closeIcon {
   width: max(44px, 3rem);
   height: max(44px, 3rem);
-  stroke: black;
 }
 .menu {
   margin: auto;

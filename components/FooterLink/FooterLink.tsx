@@ -1,3 +1,5 @@
+import { libraryLinkVariants } from "@/motions/homePage";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FC } from "react";
 import WidthContainer from "../WidthContainer/WidthContainer";
@@ -7,10 +9,19 @@ const FooterLink: FC = () => {
   return (
     <section className={s.libraryLinkSection}>
       <WidthContainer className={s.libraryLinkContainer}>
-        <Link className={s.libraryLink} href="/library">
-          check out <br />
-          our accessibility library
-        </Link>
+        <motion.div
+          variants={libraryLinkVariants}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true }}
+          whileHover="hover"
+          exit="exit"
+        >
+          <Link className={s.libraryLink} href="/library">
+            check out <br />
+            our accessibility library
+          </Link>
+        </motion.div>
       </WidthContainer>
     </section>
   );

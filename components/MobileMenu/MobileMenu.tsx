@@ -12,13 +12,11 @@ type MobileMenuProps = {
   navigation: NavigationItem[];
   onMenuItemClick: (newMenuItemId: number) => void;
   onCloseMenu: () => void;
-  selectedMenuItemId?: number;
 };
 
 const MobileMenu: FC<MobileMenuProps> = ({
   isOpen,
   navigation,
-  selectedMenuItemId,
   onCloseMenu,
   onMenuItemClick,
 }) => {
@@ -41,9 +39,7 @@ const MobileMenu: FC<MobileMenuProps> = ({
               <Link
                 href={path}
                 onClick={() => onMenuItemClick(id)}
-                className={classNames(s.link, {
-                  [s.selected]: selectedMenuItemId === id,
-                })}
+                className={classNames(s.link)}
               >
                 {title}
               </Link>

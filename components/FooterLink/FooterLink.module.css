@@ -14,8 +14,9 @@
   font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
+  transition: font-weight 100ms ease-in-out;
 }
 .libraryLink:hover,
 .libraryLink:focus {
-  font-weight: 800;
+  font-weight: 700;
 }

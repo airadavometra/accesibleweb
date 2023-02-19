@@ -11,6 +11,8 @@ import { Blob7 } from "@/icons/Blob7";
 import { Blob8 } from "@/icons/Blob8";
 import s from "./Blobs.module.css";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { blobLinkVariants } from "@/motions/homePage";
 
 export default function Blobs() {
   return (
@@ -20,9 +22,15 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob1 />
           </BlobAnimated>
-          <Link className={s.link} href="/blurredvision">
-            BLURRED VISION
-          </Link>
+          <motion.div
+            variants={blobLinkVariants}
+            whileHover="hover"
+            className={s.linkContainer}
+          >
+            <Link className={s.link} href="/blurredvision">
+              BLURRED VISION
+            </Link>
+          </motion.div>
         </div>
         <BlobSmall top={"55%"} left={"-10%"} size={"l"}>
           <Blob5 />
@@ -39,9 +47,15 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob2 />
           </BlobAnimated>
-          <Link className={s.link} href="/tremor">
-            TREMOR
-          </Link>
+          <motion.div
+            variants={blobLinkVariants}
+            whileHover="hover"
+            className={s.linkContainer}
+          >
+            <Link className={s.link} href="/tremor">
+              TREMOR
+            </Link>
+          </motion.div>
         </div>
         <BlobSmall top={"10%"} right={"15%"} size={"s"}>
           <Blob5 />
@@ -58,9 +72,15 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob3 />
           </BlobAnimated>
-          <Link className={s.link} href="/blindness">
-            BLINDNESS
-          </Link>
+          <motion.div
+            variants={blobLinkVariants}
+            whileHover="hover"
+            className={s.linkContainer}
+          >
+            <Link className={s.link} href="/blindness">
+              BLINDNESS
+            </Link>
+          </motion.div>
         </div>
         <BlobSmall top={"35%"} left={"-15%"} size={"xl"}>
           <Blob1 />
@@ -71,9 +91,15 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob4 />
           </BlobAnimated>
-          <Link className={s.link} href="/dyslexia">
-            DYSLEXIA
-          </Link>
+          <motion.div
+            variants={blobLinkVariants}
+            whileHover="hover"
+            className={s.linkContainer}
+          >
+            <Link className={s.link} href="/dyslexia">
+              DYSLEXIA
+            </Link>
+          </motion.div>
         </div>
         <BlobSmall top={"-12%"} left={"30%"} size={"s"}>
           <Blob6 />
@@ -96,9 +122,15 @@ export default function Blobs() {
           <BlobAnimated>
             <Blob6 />
           </BlobAnimated>
-          <Link className={s.link} href="/colourblindness">
-            COLOUR BLINDNESS
-          </Link>
+          <motion.div
+            variants={blobLinkVariants}
+            whileHover="hover"
+            className={s.linkContainer}
+          >
+            <Link className={s.link} href="/colourblindness">
+              COLOUR BLINDNESS
+            </Link>
+          </motion.div>
         </div>
         <BlobSmall top={"-2%"} right={"40%"} size={"s"}>
           <Blob5 />

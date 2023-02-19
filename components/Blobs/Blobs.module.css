@@ -17,13 +17,16 @@
 .mainBlobWrapper {
   position: relative;
 }
-.link {
+.linkContainer {
   width: fit-content;
   max-width: 60%;
   height: fit-content;
   margin: auto;
   position: absolute;
   inset: 0;
+}
+.link {
+  display: block;
   color: var(--color);
   font-family: var(--title-font);
   font-size: clamp(2rem, 4vw + 1rem, 6rem);

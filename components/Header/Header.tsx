@@ -1,5 +1,7 @@
+import { navLinkVariants } from "@/motions/homePage";
 import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { FC } from "react";
 import WidthContainer from "../WidthContainer/WidthContainer";
@@ -14,7 +16,6 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({
   navigation,
-  selectedMenuItemId,
   onOpenMenu,
   onMenuItemClick,
 }) => {
@@ -24,18 +25,16 @@ const Header: FC<HeaderProps> = ({
         <nav>
           <ul className={s.navigation}>
             {navigation.map(({ id, title, path }) => (
-              <li key={id}>
+              <motion.li key={id} variants={navLinkVariants} whileHover="hover">
                 <Link
                   data-text={title}
                   href={path}
                   onClick={() => onMenuItemClick(id)}
-                  className={classNames(s.link, {
-                    [s.selected]: id === selectedMenuItemId,
-                  })}
+                  className={classNames(s.link)}
                 >
                   {title}
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </nav>
