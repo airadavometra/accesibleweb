@@ -9,7 +9,6 @@ import s from "./Header.module.css";
 
 type HeaderProps = {
   navigation: NavigationItem[];
-  selectedMenuItemId?: number;
   onOpenMenu(): void;
   onMenuItemClick: (newMenuItemId: number) => void;
 };

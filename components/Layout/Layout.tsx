@@ -59,7 +59,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           navigation={navigation}
           onOpenMenu={openMenu}
           onMenuItemClick={onMenuItemClick}
-          selectedMenuItemId={selectedMenuItemId}
         />
         {children}
       </div>
@@ -70,7 +69,6 @@ const Layout: FC<LayoutProps> = ({ children }) => {
             navigation={navigation}
             onMenuItemClick={onMenuItemClick}
             onCloseMenu={closeMenu}
-            selectedMenuItemId={selectedMenuItemId}
           ></MobileMenu>
         )}
       </AnimatePresence>
