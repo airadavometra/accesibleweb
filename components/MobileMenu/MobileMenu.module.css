@@ -10,8 +10,8 @@
 }
 .closeIconButton {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: min(1.5rem, 32px);
+  right: 16px;
 }
 .closeIcon {
   width: max(44px, 3rem);
@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: min(4rem, 96px);
   list-style-type: none;
 }
 .link {
