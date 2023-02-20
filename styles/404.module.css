@@ -2,7 +2,6 @@
   width: clamp(280px, 60%, 1000px);
   margin: auto;
   position: relative;
-  overflow: hidden;
 }
 .notFoundText {
   width: fit-content;
