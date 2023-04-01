@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { ReactNode, useEffect, useState } from "react";
 import Header from "../Header/Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
-import { PageHead } from "../PageHead/PageHead";
+import { PageHead } from "../../PageHead/PageHead";
 import s from "./MainLayout.module.css";
 
 const navigation: NavigationItem[] = [

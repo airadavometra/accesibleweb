@@ -1,4 +1,4 @@
-import WidthContainer from "../WidthContainer/WidthContainer";
+import WidthContainer from "../../WidthContainer/WidthContainer";
 import s from "./Description.module.css";
 
 export default function Description() {

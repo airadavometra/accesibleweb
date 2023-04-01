@@ -1,4 +1,4 @@
-import BlobAnimated from "@/components/BlobAnimated/BlobAnimated";
+import BlobAnimated from "@/components/main/BlobAnimated/BlobAnimated";
 import BlobSmall from "../BlobSmall/BlobSmall";
 import classnames from "classnames";
 import { Blob1 } from "@/icons/Blob1";

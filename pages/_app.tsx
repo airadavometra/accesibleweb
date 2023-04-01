@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import MainLayout from "@/components/MainLayout/MainLayout";
+import MainLayout from "@/components/main/MainLayout/MainLayout";
 import { ChallengeLayout } from "@/components/challenge/ChallengeLayout/ChallengeLayout";
 
 export default function App({ Component, pageProps, router }: AppProps) {

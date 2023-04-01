@@ -1,7 +1,7 @@
 import { libraryLinkVariants } from "@/motions/homePage";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import WidthContainer from "../WidthContainer/WidthContainer";
+import WidthContainer from "../../WidthContainer/WidthContainer";
 import s from "./FooterLink.module.css";
 
 const FooterLink = () => {

@@ -3,7 +3,7 @@ import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import WidthContainer from "../WidthContainer/WidthContainer";
+import WidthContainer from "../../WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 
 type HeaderProps = {

@@ -1,5 +1,5 @@
-import BlobAnimated from "@/components/BlobAnimated/BlobAnimated";
-import BlobSmall from "@/components/BlobSmall/BlobSmall";
+import BlobAnimated from "@/components/main/BlobAnimated/BlobAnimated";
+import BlobSmall from "@/components/main/BlobSmall/BlobSmall";
 import { Blob1 } from "@/icons/Blob1";
 import { Blob5 } from "@/icons/Blob5";
 import { Blob7 } from "@/icons/Blob7";
