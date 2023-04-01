@@ -27,7 +27,7 @@ export default function Blobs() {
             whileHover="hover"
             className={s.linkContainer}
           >
-            <Link className={s.link} href="/blurredvision">
+            <Link className={s.link} href="/task?filter=blurredvision">
               BLURRED VISION
             </Link>
           </motion.div>
@@ -52,7 +52,7 @@ export default function Blobs() {
             whileHover="hover"
             className={s.linkContainer}
           >
-            <Link className={s.link} href="/tremor">
+            <Link className={s.link} href="/task?filter=tremor">
               TREMOR
             </Link>
           </motion.div>
@@ -77,7 +77,7 @@ export default function Blobs() {
             whileHover="hover"
             className={s.linkContainer}
           >
-            <Link className={s.link} href="/blindness">
+            <Link className={s.link} href="/task?filter=blindness">
               BLINDNESS
             </Link>
           </motion.div>
@@ -96,7 +96,7 @@ export default function Blobs() {
             whileHover="hover"
             className={s.linkContainer}
           >
-            <Link className={s.link} href="/dyslexia">
+            <Link className={s.link} href="/task?filter=dyslexia">
               DYSLEXIA
             </Link>
           </motion.div>
@@ -127,7 +127,7 @@ export default function Blobs() {
             whileHover="hover"
             className={s.linkContainer}
           >
-            <Link className={s.link} href="/colourblindness">
+            <Link className={s.link} href="/task?filter=colourblindness">
               COLOUR BLINDNESS
             </Link>
           </motion.div>
