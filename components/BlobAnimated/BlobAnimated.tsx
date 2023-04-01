@@ -1,11 +1,11 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import s from "./BlobAnimated.module.css";
 
 type BlobAnimatedProps = {
   children: ReactNode;
 };
 
-const BlobAnimated: FC<BlobAnimatedProps> = ({ children }) => {
+const BlobAnimated = ({ children }: BlobAnimatedProps) => {
   return (
     <div className={s.translateBlob}>
       <div className={s.scaleBlob}>

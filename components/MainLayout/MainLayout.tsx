@@ -2,11 +2,11 @@ import { NavigationItem } from "@/types/navigationItem";
 import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Header from "../Header/Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { PageHead } from "../PageHead/PageHead";
-import s from "./Layout.module.css";
+import s from "./MainLayout.module.css";
 
 const navigation: NavigationItem[] = [
   { id: 0, title: "about", path: "/#about" },
@@ -14,11 +14,11 @@ const navigation: NavigationItem[] = [
   { id: 2, title: "library", path: "/library" },
 ];
 
-type LayoutProps = {
+type MainLayoutProps = {
   children: ReactNode;
 };
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   const router = useRouter();
   const [selectedMenuItemId, setSelectedMenuItemId] = useState<
     number | undefined
@@ -76,4 +76,4 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   );
 };
 
-export default Layout;
+export default MainLayout;

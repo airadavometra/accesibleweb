@@ -1,7 +1,6 @@
 import { WithClassName } from "@/types/common";
-import { FC } from "react";
 
-export const Blob2: FC<WithClassName> = ({ className }) => {
+export const Blob2 = ({ className }: WithClassName) => {
   return (
     <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <path

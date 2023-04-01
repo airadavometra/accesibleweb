@@ -1,11 +1,10 @@
 import { libraryLinkVariants } from "@/motions/homePage";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FC } from "react";
 import WidthContainer from "../WidthContainer/WidthContainer";
 import s from "./FooterLink.module.css";
 
-const FooterLink: FC = () => {
+const FooterLink = () => {
   return (
     <section className={s.libraryLinkSection}>
       <WidthContainer className={s.libraryLinkContainer}>

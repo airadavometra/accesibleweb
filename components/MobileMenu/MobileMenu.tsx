@@ -1,6 +1,5 @@
 import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
-import { FC } from "react";
 import s from "./MobileMenu.module.css";
 import { Close } from "@/icons/Close";
 import Link from "next/link";
@@ -14,12 +13,12 @@ type MobileMenuProps = {
   onCloseMenu: () => void;
 };
 
-const MobileMenu: FC<MobileMenuProps> = ({
+const MobileMenu = ({
   isOpen,
   navigation,
   onCloseMenu,
   onMenuItemClick,
-}) => {
+}: MobileMenuProps) => {
   return (
     <motion.div
       key={Number(isOpen)}

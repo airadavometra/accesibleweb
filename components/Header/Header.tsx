@@ -3,7 +3,6 @@ import { NavigationItem } from "@/types/navigationItem";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FC } from "react";
 import WidthContainer from "../WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 
@@ -13,11 +12,7 @@ type HeaderProps = {
   onMenuItemClick: (newMenuItemId: number) => void;
 };
 
-const Header: FC<HeaderProps> = ({
-  navigation,
-  onOpenMenu,
-  onMenuItemClick,
-}) => {
+const Header = ({ navigation, onOpenMenu, onMenuItemClick }: HeaderProps) => {
   return (
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>

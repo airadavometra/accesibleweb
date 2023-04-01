@@ -1,4 +1,3 @@
-import classnames from "classnames";
 import WidthContainer from "../WidthContainer/WidthContainer";
 import s from "./Description.module.css";
 

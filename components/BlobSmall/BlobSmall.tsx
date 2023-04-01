@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import s from "./BlobSmall.module.css";
 
 type BlobSmallProps = {
@@ -17,14 +17,14 @@ const SIZES = {
   xl: "clamp(72px, 13%, 120px)",
 };
 
-const BlobSmall: FC<BlobSmallProps> = ({
+const BlobSmall = ({
   top,
   left,
   bottom,
   right,
   size,
   children,
-}) => {
+}: BlobSmallProps) => {
   return (
     <div
       className={s.blob}

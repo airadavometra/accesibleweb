@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { FC, ReactNode } from "react";
+import { ReactNode } from "react";
 import s from "./WidthContainer.module.css";
 
 type WidthContainerProps = {
@@ -7,7 +7,7 @@ type WidthContainerProps = {
   className?: string;
 };
 
-const WidthContainer: FC<WidthContainerProps> = ({ children, className }) => {
+const WidthContainer = ({ children, className }: WidthContainerProps) => {
   return (
     <div className={classnames(s.widthContainer, className)}>{children}</div>
   );

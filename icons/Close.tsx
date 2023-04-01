@@ -1,7 +1,6 @@
 import { WithClassName } from "@/types/common";
-import { FC } from "react";
 
-export const Close: FC<WithClassName> = ({ className }) => {
+export const Close = ({ className }: WithClassName) => {
   return (
     <svg
       className={className}
