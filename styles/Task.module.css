@@ -20,7 +20,7 @@
   width: 256px;
   height: 256px;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   position: relative;
   font-size: clamp(1rem, 6vw + 0rem, 2rem);
   font-weight: 600;
