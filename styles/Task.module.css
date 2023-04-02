@@ -1,0 +1,41 @@
+.main {
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: max(1rem, 16px);
+}
+.description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: min(4rem, 96px);
+}
+.title {
+  font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
+}
+.problem,
+.challenge {
+  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
+}
+.button {
+  width: 256px;
+  height: 256px;
+  margin: auto;
+  margin-top: 3rem;
+  position: relative;
+  font-size: clamp(1rem, 6vw + 0rem, 2rem);
+  font-weight: 600;
+  color: var(--color);
+}
+.buttonText {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+}
+@media (max-width: 48rem) {
+  .description {
+    grid-template-columns: 1fr;
+    gap: max(1rem, 16px);
+  }
+}
