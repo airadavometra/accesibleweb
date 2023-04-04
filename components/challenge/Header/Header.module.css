@@ -17,6 +17,7 @@
   padding: 0.5rem 2rem;
   background-color: white;
   border: none;
+  font-family: var(--challenge-font);
   transition: font-weight 100ms ease-in-out;
 }
 .secondaryButton {
@@ -24,6 +25,7 @@
   color: white;
   background-color: transparent;
   outline: 1px solid white;
+  font-family: var(--challenge-font);
   transition: font-weight 100ms ease-in-out;
 }
 .primaryButton:hover,
@@ -58,15 +60,13 @@
   align-items: center;
   gap: 1.5rem;
   list-style-type: none;
+  font-family: var(--challenge-font);
   font-size: 0.85rem;
 }
 .linkContainer {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-}
-.link {
-  cursor: pointer;
 }
 .link:hover,
 .link:focus,
