@@ -63,9 +63,6 @@
   font-family: var(--challenge-font);
   font-size: 0.85rem;
 }
-.sendButton {
-  padding: 1rem;
-}
 .logoAndRights {
   display: flex;
   flex-direction: column;

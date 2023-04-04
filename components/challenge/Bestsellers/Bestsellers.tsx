@@ -1,13 +1,12 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import classNames from "classnames";
-import { Button } from "../Button/Button";
-import s from "./Hero.module.css";
+import s from "./Bestsellers.module.css";
 
-export const Hero = () => {
+export const Bestsellers = () => {
   return (
-    <section className={s.hero}>
+    <section className={s.bestsellers}>
       <WidthContainer className={s.widthContainer}>
-        <div className={classNames(s.section, s.picture)} />
+        <h2>Meet our bestsellers</h2>
         <div className={classNames(s.section, s.descriptionSection)}>
           <h1 className={s.title}>Take a bite</h1>
           <p className={s.description}>
@@ -18,13 +17,7 @@ export const Hero = () => {
             , where fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. Taste the difference, fuel your life.
           </p>
-          <Button
-            text="Go shopping"
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-            type="primary"
-          />
+          <button className={s.button}>Go shopping</button>
         </div>
       </WidthContainer>
     </section>

@@ -9,31 +9,3 @@
   background-color: black;
   z-index: 2;
 }
-.primaryButton {
-  padding: 0.5rem 2rem;
-  background-color: white;
-  border: none;
-  font-family: var(--challenge-font);
-  transition: font-weight 100ms ease-in-out;
-}
-.secondaryButton {
-  padding: 0.5rem 2rem;
-  color: white;
-  background-color: transparent;
-  outline: 1px solid white;
-  font-family: var(--challenge-font);
-  transition: font-weight 100ms ease-in-out;
-}
-.primaryButton:hover,
-.primaryButton:focus,
-.primaryButton.selected,
-.secondaryButton:hover,
-.secondaryButton:focus,
-.secondaryButton.selected {
-  font-weight: 700;
-}
-.hidden {
-  height: 0;
-  visibility: hidden;
-  font-weight: 700;
-}

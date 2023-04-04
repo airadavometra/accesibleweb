@@ -26,15 +26,3 @@
   max-width: 410px;
   text-align: center;
 }
-.button {
-  padding: 0.75rem 2rem;
-  color: white;
-  background-color: black;
-  font-family: var(--challenge-font);
-  transition: font-weight 100ms ease-in-out;
-}
-.button:hover,
-.button:focus,
-.button.selected {
-  font-weight: 700;
-}

@@ -2,6 +2,7 @@ import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { SendArrow } from "@/icons/SendArrow";
 import { NavigationItem } from "@/types/navigationItem";
 import Link from "next/link";
+import { Button } from "../Button/Button";
 import s from "./Footer.module.css";
 
 type FooterProps = {
@@ -43,9 +44,14 @@ export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
             <h6 className={s.title}>We send delicious emails.</h6>
             <div className={s.inputContainer}>
               <input placeholder="Email" className={s.input} />
-              <button className={s.sendButton}>
-                <SendArrow />
-              </button>
+              <Button
+                text="Subscribe"
+                onClick={function (): void {
+                  throw new Error("Function not implemented.");
+                }}
+                type="icon"
+                icon={<SendArrow />}
+              />
             </div>
           </section>
         </div>
