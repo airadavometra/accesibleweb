@@ -78,5 +78,5 @@
   margin-left: auto;
 }
 .cartButton:hover {
-  outline: 1px solid black;
+  transform: scale(1.1);
 }

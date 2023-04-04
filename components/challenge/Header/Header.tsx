@@ -3,17 +3,14 @@ import { Cart } from "@/icons/Cart";
 import { NavigationItem } from "@/types/navigationItem";
 import Link from "next/link";
 import WidthContainer from "../../WidthContainer/WidthContainer";
-import s from "./ChallengeHeader.module.css";
+import s from "./Header.module.css";
 
 type HeaderProps = {
   navigation: NavigationItem[];
   onMenuItemClick: (newMenuItemId: number) => void;
 };
 
-export const ChallengeHeader = ({
-  navigation,
-  onMenuItemClick,
-}: HeaderProps) => {
+export const Header = ({ navigation, onMenuItemClick }: HeaderProps) => {
   return (
     <header className={s.header}>
       <div className={s.stickyHeader}>

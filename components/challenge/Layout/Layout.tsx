@@ -2,10 +2,10 @@ import { PageHead } from "@/components/PageHead/PageHead";
 import { NavigationItem } from "@/types/navigationItem";
 import { useRouter } from "next/router";
 import { ReactNode, useEffect, useState } from "react";
-import { ChallengeHeader } from "../ChallengeHeader/ChallengeHeader";
-import s from "./ChallengeLayout.module.css";
+import { Header } from "../Header/Header";
+import s from "./Layout.module.css";
 
-type ChallengeLayoutProps = {
+type LayoutProps = {
   children: ReactNode;
 };
 
@@ -15,7 +15,7 @@ const navigation: NavigationItem[] = [
   { id: 2, title: "Combo", path: "/challenge/category/combo" },
 ];
 
-export const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
   const [selectedMenuItemId, setSelectedMenuItemId] = useState<
     number | undefined
@@ -49,10 +49,7 @@ export const ChallengeLayout = ({ children }: ChallengeLayoutProps) => {
     <>
       <PageHead />
       <div className={s.layout}>
-        <ChallengeHeader
-          navigation={navigation}
-          onMenuItemClick={onMenuItemClick}
-        />
+        <Header navigation={navigation} onMenuItemClick={onMenuItemClick} />
         {children}
       </div>
       {children}
