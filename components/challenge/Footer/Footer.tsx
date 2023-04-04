@@ -1,5 +1,5 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
-import { SendArrow } from "@/icons/Sendarrow";
+import { SendArrow } from "@/icons/SendArrow";
 import { NavigationItem } from "@/types/navigationItem";
 import Link from "next/link";
 import s from "./Footer.module.css";
