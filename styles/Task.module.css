@@ -1,8 +1,8 @@
 .main {
-  padding-top: 6rem;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
-  gap: max(1rem, 16px);
+  gap: min(2rem, 48px);
 }
 .description {
   display: grid;
@@ -16,11 +16,16 @@
 .challenge {
   font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
 }
+.blobGroup {
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-top: 2rem;
+  position: relative;
+}
 .button {
   width: 256px;
   height: 256px;
-  margin: auto;
-  margin-top: 2rem;
   position: relative;
   font-size: clamp(1rem, 6vw + 0rem, 2rem);
   font-weight: 600;
