@@ -43,7 +43,10 @@ const TaskPage: NextPage = () => {
   const router = useRouter();
   const { filter } = router.query;
 
-  const setFilter = useChallengeStore((state) => state.setFilter);
+  const { setFilter, setStartTime } = useChallengeStore((state) => ({
+    setFilter: state.setFilter,
+    setStartTime: state.setStartTime,
+  }));
 
   useEffect(() => {
     if (router.isReady) {
@@ -63,6 +66,11 @@ const TaskPage: NextPage = () => {
     }
   }, [filter, setFilter, router]);
 
+  const onButtonClick = () => {
+    setStartTime(new Date());
+    router.push("/challenge");
+  };
+
   return data ? (
     <WidthContainer>
       <main className={s.main}>
@@ -72,7 +80,7 @@ const TaskPage: NextPage = () => {
           <p className={s.challenge}>{data.challenge}</p>
         </section>
         <div className={s.blobGroup}>
-          <button className={s.button}>
+          <button className={s.button} onClick={onButtonClick}>
             <BlobAnimated>
               <Blob1 />
             </BlobAnimated>
