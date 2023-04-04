@@ -1,3 +1,4 @@
+import { Hero } from "@/components/challenge/Hero/Hero";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -12,7 +13,11 @@ const ChallengeHome = () => {
     }
   }, [filter, router]);
 
-  return <main>shop {filter}</main>;
+  return (
+    <main>
+      <Hero />
+    </main>
+  );
 };
 
 export default ChallengeHome;

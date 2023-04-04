@@ -13,23 +13,9 @@ type HeaderProps = {
 export const Header = ({ navigation, onMenuItemClick }: HeaderProps) => {
   return (
     <header className={s.header}>
-      <div className={s.stickyHeader}>
-        <button className={s.primaryButton}>
-          Remind task
-          <div aria-hidden="true" className={s.hidden}>
-            Remind task
-          </div>
-        </button>
-        <button className={s.secondaryButton}>
-          Give up
-          <div aria-hidden="true" className={s.hidden}>
-            Give up
-          </div>
-        </button>
-      </div>
       <WidthContainer className={s.widthContainer}>
         <Link href="/challenge" className={s.logo}>
-          GreenUp
+          fresh
         </Link>
         <nav>
           <ul className={s.navigation}>

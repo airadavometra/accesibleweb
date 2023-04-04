@@ -2,6 +2,7 @@ import { PageHead } from "@/components/PageHead/PageHead";
 import { NavigationItem } from "@/types/navigationItem";
 import { useRouter } from "next/router";
 import { ReactNode, useEffect, useState } from "react";
+import { Banner } from "../Banner/Banner";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import s from "./Layout.module.css";
@@ -49,6 +50,7 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <PageHead />
+      <Banner />
       <div className={s.layout}>
         <Header navigation={navigation} onMenuItemClick={onMenuItemClick} />
         {children}

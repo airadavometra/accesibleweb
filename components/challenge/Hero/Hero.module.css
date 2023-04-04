@@ -1,0 +1,40 @@
+.widthContainer {
+  display: flex;
+}
+.section {
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 1/1;
+}
+.picture {
+  background-color: orange;
+  border: 1px solid black;
+}
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  border: 1px solid black;
+  border-left: none;
+}
+.title {
+  font-size: 4rem;
+}
+.description {
+  max-width: 410px;
+  text-align: center;
+}
+.button {
+  padding: 0.75rem 2rem;
+  color: white;
+  background-color: black;
+  font-family: var(--challenge-font);
+  transition: font-weight 100ms ease-in-out;
+}
+.button:hover,
+.button:focus,
+.button.selected {
+  font-weight: 700;
+}
