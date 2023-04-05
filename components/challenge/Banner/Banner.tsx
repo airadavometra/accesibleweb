@@ -1,23 +1,23 @@
-import { Button } from "../Button/Button";
+import Image from "next/image";
 import s from "./Banner.module.css";
 
-export const Banner = () => {
+type BannerProps = {
+  imgSrc: string;
+  text: string;
+};
+
+export const Banner = ({ imgSrc, text }: BannerProps) => {
   return (
-    <div className={s.stickyHeader}>
-      <Button
-        text="Remind task"
-        onClick={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-        type="secondary"
+    <section className={s.container}>
+      <Image
+        className={s.background}
+        fill
+        src={imgSrc}
+        alt="banner background"
+        aria-hidden="true"
       />
-      <Button
-        text="Give up"
-        onClick={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-        type="primary"
-      />
-    </div>
+      <div className={s.gradient} />
+      <p className={s.text}>{text}</p>
+    </section>
   );
 };

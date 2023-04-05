@@ -4,6 +4,7 @@ import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import s from "@/styles/ChallengeLanding.module.css";
+import { Banner } from "@/components/challenge/Banner/Banner";
 
 const ChallengeHome = () => {
   const router = useRouter();
@@ -19,6 +20,10 @@ const ChallengeHome = () => {
     <main className={s.main}>
       <Hero />
       <Bestsellers />
+      <Banner
+        imgSrc={"/test.png"}
+        text={"Drinks that taste as good as they make you feel."}
+      />
     </main>
   );
 };
