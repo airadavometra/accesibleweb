@@ -11,7 +11,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-const navigation: NavigationItem[] = [
+export const navigation: NavigationItem[] = [
   { id: 0, title: "Fruits", path: "/challenge/category/fruits" },
   { id: 1, title: "Vegetables", path: "/challenge/category/vegetables" },
   { id: 2, title: "Combo", path: "/challenge/category/combo" },

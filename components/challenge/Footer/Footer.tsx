@@ -50,7 +50,7 @@ export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
                   throw new Error("Function not implemented.");
                 }}
                 type="icon"
-                icon={<SendArrow />}
+                icon={<SendArrow className={s.arrow} />}
               />
             </div>
           </section>

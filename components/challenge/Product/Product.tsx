@@ -1,20 +1,24 @@
+import { Product as ProductType } from "@/types/product";
 import Image from "next/image";
 import s from "./Product.module.css";
 
 type ProductProps = {
-  imgSrc: string;
-  name: string;
-  price: string;
+  product: ProductType;
 };
 
-export const Product = ({ imgSrc, name, price }: ProductProps) => {
+export const Product = ({ product }: ProductProps) => {
   return (
     <div className={s.container}>
       <div className={s.imageContainer}>
-        <Image className={s.image} fill src={imgSrc} alt={name} />
+        <Image
+          className={s.image}
+          fill
+          src={product.imgSrc}
+          alt={product.name}
+        />
       </div>
-      <span className={s.name}>{name}</span>
-      <span className={s.price}>{price}</span>
+      <span className={s.name}>{product.name}</span>
+      <span className={s.price}>{product.price}</span>
     </div>
   );
 };

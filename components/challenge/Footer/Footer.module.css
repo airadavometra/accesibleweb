@@ -80,3 +80,8 @@
   font-family: var(--challenge-font);
   font-size: 0.85rem;
 }
+.arrow {
+  width: 1.25rem;
+  fill: white;
+  opacity: 0.5;
+}
