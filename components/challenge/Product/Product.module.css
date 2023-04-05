@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+.imageContainer {
+  width: 100%;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.name {
+  font-weight: 600;
+}
+.price {
+  font-family: var(--challenge-font);
+}
