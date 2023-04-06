@@ -20,13 +20,11 @@ body {
 }
 
 html,
-body,
-#__next {
+body {
   height: 100%;
 }
-
-.frozen {
-  overflow: hidden;
+#__next {
+  height: fit-content;
 }
 
 button {

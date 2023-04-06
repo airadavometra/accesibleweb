@@ -1,12 +1,11 @@
 import { NavigationItem } from "@/types/navigationItem";
-import { toggleFreezePage } from "@/utils/toggleFreezePage";
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { ReactNode, useEffect, useState } from "react";
 import Header from "../Header/Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { PageHead } from "../../PageHead/PageHead";
-import s from "./MainLayout.module.css";
+import s from "./Layout.module.css";
 
 const navigation: NavigationItem[] = [
   { id: 0, title: "about", path: "/#about" },
@@ -14,11 +13,11 @@ const navigation: NavigationItem[] = [
   { id: 2, title: "library", path: "/library" },
 ];
 
-type MainLayoutProps = {
+type LayoutProps = {
   children: ReactNode;
 };
 
-const MainLayout = ({ children }: MainLayoutProps) => {
+export const Layout = ({ children }: LayoutProps) => {
   const router = useRouter();
   const [selectedMenuItemId, setSelectedMenuItemId] = useState<
     number | undefined
@@ -40,15 +39,16 @@ const MainLayout = ({ children }: MainLayoutProps) => {
   const onMenuItemClick = (newMenuItemId: number) => {
     setSelectedMenuItemId(newMenuItemId);
     setMenuOpen(false);
+    document.body.style.overflow = "unset";
   };
 
   const openMenu = () => {
     setMenuOpen(true);
-    toggleFreezePage();
+    document.body.style.overflow = "hidden";
   };
   const closeMenu = () => {
     setMenuOpen(false);
-    toggleFreezePage();
+    document.body.style.overflow = "unset";
   };
 
   return (
@@ -69,11 +69,9 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             navigation={navigation}
             onMenuItemClick={onMenuItemClick}
             onCloseMenu={closeMenu}
-          ></MobileMenu>
+          />
         )}
       </AnimatePresence>
     </>
   );
 };
-
-export default MainLayout;

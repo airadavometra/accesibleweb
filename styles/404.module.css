@@ -1,6 +1,7 @@
 .blobContainer {
   width: clamp(280px, 60%, 1000px);
   margin: auto;
+  margin-top: 3rem;
   position: relative;
 }
 .notFoundText {
