@@ -19,12 +19,8 @@ export const Hero = () => {
         <div className={classNames(s.section, s.descriptionSection)}>
           <h1 className={s.title}>Take a bite</h1>
           <p className={s.description}>
-            Discover{" "}
-            <b>
-              <i>fresh</i>
-            </b>
-            , where fresh, organic fruits and vegetables meet sustainable,
-            eco-conscious values. Taste the difference, fuel your life.
+            Here fresh, organic fruits and vegetables meet sustainable,
+            eco-conscious values. <br /> Taste the difference, fuel your life.
           </p>
           <Button
             text="Go shopping"

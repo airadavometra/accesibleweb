@@ -72,7 +72,7 @@ const ChallengeHome = () => {
       <Bestsellers products={products} />
       <Banner
         imgSrc="/test.png"
-        text="Drinks that taste as good as they make you feel."
+        text="Fruits and veggies that taste as good as they make you feel."
       />
       <Categories categories={categories} />
       <Quote
