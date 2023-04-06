@@ -9,29 +9,30 @@ import { Categories } from "@/components/challenge/Categories/Categories";
 import { Product } from "@/types/product";
 import { Category } from "@/types/category";
 import { Quote } from "@/components/challenge/Quote/Quote";
+import { DayOffer } from "@/components/challenge/DayOffer/DayOffer";
 
 const products: Product[] = [
   {
     id: 1,
-    imgSrc: "/test.webp",
+    imgSrc: "/test2.png",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
   {
     id: 1,
-    imgSrc: "/test.webp",
+    imgSrc: "/test2.png",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
   {
     id: 1,
-    imgSrc: "/test.webp",
+    imgSrc: "/test2.png",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
   {
     id: 1,
-    imgSrc: "/test.webp",
+    imgSrc: "/test2.png",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
@@ -79,6 +80,7 @@ const ChallengeHome = () => {
         text="These fruits and veggies kickstart my day and energise my life with unbeatable freshness and flavour!"
         author="Jane S."
       />
+      <DayOffer product={products[0]} />
     </main>
   );
 };

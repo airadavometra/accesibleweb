@@ -12,7 +12,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
     <section className={s.categories}>
       <WidthContainer className={s.widthContainer}>
         {categories.map((category) => (
-          <div className={s.item} key={category.title}>
+          <Link key={category.title} href={category.path} className={s.item}>
             <div className={s.imageContainer}>
               <Image
                 className={s.image}
@@ -21,11 +21,11 @@ export const Categories = ({ categories }: CategoriesProps) => {
                 fill
               />
             </div>
-            <Link className={s.link} href={category.path}>
-              {category.title}
+            <div className={s.link}>
+              <span>{category.title}</span>
               <SendArrow className={s.arrow} />
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))}
       </WidthContainer>
     </section>
