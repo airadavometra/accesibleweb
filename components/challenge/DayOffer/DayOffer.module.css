@@ -19,6 +19,7 @@
 }
 .imageContainer {
   aspect-ratio: 1/1;
+  border: 1px solid black;
 }
 .image {
   object-fit: contain;
