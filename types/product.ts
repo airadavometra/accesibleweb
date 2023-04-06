@@ -1,1 +1,6 @@
-export type Product = { imgSrc: string; name: string; price: string };
+export type Product = {
+  id: number;
+  imgSrc: string;
+  name: string;
+  price: string;
+};

@@ -8,24 +8,29 @@ import { Banner } from "@/components/challenge/Banner/Banner";
 import { Categories } from "@/components/challenge/Categories/Categories";
 import { Product } from "@/types/product";
 import { Category } from "@/types/category";
+import { Quote } from "@/components/challenge/Quote/Quote";
 
 const products: Product[] = [
   {
+    id: 1,
     imgSrc: "/test.webp",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
   {
+    id: 1,
     imgSrc: "/test.webp",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
   {
+    id: 1,
     imgSrc: "/test.webp",
     name: "Genius",
     price: "$4.25 per 1 kilo",
   },
   {
+    id: 1,
     imgSrc: "/test.webp",
     name: "Genius",
     price: "$4.25 per 1 kilo",
@@ -65,10 +70,15 @@ const ChallengeHome = () => {
       <Hero />
       <Bestsellers products={products} />
       <Banner
-        imgSrc={"/test.png"}
-        text={"Drinks that taste as good as they make you feel."}
+        imgSrc="/test.png"
+        text="Drinks that taste as good as they make you feel."
       />
       <Categories categories={categories} />
+      <Quote
+        imgSrc="/test2.png"
+        text="These fruits and veggies kickstart my day and energise my life with unbeatable freshness and flavour!"
+        author="Jane S."
+      />
     </main>
   );
 };

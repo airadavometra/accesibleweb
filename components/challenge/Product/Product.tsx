@@ -1,5 +1,6 @@
 import { Product as ProductType } from "@/types/product";
 import Image from "next/image";
+import Link from "next/link";
 import s from "./Product.module.css";
 
 type ProductProps = {
@@ -8,7 +9,7 @@ type ProductProps = {
 
 export const Product = ({ product }: ProductProps) => {
   return (
-    <div className={s.container}>
+    <Link href={`/challenge/product/${product.id}`} className={s.container}>
       <div className={s.imageContainer}>
         <Image
           className={s.image}
@@ -19,6 +20,6 @@ export const Product = ({ product }: ProductProps) => {
       </div>
       <span className={s.name}>{product.name}</span>
       <span className={s.price}>{product.price}</span>
-    </div>
+    </Link>
   );
 };
