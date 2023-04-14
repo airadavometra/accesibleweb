@@ -1,15 +1,18 @@
-import { Product as ProductType } from "@/types/product";
+import { Product as ProductType } from "@/types/challenge/product";
 import Image from "next/image";
 import Link from "next/link";
-import s from "./Product.module.css";
+import s from "./ProductLink.module.css";
 
-type ProductProps = {
+type ProductLinkProps = {
   product: ProductType;
 };
 
-export const Product = ({ product }: ProductProps) => {
+export const ProductLink = ({ product }: ProductLinkProps) => {
   return (
-    <Link href={`/challenge/product/${product.id}`} className={s.container}>
+    <Link
+      href={`/challenge/product?product=${product.id}`}
+      className={s.container}
+    >
       <div className={s.imageContainer}>
         <Image
           className={s.image}

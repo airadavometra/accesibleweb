@@ -12,9 +12,13 @@ type LayoutProps = {
 };
 
 export const navigation: NavigationItem[] = [
-  { id: 0, title: "Fruits", path: "/challenge/category/fruits" },
-  { id: 1, title: "Vegetables", path: "/challenge/category/vegetables" },
-  { id: 2, title: "Combo", path: "/challenge/category/combo" },
+  { id: 0, title: "Fruits", path: "/challenge/category?category=fruits" },
+  {
+    id: 1,
+    title: "Vegetables",
+    path: "/challenge/category?category=vegetables",
+  },
+  { id: 2, title: "Combo", path: "/challenge/category?category=combo" },
 ];
 
 export const Layout = ({ children }: LayoutProps) => {

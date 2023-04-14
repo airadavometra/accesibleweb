@@ -6,6 +6,7 @@
 }
 .imageContainer {
   width: 100%;
+  height: fit-content;
 }
 .image {
   object-fit: contain;

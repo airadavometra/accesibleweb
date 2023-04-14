@@ -3,56 +3,30 @@ import { Hero } from "@/components/challenge/Hero/Hero";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import s from "@/styles/ChallengeLanding.module.css";
+import s from "@/styles/challenge/Home.module.css";
 import { Banner } from "@/components/challenge/Banner/Banner";
 import { Categories } from "@/components/challenge/Categories/Categories";
-import { Product } from "@/types/product";
+import { Product } from "@/types/challenge/product";
 import { Category } from "@/types/category";
 import { Quote } from "@/components/challenge/Quote/Quote";
 import { DayOffer } from "@/components/challenge/DayOffer/DayOffer";
-
-const products: Product[] = [
-  {
-    id: 1,
-    imgSrc: "/test2.png",
-    name: "Genius",
-    price: "$4.25 per 1 kilo",
-  },
-  {
-    id: 1,
-    imgSrc: "/test2.png",
-    name: "Genius",
-    price: "$4.25 per 1 kilo",
-  },
-  {
-    id: 1,
-    imgSrc: "/test2.png",
-    name: "Genius",
-    price: "$4.25 per 1 kilo",
-  },
-  {
-    id: 1,
-    imgSrc: "/test2.png",
-    name: "Genius",
-    price: "$4.25 per 1 kilo",
-  },
-];
+import { products } from "@/data/challenge/products";
 
 export const categories: Category[] = [
   {
     imgSrc: "/test2.png",
     title: "Fruits",
-    path: "/challenge/category/fruits",
+    path: "/challenge/category?category=fruits",
   },
   {
     imgSrc: "/test2.png",
     title: "Vegetables",
-    path: "/challenge/category/vegetables",
+    path: "/challenge/category?category=vegetables",
   },
   {
     imgSrc: "/test2.png",
     title: "Combo",
-    path: "/challenge/category/combo",
+    path: "/challenge/category?category=combo",
   },
 ];
 

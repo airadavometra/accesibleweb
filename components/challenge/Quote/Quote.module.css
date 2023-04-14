@@ -11,6 +11,7 @@
 .imageContainer {
   grid-column: -1/-2;
   width: 100%;
+  height: fit-content;
   aspect-ratio: 1/1;
   border: 1px solid black;
   border-left: none;

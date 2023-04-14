@@ -1,21 +1,21 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
-import { SendArrow } from "@/icons/SendArrow";
 import { Product } from "@/types/challenge/product";
 import classNames from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "../Button/Button";
-import s from "./DayOffer.module.css";
+import s from "./ProductInfo.module.css";
+import { useState } from "react";
 
-type DayOfferProps = {
+type ProductInfoProps = {
   product: Product;
 };
 
-export const DayOffer = ({ product }: DayOfferProps) => {
+export const ProductInfo = ({ product }: ProductInfoProps) => {
+  const [quantity, setQuantity] = useState<number>(0);
+
   return (
     <section className={s.main}>
       <WidthContainer className={s.widthContainer}>
-        <h2 className={s.title}>Best deal today</h2>
         <div className={s.content}>
           <div className={classNames(s.section, s.imageContainer)}>
             <Image
@@ -28,6 +28,28 @@ export const DayOffer = ({ product }: DayOfferProps) => {
           <div className={classNames(s.section, s.descriptionSection)}>
             <h3 className={s.name}>{product.name}</h3>
             <span className={s.price}>{product.price}</span>
+            <div>
+              <span className={s.quantityButtonTitle}>Quantity</span>
+              <div className={s.quantityButtonContainer}>
+                <button
+                  className={s.quantityButton}
+                  onClick={() =>
+                    setQuantity((prevState) =>
+                      prevState > 0 ? prevState - 1 : prevState
+                    )
+                  }
+                >
+                  -
+                </button>
+                <span className={s.quantity}>{quantity}</span>
+                <button
+                  className={s.quantityButton}
+                  onClick={() => setQuantity((prevState) => prevState + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
             <Button
               text="Add to cart"
               onClick={function (): void {
@@ -42,10 +64,7 @@ export const DayOffer = ({ product }: DayOfferProps) => {
               }}
               type="primary"
             />
-            <Link className={s.link} href={`/challenge/product/${product.id}`}>
-              <span>View full details</span>
-              <SendArrow className={s.arrow} />
-            </Link>
+            <p className={s.description}>{product.description}</p>
           </div>
         </div>
       </WidthContainer>
