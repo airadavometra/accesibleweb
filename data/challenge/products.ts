@@ -9,6 +9,7 @@ export const products: Product[] = [
     category: "fruits",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores?",
+    availableQuantity: 5,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const products: Product[] = [
     category: "fruits",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores?",
+    availableQuantity: 5,
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ export const products: Product[] = [
     category: "fruits",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores?",
+    availableQuantity: 5,
   },
   {
     id: 4,
@@ -36,5 +39,6 @@ export const products: Product[] = [
     category: "vegetables",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa provident impedit amet expedita officia minima, ratione pariatur repudiandae illo, quas nihil maiores minus ipsam quos perspiciatis voluptas ad consequuntur dolores?",
+    availableQuantity: 5,
   },
 ];
