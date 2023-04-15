@@ -3,9 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import s from "@/styles/challenge/Category.module.css";
 import { Category } from "@/types/challenge/category";
-import { Bestsellers } from "@/components/challenge/Bestsellers/Bestsellers";
 import { products } from "@/data/challenge/products";
-import { ProductInfo } from "@/components/challenge/ProductInfo/ProductInfo";
 import { Product } from "@/types/challenge/product";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { ProductsGrid } from "@/components/challenge/ProductsGrid/ProductsGrid";
@@ -32,7 +30,7 @@ const CategoryPage: NextPage = () => {
   const router = useRouter();
   const { category: categoryUrl } = router.query;
   const [category, setCategory] = useState<Category>();
-  const [products, setProducts] = useState<Product[]>([]);
+  const [categoryProducts, setCategoryProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     if (router.isReady) {
@@ -48,14 +46,19 @@ const CategoryPage: NextPage = () => {
       );
 
       setCategory(categoryValue);
-      setProducts(filteredProducts);
+      setCategoryProducts(filteredProducts);
     }
-  }, [categoryUrl, router, products]);
+  }, [categoryUrl, router]);
 
   return (
     <main className={s.main}>
-      <WidthContainer>
-        <ProductsGrid products={products} />
+      <WidthContainer className={s.widthContainer}>
+        <h1 className={s.title}>{category}</h1>
+        <div className={s.categoryInfoContainer}>
+          <span>Organic, non-GMO, local.</span>
+          <span>{categoryProducts.length} products</span>
+        </div>
+        <ProductsGrid products={categoryProducts} />
       </WidthContainer>
     </main>
   );

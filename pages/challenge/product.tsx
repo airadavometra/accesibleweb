@@ -32,6 +32,7 @@ const ProductPage: NextPage = () => {
       }
 
       const foundProduct = products.find((item) => item.id === productId);
+
       setProduct(foundProduct);
     }
   }, [productUrl, router]);
