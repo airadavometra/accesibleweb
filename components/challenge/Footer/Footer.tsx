@@ -4,6 +4,7 @@ import { NavigationItem } from "@/types/navigationItem";
 import Link from "next/link";
 import { Button } from "../Button/Button";
 import s from "./Footer.module.css";
+import { Input } from "../Input/Input";
 
 type FooterProps = {
   navigation: NavigationItem[];
@@ -42,17 +43,12 @@ export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
           </div>
           <section className={s.mailSection}>
             <h6 className={s.title}>We send delicious emails.</h6>
-            <div className={s.inputContainer}>
-              <input placeholder="Email" className={s.input} />
-              <Button
-                text="Subscribe"
-                onClick={function (): void {
-                  throw new Error("Function not implemented.");
-                }}
-                type="icon"
-                icon={<SendArrow className={s.arrow} />}
-              />
-            </div>
+            <Input
+              placeholder="Email"
+              buttonAction="Subscribe"
+              buttonIcon={<SendArrow className={s.arrow} />}
+              color="white"
+            />
           </section>
         </div>
         <div className={s.logoAndRights}>

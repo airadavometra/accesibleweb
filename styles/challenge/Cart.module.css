@@ -90,6 +90,7 @@
 }
 .subtotalSum {
   font-family: var(--challenge-font);
+  font-weight: 400;
 }
 .disclamer {
   font-family: var(--challenge-font);
