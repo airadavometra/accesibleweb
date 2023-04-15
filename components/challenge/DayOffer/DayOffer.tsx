@@ -6,12 +6,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "../Button/Button";
 import s from "./DayOffer.module.css";
+import { useChallengeStore } from "@/state/useChallenge";
+import { useRouter } from "next/router";
 
 type DayOfferProps = {
   product: Product;
 };
 
 export const DayOffer = ({ product }: DayOfferProps) => {
+  const router = useRouter();
+  const { addProduct, setCheckoutCart } = useChallengeStore((state) => ({
+    addProduct: state.addProduct,
+    setCheckoutCart: state.setCheckoutCart,
+  }));
+
   return (
     <section className={s.main}>
       <WidthContainer className={s.widthContainer}>
@@ -27,22 +35,27 @@ export const DayOffer = ({ product }: DayOfferProps) => {
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
             <h3 className={s.name}>{product.name}</h3>
-            <span className={s.price}>{product.price}</span>
+            <span className={s.price}>${product.price}</span>
             <Button
               text="Add to cart"
-              onClick={function (): void {
-                throw new Error("Function not implemented.");
+              onClick={() => {
+                addProduct(product, 1);
+                router.push("/challenge/cart");
               }}
               type="secondary"
             />
             <Button
               text="Buy it now"
-              onClick={function (): void {
-                throw new Error("Function not implemented.");
+              onClick={() => {
+                setCheckoutCart([{ ...product, quantity: 1 }]);
+                router.push("/challenge/checkout");
               }}
               type="primary"
             />
-            <Link className={s.link} href={`/challenge/product/${product.id}`}>
+            <Link
+              className={s.link}
+              href={`/challenge/product?product=${product.id}`}
+            >
               <span>View full details</span>
               <SendArrow className={s.arrow} />
             </Link>

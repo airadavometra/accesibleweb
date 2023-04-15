@@ -4,14 +4,35 @@ import classNames from "classnames";
 import Image from "next/image";
 import { Button } from "../Button/Button";
 import s from "./ProductInfo.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useChallengeStore } from "@/state/useChallenge";
+import { QuantityButton } from "../QuantityButton/QuantityButton";
 
 type ProductInfoProps = {
   product: Product;
 };
 
 export const ProductInfo = ({ product }: ProductInfoProps) => {
-  const [quantity, setQuantity] = useState<number>(0);
+  const router = useRouter();
+  const { addProduct, setCheckoutCart, cart } = useChallengeStore((state) => ({
+    addProduct: state.addProduct,
+    setCheckoutCart: state.setCheckoutCart,
+    cart: state.cart,
+  }));
+  const [quantity, setQuantity] = useState<number>(1);
+  const [inCart, setInCart] = useState<boolean>(false);
+
+  useEffect(() => {
+    const cartProduct = cart.find((item) => item.id === product.id);
+    if (cartProduct) {
+      setQuantity(cartProduct.quantity);
+      setInCart(true);
+    } else {
+      setQuantity(1);
+      setInCart(false);
+    }
+  }, [cart, product]);
 
   return (
     <section className={s.main}>
@@ -27,40 +48,29 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
             <h3 className={s.name}>{product.name}</h3>
-            <span className={s.price}>{product.price}</span>
+            <span className={s.price}>${product.price}</span>
             <div>
               <span className={s.quantityButtonTitle}>Quantity</span>
-              <div className={s.quantityButtonContainer}>
-                <button
-                  className={s.quantityButton}
-                  onClick={() =>
-                    setQuantity((prevState) =>
-                      prevState > 0 ? prevState - 1 : prevState
-                    )
-                  }
-                >
-                  -
-                </button>
-                <span className={s.quantity}>{quantity}</span>
-                <button
-                  className={s.quantityButton}
-                  onClick={() => setQuantity((prevState) => prevState + 1)}
-                >
-                  +
-                </button>
-              </div>
+              <QuantityButton
+                quantity={quantity}
+                increase={() => setQuantity((prevState) => prevState + 1)}
+                decrease={() =>
+                  setQuantity((prevState) =>
+                    prevState > 0 ? prevState - 1 : prevState
+                  )
+                }
+              />
             </div>
             <Button
-              text="Add to cart"
-              onClick={function (): void {
-                throw new Error("Function not implemented.");
-              }}
+              text={inCart ? "Update cart" : "Add to cart"}
+              onClick={() => addProduct(product, quantity)}
               type="secondary"
             />
             <Button
               text="Buy it now"
-              onClick={function (): void {
-                throw new Error("Function not implemented.");
+              onClick={() => {
+                setCheckoutCart([{ ...product, quantity: quantity }]);
+                router.push("/challenge/checkout");
               }}
               type="primary"
             />

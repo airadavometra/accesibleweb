@@ -22,7 +22,7 @@ export const ProductLink = ({ product }: ProductLinkProps) => {
         />
       </div>
       <span className={s.name}>{product.name}</span>
-      <span className={s.price}>{product.price}</span>
+      <span className={s.price}>${product.price}</span>
     </Link>
   );
 };

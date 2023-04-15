@@ -1,0 +1,11 @@
+.quantityButtonContainer {
+  width: fit-content;
+  border: 1px solid black;
+}
+.quantityButton {
+  padding: 0.75rem 1rem;
+  font-family: var(--challenge-font);
+}
+.quantity {
+  padding: 0.75rem 1rem;
+}

@@ -13,6 +13,8 @@ type ChallengeStore = {
   addProduct: (product: Product, quantity: number) => void;
   removeProduct: (productId: number) => void;
   updateProductQuantity: (productId: number, quantity: number) => void;
+  checkoutCart: CartProduct[];
+  setCheckoutCart: (checkoutCart: CartProduct[]) => void;
 };
 
 export const useChallengeStore = create<ChallengeStore>()((set) => ({
@@ -22,9 +24,29 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
   setStartTime: (startTime) => set(() => ({ startTime: startTime })),
   cart: [],
   addProduct: (product, quantity) =>
-    set((state) => ({
-      cart: [...state.cart, { quantity: quantity, ...product }],
-    })),
+    set((state) => {
+      const productIndex = state.cart.findIndex(
+        (item) => item.id === product.id
+      );
+
+      if (productIndex !== -1) {
+        const newCart = state.cart.slice();
+        newCart[productIndex].quantity += quantity;
+
+        return {
+          cart: newCart,
+        };
+      }
+
+      if (quantity > 0) {
+        return {
+          cart: [...state.cart, { quantity: quantity, ...product }],
+        };
+      }
+      return {
+        cart: state.cart,
+      };
+    }),
   removeProduct: (productId) =>
     set((state) => ({
       cart: state.cart.filter((item) => item.id !== productId),
@@ -43,4 +65,7 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
       }
       return { cart: state.cart };
     }),
+  checkoutCart: [],
+  setCheckoutCart: (checkoutCart) =>
+    set(() => ({ checkoutCart: checkoutCart })),
 }));
