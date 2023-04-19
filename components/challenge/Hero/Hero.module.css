@@ -35,3 +35,11 @@
   max-width: 410px;
   text-align: center;
 }
+.link {
+  padding: 0.75rem 2rem;
+  color: white;
+  background-color: black;
+  border: none;
+  outline: 1px solid white;
+  font-family: var(--challenge-font);
+}

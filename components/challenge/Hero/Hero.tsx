@@ -3,6 +3,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import { Button } from "../Button/Button";
 import s from "./Hero.module.css";
+import Link from "next/link";
 
 export const Hero = () => {
   return (
@@ -22,13 +23,9 @@ export const Hero = () => {
             Here fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. <br /> Taste the difference, fuel your life.
           </p>
-          <Button
-            text="Go shopping"
-            onClick={function (): void {
-              throw new Error("Function not implemented.");
-            }}
-            type="primary"
-          />
+          <Link className={s.link} href="/challenge/category?category=fruits">
+            Go shopping
+          </Link>
         </div>
       </WidthContainer>
     </section>
