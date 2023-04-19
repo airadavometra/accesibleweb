@@ -51,20 +51,25 @@ const CartPage: NextPage = () => {
                     </div>
                     <div className={s.productInfo}>
                       <span className={s.productName}>{item.name}</span>
-                      <span>{item.price}</span>
+                      <span>${item.price}</span>
                     </div>
                   </div>
                   <div className={s.buttons}>
                     <QuantityButton
                       quantity={item.quantity}
+                      disabled={
+                        item.availableQuantity === item.quantity
+                          ? "increase"
+                          : item.quantity === 0
+                          ? "decrease"
+                          : "none"
+                      }
                       increase={() =>
                         updateProductQuantity(item.id, item.quantity + 1)
                       }
-                      decrease={() => {
-                        if (item.quantity > 0) {
-                          updateProductQuantity(item.id, item.quantity - 1);
-                        }
-                      }}
+                      decrease={() =>
+                        updateProductQuantity(item.id, item.quantity - 1)
+                      }
                     />
                     <Button
                       text="Delete from cart"

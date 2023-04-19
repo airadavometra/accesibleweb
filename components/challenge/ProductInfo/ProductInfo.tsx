@@ -53,6 +53,13 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
               <span className={s.quantityButtonTitle}>Quantity</span>
               <QuantityButton
                 quantity={quantity}
+                disabled={
+                  product.availableQuantity === quantity
+                    ? "increase"
+                    : quantity === 0
+                    ? "decrease"
+                    : "none"
+                }
                 increase={() => setQuantity((prevState) => prevState + 1)}
                 decrease={() =>
                   setQuantity((prevState) =>

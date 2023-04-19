@@ -23,14 +23,7 @@ export const Input = ({
     <div className={classNames(s.inputContainer, s[color])}>
       <input placeholder={placeholder} className={s.input} />
       {buttonAction && buttonIcon && (
-        <Button
-          text={buttonAction}
-          onClick={function (): void {
-            throw new Error("Function not implemented.");
-          }}
-          type="icon"
-          icon={buttonIcon}
-        />
+        <Button text={buttonAction} type="icon" icon={buttonIcon} />
       )}
     </div>
   );

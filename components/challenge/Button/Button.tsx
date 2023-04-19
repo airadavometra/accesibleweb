@@ -6,7 +6,7 @@ import s from "./Button.module.css";
 type ButtonProps = {
   text: string;
   icon?: ReactNode;
-  onClick: () => void;
+  onClick?: () => void;
   className?: string;
   type: "primary" | "secondary" | "icon";
 };
