@@ -6,6 +6,7 @@ import { StickyBanner } from "../StickyBanner/StickyBanner";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import s from "./Layout.module.css";
+import { RemindTaskModal } from "../RemindTaskModal/RemindTaskModal";
 
 type LayoutProps = {
   children: ReactNode;
@@ -26,6 +27,7 @@ export const Layout = ({ children }: LayoutProps) => {
   const [selectedMenuItemId, setSelectedMenuItemId] = useState<
     number | undefined
   >();
+  const [remindTaskOpen, setRemindTaskOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -51,15 +53,22 @@ export const Layout = ({ children }: LayoutProps) => {
   const onMenuItemClick = (newMenuItemId: number) => {
     setSelectedMenuItemId(newMenuItemId);
   };
+
   return (
     <>
       <PageHead />
-      <StickyBanner />
+      <StickyBanner onRemindTask={() => setRemindTaskOpen(true)} />
       <div className={s.layout}>
         <Header navigation={navigation} onMenuItemClick={onMenuItemClick} />
         {children}
         <Footer navigation={navigation} onMenuItemClick={onMenuItemClick} />
       </div>
+      {remindTaskOpen && (
+        <RemindTaskModal
+          isOpen={remindTaskOpen}
+          onClose={() => setRemindTaskOpen(false)}
+        />
+      )}
     </>
   );
 };

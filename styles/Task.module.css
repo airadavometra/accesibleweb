@@ -16,28 +16,6 @@
 .challenge {
   font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
 }
-.blobGroup {
-  width: fit-content;
-  height: fit-content;
-  margin-left: auto;
-  margin-top: 2rem;
-  position: relative;
-}
-.button {
-  width: 256px;
-  height: 256px;
-  position: relative;
-  font-size: clamp(1rem, 6vw + 0rem, 2rem);
-  font-weight: 600;
-  color: var(--color);
-}
-.buttonText {
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
-  position: absolute;
-  inset: 0;
-}
 @media (max-width: 48rem) {
   .description {
     grid-template-columns: 1fr;
