@@ -2,9 +2,9 @@ import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { SendArrow } from "@/icons/SendArrow";
 import { NavigationItem } from "@/types/navigationItem";
 import Link from "next/link";
-import { Button } from "../Button/Button";
 import s from "./Footer.module.css";
 import { Input } from "../Input/Input";
+import { useState } from "react";
 
 type FooterProps = {
   navigation: NavigationItem[];
@@ -12,6 +12,8 @@ type FooterProps = {
 };
 
 export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
+  const [email, setEmail] = useState<string>();
+
   return (
     <footer className={s.footer}>
       <WidthContainer className={s.widthContainer}>
@@ -48,6 +50,8 @@ export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
               buttonAction="Subscribe"
               buttonIcon={<SendArrow className={s.arrow} />}
               color="white"
+              value={email}
+              onChange={(newValue?: string) => setEmail(newValue)}
             />
           </section>
         </div>
