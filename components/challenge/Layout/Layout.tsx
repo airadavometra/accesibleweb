@@ -7,6 +7,7 @@ import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import s from "./Layout.module.css";
 import { RemindTaskModal } from "../RemindTaskModal/RemindTaskModal";
+import { EndChallengeModal } from "../EndChallengeModal/EndChallengeModal";
 
 type LayoutProps = {
   children: ReactNode;
@@ -28,6 +29,7 @@ export const Layout = ({ children }: LayoutProps) => {
     number | undefined
   >();
   const [remindTaskOpen, setRemindTaskOpen] = useState<boolean>(false);
+  const [endChallengeOpen, setEndChallengeOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -57,7 +59,10 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <PageHead />
-      <StickyBanner onRemindTask={() => setRemindTaskOpen(true)} />
+      <StickyBanner
+        onRemindTask={() => setRemindTaskOpen(true)}
+        onEndChallenge={() => setEndChallengeOpen(true)}
+      />
       <div className={s.layout}>
         <Header navigation={navigation} onMenuItemClick={onMenuItemClick} />
         {children}
@@ -67,6 +72,12 @@ export const Layout = ({ children }: LayoutProps) => {
         <RemindTaskModal
           isOpen={remindTaskOpen}
           onClose={() => setRemindTaskOpen(false)}
+        />
+      )}
+      {endChallengeOpen && (
+        <EndChallengeModal
+          isOpen={endChallengeOpen}
+          onClose={() => setEndChallengeOpen(false)}
         />
       )}
     </>

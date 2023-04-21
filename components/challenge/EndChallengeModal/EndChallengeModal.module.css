@@ -16,7 +16,12 @@
 .title {
   font-size: 2rem;
 }
-
+.buttonsGroup {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
 @media (max-width: 48rem) {
   .modal {
     max-width: 100%;

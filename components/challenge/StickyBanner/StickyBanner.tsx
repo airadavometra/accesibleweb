@@ -3,19 +3,17 @@ import s from "./StickyBanner.module.css";
 
 type StickeHeaderProps = {
   onRemindTask: () => void;
+  onEndChallenge: () => void;
 };
 
-export const StickyBanner = ({ onRemindTask }: StickeHeaderProps) => {
+export const StickyBanner = ({
+  onRemindTask,
+  onEndChallenge,
+}: StickeHeaderProps) => {
   return (
     <div className={s.stickyHeader}>
       <Button text="Remind task" onClick={onRemindTask} type="secondary" />
-      <Button
-        text="Give up"
-        onClick={function (): void {
-          throw new Error("Function not implemented.");
-        }}
-        type="primary"
-      />
+      <Button text="End challenge" onClick={onEndChallenge} type="primary" />
     </div>
   );
 };
