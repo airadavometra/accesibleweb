@@ -55,3 +55,17 @@
   width: 1rem;
   fill: black;
 }
+
+@media (max-width: 48rem) {
+  .content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .descriptionSection {
+    padding: 0;
+    gap: 1rem;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+}

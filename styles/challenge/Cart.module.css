@@ -96,3 +96,42 @@
   font-family: var(--challenge-font);
   font-size: 0.75rem;
 }
+
+@media (max-width: 48rem) {
+  .title {
+    font-size: 2rem;
+  }
+  .continueShoppingLink {
+    text-decoration: underline;
+  }
+  .subtotalContainer {
+    align-items: center;
+  }
+  .mobileCart {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .tableHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cartItem {
+    display: flex;
+    gap: 1rem;
+  }
+  .productInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .interactiveContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}

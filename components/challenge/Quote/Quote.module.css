@@ -40,3 +40,17 @@
   font-family: var(--challenge-font);
   text-transform: uppercase;
 }
+
+@media (max-width: 48rem) {
+  .widthContainer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .imageContainer {
+    border: 1px solid black;
+    border-bottom: none;
+  }
+  .quoteSection {
+    padding: 2rem;
+  }
+}

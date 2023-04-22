@@ -20,3 +20,9 @@
   outline: 1px solid white;
   font-family: var(--challenge-font);
 }
+
+@media (max-width: 48rem) {
+  .text {
+    font-size: 2rem;
+  }
+}

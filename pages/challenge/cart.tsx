@@ -10,9 +10,11 @@ import { Button } from "@/components/challenge/Button/Button";
 import classNames from "classnames";
 import { Delete } from "@/icons/Delete";
 import { useRouter } from "next/router";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const CartPage: NextPage = () => {
   const router = useRouter();
+
   const { cart, removeProduct, updateProductQuantity, setCheckoutCart } =
     useChallengeStore((state) => ({
       cart: state.cart,
@@ -20,6 +22,8 @@ const CartPage: NextPage = () => {
       updateProductQuantity: state.updateProductQuantity,
       setCheckoutCart: state.setCheckoutCart,
     }));
+
+  const isMobile = useMediaQuery("(max-width: 48rem)");
 
   return (
     <main className={s.main}>
@@ -34,13 +38,14 @@ const CartPage: NextPage = () => {
                 Continue shopping
               </Link>
             </div>
-            <section className={s.grid}>
-              <span className={s.gridHeader}>product</span>
-              <span className={s.gridHeader}>quantity</span>
-              <span className={classNames(s.gridHeader, s.right)}>total</span>
-              {cart.map((item) => (
-                <>
-                  <div className={s.product}>
+            {isMobile ? (
+              <section className={s.mobileCart}>
+                <div className={s.tableHeader}>
+                  <span className={s.gridHeader}>product</span>
+                  <span className={s.gridHeader}>total</span>
+                </div>
+                {cart.map((item) => (
+                  <div key={item.id} className={s.cartItem}>
                     <div className={s.imageContainer}>
                       <Image
                         className={s.image}
@@ -49,64 +54,122 @@ const CartPage: NextPage = () => {
                         fill
                       />
                     </div>
-                    <div className={s.productInfo}>
-                      <span className={s.productName}>{item.name}</span>
-                      <span>${item.price}</span>
+                    <div className={s.interactiveContainer}>
+                      <div className={s.productInfoContainer}>
+                        <div className={s.productInfo}>
+                          <span className={s.productName}>{item.name}</span>
+                          <span>${item.price}</span>
+                        </div>
+                        <span className={s.total}>
+                          ${item.price * item.quantity}
+                        </span>
+                      </div>
+                      <div className={s.buttons}>
+                        <QuantityButton
+                          quantity={item.quantity}
+                          disabled={
+                            item.availableQuantity === item.quantity
+                              ? "increase"
+                              : item.quantity === 0
+                              ? "decrease"
+                              : "none"
+                          }
+                          increase={() =>
+                            updateProductQuantity(item.id, item.quantity + 1)
+                          }
+                          decrease={() =>
+                            updateProductQuantity(item.id, item.quantity - 1)
+                          }
+                        />
+                        <Button
+                          text="Delete from cart"
+                          onClick={() => removeProduct(item.id)}
+                          type={"icon"}
+                          icon={<Delete className={s.icon} />}
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div className={s.buttons}>
-                    <QuantityButton
-                      quantity={item.quantity}
-                      disabled={
-                        item.availableQuantity === item.quantity
-                          ? "increase"
-                          : item.quantity === 0
-                          ? "decrease"
-                          : "none"
-                      }
-                      increase={() =>
-                        updateProductQuantity(item.id, item.quantity + 1)
-                      }
-                      decrease={() =>
-                        updateProductQuantity(item.id, item.quantity - 1)
-                      }
-                    />
-                    <Button
-                      text="Delete from cart"
-                      onClick={() => removeProduct(item.id)}
-                      type={"icon"}
-                      icon={<Delete className={s.icon} />}
-                    />
-                  </div>
-                  <span className={classNames(s.total, s.right)}>
-                    ${item.price * item.quantity}
-                  </span>
-                </>
-              ))}
+                ))}
+              </section>
+            ) : (
+              <section className={s.grid}>
+                <span className={s.gridHeader}>product</span>
+                <span className={s.gridHeader}>quantity</span>
+                <span className={classNames(s.gridHeader, s.right)}>total</span>
+                {cart.map((item) => (
+                  <>
+                    <div className={s.product}>
+                      <div className={s.imageContainer}>
+                        <Image
+                          className={s.image}
+                          src={item.imgSrc}
+                          alt={item.name}
+                          fill
+                        />
+                      </div>
+                      <div className={s.productInfo}>
+                        <span className={s.productName}>{item.name}</span>
+                        <span>${item.price}</span>
+                      </div>
+                    </div>
+                    <div className={s.buttons}>
+                      <QuantityButton
+                        quantity={item.quantity}
+                        disabled={
+                          item.availableQuantity === item.quantity
+                            ? "increase"
+                            : item.quantity === 0
+                            ? "decrease"
+                            : "none"
+                        }
+                        increase={() =>
+                          updateProductQuantity(item.id, item.quantity + 1)
+                        }
+                        decrease={() =>
+                          updateProductQuantity(item.id, item.quantity - 1)
+                        }
+                      />
+                      <Button
+                        text="Delete from cart"
+                        onClick={() => removeProduct(item.id)}
+                        type={"icon"}
+                        icon={<Delete className={s.icon} />}
+                      />
+                    </div>
+                    <span className={classNames(s.total, s.right)}>
+                      ${item.price * item.quantity}
+                    </span>
+                  </>
+                ))}
+              </section>
+            )}
+            <div className={s.border} />
+            <section className={s.subtotalContainer}>
+              <span className={s.subtotal}>
+                Subtotal
+                <span className={s.subtotalSum}>
+                  {"  "}$
+                  {cart.reduce(
+                    (sum, item) => sum + item.price * item.quantity,
+                    0
+                  )}
+                </span>
+              </span>
+              <span className={s.disclamer}>
+                Taxes and shipping calculated at checkout
+              </span>
+              <Button
+                text="Check out"
+                type="primary"
+                onClick={() => {
+                  setCheckoutCart(cart);
+                  router.push("/challenge/checkout");
+                }}
+              />
             </section>
           </>
         )}
-        <div className={s.border} />
-        <section className={s.subtotalContainer}>
-          <span className={s.subtotal}>
-            Subtotal
-            <span className={s.subtotalSum}>
-              {"  "}$
-              {cart.reduce((sum, item) => sum + item.price * item.quantity, 0)}
-            </span>
-          </span>
-          <span className={s.disclamer}>
-            Taxes and shipping calculated at checkout
-          </span>
-          <Button
-            text="Check out"
-            type="primary"
-            onClick={() => {
-              setCheckoutCart(cart);
-              router.push("/challenge/checkout");
-            }}
-          />
-        </section>
       </WidthContainer>
     </main>
   );

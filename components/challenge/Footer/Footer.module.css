@@ -29,6 +29,7 @@
 .title {
   font-size: 1.5rem;
   font-weight: 600;
+  white-space: nowrap;
 }
 .navigation {
   padding: 0;
@@ -84,4 +85,26 @@
   width: 1.25rem;
   fill: white;
   opacity: 0.5;
+}
+
+@media (max-width: 48rem) {
+  .footer {
+    padding: 2rem 0;
+  }
+  .widthContainer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footerContent {
+    gap: 3rem;
+  }
+  .logoAndRights {
+    gap: 0.5rem;
+  }
+  .mailSection {
+    gap: 0.5rem;
+  }
+  .linksAndMission {
+    gap: 3rem;
+  }
 }
