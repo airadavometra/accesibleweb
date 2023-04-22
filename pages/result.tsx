@@ -52,7 +52,15 @@ const ResultPage: NextPage = () => {
             praesentium?
           </p>
         </section>
-        <BlobButton text="Other challenges" onClick={onButtonClick} />
+        <BlobButton
+          text={
+            <>
+              Other
+              <br /> challenges
+            </>
+          }
+          onClick={onButtonClick}
+        />
       </main>
     </WidthContainer>
   ) : null;
