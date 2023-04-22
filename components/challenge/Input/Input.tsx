@@ -3,7 +3,7 @@ import { SendArrow } from "@/icons/SendArrow";
 import { NavigationItem } from "@/types/navigationItem";
 import { Button } from "../Button/Button";
 import s from "./Input.module.css";
-import { ReactNode } from "react";
+import { HTMLInputTypeAttribute, ReactNode } from "react";
 import classNames from "classnames";
 
 type InputProps = {
@@ -12,6 +12,8 @@ type InputProps = {
   buttonIcon?: ReactNode;
   color: "black" | "white";
   value?: string;
+  type: HTMLInputTypeAttribute;
+  required?: boolean;
   onChange: (newValue?: string) => void;
 };
 
@@ -21,6 +23,8 @@ export const Input = ({
   buttonIcon,
   color,
   value,
+  type,
+  required,
   onChange,
 }: InputProps) => {
   return (
@@ -32,6 +36,8 @@ export const Input = ({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.target.value)
         }
+        type={type}
+        required={required}
       />
       {buttonAction && buttonIcon && (
         <Button text={buttonAction} type="icon" icon={buttonIcon} />

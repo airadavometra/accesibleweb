@@ -52,6 +52,7 @@ export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
               color="white"
               value={email}
               onChange={(newValue?: string) => setEmail(newValue)}
+              type={"email"}
             />
           </section>
         </div>

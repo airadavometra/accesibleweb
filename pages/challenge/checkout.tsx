@@ -5,16 +5,21 @@ import { useChallengeStore } from "@/state/useChallenge";
 import { Button } from "@/components/challenge/Button/Button";
 import { useRouter } from "next/router";
 import { Input } from "@/components/challenge/Input/Input";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 const SHIPPING_PRICE = 1.25;
 
 const CheckoutPage: NextPage = () => {
   const router = useRouter();
-  const { cart, setCheckoutCart } = useChallengeStore((state) => ({
-    cart: state.cart,
-    setCheckoutCart: state.setCheckoutCart,
-  }));
+
+  const { cart, setCheckoutCart, setFinishTime, setIsSuccessfulTrue } =
+    useChallengeStore((state) => ({
+      cart: state.cart,
+      setCheckoutCart: state.setCheckoutCart,
+      setFinishTime: state.setFinishTime,
+      setIsSuccessfulTrue: state.setIsSuccessfulTrue,
+    }));
+
   const [firstName, setFirstName] = useState<string>();
   const [lastName, setLastName] = useState<string>();
   const [email, setEmail] = useState<string>();
@@ -32,6 +37,40 @@ const CheckoutPage: NextPage = () => {
     [cart]
   );
 
+  const onPayClick = useCallback(() => {
+    setFinishTime(new Date());
+    if (
+      firstName &&
+      lastName &&
+      email &&
+      address &&
+      country &&
+      city &&
+      region &&
+      zipCode
+    ) {
+      setIsSuccessfulTrue();
+    }
+    router.push("/result");
+  }, [
+    firstName,
+    lastName,
+    email,
+    address,
+    country,
+    city,
+    region,
+    zipCode,
+    setFinishTime,
+    setIsSuccessfulTrue,
+    router,
+  ]);
+
+  const onBackToCartClick = useCallback(() => {
+    setCheckoutCart([]);
+    router.push("/challenge/cart");
+  }, [setCheckoutCart, router]);
+
   return (
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
@@ -45,12 +84,16 @@ const CheckoutPage: NextPage = () => {
                 color="black"
                 value={firstName}
                 onChange={(newValue?: string) => setFirstName(newValue)}
+                type={"text"}
+                required
               />
               <Input
                 placeholder="Last name"
                 color="black"
                 value={lastName}
                 onChange={(newValue?: string) => setLastName(newValue)}
+                type={"text"}
+                required
               />
               <div className={s.inputGroup}>
                 <Input
@@ -58,12 +101,15 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={email}
                   onChange={(newValue?: string) => setEmail(newValue)}
+                  type={"email"}
+                  required
                 />
                 <Input
                   placeholder="Phone (optional)"
                   color="black"
                   value={phone}
                   onChange={(newValue?: string) => setPhone(newValue)}
+                  type={"tel"}
                 />
               </div>
             </div>
@@ -74,12 +120,15 @@ const CheckoutPage: NextPage = () => {
                 color="black"
                 value={address}
                 onChange={(newValue?: string) => setAddress(newValue)}
+                type={"text"}
+                required
               />
               <Input
                 placeholder="Apartment, suite, etc (optional)"
                 color="black"
                 value={apartment}
                 onChange={(newValue?: string) => setApartment(newValue)}
+                type={"text"}
               />
               <div className={s.inputGroup}>
                 <Input
@@ -87,12 +136,16 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={country}
                   onChange={(newValue?: string) => setCountry(newValue)}
+                  type={"text"}
+                  required
                 />
                 <Input
                   placeholder="City"
                   color="black"
                   value={city}
                   onChange={(newValue?: string) => setCity(newValue)}
+                  type={"text"}
+                  required
                 />
               </div>
               <div className={s.inputGroup}>
@@ -101,12 +154,16 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={region}
                   onChange={(newValue?: string) => setRegion(newValue)}
+                  type={"text"}
+                  required
                 />
                 <Input
                   placeholder="ZIP code"
                   color="black"
                   value={zipCode}
                   onChange={(newValue?: string) => setZipCode(newValue)}
+                  type={"text"}
+                  required
                 />
               </div>
             </div>
@@ -119,6 +176,7 @@ const CheckoutPage: NextPage = () => {
                 color="black"
                 value={discountCode}
                 onChange={(newValue?: string) => setDiscountCode(newValue)}
+                type={"text"}
               />
               <div className={s.border} />
               <span className={s.subtotal}>
@@ -142,19 +200,10 @@ const CheckoutPage: NextPage = () => {
               </span>
             </div>
             <div className={s.buttonsGroup}>
-              <Button
-                text="Pay"
-                onClick={function (): void {
-                  throw new Error("Function not implemented.");
-                }}
-                type="primary"
-              />
+              <Button text="Pay" onClick={onPayClick} type="primary" />
               <Button
                 text="Back to cart"
-                onClick={() => {
-                  setCheckoutCart([]);
-                  router.push("/challenge/cart");
-                }}
+                onClick={onBackToCartClick}
                 type="secondary"
               />
             </div>
