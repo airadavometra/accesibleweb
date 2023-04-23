@@ -21,7 +21,7 @@
   margin: auto;
   position: absolute;
   inset: 0;
-  font-size: 4rem;
+  font-size: clamp(2rem, 3vw + 0.5rem, 3rem);
   font-weight: 600;
   color: white;
   text-align: center;
@@ -36,7 +36,7 @@
     object-fit: cover;
   }
   .text {
-    max-width: 90%;
+    max-width: 80%;
     font-size: 2rem;
   }
 }
