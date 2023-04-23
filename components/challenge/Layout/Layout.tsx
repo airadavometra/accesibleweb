@@ -1,6 +1,5 @@
 import { PageHead } from "@/components/PageHead/PageHead";
 import { NavigationItem } from "@/types/navigationItem";
-import { useRouter } from "next/router";
 import { ReactNode, useEffect, useState } from "react";
 import { StickyBanner } from "../StickyBanner/StickyBanner";
 import { Footer } from "../Footer/Footer";
@@ -8,6 +7,7 @@ import { Header } from "../Header/Header";
 import s from "./Layout.module.css";
 import { RemindTaskModal } from "../RemindTaskModal/RemindTaskModal";
 import { EndChallengeModal } from "../EndChallengeModal/EndChallengeModal";
+import { useChallengeStore } from "@/state/useChallenge";
 
 type LayoutProps = {
   children: ReactNode;
@@ -24,12 +24,10 @@ export const navigation: NavigationItem[] = [
 ];
 
 export const Layout = ({ children }: LayoutProps) => {
-  const router = useRouter();
-  const [selectedMenuItemId, setSelectedMenuItemId] = useState<
-    number | undefined
-  >();
   const [remindTaskOpen, setRemindTaskOpen] = useState<boolean>(false);
   const [endChallengeOpen, setEndChallengeOpen] = useState<boolean>(false);
+
+  const filter = useChallengeStore((state) => state.filter);
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -42,19 +40,16 @@ export const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   useEffect(() => {
-    const selectedMenuItem = navigation.find(
-      (nav) => nav.path === router.pathname
-    );
-    if (selectedMenuItem) {
-      setSelectedMenuItemId(selectedMenuItem.id);
-    } else {
-      setSelectedMenuItemId(undefined);
+    const layout = document.getElementById("layout");
+    if (layout) {
+      switch (filter) {
+        case "blurredvision": {
+          layout.style.filter = "blur(3px)";
+          break;
+        }
+      }
     }
-  }, [router.pathname]);
-
-  const onMenuItemClick = (newMenuItemId: number) => {
-    setSelectedMenuItemId(newMenuItemId);
-  };
+  }, [filter]);
 
   return (
     <>
@@ -63,10 +58,10 @@ export const Layout = ({ children }: LayoutProps) => {
         onRemindTask={() => setRemindTaskOpen(true)}
         onEndChallenge={() => setEndChallengeOpen(true)}
       />
-      <div className={s.layout}>
-        <Header navigation={navigation} onMenuItemClick={onMenuItemClick} />
+      <div id="layout" className={s.layout}>
+        <Header navigation={navigation} />
         {children}
-        <Footer navigation={navigation} onMenuItemClick={onMenuItemClick} />
+        <Footer navigation={navigation} />
       </div>
       {remindTaskOpen && (
         <RemindTaskModal

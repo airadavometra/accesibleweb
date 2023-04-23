@@ -8,10 +8,9 @@ import { useState } from "react";
 
 type FooterProps = {
   navigation: NavigationItem[];
-  onMenuItemClick: (newMenuItemId: number) => void;
 };
 
-export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
+export const Footer = ({ navigation }: FooterProps) => {
   const [email, setEmail] = useState<string>();
 
   return (
@@ -24,11 +23,7 @@ export const Footer = ({ navigation, onMenuItemClick }: FooterProps) => {
               <ul className={s.navigation}>
                 {navigation.map(({ id, title, path }) => (
                   <li key={id}>
-                    <Link
-                      href={path}
-                      onClick={() => onMenuItemClick(id)}
-                      className={s.link}
-                    >
+                    <Link href={path} className={s.link}>
                       {title}
                     </Link>
                   </li>

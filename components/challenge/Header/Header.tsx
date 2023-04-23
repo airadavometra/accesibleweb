@@ -9,10 +9,9 @@ import { useMemo } from "react";
 
 type HeaderProps = {
   navigation: NavigationItem[];
-  onMenuItemClick: (newMenuItemId: number) => void;
 };
 
-export const Header = ({ navigation, onMenuItemClick }: HeaderProps) => {
+export const Header = ({ navigation }: HeaderProps) => {
   const cart = useChallengeStore((state) => state.cart);
 
   const cartCount = useMemo(
@@ -30,11 +29,7 @@ export const Header = ({ navigation, onMenuItemClick }: HeaderProps) => {
           <ul className={s.navigation}>
             {navigation.map(({ id, title, path }) => (
               <li className={s.linkContainer} key={id}>
-                <Link
-                  href={path}
-                  onClick={() => onMenuItemClick(id)}
-                  className={s.link}
-                >
+                <Link href={path} className={s.link}>
                   {title}
                 </Link>
               </li>
