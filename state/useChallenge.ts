@@ -33,6 +33,11 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
   cart: [],
   addProduct: (product, quantity) =>
     set((state) => {
+      if (quantity === 0) {
+        return {
+          cart: state.cart,
+        };
+      }
       const productIndex = state.cart.findIndex(
         (item) => item.id === product.id
       );
@@ -46,13 +51,8 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
         };
       }
 
-      if (quantity > 0) {
-        return {
-          cart: [...state.cart, { quantity: quantity, ...product }],
-        };
-      }
       return {
-        cart: state.cart,
+        cart: [...state.cart, { quantity: quantity, ...product }],
       };
     }),
   removeProduct: (productId) =>

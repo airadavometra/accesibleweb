@@ -4,7 +4,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import { Button } from "../Button/Button";
 import s from "./ProductInfo.module.css";
-import { useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useRouter } from "next/router";
 import { useChallengeStore } from "@/state/useChallenge";
 import { QuantityButton } from "../QuantityButton/QuantityButton";
@@ -15,24 +15,19 @@ type ProductInfoProps = {
 
 export const ProductInfo = ({ product }: ProductInfoProps) => {
   const router = useRouter();
-  const { addProduct, setCheckoutCart, cart } = useChallengeStore((state) => ({
+  const { addProduct, setCheckoutCart } = useChallengeStore((state) => ({
     addProduct: state.addProduct,
     setCheckoutCart: state.setCheckoutCart,
-    cart: state.cart,
   }));
   const [quantity, setQuantity] = useState<number>(1);
-  const [inCart, setInCart] = useState<boolean>(false);
 
-  useEffect(() => {
-    const cartProduct = cart.find((item) => item.id === product.id);
-    if (cartProduct) {
-      setQuantity(cartProduct.quantity);
-      setInCart(true);
-    } else {
+  const onAddProductClick = useCallback(
+    (product: Product, quantity: number) => {
+      addProduct(product, quantity);
       setQuantity(1);
-      setInCart(false);
-    }
-  }, [cart, product]);
+    },
+    [addProduct, setQuantity]
+  );
 
   return (
     <section className={s.main}>
@@ -69,8 +64,8 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
               />
             </div>
             <Button
-              text={inCart ? "Update cart" : "Add to cart"}
-              onClick={() => addProduct(product, quantity)}
+              text={"Add to cart"}
+              onClick={() => onAddProductClick(product, quantity)}
               type="secondary"
             />
             <Button
