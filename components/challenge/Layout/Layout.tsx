@@ -44,7 +44,7 @@ export const Layout = ({ children }: LayoutProps) => {
     if (layout) {
       switch (filter) {
         case "blurredvision": {
-          layout.style.filter = "blur(3px)";
+          layout.style.filter = "blur(2px)";
           break;
         }
       }
