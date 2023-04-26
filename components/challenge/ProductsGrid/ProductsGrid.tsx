@@ -10,8 +10,8 @@ type ProductsGridProps = {
 export const ProductsGrid = ({ products }: ProductsGridProps) => {
   return (
     <div className={s.grid}>
-      {products.map((product) => (
-        <ProductLink key={product.name} product={product} />
+      {products.map((product, index) => (
+        <ProductLink key={`${product.name}-${index}`} product={product} />
       ))}
     </div>
   );
