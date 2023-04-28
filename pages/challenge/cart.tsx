@@ -11,6 +11,7 @@ import classNames from "classnames";
 import { Delete } from "@/icons/Delete";
 import { useRouter } from "next/router";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { Fragment } from "react";
 
 const CartPage: NextPage = () => {
   const router = useRouter();
@@ -98,7 +99,7 @@ const CartPage: NextPage = () => {
                 <span className={s.gridHeader}>quantity</span>
                 <span className={classNames(s.gridHeader, s.right)}>total</span>
                 {cart.map((item) => (
-                  <>
+                  <Fragment key={item.id}>
                     <div className={s.product}>
                       <div className={s.imageContainer}>
                         <Image
@@ -140,7 +141,7 @@ const CartPage: NextPage = () => {
                     <span className={classNames(s.total, s.right)}>
                       ${item.price * item.quantity}
                     </span>
-                  </>
+                  </Fragment>
                 ))}
               </section>
             )}
