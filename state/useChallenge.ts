@@ -2,7 +2,7 @@ import { Product } from "@/types/challenge/product";
 import { Filter } from "@/types/filter";
 import { create } from "zustand";
 
-type CartProduct = Product & { quantity: number };
+export type CartProduct = Product & { quantity: number };
 
 type ChallengeStore = {
   filter?: Filter;

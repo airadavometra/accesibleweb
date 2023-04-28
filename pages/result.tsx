@@ -13,7 +13,10 @@ const ResultPage: NextPage = () => {
   }>();
 
   const router = useRouter();
-  const filter = useChallengeStore((state) => state.filter);
+  const { filter, isSuccessful } = useChallengeStore((state) => ({
+    filter: state.filter,
+    isSuccessful: state.isSuccessful,
+  }));
 
   useEffect(() => {
     if (router.isReady) {
@@ -40,10 +43,7 @@ const ResultPage: NextPage = () => {
         <h1 className={s.title}>{data.title} result</h1>
         <section className={s.description}>
           <p className={s.problem}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-            nisi, ipsam impedit non sint saepe quis optio eius repudiandae
-            dolores sed voluptate maiores labore ab repellat autem minus totam
-            praesentium?
+            {isSuccessful ? "Well done!" : "Sorry, but this is the wrong order"}
           </p>
           <p className={s.challenge}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
