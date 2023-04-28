@@ -7,6 +7,8 @@ import { products } from "@/data/challenge/products";
 import { Product } from "@/types/challenge/product";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { ProductsGrid } from "@/components/challenge/ProductsGrid/ProductsGrid";
+import { useChallengeStore } from "@/state/useChallenge";
+import { challengeMap } from "@/data/challenge/challenge";
 
 const getCategoryValue = (
   category?: string | string[]
@@ -28,6 +30,7 @@ const getCategoryValue = (
 
 const CategoryPage: NextPage = () => {
   const router = useRouter();
+  const filter = useChallengeStore((state) => state.filter);
   const { category: categoryUrl } = router.query;
   const [category, setCategory] = useState<Category>();
   const [categoryProducts, setCategoryProducts] = useState<Product[]>([]);
@@ -41,14 +44,17 @@ const CategoryPage: NextPage = () => {
         return;
       }
 
+      const data = filter ? challengeMap[filter] : undefined;
+
       const filteredProducts = products.filter(
-        (item) => item.category === categoryValue
+        (item) =>
+          item.category === categoryValue && data?.productIds.includes(item.id)
       );
 
       setCategory(categoryValue);
       setCategoryProducts(filteredProducts);
     }
-  }, [categoryUrl, router]);
+  }, [categoryUrl, filter, router]);
 
   return (
     <main className={s.main}>

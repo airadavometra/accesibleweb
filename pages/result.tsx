@@ -5,7 +5,7 @@ import s from "../styles/Result.module.css";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { taskMap } from "@/data/task";
+import { challengeMap } from "@/data/challenge/challenge";
 
 const ResultPage: NextPage = () => {
   const [data, setData] = useState<{
@@ -21,7 +21,7 @@ const ResultPage: NextPage = () => {
         router.push("/");
         return;
       }
-      const data = taskMap[filter];
+      const data = challengeMap[filter];
       if (data === undefined) {
         router.push("/404");
         return;

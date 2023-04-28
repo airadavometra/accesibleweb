@@ -1,7 +1,7 @@
 import { Dialog } from "@headlessui/react";
 import s from "./RemindTaskModal.module.css";
 import { useChallengeStore } from "@/state/useChallenge";
-import { taskMap } from "@/data/task";
+import { challengeMap } from "@/data/challenge/challenge";
 import { Button } from "../Button/Button";
 
 type RemindTaskModalProps = {
@@ -12,7 +12,7 @@ type RemindTaskModalProps = {
 export const RemindTaskModal = ({ isOpen, onClose }: RemindTaskModalProps) => {
   const filter = useChallengeStore((state) => state.filter);
 
-  const data = filter ? taskMap[filter] : undefined;
+  const data = filter ? challengeMap[filter] : undefined;
 
   return (
     <Dialog className={s.modal} open={isOpen} onClose={onClose}>

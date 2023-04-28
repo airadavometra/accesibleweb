@@ -1,5 +1,5 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
-import { taskMap } from "@/data/task";
+import { challengeMap } from "@/data/challenge/challenge";
 import { useChallengeStore } from "@/state/useChallenge";
 import { Filter } from "@/types/filter";
 import type { NextPage } from "next";
@@ -51,7 +51,7 @@ const TaskPage: NextPage = () => {
         return;
       }
       setFilter(filterValue);
-      const data = taskMap[filterValue];
+      const data = challengeMap[filterValue];
       if (data === undefined) {
         router.push("/404");
         return;

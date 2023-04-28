@@ -2,15 +2,17 @@ import { Bestsellers } from "@/components/challenge/Bestsellers/Bestsellers";
 import { Hero } from "@/components/challenge/Hero/Hero";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import s from "@/styles/challenge/Home.module.css";
 import { Banner } from "@/components/challenge/Banner/Banner";
 import { Categories } from "@/components/challenge/Categories/Categories";
-import { Product } from "@/types/challenge/product";
 import { Category } from "@/types/category";
 import { Quote } from "@/components/challenge/Quote/Quote";
 import { DayOffer } from "@/components/challenge/DayOffer/DayOffer";
 import { products } from "@/data/challenge/products";
+import { challengeMap } from "@/data/challenge/challenge";
+import { Product } from "@/types/challenge/product";
+import { Challenge } from "@/types/challenge/challenge";
 
 export const categories: Category[] = [
   {
@@ -34,16 +36,37 @@ const ChallengeHome = () => {
   const router = useRouter();
   const filter = useChallengeStore((state) => state.filter);
 
+  const [challenge, setChallenge] = useState<Challenge>();
+  const [bestsetters, setBestsellers] = useState<Product[]>([]);
+  const [dayOffer, setDayOffer] = useState<Product>();
+
   useEffect(() => {
     if (filter === undefined) {
       router.push("/#try");
     }
   }, [filter, router]);
 
+  useEffect(() => {
+    if (filter) {
+      const data = filter ? challengeMap[filter] : undefined;
+      if (data) {
+        setChallenge(data);
+        setBestsellers(
+          products.filter((p) => data?.bestsellerIds.includes(p.id))
+        );
+        setDayOffer(products.find((p) => data?.dayOfferId === p.id));
+        return;
+      }
+    }
+    setChallenge(undefined);
+    setBestsellers([]);
+    setDayOffer(undefined);
+  }, [filter]);
+
   return (
     <main className={s.main}>
       <Hero />
-      <Bestsellers products={products} />
+      <Bestsellers products={bestsetters} />
       <Banner
         imgSrc="/test.png"
         text="Fruits and veggies that taste as good as they make you feel."
@@ -54,7 +77,7 @@ const ChallengeHome = () => {
         text="These fruits and veggies kickstart my day and energise my life with unbeatable freshness and flavour!"
         author="Jane S."
       />
-      <DayOffer product={products[0]} />
+      {dayOffer && <DayOffer product={dayOffer} />}
     </main>
   );
 };
