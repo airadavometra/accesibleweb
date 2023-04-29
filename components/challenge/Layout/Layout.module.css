@@ -6,3 +6,9 @@
   gap: 4rem;
   position: relative;
 }
+.blindness {
+  position: absolute;
+  inset: 0;
+  background-color: #80808090;
+  backdrop-filter: blur(100px);
+}

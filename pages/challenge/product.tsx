@@ -6,6 +6,8 @@ import { Bestsellers } from "@/components/challenge/Bestsellers/Bestsellers";
 import { products } from "@/data/challenge/products";
 import { ProductInfo } from "@/components/challenge/ProductInfo/ProductInfo";
 import { Product } from "@/types/challenge/product";
+import { challengeMap } from "@/data/challenge/challenge";
+import { useChallengeStore } from "@/state/useChallenge";
 
 const getProductIdValue = (
   productId?: string | string[]
@@ -19,8 +21,11 @@ const getProductIdValue = (
 
 const ProductPage: NextPage = () => {
   const router = useRouter();
+  const filter = useChallengeStore((state) => state.filter);
+
   const { product: productUrl } = router.query;
   const [product, setProduct] = useState<Product>();
+  const [bestsetters, setBestsellers] = useState<Product[]>([]);
 
   useEffect(() => {
     if (router.isReady) {
@@ -34,13 +39,20 @@ const ProductPage: NextPage = () => {
       const foundProduct = products.find((item) => item.id === productId);
 
       setProduct(foundProduct);
+
+      const data = filter ? challengeMap[filter] : undefined;
+      if (data) {
+        setBestsellers(
+          products.filter((p) => data?.bestsellerIds.includes(p.id))
+        );
+      }
     }
-  }, [productUrl, router]);
+  }, [filter, productUrl, router]);
 
   return (
     <main className={s.main}>
       {product ? <ProductInfo product={product} /> : "oops"}
-      <Bestsellers products={products} />
+      <Bestsellers products={bestsetters} />
     </main>
   );
 };

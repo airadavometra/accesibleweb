@@ -26,6 +26,7 @@ export const navigation: NavigationItem[] = [
 export const Layout = ({ children }: LayoutProps) => {
   const [remindTaskOpen, setRemindTaskOpen] = useState<boolean>(false);
   const [endChallengeOpen, setEndChallengeOpen] = useState<boolean>(false);
+  const [isBlindnessMode, setIsBlindnessMode] = useState<boolean>(false);
 
   const filter = useChallengeStore((state) => state.filter);
 
@@ -47,6 +48,19 @@ export const Layout = ({ children }: LayoutProps) => {
           layout.style.filter = "blur(2px)";
           break;
         }
+        case "blindness": {
+          setIsBlindnessMode(true);
+          break;
+        }
+        case "colourblindness": {
+          break;
+        }
+        case "dyslexia": {
+          break;
+        }
+        case "tremor": {
+          break;
+        }
       }
     }
   }, [filter]);
@@ -62,6 +76,7 @@ export const Layout = ({ children }: LayoutProps) => {
         <Header navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
+        {isBlindnessMode && <div className={s.blindness} aria-hidden />}
       </div>
       {remindTaskOpen && (
         <RemindTaskModal
