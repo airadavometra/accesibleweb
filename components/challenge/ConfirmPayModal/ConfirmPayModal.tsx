@@ -17,7 +17,7 @@ export const ConfirmPayModal = ({
     <Dialog className={s.modal} open={isOpen} onClose={onClose}>
       <Dialog.Panel>
         <Dialog.Title className={s.title}>
-          Do you confirm the payment?
+          This is the end of challenge
         </Dialog.Title>
         <Dialog.Description>
           Let&apos;s check if you bought everything needed for this challenge.
