@@ -6,9 +6,55 @@
   gap: 4rem;
   position: relative;
 }
-.blindness {
+
+.filter {
   position: absolute;
   inset: 0;
+  pointer-events: none;
+}
+
+.blindness {
   background-color: #80808090;
   backdrop-filter: blur(100px);
+}
+
+.protanopia {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#protanopia");
+  filter: url("../../../filters/colorBlindness.svg#protanopia");
+  color-interpolation-filters: sRGB;
+}
+.protanomaly {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#protanomaly");
+  filter: url("../../../filters/colorBlindness.svg#protanomaly");
+  color-interpolation-filters: sRGB;
+}
+.deuteranopia {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#deuteranopia");
+  filter: url("../../../filters/colorBlindness.svg#deuteranopia");
+  color-interpolation-filters: sRGB;
+}
+.deuteranomaly {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#deuteranomaly");
+  filter: url("../../../filters/colorBlindness.svg#deuteranomaly");
+  color-interpolation-filters: sRGB;
+}
+.tritanopia {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#tritanopia");
+  filter: url("../../../filters/colorBlindness.svg#tritanopia");
+  color-interpolation-filters: sRGB;
+}
+.tritanomaly {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#tritanomaly");
+  filter: url("../../../filters/colorBlindness.svg#tritanomaly");
+  color-interpolation-filters: sRGB;
+}
+.achromatopsia {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#achromatopsia");
+  filter: url("../../../filters/colorBlindness.svg#achromatopsia");
+  color-interpolation-filters: sRGB;
+}
+.achromatomaly {
+  backdrop-filter: url("../../../filters/colorBlindness.svg#achromatomaly");
+  filter: url("../../../filters/colorBlindness.svg#achromatomaly");
+  color-interpolation-filters: sRGB;
 }

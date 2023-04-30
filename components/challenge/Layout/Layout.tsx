@@ -8,10 +8,18 @@ import s from "./Layout.module.css";
 import { RemindTaskModal } from "../RemindTaskModal/RemindTaskModal";
 import { EndChallengeModal } from "../EndChallengeModal/EndChallengeModal";
 import { useChallengeStore } from "@/state/useChallenge";
+import classNames from "classnames";
 
-type LayoutProps = {
-  children: ReactNode;
-};
+const colorBlindnessModes = [
+  "protanopia",
+  "protanomaly",
+  "deuteranopia",
+  "deuteranomaly",
+  "tritanopia",
+  "tritanomaly",
+  "achromatopsia",
+  "achromatomaly",
+];
 
 export const navigation: NavigationItem[] = [
   { id: 0, title: "Fruits", path: "/challenge/category?category=fruits" },
@@ -23,10 +31,16 @@ export const navigation: NavigationItem[] = [
   { id: 2, title: "Combo", path: "/challenge/category?category=combo" },
 ];
 
+type LayoutProps = {
+  children: ReactNode;
+};
+
 export const Layout = ({ children }: LayoutProps) => {
   const [remindTaskOpen, setRemindTaskOpen] = useState<boolean>(false);
   const [endChallengeOpen, setEndChallengeOpen] = useState<boolean>(false);
+
   const [isBlindnessMode, setIsBlindnessMode] = useState<boolean>(false);
+  const [colorBlindnessMode, setColorBlindnessMode] = useState<string>();
 
   const filter = useChallengeStore((state) => state.filter);
 
@@ -53,6 +67,11 @@ export const Layout = ({ children }: LayoutProps) => {
           break;
         }
         case "colourblindness": {
+          setColorBlindnessMode(
+            colorBlindnessModes[
+              Math.floor(Math.random() * colorBlindnessModes.length)
+            ]
+          );
           break;
         }
         case "dyslexia": {
@@ -76,7 +95,15 @@ export const Layout = ({ children }: LayoutProps) => {
         <Header navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
-        {isBlindnessMode && <div className={s.blindness} aria-hidden />}
+        {isBlindnessMode && (
+          <div className={classNames(s.filter, s.blindness)} aria-hidden />
+        )}
+        {colorBlindnessMode && (
+          <div
+            className={classNames(s.filter, s[colorBlindnessMode])}
+            aria-hidden
+          />
+        )}
       </div>
       {remindTaskOpen && (
         <RemindTaskModal
