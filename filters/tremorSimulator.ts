@@ -28,11 +28,20 @@ export const simulateTremor = () => {
         cursor.style.top = e.pageY + "px";
       }
     });
-    document.addEventListener("click", (e: MouseEvent) => {
-      e.stopPropagation();
-      e.preventDefault();
-      return false;
-    });
+
+    document.addEventListener(
+      "click",
+      (e: MouseEvent) => {
+        const randomNum = Math.floor(Math.random() * 5) + 1;
+        if (randomNum !== 5) {
+          e.stopPropagation();
+          e.preventDefault();
+          return false;
+        }
+      },
+      true
+    );
+
     tremor(cursor);
   }
 };
