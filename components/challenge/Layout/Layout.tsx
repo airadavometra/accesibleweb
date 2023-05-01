@@ -11,6 +11,8 @@ import { useChallengeStore } from "@/state/useChallenge";
 import classNames from "classnames";
 import { colorBlindnessModes } from "@/filters/colorBlindnessModes";
 import { simulateTremor } from "@/filters/tremorSimulator";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { Cursor } from "@/icons/Cursor";
 
 export const navigation: NavigationItem[] = [
   { id: 0, title: "Fruits", path: "/challenge/category?category=fruits" },
@@ -33,6 +35,10 @@ export const Layout = ({ children }: LayoutProps) => {
   const [isBlindnessMode, setIsBlindnessMode] = useState<boolean>(false);
   const [colorBlindnessMode, setColorBlindnessMode] = useState<string>();
   const [isTremorMode, setIsTremorMode] = useState<boolean>(false);
+
+  const isMobileTouchScreen = useMediaQuery(
+    "(hover: none) and (pointer: coarse)"
+  );
 
   const filter = useChallengeStore((state) => state.filter);
 
@@ -79,15 +85,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
   useEffect(() => {
     if (isTremorMode) {
-      const layout = document.getElementById("layout");
-      if (layout) {
-        // layout.style.cursor = "none";
-        // const allElements = layout.querySelectorAll("*");
-        // allElements.forEach(
-        //   (element) => ((element as HTMLElement).style.cursor = "none")
-        // );
-        simulateTremor();
-      }
+      simulateTremor();
     }
   }, [isTremorMode]);
 
@@ -124,14 +122,8 @@ export const Layout = ({ children }: LayoutProps) => {
           onClose={() => setEndChallengeOpen(false)}
         />
       )}
-      {isTremorMode && (
-        <img
-          className={classNames(s.cursor, "cursor")}
-          src="http://i.stack.imgur.com/KwMGA.png"
-          alt=""
-          aria-hidden="true"
-          role="presentation"
-        />
+      {isTremorMode && !isMobileTouchScreen && (
+        <Cursor className={classNames(s.cursor, "cursor")} aria-hidden="true" />
       )}
     </>
   );
