@@ -85,7 +85,8 @@ export const Layout = ({ children }: LayoutProps) => {
 
   useEffect(() => {
     if (isTremorMode) {
-      simulateTremor();
+      const stopTremorSimulation = simulateTremor();
+      return () => stopTremorSimulation();
     }
   }, [isTremorMode]);
 

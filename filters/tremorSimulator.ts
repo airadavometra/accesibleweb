@@ -9,10 +9,8 @@ const rand = (min: number, max: number) => {
 const tremor = (cursor: HTMLElement) => {
   const adjustedX = rand(-TREMOR, TREMOR);
   const adjustedY = rand(-TREMOR * 2, TREMOR * 2);
-  if (cursor) {
-    cursor.style.marginLeft = adjustedX + "px";
-    cursor.style.marginTop = adjustedY + "px";
-  }
+  cursor.style.marginLeft = adjustedX + "px";
+  cursor.style.marginTop = adjustedY + "px";
   setTimeout(
     () => tremor(cursor),
     rand(TREMOR_SPEED, TREMOR_SPEED * TREMOR_RANGE)
@@ -21,6 +19,7 @@ const tremor = (cursor: HTMLElement) => {
 
 const click = (e: Event) => {
   const randomNum = Math.floor(Math.random() * 5) + 1;
+  console.log(randomNum);
   if (randomNum !== 5) {
     e.stopPropagation();
     e.preventDefault();
@@ -31,16 +30,21 @@ const click = (e: Event) => {
 export const simulateTremor = () => {
   const cursor = document.querySelector(".cursor") as HTMLElement;
   if (cursor) {
-    document.addEventListener("mousemove", (e: MouseEvent) => {
-      if (cursor) {
-        cursor.style.left = e.pageX + "px";
-        cursor.style.top = e.pageY + "px";
-      }
-    });
+    const onMouseMove = (e: MouseEvent) => {
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+    };
+    document.addEventListener("mousemove", onMouseMove);
 
     document.addEventListener("click", click, true);
     document.addEventListener("touchstart", click, true);
 
     tremor(cursor);
+    return () => {
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("click", click, true);
+      document.removeEventListener("touchstart", click, true);
+    };
   }
+  return () => {};
 };
