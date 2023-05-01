@@ -58,3 +58,14 @@
   filter: url("../../../filters/colorBlindness.svg#achromatomaly");
   color-interpolation-filters: sRGB;
 }
+
+.cursor {
+  display: block;
+  position: absolute;
+  transition: margin 0.2s;
+  pointer-events: none;
+}
+.tremorLayout,
+.tremorLayout * {
+  cursor: none !important;
+}

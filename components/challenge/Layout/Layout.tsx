@@ -9,17 +9,8 @@ import { RemindTaskModal } from "../RemindTaskModal/RemindTaskModal";
 import { EndChallengeModal } from "../EndChallengeModal/EndChallengeModal";
 import { useChallengeStore } from "@/state/useChallenge";
 import classNames from "classnames";
-
-const colorBlindnessModes = [
-  "protanopia",
-  "protanomaly",
-  "deuteranopia",
-  "deuteranomaly",
-  "tritanopia",
-  "tritanomaly",
-  "achromatopsia",
-  "achromatomaly",
-];
+import { colorBlindnessModes } from "@/filters/colorBlindnessModes";
+import { simulateTremor } from "@/filters/tremorSimulator";
 
 export const navigation: NavigationItem[] = [
   { id: 0, title: "Fruits", path: "/challenge/category?category=fruits" },
@@ -41,6 +32,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
   const [isBlindnessMode, setIsBlindnessMode] = useState<boolean>(false);
   const [colorBlindnessMode, setColorBlindnessMode] = useState<string>();
+  const [isTremorMode, setIsTremorMode] = useState<boolean>(false);
 
   const filter = useChallengeStore((state) => state.filter);
 
@@ -78,11 +70,26 @@ export const Layout = ({ children }: LayoutProps) => {
           break;
         }
         case "tremor": {
+          setIsTremorMode(true);
           break;
         }
       }
     }
   }, [filter]);
+
+  useEffect(() => {
+    if (isTremorMode) {
+      const layout = document.getElementById("layout");
+      if (layout) {
+        // layout.style.cursor = "none";
+        // const allElements = layout.querySelectorAll("*");
+        // allElements.forEach(
+        //   (element) => ((element as HTMLElement).style.cursor = "none")
+        // );
+        simulateTremor();
+      }
+    }
+  }, [isTremorMode]);
 
   return (
     <>
@@ -91,7 +98,7 @@ export const Layout = ({ children }: LayoutProps) => {
         onRemindTask={() => setRemindTaskOpen(true)}
         onEndChallenge={() => setEndChallengeOpen(true)}
       />
-      <div id="layout" className={s.layout}>
+      <div id="layout" className={classNames(s.layout, s[`${filter}Layout`])}>
         <Header navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
@@ -115,6 +122,15 @@ export const Layout = ({ children }: LayoutProps) => {
         <EndChallengeModal
           isOpen={endChallengeOpen}
           onClose={() => setEndChallengeOpen(false)}
+        />
+      )}
+      {isTremorMode && (
+        <img
+          className={classNames(s.cursor, "cursor")}
+          src="http://i.stack.imgur.com/KwMGA.png"
+          alt=""
+          aria-hidden="true"
+          role="presentation"
         />
       )}
     </>
