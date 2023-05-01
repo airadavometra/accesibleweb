@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import s from "./Button.module.css";
 
 type ButtonProps = {
+  id?: string;
   text: string;
   icon?: ReactNode;
   onClick?: () => void;
@@ -12,6 +13,7 @@ type ButtonProps = {
 };
 
 export const Button = ({
+  id,
   text,
   icon,
   onClick,
@@ -19,7 +21,11 @@ export const Button = ({
   type,
 }: ButtonProps) => {
   return (
-    <button className={classNames(s[type], className)} onClick={onClick}>
+    <button
+      id={id}
+      className={classNames(s[type], className)}
+      onClick={onClick}
+    >
       {type === "icon" ? (
         <>
           {icon}

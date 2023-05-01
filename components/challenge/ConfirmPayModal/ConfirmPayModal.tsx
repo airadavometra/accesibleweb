@@ -24,8 +24,18 @@ export const ConfirmPayModal = ({
           <br /> Your cart is going to be validated now.
         </Dialog.Description>
         <div className={s.buttonsGroup}>
-          <Button onClick={onOk} text={"OK"} type={"primary"} />
-          <Button onClick={onClose} text={"Cancel"} type={"secondary"} />
+          <Button
+            id="service-confirm-pay"
+            onClick={onOk}
+            text={"OK"}
+            type={"primary"}
+          />
+          <Button
+            id="service-not-conform-pay"
+            onClick={onClose}
+            text={"Cancel"}
+            type={"secondary"}
+          />
         </div>
       </Dialog.Panel>
     </Dialog>

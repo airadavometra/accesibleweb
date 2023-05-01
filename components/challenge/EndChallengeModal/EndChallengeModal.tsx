@@ -28,8 +28,18 @@ export const EndChallengeModal = ({
           You want to end the challenge?
         </Dialog.Title>
         <div className={s.buttonsGroup}>
-          <Button onClick={endChallenge} text={"Yes"} type={"primary"} />
-          <Button onClick={onClose} text={"No"} type={"secondary"} />
+          <Button
+            id="service-end-challenge"
+            onClick={endChallenge}
+            text={"Yes"}
+            type={"primary"}
+          />
+          <Button
+            id="service-continue-challenge"
+            onClick={onClose}
+            text={"No"}
+            type={"secondary"}
+          />
         </div>
       </Dialog.Panel>
     </Dialog>

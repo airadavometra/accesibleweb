@@ -20,7 +20,12 @@ export const RemindTaskModal = ({ isOpen, onClose }: RemindTaskModalProps) => {
         <Dialog.Panel>
           <Dialog.Title className={s.title}>{data.title}</Dialog.Title>
           <Dialog.Description>{data.challenge}</Dialog.Description>
-          <Button onClick={onClose} text={"Get back"} type={"secondary"} />
+          <Button
+            id="service-remind-task-close"
+            onClick={onClose}
+            text={"Get back"}
+            type={"secondary"}
+          />
         </Dialog.Panel>
       ) : (
         <Dialog.Panel>
@@ -28,7 +33,12 @@ export const RemindTaskModal = ({ isOpen, onClose }: RemindTaskModalProps) => {
           <Dialog.Description>
             Something went wrong... Please contact the support
           </Dialog.Description>
-          <Button onClick={onClose} text={"Close"} type={"secondary"} />
+          <Button
+            id="service-remind-task-close"
+            onClick={onClose}
+            text={"Close"}
+            type={"secondary"}
+          />
         </Dialog.Panel>
       )}
     </Dialog>

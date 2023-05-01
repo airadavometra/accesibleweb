@@ -12,8 +12,18 @@ export const StickyBanner = ({
 }: StickeHeaderProps) => {
   return (
     <div className={s.stickyHeader}>
-      <Button text="Remind task" onClick={onRemindTask} type="secondary" />
-      <Button text="End challenge" onClick={onEndChallenge} type="primary" />
+      <Button
+        id="service-remind-task"
+        text="Remind task"
+        onClick={onRemindTask}
+        type="secondary"
+      />
+      <Button
+        id="service-remind-task"
+        text="End challenge"
+        onClick={onEndChallenge}
+        type="primary"
+      />
     </div>
   );
 };

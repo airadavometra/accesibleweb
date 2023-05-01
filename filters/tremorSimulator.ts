@@ -18,12 +18,14 @@ const tremor = (cursor: HTMLElement) => {
 };
 
 const click = (e: Event) => {
-  const randomNum = Math.floor(Math.random() * 5) + 1;
-  console.log(randomNum);
-  if (randomNum !== 5) {
-    e.stopPropagation();
-    e.preventDefault();
-    return false;
+  const targetId = (e.target as HTMLElement)?.id;
+  if (!targetId.includes("service-")) {
+    const randomNum = Math.floor(Math.random() * 5) + 1;
+    if (randomNum !== 5) {
+      e.stopPropagation();
+      e.preventDefault();
+      return false;
+    }
   }
 };
 
