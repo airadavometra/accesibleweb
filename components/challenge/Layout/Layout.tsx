@@ -13,6 +13,7 @@ import { colorBlindnessModes } from "@/filters/colorBlindnessModes";
 import { simulateTremor } from "@/filters/tremorSimulator";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Cursor } from "@/icons/Cursor";
+import { simulateDyslexia } from "@/filters/dyslexiaSimulator";
 
 export const navigation: NavigationItem[] = [
   { id: 0, title: "Fruits", path: "/challenge/category?category=fruits" },
@@ -35,6 +36,7 @@ export const Layout = ({ children }: LayoutProps) => {
   const [isBlindnessMode, setIsBlindnessMode] = useState<boolean>(false);
   const [colorBlindnessMode, setColorBlindnessMode] = useState<string>();
   const [isTremorMode, setIsTremorMode] = useState<boolean>(false);
+  const [isDyslexiaMode, setIsDyslexiaMode] = useState<boolean>(false);
 
   const isMobileTouchScreen = useMediaQuery(
     "(hover: none) and (pointer: coarse)"
@@ -73,6 +75,7 @@ export const Layout = ({ children }: LayoutProps) => {
           break;
         }
         case "dyslexia": {
+          setIsDyslexiaMode(true);
           break;
         }
         case "tremor": {
@@ -89,6 +92,13 @@ export const Layout = ({ children }: LayoutProps) => {
       return () => stopTremorSimulation();
     }
   }, [isTremorMode]);
+
+  useEffect(() => {
+    if (isDyslexiaMode) {
+      const stopDyslexiaSimulation = simulateDyslexia();
+      return () => stopDyslexiaSimulation();
+    }
+  }, [isDyslexiaMode]);
 
   return (
     <>
@@ -124,7 +134,7 @@ export const Layout = ({ children }: LayoutProps) => {
         />
       )}
       {isTremorMode && !isMobileTouchScreen && (
-        <Cursor className={classNames(s.cursor, "cursor")} aria-hidden="true" />
+        <Cursor className={classNames(s.cursor, "cursor")} aria-hidden />
       )}
     </>
   );

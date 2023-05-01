@@ -18,8 +18,12 @@ export const RemindTaskModal = ({ isOpen, onClose }: RemindTaskModalProps) => {
     <Dialog className={s.modal} open={isOpen} onClose={onClose}>
       {data ? (
         <Dialog.Panel>
-          <Dialog.Title className={s.title}>{data.title}</Dialog.Title>
-          <Dialog.Description>{data.challenge}</Dialog.Description>
+          <Dialog.Title id="service-reming-task-title" className={s.title}>
+            {data.title}
+          </Dialog.Title>
+          <Dialog.Description id="service-reming-task-description">
+            {data.challenge}
+          </Dialog.Description>
           <Button
             id="service-remind-task-close"
             onClick={onClose}
@@ -29,8 +33,10 @@ export const RemindTaskModal = ({ isOpen, onClose }: RemindTaskModalProps) => {
         </Dialog.Panel>
       ) : (
         <Dialog.Panel>
-          <Dialog.Title className={s.title}>Oops!</Dialog.Title>
-          <Dialog.Description>
+          <Dialog.Title id="service-error-title" className={s.title}>
+            Oops!
+          </Dialog.Title>
+          <Dialog.Description id="service-error-description">
             Something went wrong... Please contact the support
           </Dialog.Description>
           <Button

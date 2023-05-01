@@ -1,19 +1,17 @@
+import { getRandomInt } from "./getRandomInt";
+
 const TREMOR = 20;
 const TREMOR_SPEED = 50;
 const TREMOR_RANGE = 2;
 
-const rand = (min: number, max: number) => {
-  return Math.random() * (max - min) + min;
-};
-
 const tremor = (cursor: HTMLElement) => {
-  const adjustedX = rand(-TREMOR, TREMOR);
-  const adjustedY = rand(-TREMOR * 2, TREMOR * 2);
+  const adjustedX = getRandomInt(-TREMOR, TREMOR);
+  const adjustedY = getRandomInt(-TREMOR * 2, TREMOR * 2);
   cursor.style.marginLeft = adjustedX + "px";
   cursor.style.marginTop = adjustedY + "px";
   setTimeout(
     () => tremor(cursor),
-    rand(TREMOR_SPEED, TREMOR_SPEED * TREMOR_RANGE)
+    getRandomInt(TREMOR_SPEED, TREMOR_SPEED * TREMOR_RANGE)
   );
 };
 

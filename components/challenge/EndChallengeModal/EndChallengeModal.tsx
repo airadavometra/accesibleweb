@@ -24,7 +24,7 @@ export const EndChallengeModal = ({
   return (
     <Dialog className={s.modal} open={isOpen} onClose={onClose}>
       <Dialog.Panel>
-        <Dialog.Title className={s.title}>
+        <Dialog.Title id="service-end-challenge-title" className={s.title}>
           You want to end the challenge?
         </Dialog.Title>
         <div className={s.buttonsGroup}>
