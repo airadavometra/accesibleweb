@@ -16,17 +16,17 @@ import { Challenge } from "@/types/challenge/challenge";
 
 export const categories: Category[] = [
   {
-    imgSrc: "/test2.png",
+    imgSrc: "/fruits.png",
     title: "Fruits",
     path: "/challenge/category?category=fruits",
   },
   {
-    imgSrc: "/test2.png",
+    imgSrc: "/vegetables.png",
     title: "Vegetables",
     path: "/challenge/category?category=vegetables",
   },
   {
-    imgSrc: "/test2.png",
+    imgSrc: "/combos.png",
     title: "Combo",
     path: "/challenge/category?category=combo",
   },
@@ -68,12 +68,12 @@ const ChallengeHome = () => {
       <Hero />
       <Bestsellers products={bestsetters} />
       <Banner
-        imgSrc="/test.png"
+        imgSrc="/salad.png"
         text="Fruits and veggies that taste as good as they make you feel."
       />
       <Categories categories={categories} />
       <Quote
-        imgSrc="/test2.png"
+        imgSrc="/quote.png"
         text="These fruits and veggies kickstart my day and energise my life with unbeatable freshness and flavour!"
         author="Jane S."
       />

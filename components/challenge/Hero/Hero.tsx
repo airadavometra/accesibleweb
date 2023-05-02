@@ -12,7 +12,7 @@ export const Hero = () => {
         <div className={classNames(s.section, s.imageContainer)}>
           <Image
             className={s.image}
-            src="/test2.png"
+            src="/hero.png"
             alt="fruits and veggies"
             fill
           />

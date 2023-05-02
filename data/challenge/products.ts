@@ -3,7 +3,7 @@ import { Product } from "@/types/challenge/product";
 export const products: Product[] = [
   {
     id: 1,
-    imgSrc: "/test2.png",
+    imgSrc: "/orange1.png",
     name: "Orange",
     price: 1.99,
     unit: "1 kg",
@@ -14,7 +14,7 @@ export const products: Product[] = [
   },
   {
     id: 2,
-    imgSrc: "/test2.png",
+    imgSrc: "/orange2.png",
     name: "Orange",
     price: 2.49,
     unit: "1 kg",
@@ -25,7 +25,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    imgSrc: "/test2.png",
+    imgSrc: "/orange3.png",
     name: "Orange",
     price: 1.29,
     unit: "1 kg",
@@ -36,7 +36,7 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    imgSrc: "/test2.png",
+    imgSrc: "/orange4.png",
     name: "Orange",
     price: 2.59,
     unit: "1 kg",
@@ -47,7 +47,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    imgSrc: "/test2.png",
+    imgSrc: "/banana.png",
     name: "Banana",
     price: 2.19,
     unit: "1 kg",
@@ -58,7 +58,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    imgSrc: "/test2.png",
+    imgSrc: "/pomegranate.png",
     name: "Pomegranate",
     price: 2.55,
     unit: "1 each",
@@ -69,7 +69,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    imgSrc: "/test2.png",
+    imgSrc: "/grapefruit.png",
     name: "Grapefruit",
     price: 1.19,
     unit: "1 each",
@@ -80,7 +80,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    imgSrc: "/test2.png",
+    imgSrc: "/pear.png",
     name: "Pear",
     price: 1.99,
     unit: "1 kg",
@@ -91,7 +91,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    imgSrc: "/test2.png",
+    imgSrc: "/kiwi.png",
     name: "Kiwi",
     price: 2.49,
     unit: "1 kg",
@@ -102,7 +102,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    imgSrc: "/test2.png",
+    imgSrc: "/lime.png",
     name: "Lime",
     price: 0.69,
     unit: "1 each",
@@ -113,7 +113,7 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    imgSrc: "/test2.png",
+    imgSrc: "/lemon.png",
     name: "Lemon",
     price: 0.69,
     unit: "1 each",
@@ -124,7 +124,7 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    imgSrc: "/test2.png",
+    imgSrc: "/lychee.png",
     name: "Lychee",
     price: 3.39,
     unit: "1 kg",
@@ -135,7 +135,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    imgSrc: "/test2.png",
+    imgSrc: "/mango.png",
     name: "Mango",
     price: 1.75,
     unit: "1 each",
@@ -146,7 +146,7 @@ export const products: Product[] = [
   },
   {
     id: 14,
-    imgSrc: "/test2.png",
+    imgSrc: "/mandarin.png",
     name: "Mandarin",
     price: 2.85,
     unit: "1 kg",
@@ -157,7 +157,7 @@ export const products: Product[] = [
   },
   {
     id: 15,
-    imgSrc: "/test2.png",
+    imgSrc: "/passionfruit.png",
     name: "Passion fruit",
     price: 3.89,
     unit: "250 gr",
@@ -168,7 +168,7 @@ export const products: Product[] = [
   },
   {
     id: 16,
-    imgSrc: "/test2.png",
+    imgSrc: "/nectarine.png",
     name: "Nectarine",
     price: 5.99,
     unit: "1 kg",
@@ -179,7 +179,7 @@ export const products: Product[] = [
   },
   {
     id: 17,
-    imgSrc: "/test2.png",
+    imgSrc: "/papaya.png",
     name: "Papaya",
     price: 3.79,
     unit: "1 each",
@@ -190,7 +190,7 @@ export const products: Product[] = [
   },
   {
     id: 18,
-    imgSrc: "/test2.png",
+    imgSrc: "/peach.png",
     name: "Peach",
     price: 6.29,
     unit: "1 kg",
@@ -201,7 +201,7 @@ export const products: Product[] = [
   },
   {
     id: 19,
-    imgSrc: "/test2.png",
+    imgSrc: "/persimmon.png",
     name: "Persimmon",
     price: 3.59,
     unit: "1 kg",
@@ -212,7 +212,7 @@ export const products: Product[] = [
   },
   {
     id: 20,
-    imgSrc: "/test2.png",
+    imgSrc: "/apple1.png",
     name: "Apple",
     price: 1.74,
     unit: "1 kg",
@@ -223,7 +223,7 @@ export const products: Product[] = [
   },
   {
     id: 21,
-    imgSrc: "/test2.png",
+    imgSrc: "/apple2.png",
     name: "Apple",
     price: 3.89,
     unit: "1 kg",
@@ -234,7 +234,7 @@ export const products: Product[] = [
   },
   {
     id: 22,
-    imgSrc: "/test2.png",
+    imgSrc: "/apple3.png",
     name: "Apple",
     price: 3.29,
     unit: "1 kg",
@@ -245,7 +245,7 @@ export const products: Product[] = [
   },
   {
     id: 23,
-    imgSrc: "/test2.png",
+    imgSrc: "/apple4.png",
     name: "Apple",
     price: 2.47,
     unit: "1 kg",
@@ -256,7 +256,7 @@ export const products: Product[] = [
   },
   {
     id: 24,
-    imgSrc: "/test2.png",
+    imgSrc: "/aubergine.png",
     name: "Aubergine",
     price: 0.92,
     unit: "1 each",
@@ -267,7 +267,7 @@ export const products: Product[] = [
   },
   {
     id: 25,
-    imgSrc: "/test2.png",
+    imgSrc: "/sweetpotato.png",
     name: "Sweet potato",
     price: 2.99,
     unit: "1 kg",
@@ -278,8 +278,8 @@ export const products: Product[] = [
   },
   {
     id: 26,
-    imgSrc: "/test2.png",
-    name: "Daikon",
+    imgSrc: "/asparagus.png",
+    name: "Asparagus",
     price: 2.99,
     unit: "1 each",
     category: "vegetables",
@@ -289,7 +289,7 @@ export const products: Product[] = [
   },
   {
     id: 27,
-    imgSrc: "/test2.png",
+    imgSrc: "/zucchini.png",
     name: "Zucchini",
     price: 0.69,
     unit: "1 each",
@@ -300,7 +300,7 @@ export const products: Product[] = [
   },
   {
     id: 28,
-    imgSrc: "/test2.png",
+    imgSrc: "/whitecabbage.png",
     name: "White cabbage",
     price: 1.29,
     unit: "1 each",
@@ -311,7 +311,7 @@ export const products: Product[] = [
   },
   {
     id: 29,
-    imgSrc: "/test2.png",
+    imgSrc: "/broccoli.png",
     name: "Broccoli",
     price: 3.48,
     unit: "1 kg",
@@ -322,7 +322,7 @@ export const products: Product[] = [
   },
   {
     id: 30,
-    imgSrc: "/test2.png",
+    imgSrc: "/brusselssprouts.png",
     name: "Brussels sprouts",
     price: 2.39,
     unit: "350 gr",
@@ -333,7 +333,7 @@ export const products: Product[] = [
   },
   {
     id: 31,
-    imgSrc: "/test2.png",
+    imgSrc: "/redcabbage.png",
     name: "Red cabbage",
     price: 1.89,
     unit: "1 kg",
@@ -344,7 +344,7 @@ export const products: Product[] = [
   },
   {
     id: 32,
-    imgSrc: "/test2.png",
+    imgSrc: "/bokchoy.png",
     name: "Bok choy",
     price: 1.45,
     unit: "1 each",
@@ -355,7 +355,7 @@ export const products: Product[] = [
   },
   {
     id: 33,
-    imgSrc: "/test2.png",
+    imgSrc: "/chinesecabbage.png",
     name: "Chinese cabbage",
     price: 2.19,
     unit: "1 each",
@@ -366,7 +366,7 @@ export const products: Product[] = [
   },
   {
     id: 34,
-    imgSrc: "/test2.png",
+    imgSrc: "/cauliflower.png",
     name: "Cauliflower",
     price: 2.44,
     unit: "1 each",
@@ -377,7 +377,7 @@ export const products: Product[] = [
   },
   {
     id: 35,
-    imgSrc: "/test2.png",
+    imgSrc: "/potato1.png",
     name: "Potato",
     price: 1.84,
     unit: "1 kg",
@@ -388,7 +388,7 @@ export const products: Product[] = [
   },
   {
     id: 36,
-    imgSrc: "/test2.png",
+    imgSrc: "/potato2.png",
     name: "Potato",
     price: 2.19,
     unit: "1 kg",
@@ -399,7 +399,7 @@ export const products: Product[] = [
   },
   {
     id: 37,
-    imgSrc: "/test2.png",
+    imgSrc: "/corn.png",
     name: "Corn",
     price: 1.89,
     unit: "1 each",
@@ -410,7 +410,7 @@ export const products: Product[] = [
   },
   {
     id: 38,
-    imgSrc: "/test2.png",
+    imgSrc: "/onion.png",
     name: "Onion",
     price: 2.89,
     unit: "2 kg",
@@ -421,7 +421,7 @@ export const products: Product[] = [
   },
   {
     id: 39,
-    imgSrc: "/test2.png",
+    imgSrc: "/carrot.png",
     name: "Carrot",
     price: 2.09,
     unit: "1 kg",
@@ -432,7 +432,7 @@ export const products: Product[] = [
   },
   {
     id: 40,
-    imgSrc: "/test2.png",
+    imgSrc: "/cucumber.png",
     name: "Cucumber",
     price: 0.89,
     unit: "1 each",
@@ -443,7 +443,7 @@ export const products: Product[] = [
   },
   {
     id: 41,
-    imgSrc: "/test2.png",
+    imgSrc: "/paprikared.png",
     name: "Paprika red",
     price: 1.39,
     unit: "1 each",
@@ -454,7 +454,7 @@ export const products: Product[] = [
   },
   {
     id: 42,
-    imgSrc: "/test2.png",
+    imgSrc: "/paprikayellow.png",
     name: "Paprika yellow",
     price: 1.35,
     unit: "1 each",
@@ -465,7 +465,7 @@ export const products: Product[] = [
   },
   {
     id: 43,
-    imgSrc: "/test2.png",
+    imgSrc: "/paprikagreen.png",
     name: "Paprika green",
     price: 1.29,
     unit: "1 each",
@@ -476,7 +476,7 @@ export const products: Product[] = [
   },
   {
     id: 44,
-    imgSrc: "/test2.png",
+    imgSrc: "/paprikaorange.png",
     name: "Paprika orange",
     price: 1.29,
     unit: "1 each",
@@ -487,8 +487,8 @@ export const products: Product[] = [
   },
   {
     id: 45,
-    imgSrc: "/test2.png",
-    name: "Tomatoes",
+    imgSrc: "/tomato1.png",
+    name: "Tomato",
     price: 4.19,
     unit: "1 kg",
     category: "vegetables",
@@ -498,8 +498,8 @@ export const products: Product[] = [
   },
   {
     id: 46,
-    imgSrc: "/test2.png",
-    name: "Tomatoes",
+    imgSrc: "/tomato2.png",
+    name: "Tomato",
     price: 3.39,
     unit: "1 kg",
     category: "vegetables",
@@ -509,8 +509,8 @@ export const products: Product[] = [
   },
   {
     id: 47,
-    imgSrc: "/test2.png",
-    name: "Tomatoes",
+    imgSrc: "/tomato3.png",
+    name: "Tomato",
     price: 2.19,
     unit: "500 gr",
     category: "vegetables",
@@ -520,8 +520,8 @@ export const products: Product[] = [
   },
   {
     id: 48,
-    imgSrc: "/test2.png",
-    name: "Tomatoes",
+    imgSrc: "/tomato4.png",
+    name: "Tomato",
     price: 1.24,
     unit: "250 gr",
     category: "vegetables",
@@ -531,7 +531,7 @@ export const products: Product[] = [
   },
   {
     id: 49,
-    imgSrc: "/test2.png",
+    imgSrc: "/radish.png",
     name: "Radish",
     price: 0.89,
     unit: "250 gr",
@@ -542,7 +542,7 @@ export const products: Product[] = [
   },
   {
     id: 50,
-    imgSrc: "/test2.png",
+    imgSrc: "/beet.png",
     name: "Beet",
     price: 0.99,
     unit: "500 gr",
@@ -553,7 +553,7 @@ export const products: Product[] = [
   },
   {
     id: 51,
-    imgSrc: "/test2.png",
+    imgSrc: "/tomatosoup.png",
     name: "Tomato soup (2 person)",
     price: 4.29,
     unit: "1 each",
@@ -564,7 +564,7 @@ export const products: Product[] = [
   },
   {
     id: 52,
-    imgSrc: "/test2.png",
+    imgSrc: "/tomatosoup.png",
     name: "Tomato soup (4 person)",
     price: 6.89,
     unit: "1 each",
@@ -575,7 +575,7 @@ export const products: Product[] = [
   },
   {
     id: 53,
-    imgSrc: "/test2.png",
+    imgSrc: "/borsch.png",
     name: "Vegetarian borsch (2 person)",
     price: 5.69,
     unit: "1 each",
@@ -586,7 +586,7 @@ export const products: Product[] = [
   },
   {
     id: 54,
-    imgSrc: "/test2.png",
+    imgSrc: "/borsch.png",
     name: "Vegetarian borsch (4 person)",
     price: 8.74,
     unit: "1 each",
@@ -597,7 +597,7 @@ export const products: Product[] = [
   },
   {
     id: 55,
-    imgSrc: "/test2.png",
+    imgSrc: "/lasagna.png",
     name: "Vegetarian lasagna (2 person)",
     price: 5.49,
     unit: "1 each",
@@ -608,7 +608,7 @@ export const products: Product[] = [
   },
   {
     id: 56,
-    imgSrc: "/test2.png",
+    imgSrc: "/lasagna.png",
     name: "Vegetarian lasagna (4 person)",
     price: 8.29,
     unit: "1 each",
@@ -619,7 +619,7 @@ export const products: Product[] = [
   },
   {
     id: 57,
-    imgSrc: "/test2.png",
+    imgSrc: "/mustardsoup.png",
     name: "Mustard soup (2 person)",
     price: 4.29,
     unit: "1 each",
@@ -630,7 +630,7 @@ export const products: Product[] = [
   },
   {
     id: 58,
-    imgSrc: "/test2.png",
+    imgSrc: "/mustardsoup.png",
     name: "Mustard soup (4 person)",
     price: 6.89,
     unit: "1 each",
@@ -641,7 +641,7 @@ export const products: Product[] = [
   },
   {
     id: 59,
-    imgSrc: "/test2.png",
+    imgSrc: "/mushroomsoup.png",
     name: "Mushroom soup (2 person)",
     price: 4.29,
     unit: "1 each",
@@ -652,7 +652,7 @@ export const products: Product[] = [
   },
   {
     id: 60,
-    imgSrc: "/test2.png",
+    imgSrc: "/mushroomsoup.png",
     name: "Mushroom soup (4 person)",
     price: 6.89,
     unit: "1 each",
