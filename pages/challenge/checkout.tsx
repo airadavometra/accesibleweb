@@ -5,7 +5,7 @@ import { CartProduct, useChallengeStore } from "@/state/useChallenge";
 import { Button } from "@/components/challenge/Button/Button";
 import { useRouter } from "next/router";
 import { Input } from "@/components/challenge/Input/Input";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { challengeMap } from "@/data/challenge/challenge";
 import { Filter } from "@/types/filter";
 import { ConfirmPayModal } from "@/components/challenge/ConfirmPayModal/ConfirmPayModal";
@@ -23,19 +23,36 @@ const validateResult = (filter: Filter, cart: CartProduct[]): boolean => {
   return false;
 };
 
+const getDiscount = (promocode: string, filter?: Filter) => {
+  const data = filter ? challengeMap[filter] : undefined;
+  if (data && data.promocode === promocode) {
+    return data.discount;
+  }
+  return undefined;
+};
+
 const SHIPPING_PRICE = 1.25;
 
 const CheckoutPage: NextPage = () => {
   const router = useRouter();
 
-  const { filter, cart, setCheckoutCart, setFinishTime, setIsSuccessfulTrue } =
-    useChallengeStore((state) => ({
-      filter: state.filter,
-      cart: state.cart,
-      setCheckoutCart: state.setCheckoutCart,
-      setFinishTime: state.setFinishTime,
-      setIsSuccessfulTrue: state.setIsSuccessfulTrue,
-    }));
+  const {
+    filter,
+    cart,
+    appliedDiscount,
+    setAppliedDiscount,
+    setCheckoutCart,
+    setFinishTime,
+    setIsSuccessfulTrue,
+  } = useChallengeStore((state) => ({
+    filter: state.filter,
+    cart: state.cart,
+    appliedDiscount: state.appliedDiscount,
+    setAppliedDiscount: state.setAppliedDiscount,
+    setCheckoutCart: state.setCheckoutCart,
+    setFinishTime: state.setFinishTime,
+    setIsSuccessfulTrue: state.setIsSuccessfulTrue,
+  }));
 
   const [firstName, setFirstName] = useState<string>();
   const [lastName, setLastName] = useState<string>();
@@ -55,6 +72,19 @@ const CheckoutPage: NextPage = () => {
     () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
     [cart]
   );
+
+  useEffect(() => {
+    if (filter === undefined) {
+      router.push("/#try");
+    }
+  }, [filter, router]);
+
+  useEffect(() => {
+    if (discountCode) {
+      const discount = getDiscount(discountCode, filter);
+      setAppliedDiscount(discount ?? 0);
+    }
+  }, [discountCode, filter, setAppliedDiscount]);
 
   const onPayClick = useCallback(() => {
     setFinishTime(new Date());
@@ -203,6 +233,13 @@ const CheckoutPage: NextPage = () => {
                   onChange={(newValue?: string) => setDiscountCode(newValue)}
                   type={"text"}
                 />
+                {discountCode !== undefined &&
+                  discountCode !== "" &&
+                  appliedDiscount === 0 && (
+                    <span className={s.errorMessage}>
+                      Invalid discount code
+                    </span>
+                  )}
                 <div className={s.border} />
                 <span className={s.subtotal}>
                   Subtotal
@@ -216,11 +253,21 @@ const CheckoutPage: NextPage = () => {
                     {"  "}${SHIPPING_PRICE}
                   </span>
                 </span>
+                {appliedDiscount > 0 && (
+                  <span className={s.subtotal}>
+                    Discount
+                    <span className={s.price}>
+                      {"  "}-{appliedDiscount}%
+                    </span>
+                  </span>
+                )}
                 <div className={s.border} />
                 <span className={s.total}>
                   Total
                   <span className={s.price}>
-                    {"  "}${SHIPPING_PRICE + subtotal}
+                    {"  "}$
+                    {(SHIPPING_PRICE + subtotal) *
+                      ((100 - appliedDiscount) / 100)}
                   </span>
                 </span>
               </div>

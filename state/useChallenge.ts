@@ -17,6 +17,8 @@ type ChallengeStore = {
   addProduct: (product: Product, quantity: number) => void;
   removeProduct: (productId: number) => void;
   updateProductQuantity: (productId: number, quantity: number) => void;
+  appliedDiscount: number;
+  setAppliedDiscount: (value: number) => void;
   checkoutCart: CartProduct[];
   setCheckoutCart: (checkoutCart: CartProduct[]) => void;
 };
@@ -73,6 +75,9 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
       }
       return { cart: state.cart };
     }),
+  appliedDiscount: 0,
+  setAppliedDiscount: (value: number) =>
+    set(() => ({ appliedDiscount: value })),
   checkoutCart: [],
   setCheckoutCart: (checkoutCart) =>
     set(() => ({ checkoutCart: checkoutCart })),
