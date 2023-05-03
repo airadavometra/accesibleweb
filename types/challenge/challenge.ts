@@ -8,6 +8,7 @@ export type Challenge = {
   deliveryPrice: number;
   promocode: string;
   discount: number;
+  budgetLimit: number;
   problemDescription: string;
   taskDescription: string;
   cart: Array<{ productId: number; quantity: number }>;
