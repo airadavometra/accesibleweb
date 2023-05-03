@@ -77,6 +77,10 @@ const ChallengeHome = () => {
         text="These fruits and veggies kickstart my day and energise my life with unbeatable freshness and flavour!"
         author="Jane S."
       />
+      <Banner
+        imgSrc="/apple.png"
+        text={`${challenge?.discount}% off with ${challenge?.promocode}. Enjoy delicious groceries at discounted prices. Shop now!`}
+      />
       {dayOffer && <DayOffer product={dayOffer} />}
     </main>
   );
