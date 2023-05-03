@@ -42,7 +42,7 @@ const ChallengeHome = () => {
 
   useEffect(() => {
     if (filter === undefined) {
-      router.push("/#try");
+      router.push("/");
     }
   }, [filter, router]);
 

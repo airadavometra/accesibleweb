@@ -11,18 +11,30 @@ import classNames from "classnames";
 import { Delete } from "@/icons/Delete";
 import { useRouter } from "next/router";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 
 const CartPage: NextPage = () => {
   const router = useRouter();
 
-  const { cart, removeProduct, updateProductQuantity, setCheckoutCart } =
-    useChallengeStore((state) => ({
-      cart: state.cart,
-      removeProduct: state.removeProduct,
-      updateProductQuantity: state.updateProductQuantity,
-      setCheckoutCart: state.setCheckoutCart,
-    }));
+  const {
+    filter,
+    cart,
+    removeProduct,
+    updateProductQuantity,
+    setCheckoutCart,
+  } = useChallengeStore((state) => ({
+    filter: state.filter,
+    cart: state.cart,
+    removeProduct: state.removeProduct,
+    updateProductQuantity: state.updateProductQuantity,
+    setCheckoutCart: state.setCheckoutCart,
+  }));
+
+  useEffect(() => {
+    if (filter === undefined) {
+      router.push("/");
+    }
+  }, [filter, router]);
 
   const isMobile = useMediaQuery("(max-width: 48rem)");
 

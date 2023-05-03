@@ -75,7 +75,7 @@ const CheckoutPage: NextPage = () => {
 
   useEffect(() => {
     if (filter === undefined) {
-      router.push("/#try");
+      router.push("/");
     }
   }, [filter, router]);
 

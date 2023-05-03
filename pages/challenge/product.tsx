@@ -28,6 +28,12 @@ const ProductPage: NextPage = () => {
   const [bestsetters, setBestsellers] = useState<Product[]>([]);
 
   useEffect(() => {
+    if (filter === undefined) {
+      router.push("/");
+    }
+  }, [filter, router]);
+
+  useEffect(() => {
     if (router.isReady) {
       const productId = getProductIdValue(productUrl);
 

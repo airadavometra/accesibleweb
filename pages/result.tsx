@@ -34,7 +34,7 @@ const ResultPage: NextPage = () => {
   }, [filter, router]);
 
   const onButtonClick = () => {
-    router.push("/#try");
+    router.push("/#challenges");
   };
 
   return data ? (

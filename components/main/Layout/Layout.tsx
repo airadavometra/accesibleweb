@@ -9,8 +9,7 @@ import s from "./Layout.module.css";
 
 const navigation: NavigationItem[] = [
   { id: 0, title: "about", path: "/#about" },
-  { id: 1, title: "try yourself", path: "/#try" },
-  { id: 2, title: "library", path: "/library" },
+  { id: 1, title: "challenges", path: "/#challenges" },
 ];
 
 type LayoutProps = {

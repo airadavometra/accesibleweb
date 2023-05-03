@@ -36,6 +36,12 @@ const CategoryPage: NextPage = () => {
   const [categoryProducts, setCategoryProducts] = useState<Product[]>([]);
 
   useEffect(() => {
+    if (filter === undefined) {
+      router.push("/");
+    }
+  }, [filter, router]);
+
+  useEffect(() => {
     if (router.isReady) {
       const categoryValue = getCategoryValue(categoryUrl);
 
