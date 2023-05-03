@@ -38,7 +38,7 @@ const CheckoutPage: NextPage = () => {
 
   const {
     filter,
-    cart,
+    checkoutCart,
     appliedDiscount,
     setAppliedDiscount,
     setCheckoutCart,
@@ -46,7 +46,7 @@ const CheckoutPage: NextPage = () => {
     setIsSuccessfulTrue,
   } = useChallengeStore((state) => ({
     filter: state.filter,
-    cart: state.cart,
+    checkoutCart: state.checkoutCart,
     appliedDiscount: state.appliedDiscount,
     setAppliedDiscount: state.setAppliedDiscount,
     setCheckoutCart: state.setCheckoutCart,
@@ -67,10 +67,11 @@ const CheckoutPage: NextPage = () => {
   const [discountCode, setDiscountCode] = useState<string>();
 
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
-
+  console.log(checkoutCart);
   const subtotal = useMemo(
-    () => cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
-    [cart]
+    () =>
+      checkoutCart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+    [checkoutCart]
   );
 
   useEffect(() => {
@@ -99,14 +100,14 @@ const CheckoutPage: NextPage = () => {
       city &&
       region &&
       zipCode &&
-      validateResult(filter, cart)
+      validateResult(filter, checkoutCart)
     ) {
       setIsSuccessfulTrue();
     }
     router.push("/result");
   }, [
     setFinishTime,
-    cart,
+    checkoutCart,
     filter,
     firstName,
     lastName,
