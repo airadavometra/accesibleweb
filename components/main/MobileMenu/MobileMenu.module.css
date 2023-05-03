@@ -1,5 +1,6 @@
 .menuContainer {
-  position: fixed;
+  max-width: 100vw;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -7,6 +8,7 @@
   z-index: 2;
   display: flex;
   background-color: var(--color);
+  overflow: hidden;
 }
 .closeIconButton {
   position: absolute;

@@ -12,6 +12,15 @@ const navigation: NavigationItem[] = [
   { id: 1, title: "challenges", path: "/#challenges" },
 ];
 
+const mobileNavigation: NavigationItem[] = [
+  { id: 0, title: "about project", path: "/#about" },
+  { id: 2, title: "blurred vision", path: "/task?filter=blurredvision" },
+  { id: 3, title: "tremor", path: "/task?filter=tremor" },
+  { id: 4, title: "blindness", path: "/task?filter=blindness" },
+  { id: 5, title: "dyslexia", path: "/task?filter=dyslexia" },
+  { id: 6, title: "colour blindness", path: "/task?filter=colourblindness" },
+];
+
 type LayoutProps = {
   children: ReactNode;
 };
@@ -43,17 +52,25 @@ export const Layout = ({ children }: LayoutProps) => {
 
   const openMenu = () => {
     setMenuOpen(true);
+    const layout = document.getElementById("layout");
+    if (layout) {
+      layout.style.overflow = "hidden";
+    }
     document.body.style.overflow = "hidden";
   };
   const closeMenu = () => {
     setMenuOpen(false);
+    const layout = document.getElementById("layout");
+    if (layout) {
+      layout.style.overflow = "auto";
+    }
     document.body.style.overflow = "unset";
   };
 
   return (
     <>
       <PageHead />
-      <div className={s.layout}>
+      <div id="layout" className={s.layout}>
         <Header
           navigation={navigation}
           onOpenMenu={openMenu}
@@ -65,7 +82,7 @@ export const Layout = ({ children }: LayoutProps) => {
         {isMenuOpen && (
           <MobileMenu
             isOpen={isMenuOpen}
-            navigation={navigation}
+            navigation={mobileNavigation}
             onMenuItemClick={onMenuItemClick}
             onCloseMenu={closeMenu}
           />
