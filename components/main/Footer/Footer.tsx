@@ -1,19 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import s from "./Footer.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { Heart } from "@/icons/Heart";
+import { Wave } from "@/icons/Wave";
 
 const Footer = () => {
   return (
     <footer className={s.footer}>
-      <Image
-        className={s.background}
-        fill
-        src="/footer.png"
-        alt="banner background"
-        aria-hidden="true"
-      />
+      <Wave className={s.background} />
       <WidthContainer className={s.textContainer}>
         <div>
           <span className={s.transparent}>
