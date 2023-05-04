@@ -16,7 +16,7 @@ import { blobLinkVariants } from "@/motions/homePage";
 
 export default function Blobs() {
   return (
-    <section id="try" className={s.blobsSection}>
+    <section id="challenges" className={s.blobsSection}>
       <div className={classnames(s.blobsGroup, s.right)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
