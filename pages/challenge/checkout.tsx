@@ -9,29 +9,35 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { challengeMap } from "@/data/challenge/challenge";
 import { Filter } from "@/types/filter";
 import { ConfirmPayModal } from "@/components/challenge/ConfirmPayModal/ConfirmPayModal";
+import { Challenge } from "@/types/challenge/challenge";
 
-const validateResult = (filter: Filter, cart: CartProduct[]): boolean => {
+const validateResult = (
+  filter: Filter,
+  cart: CartProduct[],
+  isDiscountApplied: boolean
+): boolean => {
   const data = filter ? challengeMap[filter] : undefined;
   if (data) {
-    return data.cart.every(
+    const allItemsAreInCart = data.cart.every(
       (item) =>
         cart.find(
           (c) => c.id === item.productId && c.quantity === item.quantity
         ) !== undefined
     );
+
+    const subtotal = cart.reduce(
+      (sum, item) => sum + item.price * item.quantity,
+      0
+    );
+    const limitIsEnough =
+      (isDiscountApplied
+        ? data.deliveryPrice + subtotal * ((100 - data.discount) / 100)
+        : data.deliveryPrice + subtotal) <= data.budgetLimit;
+
+    return allItemsAreInCart && limitIsEnough;
   }
   return false;
 };
-
-const getDiscount = (promocode: string, filter?: Filter) => {
-  const data = filter ? challengeMap[filter] : undefined;
-  if (data && data.promocode === promocode) {
-    return data.discount;
-  }
-  return undefined;
-};
-
-const SHIPPING_PRICE = 1.25;
 
 const CheckoutPage: NextPage = () => {
   const router = useRouter();
@@ -39,20 +45,22 @@ const CheckoutPage: NextPage = () => {
   const {
     filter,
     checkoutCart,
-    appliedDiscount,
-    setAppliedDiscount,
+    isDiscountApplied,
+    setIsDiscountApplied,
     setCheckoutCart,
     setFinishTime,
     setIsSuccessfulTrue,
   } = useChallengeStore((state) => ({
     filter: state.filter,
     checkoutCart: state.checkoutCart,
-    appliedDiscount: state.appliedDiscount,
-    setAppliedDiscount: state.setAppliedDiscount,
+    isDiscountApplied: state.isDiscountApplied,
+    setIsDiscountApplied: state.setIsDiscountApplied,
     setCheckoutCart: state.setCheckoutCart,
     setFinishTime: state.setFinishTime,
     setIsSuccessfulTrue: state.setIsSuccessfulTrue,
   }));
+
+  const [challenge, setChallenge] = useState<Challenge>();
 
   const [firstName, setFirstName] = useState<string>();
   const [lastName, setLastName] = useState<string>();
@@ -67,7 +75,7 @@ const CheckoutPage: NextPage = () => {
   const [discountCode, setDiscountCode] = useState<string>();
 
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState<boolean>(false);
-  console.log(checkoutCart);
+
   const subtotal = useMemo(
     () =>
       checkoutCart.reduce((sum, item) => sum + item.price * item.quantity, 0),
@@ -81,11 +89,20 @@ const CheckoutPage: NextPage = () => {
   }, [filter, router]);
 
   useEffect(() => {
-    if (discountCode) {
-      const discount = getDiscount(discountCode, filter);
-      setAppliedDiscount(discount ?? 0);
+    if (filter) {
+      const data = filter ? challengeMap[filter] : undefined;
+      if (data) {
+        setChallenge(data);
+        return;
+      }
     }
-  }, [discountCode, filter, setAppliedDiscount]);
+  }, [filter]);
+
+  useEffect(() => {
+    if (discountCode && challenge && challenge.promocode === discountCode) {
+      setIsDiscountApplied(true);
+    }
+  }, [challenge, discountCode, filter, setIsDiscountApplied]);
 
   const onPayClick = useCallback(() => {
     setFinishTime(new Date());
@@ -100,14 +117,13 @@ const CheckoutPage: NextPage = () => {
       city &&
       region &&
       zipCode &&
-      validateResult(filter, checkoutCart)
+      validateResult(filter, checkoutCart, isDiscountApplied)
     ) {
       setIsSuccessfulTrue();
     }
     router.push("/result");
   }, [
     setFinishTime,
-    checkoutCart,
     filter,
     firstName,
     lastName,
@@ -117,6 +133,8 @@ const CheckoutPage: NextPage = () => {
     city,
     region,
     zipCode,
+    checkoutCart,
+    isDiscountApplied,
     router,
     setIsSuccessfulTrue,
   ]);
@@ -236,7 +254,7 @@ const CheckoutPage: NextPage = () => {
                 />
                 {discountCode !== undefined &&
                   discountCode !== "" &&
-                  appliedDiscount === 0 && (
+                  !isDiscountApplied && (
                     <span className={s.errorMessage}>
                       Invalid discount code
                     </span>
@@ -251,14 +269,14 @@ const CheckoutPage: NextPage = () => {
                 <span className={s.subtotal}>
                   Shipping
                   <span className={s.price}>
-                    {"  "}${SHIPPING_PRICE}
+                    {"  "}${challenge?.deliveryPrice || 0}
                   </span>
                 </span>
-                {appliedDiscount > 0 && (
+                {isDiscountApplied && (
                   <span className={s.subtotal}>
                     Discount
                     <span className={s.price}>
-                      {"  "}-{appliedDiscount}%
+                      {"  "}-{challenge?.discount || 0}%
                     </span>
                   </span>
                 )}
@@ -267,8 +285,8 @@ const CheckoutPage: NextPage = () => {
                   Total
                   <span className={s.price}>
                     {"  "}$
-                    {(SHIPPING_PRICE + subtotal) *
-                      ((100 - appliedDiscount) / 100)}
+                    {challenge?.deliveryPrice ||
+                      0 + subtotal * ((100 - (challenge?.discount || 0)) / 100)}
                   </span>
                 </span>
               </div>
