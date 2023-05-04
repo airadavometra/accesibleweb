@@ -1,9 +1,4 @@
-import { WithClassName } from "@/types/common";
-
-export const Wave = ({ className }: WithClassName) => {
-  return (
-    <svg
-      className={className}
+<svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1400 480"
     >
@@ -26,5 +21,3 @@ export const Wave = ({ className }: WithClassName) => {
         </path>
       </g>
     </svg>
-  );
-};

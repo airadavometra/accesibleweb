@@ -2,12 +2,22 @@ import Link from "next/link";
 import s from "./Footer.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { Heart } from "@/icons/Heart";
-import { Wave } from "@/icons/Wave";
 
 const Footer = () => {
   return (
     <footer className={s.footer}>
-      <Wave className={s.background} />
+      <picture>
+        <source
+          className={s.background}
+          srcSet="/wave.svg"
+          media="(prefers-reduced-motion: no-preference)"
+        />
+        <img
+          className={s.background}
+          src="/footer.svg"
+          alt="footer background"
+        />
+      </picture>
       <WidthContainer className={s.textContainer}>
         <div>
           <span className={s.transparent}>
