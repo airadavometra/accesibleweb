@@ -33,6 +33,8 @@ export const Layout = ({ children }: LayoutProps) => {
   const [remindTaskOpen, setRemindTaskOpen] = useState<boolean>(false);
   const [endChallengeOpen, setEndChallengeOpen] = useState<boolean>(false);
 
+  const [isBlurredVisionMode, setIsBlurredVisionMode] =
+    useState<boolean>(false);
   const [isBlindnessMode, setIsBlindnessMode] = useState<boolean>(false);
   const [colorBlindnessMode, setColorBlindnessMode] = useState<string>();
   const [isTremorMode, setIsTremorMode] = useState<boolean>(false);
@@ -59,7 +61,7 @@ export const Layout = ({ children }: LayoutProps) => {
     if (layout) {
       switch (filter) {
         case "blurredvision": {
-          layout.style.filter = "blur(2px)";
+          setIsBlurredVisionMode(true);
           break;
         }
         case "blindness": {
@@ -111,6 +113,9 @@ export const Layout = ({ children }: LayoutProps) => {
         <Header navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
+        {isBlurredVisionMode && (
+          <div className={classNames(s.filter, s.blurred)} aria-hidden />
+        )}
         {isBlindnessMode && (
           <div className={classNames(s.filter, s.blindness)} aria-hidden />
         )}
