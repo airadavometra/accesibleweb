@@ -4,7 +4,8 @@
 }
 
 .background {
-  max-width: unset;
+  width: 100%;
+  height: fit-content;
 }
 
 .textContainer {
