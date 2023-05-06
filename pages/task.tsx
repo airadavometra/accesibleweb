@@ -33,6 +33,7 @@ const TaskPage: NextPage = () => {
     title: string;
     problem: string;
     challenge: string;
+    disclaimer?: string;
   }>();
   const router = useRouter();
   const { filter } = router.query;
@@ -69,6 +70,12 @@ const TaskPage: NextPage = () => {
     <WidthContainer>
       <main className={s.main}>
         <h1 className={s.title}>{data.title}</h1>
+        {data.disclaimer && (
+          <section className={s.disclaimer}>
+            <h2 className={s.disclaimerTitle}>Please note:</h2>
+            <p>{data.disclaimer}</p>
+          </section>
+        )}
         <section className={s.description}>
           <p className={s.problem}>{data.problem}</p>
           <p className={s.challenge}>{data.challenge}</p>

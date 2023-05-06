@@ -16,6 +16,17 @@
 .challenge {
   font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
 }
+.disclaimer {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: clamp(0.75rem, 4vw + 0rem, 1.25rem);
+  border: 1px solid black;
+}
+.disclaimerTitle {
+  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
+}
 @media (max-width: 48rem) {
   .description {
     grid-template-columns: 1fr;

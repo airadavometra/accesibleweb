@@ -169,7 +169,7 @@ const CartPage: NextPage = () => {
                   )}
                 </span>
               </span>
-              <span className={s.disclamer}>
+              <span className={s.disclaimer}>
                 Taxes and shipping calculated at checkout
               </span>
               <Button
