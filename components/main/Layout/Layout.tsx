@@ -47,24 +47,16 @@ export const Layout = ({ children }: LayoutProps) => {
   const onMenuItemClick = (newMenuItemId: number) => {
     setSelectedMenuItemId(newMenuItemId);
     setMenuOpen(false);
-    document.body.style.overflow = "unset";
+    document.body.classList.toggle("frozen");
   };
 
   const openMenu = () => {
     setMenuOpen(true);
-    const layout = document.getElementById("layout");
-    if (layout) {
-      layout.style.overflow = "hidden";
-    }
-    document.body.style.overflow = "hidden";
+    document.body.classList.toggle("frozen");
   };
   const closeMenu = () => {
     setMenuOpen(false);
-    const layout = document.getElementById("layout");
-    if (layout) {
-      layout.style.overflow = "auto";
-    }
-    document.body.style.overflow = "unset";
+    document.body.classList.toggle("frozen");
   };
 
   return (

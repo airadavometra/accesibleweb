@@ -1,11 +1,11 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
-import { BlobButton } from "@/components/main/BlobButton/BlobButton";
 import type { NextPage } from "next";
 import s from "../styles/Result.module.css";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { challengeMap } from "@/data/challenge/challenge";
+import { Button } from "@/components/main/Button/Button";
 
 const ResultPage: NextPage = () => {
   const [data, setData] = useState<{
@@ -52,15 +52,18 @@ const ResultPage: NextPage = () => {
             praesentium?
           </p>
         </section>
-        <BlobButton
-          text={
-            <>
-              Other
-              <br /> challenges
-            </>
-          }
-          onClick={onButtonClick}
-        />
+        <section className={s.buttons}>
+          <Button
+            text={"Try accessible version"}
+            type={"secondary"}
+            onClick={onButtonClick}
+          />
+          <Button
+            text={"Other challenges"}
+            type={"primary"}
+            onClick={onButtonClick}
+          />
+        </section>
       </main>
     </WidthContainer>
   ) : null;

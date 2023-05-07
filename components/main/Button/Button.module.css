@@ -1,0 +1,32 @@
+.primary {
+  padding: 0.75rem 2rem;
+  color: var(--color);
+  background-color: black;
+  font-size: 1.5rem;
+  border: none;
+  outline: 1px solid var(--color);
+  transition: font-weight 100ms ease-in-out;
+}
+.secondary {
+  padding: 0.75rem 2rem;
+  color: black;
+  background-color: var(--color);
+  font-size: 1.5rem;
+  border: none;
+  outline: 1px solid black;
+  transition: font-weight 100ms ease-in-out;
+}
+.primary:hover,
+.primary:focus,
+.primary.selected,
+.secondary:hover,
+.secondary:focus,
+.secondary.selected {
+  font-weight: 700;
+}
+
+.hidden {
+  height: 0;
+  visibility: hidden;
+  font-weight: 700;
+}

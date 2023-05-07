@@ -27,9 +27,17 @@
 .disclaimerTitle {
   font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
 }
+.button {
+  width: fit-content;
+  align-self: flex-end;
+}
 @media (max-width: 48rem) {
   .description {
     grid-template-columns: 1fr;
     gap: max(1rem, 16px);
+  }
+  .button {
+    width: unset;
+    align-self: unset;
   }
 }

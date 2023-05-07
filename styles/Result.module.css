@@ -16,9 +16,18 @@
 .challenge {
   font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
 @media (max-width: 48rem) {
   .description {
     grid-template-columns: 1fr;
     gap: max(1rem, 16px);
+  }
+  .buttons {
+    flex-direction: column;
   }
 }

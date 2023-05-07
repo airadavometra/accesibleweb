@@ -6,7 +6,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import s from "../styles/Task.module.css";
-import { BlobButton } from "@/components/main/BlobButton/BlobButton";
+import { Button } from "@/components/main/Button/Button";
 
 const getFilterValue = (filter?: string | string[]): Filter | undefined => {
   if (filter && typeof filter === "string") {
@@ -80,14 +80,11 @@ const TaskPage: NextPage = () => {
           <p className={s.problem}>{data.problem}</p>
           <p className={s.challenge}>{data.challenge}</p>
         </section>
-        <BlobButton
-          text={
-            <>
-              OK,
-              <br /> LET&apos;S TRY
-            </>
-          }
+        <Button
+          text={"OK, let's try"}
+          type={"primary"}
           onClick={onButtonClick}
+          className={s.button}
         />
       </main>
     </WidthContainer>
