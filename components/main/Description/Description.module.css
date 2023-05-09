@@ -1,21 +1,32 @@
 .description {
   padding-top: 6rem;
 }
+.widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 .descriptionHeading {
   font-family: var(--title-font);
   font-size: clamp(2rem, 5vw + 1rem, 6.5rem);
   font-weight: 600;
   text-transform: uppercase;
+  word-spacing: 1rem;
 }
 .descriptionContent {
-  margin: min(2rem, 64px) 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(4rem, 96px);
   font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
-  columns: 2;
-  column-gap: min(4rem, 96px);
 }
-
+.descriptionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: min(2rem, 32px);
+}
 @media (max-width: 48rem) {
   .descriptionContent {
-    columns: 1;
+    grid-template-columns: 1fr;
+    gap: min(2rem, 32px);
   }
 }

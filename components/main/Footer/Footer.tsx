@@ -23,7 +23,12 @@ const Footer = () => {
           <span className={s.transparent}>
             Made with <Heart className={s.heart} /> for accessibility by{" "}
           </span>
-          <Link href="https://www.airadavometra.space/" className={s.link}>
+          <Link
+            href="https://www.airadavometra.space/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.link}
+          >
             Daria Artemova
           </Link>
         </div>
