@@ -6,6 +6,7 @@ import Link from "next/link";
 import WidthContainer from "../../WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 import { AccessibilityMan } from "@/icons/AccessibilityMan";
+import { VisuallyHidden } from "@/components/VisuallyHidden/VisuallyHidden";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -19,6 +20,7 @@ const Header = ({ navigation, onOpenMenu, onMenuItemClick }: HeaderProps) => {
       <WidthContainer className={s.widthContainer}>
         <Link className={s.logo} href={"/"}>
           <AccessibilityMan />
+          <VisuallyHidden>Home</VisuallyHidden>
         </Link>
         <nav>
           <ul className={s.navigation}>
