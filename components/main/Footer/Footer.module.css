@@ -8,7 +8,7 @@
 }
 
 .textContainer {
-  padding-bottom: 16px;
+  padding-bottom: min(2rem, 64px);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -56,4 +56,9 @@
 .link:hover::before {
   transform-origin: left;
   transform: scaleX(1);
+}
+@media (max-width: 48rem) {
+  .textContainer {
+    padding-bottom: min(1rem, 24px);
+  }
 }

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import WidthContainer from "../../WidthContainer/WidthContainer";
 import s from "./Header.module.css";
+import { AccessibilityMan } from "@/icons/AccessibilityMan";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -16,6 +17,9 @@ const Header = ({ navigation, onOpenMenu, onMenuItemClick }: HeaderProps) => {
   return (
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
+        <Link className={s.logo} href={"/"}>
+          <AccessibilityMan />
+        </Link>
         <nav>
           <ul className={s.navigation}>
             {navigation.map(({ id, title, path }) => (

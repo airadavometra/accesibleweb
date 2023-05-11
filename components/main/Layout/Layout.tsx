@@ -13,7 +13,7 @@ const navigation: NavigationItem[] = [
 ];
 
 const mobileNavigation: NavigationItem[] = [
-  { id: 0, title: "about project", path: "/#about" },
+  { id: 0, title: "about", path: "/#about" },
   { id: 2, title: "blurred vision", path: "/task?filter=blurredvision" },
   { id: 3, title: "tremor", path: "/task?filter=tremor" },
   { id: 4, title: "blindness", path: "/task?filter=blindness" },
@@ -47,7 +47,6 @@ export const Layout = ({ children }: LayoutProps) => {
   const onMenuItemClick = (newMenuItemId: number) => {
     setSelectedMenuItemId(newMenuItemId);
     setMenuOpen(false);
-    document.body.classList.toggle("frozen");
   };
 
   const openMenu = () => {

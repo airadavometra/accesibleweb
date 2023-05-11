@@ -37,7 +37,10 @@ const MobileMenu = ({
             <li key={id}>
               <Link
                 href={path}
-                onClick={() => onMenuItemClick(id)}
+                onClick={() => {
+                  onCloseMenu();
+                  onMenuItemClick(id);
+                }}
                 className={classNames(s.link)}
               >
                 {title}
