@@ -56,7 +56,7 @@
 }
 @media (max-width: 48rem) {
   .header {
-    padding: min(1.5rem, 32px) 0;
+    padding: min(1rem, 24px) 0;
   }
   .navigation {
     display: none;
