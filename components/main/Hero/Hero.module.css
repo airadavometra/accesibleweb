@@ -8,6 +8,7 @@
   font-size: clamp(6rem, 20vw + 1rem, 12rem);
   text-transform: uppercase;
   overflow: hidden;
+  cursor: default;
 }
 .boldHeroText {
   font-weight: 900;

@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { challengeMap } from "@/data/challenge/challenge";
 import { Button } from "@/components/main/Button/Button";
+import { challenges } from "@/data/challenges";
+import Link from "next/link";
 
 const ResultPage: NextPage = () => {
   const [data, setData] = useState<{
@@ -38,14 +40,16 @@ const ResultPage: NextPage = () => {
   };
 
   return data ? (
-    <WidthContainer>
-      <main className={s.main}>
+    <main className={s.main}>
+      <WidthContainer className={s.widthContainer}>
         <h1 className={s.title}>{data.title} result</h1>
-        <section className={s.description}>
-          <p className={s.problem}>
+        <section>
+          <p className={s.text}>
             {isSuccessful ? "Well done!" : "Sorry, but this is the wrong order"}
           </p>
-          <p className={s.challenge}>
+        </section>
+        <section>
+          <p className={s.text}>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
             nisi, ipsam impedit non sint saepe quis optio eius repudiandae
             dolores sed voluptate maiores labore ab repellat autem minus totam
@@ -55,17 +59,31 @@ const ResultPage: NextPage = () => {
         <section className={s.buttons}>
           <Button
             text={"Try accessible version"}
-            type={"secondary"}
-            onClick={onButtonClick}
-          />
-          <Button
-            text={"Other challenges"}
             type={"primary"}
             onClick={onButtonClick}
           />
+          <Button
+            text={"Or try again"}
+            type={"secondary"}
+            onClick={onButtonClick}
+          />
         </section>
-      </main>
-    </WidthContainer>
+        <section className={s.otherChallenges}>
+          <h2>Check out other challenges:</h2>
+          <ul className={s.otherChallengesList}>
+            {challenges
+              .filter((c) => c.id !== filter)
+              .map((c) => (
+                <li key={c.id}>
+                  <Link href={c.link} className={s.link}>
+                    {c.name}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </section>
+      </WidthContainer>
+    </main>
   ) : null;
 };
 

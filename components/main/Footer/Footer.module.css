@@ -28,9 +28,6 @@
 .transparent {
   opacity: 0.6;
 }
-.link {
-  opacity: 1;
-}
 
 .link {
   width: fit-content;
@@ -39,6 +36,7 @@
   white-space: nowrap;
   position: relative;
   font-weight: 600;
+  opacity: 1;
 }
 .link:before {
   content: "";

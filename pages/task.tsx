@@ -32,7 +32,7 @@ const TaskPage: NextPage = () => {
   const [data, setData] = useState<{
     title: string;
     problem: string;
-    challenge: string;
+    challengeSteps: string[];
     disclaimer?: string;
   }>();
   const router = useRouter();
@@ -67,8 +67,8 @@ const TaskPage: NextPage = () => {
   };
 
   return data ? (
-    <WidthContainer>
-      <main className={s.main}>
+    <main className={s.main}>
+      <WidthContainer className={s.widthContainer}>
         <h1 className={s.title}>{data.title}</h1>
         {data.disclaimer && (
           <section className={s.disclaimer}>
@@ -76,9 +76,23 @@ const TaskPage: NextPage = () => {
             <p>{data.disclaimer}</p>
           </section>
         )}
-        <section className={s.description}>
-          <p className={s.problem}>{data.problem}</p>
-          <p className={s.challenge}>{data.challenge}</p>
+        <section className={s.descriptionSection}>
+          <p className={s.text}>{data.problem}</p>
+        </section>
+        <section className={s.descriptionSection}>
+          <h2 className={s.subtitle}>What you should do</h2>
+          <p className={s.text}>
+            You will see a grocery store where you need to do some shopping.
+            This store has some trivial accessibility mistakes, so it is more
+            like real life example
+          </p>
+          <ul>
+            {data.challengeSteps.map((step, index) => (
+              <li key={index} className={s.text}>
+                {step}
+              </li>
+            ))}
+          </ul>
         </section>
         <Button
           text={"OK, let's try"}
@@ -86,8 +100,8 @@ const TaskPage: NextPage = () => {
           onClick={onButtonClick}
           className={s.button}
         />
-      </main>
-    </WidthContainer>
+      </WidthContainer>
+    </main>
   ) : null;
 };
 

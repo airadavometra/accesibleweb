@@ -1,7 +1,7 @@
 export type Challenge = {
   title: string;
   problem: string;
-  challenge: string;
+  challengeSteps: string[];
   disclaimer?: string;
   productIds: number[];
   dayOfferId: number;
@@ -10,7 +10,5 @@ export type Challenge = {
   promocode: string;
   discount: number;
   budgetLimit: number;
-  problemDescription: string;
-  taskDescription: string;
   cart: Array<{ productId: number; quantity: number }>;
 };
