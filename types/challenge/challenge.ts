@@ -1,6 +1,6 @@
 export type Challenge = {
   title: string;
-  problem: string;
+  problem: string[];
   challengeSteps: string[];
   disclaimer?: string;
   productIds: number[];

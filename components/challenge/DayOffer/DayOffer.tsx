@@ -35,7 +35,9 @@ export const DayOffer = ({ product }: DayOfferProps) => {
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
             <h3 className={s.name}>{product.name}</h3>
-            <span className={s.price}>${product.price}</span>
+            <span className={s.price}>
+              ${product.price} / {product.unit}
+            </span>
             <Button
               text="Add to cart"
               onClick={() => {

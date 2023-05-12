@@ -3,9 +3,19 @@ import { Challenge } from "@/types/challenge/challenge";
 export const challengeMap = {
   blurredvision: {
     title: "Blurred vision challenge",
-    problem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    challengeSteps: [],
+    problem: [
+      "According to the World Health Organization, at least 2.2 billion people have some vision impairment and this number is continually growing. People may also experience temporary blurred vision because of fatigue, certain medications, migraines, diabetes and many other reasons.",
+      "Unfortunately, many websites lack essential accessibility accommodations like adjustable font sizes, high-contrast color schemes, and alternative text descriptions for images. These missing features create a frustrating and often inaccessible browsing experience.",
+    ],
+    challengeSteps: [
+      "You have a family of 3 people",
+      "You have $18 budget limit",
+      "Buy 2 kg of Cara Cara oranges",
+      "Buy 1 kg of bananas",
+      "Buy 1 kg of sweet potatoes",
+      "Buy a combo for tomato soup",
+      "Use a discount code to save some money (optional)",
+    ],
     productIds: [
       1, 2, 3, 4, 5, 6, 7, 8, 24, 25, 26, 27, 28, 29, 30, 31, 32, 51, 52, 53,
       54,
@@ -15,9 +25,9 @@ export const challengeMap = {
     deliveryPrice: 1.09,
     promocode: "BLURRY20",
     discount: 20,
-    budgetLimit: 15,
+    budgetLimit: 18,
     cart: [
-      { productId: 3, quantity: 2 },
+      { productId: 4, quantity: 2 },
       { productId: 5, quantity: 1 },
       { productId: 25, quantity: 1 },
       { productId: 52, quantity: 1 },
@@ -25,9 +35,19 @@ export const challengeMap = {
   } as Challenge,
   tremor: {
     title: "Tremor challenge",
-    problem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    challengeSteps: [],
+    problem: [
+      "According to the International Essential Tremor Foundation, an estimated 7 to 10 million people in the United States alone are affected by tremor. Moreover, tremor isn't always a chronic condition. Many individuals may experience temporary tremor because of stress, anxiety, fatigue, certain medications, or just while riding on public transportation. This means that anyone can face this issue at some point.",
+      "Unfortunately, many websites and applications are not designed with these issues in mind. Interactive elements might be too small to click on, the lack of space between elements can cause misclicking, and the lack of keyboard navigation options often leave users reliant on mouse movements.",
+    ],
+    challengeSteps: [
+      "You live alone",
+      "You have $16 budget limit",
+      "Buy 1 kg of nectarines",
+      "Buy a chinese cabbage",
+      "Buy 2 kg of cucumbers",
+      "Buy a combo for mustard soup",
+      "Use a discount code to save some money (optional)",
+    ],
     disclaimer:
       "To successfully complete the challenge and gain the intended experience, you need to use a computer, not mobile device. Good luck with the challenge!",
     productIds: [
@@ -36,10 +56,10 @@ export const challengeMap = {
     ],
     dayOfferId: 37,
     bestsellerIds: [9, 14, 35, 49],
-    deliveryPrice: 0.09,
+    deliveryPrice: 0.99,
     promocode: "STEADY10",
     discount: 10,
-    budgetLimit: 15,
+    budgetLimit: 16,
     cart: [
       { productId: 16, quantity: 1 },
       { productId: 33, quantity: 1 },
@@ -49,9 +69,19 @@ export const challengeMap = {
   } as Challenge,
   blindness: {
     title: "Blindness challenge",
-    problem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    challengeSteps: ["11111", "222222", "333333", "4444"],
+    problem: [
+      "According to the World Health Organization, an estimated 39 million people are affected by blindness. Navigating the web via screen readers is a challenge for these individuals. And screen readers aren't exclusively used by the visually impaired; they also assist those wanting to alleviate eye strain or preferring auditory information.",
+      "Many websites are not designed with these users in mind. Important information may only be conveyed visually, interactive elements might not be properly labeled for screen readers, and complex navigation systems can create confusion and difficulty in accessing content.",
+    ],
+    challengeSteps: [
+      "You have a family of 4 people",
+      "You have $16 budget limit",
+      "Buy 2 kg of pomegranates",
+      "Buy an aubergine",
+      "Buy a green paprika",
+      "Buy a combo for mushroom soup",
+      "Use a discount code to save some money (optional)",
+    ],
     disclaimer:
       "To successfully complete the challenge and gain the intended experience, you need to enable the voice-over feature. Good luck with the challenge!",
     productIds: [
@@ -63,7 +93,7 @@ export const challengeMap = {
     deliveryPrice: 0.79,
     promocode: "BRIGHTSIGHT15",
     discount: 15,
-    budgetLimit: 15,
+    budgetLimit: 16,
     cart: [
       { productId: 43, quantity: 1 },
       { productId: 6, quantity: 2 },
@@ -73,9 +103,19 @@ export const challengeMap = {
   } as Challenge,
   dyslexia: {
     title: "Dyslexia challenge",
-    problem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    challengeSteps: [],
+    problem: [
+      "Dyslexia, potentially affecting between 5% to 17% of the population, create difficulties with reading and understanding online content. It's crucial to remember that not just dyslexia, but factors like language proficiency, education, or even tiredness and distractions can make it complicated.",
+      "It's a concerning reality that individuals with dyslexia or comparable reading challenges are often overlooked in website design. Features such as dense blocks of text, complex fonts, low contrast between text and background, and a lack of diverse content forms can create significant accessibility barriers on many websites.",
+    ],
+    challengeSteps: [
+      "You have a family of 2 people",
+      "You have $16 budget limit",
+      "Buy 2 grapefruits",
+      "Buy 1 kg of persimmons",
+      "Buy 1 kg of Red Delicious apples",
+      "Buy a combo for vegetarian borsch",
+      "Use a discount code to save some money (optional)",
+    ],
     productIds: [
       5, 6, 7, 8, 13, 14, 15, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
       32, 33, 34, 35, 53, 54, 57, 58,
@@ -95,9 +135,19 @@ export const challengeMap = {
   } as Challenge,
   colourblindness: {
     title: "Colour blindness challenge",
-    problem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    challengeSteps: [],
+    problem: [
+      "Color blindness, affecting roughly 1 in 12 men and 1 in 200 women worldwide, casts unique challenges in online exploration. Even situational factors like screen glare, bright sunlight or a dim screen can momentarily disrupt color perception, leading to potential digital misunderstandings.",
+      "Despite the prevalence of color blindness and situations impacting color perception, many websites are not designed to help these users. The reliance on color to convey information, poor color contrast, and lack of alternative cues can make a website difficult to use for these individuals.",
+    ],
+    challengeSteps: [
+      "You live alone",
+      "You have $16 budget limit",
+      "Buy 2 lemons",
+      "Buy a mango",
+      "Buy 1 kg of pink tomatoes",
+      "Buy a combo for vegetarian lasagna",
+      "Use a discount code to save some money (optional)",
+    ],
     productIds: [
       5, 9, 10, 11, 12, 13, 14, 18, 19, 33, 34, 35, 36, 45, 46, 47, 48, 49, 50,
       55, 56, 59, 60,
@@ -111,7 +161,7 @@ export const challengeMap = {
     cart: [
       { productId: 11, quantity: 2 },
       { productId: 13, quantity: 1 },
-      { productId: 47, quantity: 1 },
+      { productId: 45, quantity: 1 },
       { productId: 55, quantity: 1 },
     ],
   } as Challenge,

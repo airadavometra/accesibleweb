@@ -31,7 +31,7 @@ const getFilterValue = (filter?: string | string[]): Filter | undefined => {
 const TaskPage: NextPage = () => {
   const [data, setData] = useState<{
     title: string;
-    problem: string;
+    problem: string[];
     challengeSteps: string[];
     disclaimer?: string;
   }>();
@@ -76,15 +76,28 @@ const TaskPage: NextPage = () => {
             <p>{data.disclaimer}</p>
           </section>
         )}
-        <section className={s.descriptionSection}>
-          <p className={s.text}>{data.problem}</p>
+        <section className={s.problemSection}>
+          <div className={s.problemDescription}>
+            {data.problem.map((p, index) => (
+              <p key={index} className={s.text}>
+                {p}
+              </p>
+            ))}
+          </div>
+          <p className={s.text}>
+            By designing websites with inclusivity and adaptability in mind, we
+            can create a more equitable digital space. This not only benefits
+            individuals with chronic or temporary disabilities but also ensures
+            a comfortable and effective browsing experience for all users.
+          </p>
         </section>
         <section className={s.descriptionSection}>
           <h2 className={s.subtitle}>What you should do</h2>
           <p className={s.text}>
-            You will see a grocery store where you need to do some shopping.
-            This store has some trivial accessibility mistakes, so it is more
-            like real life example
+            You will see a simulation of a grocery store with some common
+            accessibility mistakes. We applied a special filter on this shop to
+            help your imagination and make you feel like if you had this
+            disability. And you simply need to do shopping:
           </p>
           <ul>
             {data.challengeSteps.map((step, index) => (

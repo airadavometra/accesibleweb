@@ -61,7 +61,7 @@ export const products: Product[] = [
     imgSrc: "/pomegranate.png",
     name: "Pomegranate",
     price: 2.55,
-    unit: "1 each",
+    unit: "1 kg",
     category: "fruits",
     description:
       "Embrace the luxurious taste and vibrant allure of our premium pomegranates, famed for their jewel-like seeds and rich, tangy flavor. Hidden within their tough exterior lies a treasure trove of ruby-red arils, bursting with antioxidants, vitamins, and essential nutrients that promote overall health and well-being. Our hand-selected pomegranates offer a delightful sensory experience, whether you're sprinkling their seeds atop salads and desserts, juicing them for a refreshing beverage, or savoring their unique taste straight from the fruit. Add a touch of elegance and sophistication to your culinary creations with our exquisite pomegranates, and indulge in their captivating flavor and health benefits today.",
@@ -435,7 +435,7 @@ export const products: Product[] = [
     imgSrc: "/cucumber.png",
     name: "Cucumber",
     price: 0.89,
-    unit: "1 each",
+    unit: "1 kg",
     category: "vegetables",
     description:
       "Indulge in the crisp, refreshing taste and juicy texture of our premium cucumbers, a beloved vegetable known for its versatile culinary uses and refreshing taste. Handpicked at peak ripeness, our cucumbers offer a satisfying crunch and a subtle, slightly sweet flavor that pairs well with a variety of herbs and spices. Rich in vitamins, fiber, and essential nutrients, this nutrient-dense vegetable not only provides a delightful taste experience but also offers numerous health benefits. Enjoy them raw in salads, sliced as a healthy snack, or pickled as a delicious condiment. By choosing our premium cucumbers, you'll not only enjoy their exceptional taste but also support sustainable agriculture and responsible farming practices. Add a touch of freshness and wholesomeness to your meals with our exquisite cucumbers and discover the countless culinary possibilities they offer today.",

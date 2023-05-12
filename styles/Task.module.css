@@ -9,6 +9,16 @@
 .title {
   font-size: 3rem;
 }
+.problemSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 3rem;
+}
+.problemDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .descriptionSection {
   display: flex;
   flex-direction: column;
@@ -37,5 +47,8 @@
 @media (max-width: 48rem) {
   .button {
     width: unset;
+  }
+  .problemSection {
+    grid-template-columns: 1fr;
   }
 }

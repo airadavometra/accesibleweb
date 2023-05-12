@@ -285,8 +285,8 @@ const CheckoutPage: NextPage = () => {
                   Total
                   <span className={s.price}>
                     {"  "}$
-                    {challenge?.deliveryPrice ||
-                      0 + subtotal * ((100 - (challenge?.discount || 0)) / 100)}
+                    {(challenge?.deliveryPrice || 0) +
+                      subtotal * ((100 - (challenge?.discount || 0)) / 100)}
                   </span>
                 </span>
               </div>
