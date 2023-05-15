@@ -14,11 +14,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem 3rem;
 }
-.problemDescription {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 .descriptionSection {
   display: flex;
   flex-direction: column;

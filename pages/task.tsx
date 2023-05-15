@@ -38,9 +38,8 @@ const TaskPage: NextPage = () => {
   const router = useRouter();
   const { filter } = router.query;
 
-  const { setFilter, setStartTime } = useChallengeStore((state) => ({
+  const { setFilter } = useChallengeStore((state) => ({
     setFilter: state.setFilter,
-    setStartTime: state.setStartTime,
   }));
 
   useEffect(() => {
@@ -61,11 +60,6 @@ const TaskPage: NextPage = () => {
     }
   }, [filter, setFilter, router]);
 
-  const onButtonClick = () => {
-    setStartTime(new Date());
-    router.push("/challenge");
-  };
-
   return data ? (
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
@@ -77,19 +71,11 @@ const TaskPage: NextPage = () => {
           </section>
         )}
         <section className={s.problemSection}>
-          <div className={s.problemDescription}>
-            {data.problem.map((p, index) => (
-              <p key={index} className={s.text}>
-                {p}
-              </p>
-            ))}
-          </div>
-          <p className={s.text}>
-            By designing websites with inclusivity and adaptability in mind, we
-            can create a more equitable digital space. This not only benefits
-            individuals with chronic or temporary disabilities but also ensures
-            a comfortable and effective browsing experience for all users.
-          </p>
+          {data.problem.map((p, index) => (
+            <p key={index} className={s.text}>
+              {p}
+            </p>
+          ))}
         </section>
         <section className={s.descriptionSection}>
           <h2 className={s.subtitle}>What you should do</h2>
@@ -106,11 +92,19 @@ const TaskPage: NextPage = () => {
               </li>
             ))}
           </ul>
+          <p className={s.text}>
+            Your task is to fill your cart with the items on your shopping list.
+            Feel free to add additional items to your order, but remember to
+            include the required items and stay within the set budget. Next,
+            you&apos;ll need to enter some delivery information. Once
+            you&apos;re ready, hit the &quot;Pay&quot; button. Your cart
+            contents and delivery information will be validated at this stage.
+          </p>
         </section>
         <Button
           text={"OK, let's try"}
           type={"primary"}
-          onClick={onButtonClick}
+          href="/challenge"
           className={s.button}
         />
       </WidthContainer>

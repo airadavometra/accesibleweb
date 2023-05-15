@@ -48,16 +48,14 @@ const CheckoutPage: NextPage = () => {
     isDiscountApplied,
     setIsDiscountApplied,
     setCheckoutCart,
-    setFinishTime,
-    setIsSuccessfulTrue,
+    setIsSuccessful,
   } = useChallengeStore((state) => ({
     filter: state.filter,
     checkoutCart: state.checkoutCart,
     isDiscountApplied: state.isDiscountApplied,
     setIsDiscountApplied: state.setIsDiscountApplied,
     setCheckoutCart: state.setCheckoutCart,
-    setFinishTime: state.setFinishTime,
-    setIsSuccessfulTrue: state.setIsSuccessfulTrue,
+    setIsSuccessful: state.setIsSuccessful,
   }));
 
   const [challenge, setChallenge] = useState<Challenge>();
@@ -105,8 +103,6 @@ const CheckoutPage: NextPage = () => {
   }, [challenge, discountCode, filter, setIsDiscountApplied]);
 
   const onPayClick = useCallback(() => {
-    setFinishTime(new Date());
-
     if (
       filter &&
       firstName &&
@@ -119,11 +115,12 @@ const CheckoutPage: NextPage = () => {
       zipCode &&
       validateResult(filter, checkoutCart, isDiscountApplied)
     ) {
-      setIsSuccessfulTrue();
+      setIsSuccessful(true);
+    } else {
+      setIsSuccessful(false);
     }
     router.push("/result");
   }, [
-    setFinishTime,
     filter,
     firstName,
     lastName,
@@ -136,7 +133,7 @@ const CheckoutPage: NextPage = () => {
     checkoutCart,
     isDiscountApplied,
     router,
-    setIsSuccessfulTrue,
+    setIsSuccessful,
   ]);
 
   const onBackToCartClick = useCallback(() => {

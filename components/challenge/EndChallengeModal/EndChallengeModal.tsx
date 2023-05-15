@@ -14,10 +14,10 @@ export const EndChallengeModal = ({
   onClose,
 }: EndChallengeModalProps) => {
   const router = useRouter();
-  const setFinishTime = useChallengeStore((state) => state.setFinishTime);
+  const setIsSuccessful = useChallengeStore((state) => state.setIsSuccessful);
 
   const endChallenge = () => {
-    setFinishTime(new Date());
+    setIsSuccessful(false);
     router.push("/result");
   };
 

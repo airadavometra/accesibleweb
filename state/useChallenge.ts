@@ -7,12 +7,8 @@ export type CartProduct = Product & { quantity: number };
 type ChallengeStore = {
   filter?: Filter;
   setFilter: (filter?: Filter) => void;
-  startTime?: Date;
-  setStartTime: (startTime?: Date) => void;
-  finishTime?: Date;
-  setFinishTime: (startTime?: Date) => void;
   isSuccessful: boolean;
-  setIsSuccessfulTrue: () => void;
+  setIsSuccessful: (value: boolean) => void;
   cart: CartProduct[];
   addProduct: (product: Product, quantity: number) => void;
   removeProduct: (productId: number) => void;
@@ -26,12 +22,8 @@ type ChallengeStore = {
 export const useChallengeStore = create<ChallengeStore>()((set) => ({
   filter: undefined,
   setFilter: (filter) => set(() => ({ filter: filter })),
-  startTime: undefined,
-  setStartTime: (startTime) => set(() => ({ startTime: startTime })),
-  finishTime: undefined,
-  setFinishTime: (startTime) => set(() => ({ startTime: startTime })),
   isSuccessful: false,
-  setIsSuccessfulTrue: () => set({ isSuccessful: true }),
+  setIsSuccessful: (value: boolean) => set({ isSuccessful: value }),
   cart: [],
   addProduct: (product, quantity) =>
     set((state) => {

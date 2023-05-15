@@ -35,10 +35,6 @@ const ResultPage: NextPage = () => {
     }
   }, [filter, router]);
 
-  const onButtonClick = () => {
-    router.push("/#challenges");
-  };
-
   return data ? (
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
@@ -50,23 +46,19 @@ const ResultPage: NextPage = () => {
         </section>
         <section>
           <p className={s.text}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem
-            nisi, ipsam impedit non sint saepe quis optio eius repudiandae
-            dolores sed voluptate maiores labore ab repellat autem minus totam
-            praesentium?
+            By designing websites with inclusivity and adaptability in mind, we
+            can create a more equitable digital space. This not only benefits
+            individuals with chronic or temporary disabilities but also ensures
+            a comfortable and effective browsing experience for all users.
           </p>
         </section>
         <section className={s.buttons}>
           <Button
             text={"Try accessible version"}
             type={"primary"}
-            onClick={onButtonClick}
+            href="/challenge"
           />
-          <Button
-            text={"Or try again"}
-            type={"secondary"}
-            onClick={onButtonClick}
-          />
+          <Button text={"Or try again"} type={"secondary"} href="/challenge" />
         </section>
         <section className={s.otherChallenges}>
           <h2>Check out other challenges:</h2>
