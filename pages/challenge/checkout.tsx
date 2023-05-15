@@ -10,34 +10,7 @@ import { challengeMap } from "@/data/challenge/challenge";
 import { Filter } from "@/types/filter";
 import { ConfirmPayModal } from "@/components/challenge/ConfirmPayModal/ConfirmPayModal";
 import { Challenge } from "@/types/challenge/challenge";
-
-const validateResult = (
-  filter: Filter,
-  cart: CartProduct[],
-  isDiscountApplied: boolean
-): boolean => {
-  const data = filter ? challengeMap[filter] : undefined;
-  if (data) {
-    const allItemsAreInCart = data.cart.every(
-      (item) =>
-        cart.find(
-          (c) => c.id === item.productId && c.quantity === item.quantity
-        ) !== undefined
-    );
-
-    const subtotal = cart.reduce(
-      (sum, item) => sum + item.price * item.quantity,
-      0
-    );
-    const limitIsEnough =
-      (isDiscountApplied
-        ? data.deliveryPrice + subtotal * ((100 - data.discount) / 100)
-        : data.deliveryPrice + subtotal) <= data.budgetLimit;
-
-    return allItemsAreInCart && limitIsEnough;
-  }
-  return false;
-};
+import { validateResult } from "@/utils/validateResult";
 
 const CheckoutPage: NextPage = () => {
   const router = useRouter();
@@ -48,6 +21,7 @@ const CheckoutPage: NextPage = () => {
     isDiscountApplied,
     setIsDiscountApplied,
     setCheckoutCart,
+    setCart,
     setIsSuccessful,
   } = useChallengeStore((state) => ({
     filter: state.filter,
@@ -55,6 +29,7 @@ const CheckoutPage: NextPage = () => {
     isDiscountApplied: state.isDiscountApplied,
     setIsDiscountApplied: state.setIsDiscountApplied,
     setCheckoutCart: state.setCheckoutCart,
+    setCart: state.setCart,
     setIsSuccessful: state.setIsSuccessful,
   }));
 
@@ -80,6 +55,15 @@ const CheckoutPage: NextPage = () => {
     [checkoutCart]
   );
 
+  const total = useMemo(
+    () =>
+      Number(
+        (challenge?.deliveryPrice || 0) +
+          subtotal * ((100 - (challenge?.discount || 0)) / 100)
+      ).toFixed(2),
+    [challenge?.deliveryPrice, challenge?.discount, subtotal]
+  );
+
   useEffect(() => {
     if (filter === undefined) {
       router.push("/");
@@ -103,24 +87,23 @@ const CheckoutPage: NextPage = () => {
   }, [challenge, discountCode, filter, setIsDiscountApplied]);
 
   const onPayClick = useCallback(() => {
-    if (
-      filter &&
-      firstName &&
-      lastName &&
-      email &&
-      address &&
-      country &&
-      city &&
-      region &&
-      zipCode &&
-      validateResult(filter, checkoutCart, isDiscountApplied)
-    ) {
-      setIsSuccessful(true);
-    } else {
-      setIsSuccessful(false);
-    }
+    setIsSuccessful(
+      filter !== undefined &&
+        firstName !== undefined &&
+        lastName !== undefined &&
+        email !== undefined &&
+        address !== undefined &&
+        country !== undefined &&
+        city !== undefined &&
+        region !== undefined &&
+        zipCode !== undefined &&
+        validateResult(filter, checkoutCart, isDiscountApplied)
+    );
+    setCart([]);
+    setCheckoutCart([]);
     router.push("/result");
   }, [
+    setIsSuccessful,
     filter,
     firstName,
     lastName,
@@ -132,8 +115,9 @@ const CheckoutPage: NextPage = () => {
     zipCode,
     checkoutCart,
     isDiscountApplied,
+    setCart,
+    setCheckoutCart,
     router,
-    setIsSuccessful,
   ]);
 
   const onBackToCartClick = useCallback(() => {
@@ -281,9 +265,7 @@ const CheckoutPage: NextPage = () => {
                 <span className={s.total}>
                   Total
                   <span className={s.price}>
-                    {"  "}$
-                    {(challenge?.deliveryPrice || 0) +
-                      subtotal * ((100 - (challenge?.discount || 0)) / 100)}
+                    {"  "}${total}
                   </span>
                 </span>
               </div>

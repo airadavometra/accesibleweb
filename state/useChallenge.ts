@@ -10,6 +10,7 @@ type ChallengeStore = {
   isSuccessful: boolean;
   setIsSuccessful: (value: boolean) => void;
   cart: CartProduct[];
+  setCart: (Cart: CartProduct[]) => void;
   addProduct: (product: Product, quantity: number) => void;
   removeProduct: (productId: number) => void;
   updateProductQuantity: (productId: number, quantity: number) => void;
@@ -25,6 +26,7 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
   isSuccessful: false,
   setIsSuccessful: (value: boolean) => set({ isSuccessful: value }),
   cart: [],
+  setCart: (Cart) => set(() => ({ cart: Cart })),
   addProduct: (product, quantity) =>
     set((state) => {
       if (quantity === 0) {
