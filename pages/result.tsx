@@ -56,7 +56,7 @@ const ResultPage: NextPage = () => {
           <Button
             text={"Try accessible version"}
             type={"primary"}
-            href="/challenge"
+            href="/challenge/accessible/"
           />
           <Button text={"Or try again"} type={"secondary"} href="/challenge" />
         </section>
