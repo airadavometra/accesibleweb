@@ -5,7 +5,7 @@
   font-size: 1.5rem;
   text-align: center;
   border: none;
-  outline: 1px solid var(--color);
+  outline: 1px solid black;
   transition: font-weight 100ms ease-in-out;
 }
 .secondary {

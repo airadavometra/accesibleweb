@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import s from "@/styles/challenge/Checkout.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
-import { CartProduct, useChallengeStore } from "@/state/useChallenge";
+import { useChallengeStore } from "@/state/useChallenge";
 import { Button } from "@/components/challenge/Button/Button";
 import { useRouter } from "next/router";
 import { Input } from "@/components/challenge/Input/Input";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { challengeMap } from "@/data/challenge/challenge";
-import { Filter } from "@/types/filter";
 import { ConfirmPayModal } from "@/components/challenge/ConfirmPayModal/ConfirmPayModal";
 import { Challenge } from "@/types/challenge/challenge";
 import { validateResult } from "@/utils/validateResult";
