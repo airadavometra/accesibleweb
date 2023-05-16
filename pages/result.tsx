@@ -83,7 +83,7 @@ const ResultPage: NextPage = () => {
             </div>
           </div>
           <div className={s.group}>
-            <h2>Or try other challenges:</h2>
+            <h2>And try other challenges:</h2>
             <ul className={s.otherChallengesList}>
               {challenges
                 .filter((c) => c.id !== filter)
