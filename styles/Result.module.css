@@ -12,7 +12,7 @@
   gap: min(4rem, 96px);
 }
 .title {
-  font-size: clamp(2rem, -3.3333rem + 11.1111vw, 5rem);
+  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
 }
 .text {
   font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
