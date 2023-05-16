@@ -21,7 +21,10 @@ export const RemindTaskModal = ({ isOpen, onClose }: RemindTaskModalProps) => {
           <Dialog.Title id="service-reming-task-title" className={s.title}>
             {data.title}
           </Dialog.Title>
-          <Dialog.Description id="service-reming-task-description">
+          <Dialog.Description
+            id="service-reming-task-description"
+            className={s.description}
+          >
             <ul>
               {data.challengeSteps.map((step, index) => (
                 <li key={index}>{step}</li>

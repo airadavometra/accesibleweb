@@ -3,6 +3,9 @@
   max-width: 50%;
   height: fit-content;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   inset: 0;
   background-color: var(--color);
@@ -14,7 +17,10 @@
   gap: 1.5rem;
 }
 .title {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+}
+.description {
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .buttonsGroup {
   width: 100%;
@@ -25,6 +31,7 @@
 @media (max-width: 48rem) {
   .modal {
     max-width: 100%;
+    width: 100%;
     height: 100%;
   }
   .modal > div {

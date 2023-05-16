@@ -17,10 +17,14 @@ export const ConfirmPayModal = ({
     <Dialog className={s.modal} open={isOpen} onClose={onClose}>
       <Dialog.Panel>
         <Dialog.Title id="service-confirm-pay-title" className={s.title}>
-          This is the end of challenge
+          Final step!
         </Dialog.Title>
-        <Dialog.Description id="service-confirm-pay-description">
-          Let&apos;s check if you bought everything needed for this challenge.
+        <Dialog.Description
+          id="service-confirm-pay-description"
+          className={s.description}
+        >
+          Let&apos;s check if you bought everything needed for this challenge
+          and filled required delivery info.
           <br /> Your cart is going to be validated now.
         </Dialog.Description>
         <div className={s.buttonsGroup}>
