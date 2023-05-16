@@ -8,12 +8,14 @@ import { challengeMap } from "@/data/challenge/challenge";
 import { Button } from "@/components/main/Button/Button";
 import { challenges } from "@/data/challenges";
 import Link from "next/link";
+import { Arrow } from "@/icons/Arrow";
+import classnames from "classnames";
 
 const SUCCESSFUL_RESULT =
-  "Congratulations on successfully completing the challenge! We hope this experience has provided you with a deeper understanding of the difficulties individuals with disabilities face while navigating the web. While you've triumphed over this task, remember that for many, such obstacles are part of their everyday online experience.";
+  "Congratulations on successfully completing the challenge! We hope this experience gave you a deeper understanding of the difficulties individuals with different abilities face while navigating the web. Remember that for many, such obstacles are part of their everyday online experience.";
 
 const UNSUCCESSFUL_RESULT =
-  "Although the challenge wasn't successfully completed, it's designed not to rate you but to replicate the daily web navigation difficulties faced by individuals with disabilities. This challenge is not easy, mirroring the complexities these individuals often face. Your experience today underscores the urgent need for a more accessible online environment.";
+  "Although the challenge wasn't successfully completed, it's designed not to rate you but to replicate the daily web navigation difficulties faced by individuals with different abilities. Your experience today proves the urgent need for a more accessible online environment.";
 
 const ResultPage: NextPage = () => {
   const [data, setData] = useState<{
@@ -45,9 +47,9 @@ const ResultPage: NextPage = () => {
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
         <h1 className={s.title}>{data.title} result</h1>
-        <section className={s.resultSection}>
+        <section className={s.gridSection}>
           <p className={s.text}>
-            {isSuccessful ? SUCCESSFUL_RESULT : SUCCESSFUL_RESULT}
+            {isSuccessful ? SUCCESSFUL_RESULT : UNSUCCESSFUL_RESULT}
           </p>
           <p className={s.text}>
             By designing websites with inclusivity and adaptability in mind, we
@@ -56,27 +58,45 @@ const ResultPage: NextPage = () => {
             a comfortable and effective browsing experience for all users.
           </p>
         </section>
-        <section className={s.buttons}>
-          <Button
-            text={"Try accessible version"}
-            type={"primary"}
-            href="/challenge/accessible/"
-          />
-          <Button text={"Or try again"} type={"secondary"} href="/challenge" />
-        </section>
-        <section className={s.otherChallenges}>
-          <h2>Check out other challenges:</h2>
-          <ul className={s.otherChallengesList}>
-            {challenges
-              .filter((c) => c.id !== filter)
-              .map((c) => (
-                <li key={c.id}>
-                  <Link href={c.link} className={s.link}>
-                    {c.name}
-                  </Link>
-                </li>
-              ))}
-          </ul>
+        <section className={classnames(s.gridSection, s.otherChallenges)}>
+          <div className={classnames(s.group, s.accessibleGroup)}>
+            <div className={s.group}>
+              <h2>Also check this out</h2>
+              <p className={s.text}>
+                Try a similar challenge, but with one key difference: this
+                version is more accessible than the one you visited before. You
+                can experience how an accessible website can be a gamechanger
+                and make the web more inclusive and user-friendly.
+              </p>
+            </div>
+            <div className={s.group}>
+              <Button
+                text={"Try accessible version"}
+                type={"primary"}
+                href="/challenge/accessible/"
+              />
+              <Button
+                text={"Or try the broken one again"}
+                type={"secondary"}
+                href="/challenge"
+              />
+            </div>
+          </div>
+          <div className={s.group}>
+            <h2>Or try other challenges:</h2>
+            <ul className={s.otherChallengesList}>
+              {challenges
+                .filter((c) => c.id !== filter)
+                .map((c) => (
+                  <li key={c.id} className={s.listItem}>
+                    <Arrow className={s.arrow} />
+                    <Link href={c.link} className={s.link}>
+                      {c.name}
+                    </Link>
+                  </li>
+                ))}
+            </ul>
+          </div>
         </section>
       </WidthContainer>
     </main>

@@ -11,8 +11,8 @@ export default function Description() {
             <p>
               This is a non-commercial project focused on web accessibility. Our
               goal is to create an engaging, interactive experience that allows
-              to face the challenges that people with disabilities have in the
-              web.
+              to face the challenges that people with different abilities have
+              in the web.
             </p>
             <p>
               By simulating various accessibility obstacles, we want to

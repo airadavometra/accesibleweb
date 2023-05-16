@@ -2,7 +2,7 @@
   padding: 0.75rem 2rem;
   color: var(--color);
   background-color: black;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
   text-align: center;
   border: none;
   outline: 1px solid black;
@@ -12,7 +12,7 @@
   padding: 0.75rem 2rem;
   color: black;
   background-color: var(--color);
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
   text-align: center;
   border: none;
   outline: 1px solid black;
