@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: var(--title-font);
-  font-size: clamp(6rem, 20vw + 1rem, 12rem);
+  font-size: clamp(6rem, -4.6667rem + 22.2222vw, 12rem);
   text-transform: uppercase;
   overflow: hidden;
   cursor: default;

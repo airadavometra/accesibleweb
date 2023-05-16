@@ -8,7 +8,7 @@
 }
 .descriptionHeading {
   font-family: var(--title-font);
-  font-size: clamp(2rem, 5vw + 1rem, 6.5rem);
+  font-size: clamp(2rem, -3.3333rem + 11.1111vw, 5rem);
   font-weight: 600;
   text-transform: uppercase;
   word-spacing: 1rem;
@@ -17,7 +17,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: min(4rem, 96px);
-  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .descriptionColumn {
   display: flex;
@@ -28,5 +28,8 @@
   .descriptionContent {
     grid-template-columns: 1fr;
     gap: min(2rem, 32px);
+  }
+  .descriptionHeading {
+    word-spacing: revert;
   }
 }

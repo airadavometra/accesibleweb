@@ -15,7 +15,7 @@
   right: 0;
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.5rem, 3vw + 0rem, 1rem);
+  font-size: clamp(0.75rem, 0.3056rem + 0.9259vw, 1rem);
   font-weight: 600;
   color: var(--color);
 }

@@ -12,10 +12,10 @@
   gap: min(4rem, 96px);
 }
 .title {
-  font-size: 3rem;
+  font-size: clamp(2rem, -3.3333rem + 11.1111vw, 5rem);
 }
 .text {
-  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .gridSection {
   display: grid;
@@ -51,7 +51,7 @@
   white-space: nowrap;
   position: relative;
   text-transform: capitalize;
-  font-size: clamp(1rem, 6vw + 0rem, 1.5rem);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .link:before {
   content: "";

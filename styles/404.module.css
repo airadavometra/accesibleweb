@@ -13,7 +13,7 @@
   inset: 0;
   color: var(--color);
   font-family: var(--title-font);
-  font-size: clamp(2rem, 4vw + 0.5rem, 4rem);
+  font-size: clamp(2rem, -3.3333rem + 11.1111vw, 5rem);
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
