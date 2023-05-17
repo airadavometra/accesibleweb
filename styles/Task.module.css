@@ -4,7 +4,7 @@
 .widthContainer {
   display: flex;
   flex-direction: column;
-  gap: min(2rem, 48px);
+  gap: min(3rem, 48px);
 }
 .title {
   font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
