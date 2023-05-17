@@ -4,20 +4,20 @@ import React from "react";
 
 // TODO description and share image
 
-const description = `Accessibility project`;
+const description = `Access denied?`;
 
 export const PageHead = () => (
   <>
     <NextHead>
-      <title>Accessibility project</title>
+      <title>Access denied?</title>
       <meta name="description" content={description} />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
         key="viewport"
       />
-      <meta name="keywords" content="Accessibility project" />
-      <meta property="og:title" content="Accessibility project" />
+      <meta name="keywords" content="Access denied?" />
+      <meta property="og:title" content="Access denied?" />
       <meta property="og:image" content="/share.png" />
     </NextHead>
     {process.env.NODE_ENV === "production" &&
