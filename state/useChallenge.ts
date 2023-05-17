@@ -9,6 +9,8 @@ type ChallengeStore = {
   setFilter: (filter?: Filter) => void;
   isSuccessful: boolean;
   setIsSuccessful: (value: boolean) => void;
+  challengeErrors: string[];
+  setChallengeErrors: (errors: string[]) => void;
   cart: CartProduct[];
   setCart: (Cart: CartProduct[]) => void;
   addProduct: (product: Product, quantity: number) => void;
@@ -25,6 +27,8 @@ export const useChallengeStore = create<ChallengeStore>()((set) => ({
   setFilter: (filter) => set(() => ({ filter: filter })),
   isSuccessful: false,
   setIsSuccessful: (value: boolean) => set({ isSuccessful: value }),
+  challengeErrors: [],
+  setChallengeErrors: (errors) => set(() => ({ challengeErrors: errors })),
   cart: [],
   setCart: (Cart) => set(() => ({ cart: Cart })),
   addProduct: (product, quantity) =>

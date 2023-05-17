@@ -6,6 +6,19 @@
   flex-direction: column;
   gap: min(3rem, 48px);
 }
+
+.errors {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
+  border: 1px solid black;
+}
+.errorsTitle {
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+}
+
 .description {
   display: grid;
   grid-template-columns: 1fr 1fr;

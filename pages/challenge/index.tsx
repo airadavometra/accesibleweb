@@ -34,11 +34,16 @@ export const categories: Category[] = [
 
 const ChallengeHome = () => {
   const router = useRouter();
-  const filter = useChallengeStore((state) => state.filter);
+  const { filter, setChallengeErrors } = useChallengeStore((state) => ({
+    filter: state.filter,
+    setChallengeErrors: state.setChallengeErrors,
+  }));
 
   const [challenge, setChallenge] = useState<Challenge>();
   const [bestsetters, setBestsellers] = useState<Product[]>([]);
   const [dayOffer, setDayOffer] = useState<Product>();
+
+  useEffect(() => setChallengeErrors([]), [setChallengeErrors]);
 
   useEffect(() => {
     if (filter === undefined) {

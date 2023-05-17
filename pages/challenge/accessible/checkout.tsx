@@ -22,6 +22,7 @@ const CheckoutPage: NextPage = () => {
     setCheckoutCart,
     setCart,
     setIsSuccessful,
+    setChallengeErrors,
   } = useChallengeStore((state) => ({
     filter: state.filter,
     checkoutCart: state.checkoutCart,
@@ -30,6 +31,7 @@ const CheckoutPage: NextPage = () => {
     setCheckoutCart: state.setCheckoutCart,
     setCart: state.setCart,
     setIsSuccessful: state.setIsSuccessful,
+    setChallengeErrors: state.setChallengeErrors,
   }));
 
   const [challenge, setChallenge] = useState<Challenge>();
@@ -86,23 +88,27 @@ const CheckoutPage: NextPage = () => {
   }, [challenge, discountCode, filter, setIsDiscountApplied]);
 
   const onPayClick = useCallback(() => {
-    setIsSuccessful(
-      filter !== undefined &&
-        firstName !== undefined &&
-        lastName !== undefined &&
-        email !== undefined &&
-        address !== undefined &&
-        country !== undefined &&
-        city !== undefined &&
-        region !== undefined &&
-        zipCode !== undefined &&
-        validateResult(filter, checkoutCart, isDiscountApplied)
+    const cartValidationResult = validateResult(
+      filter,
+      firstName,
+      lastName,
+      email,
+      address,
+      country,
+      city,
+      region,
+      zipCode,
+      checkoutCart,
+      isDiscountApplied
     );
+
+    setIsSuccessful(cartValidationResult.length === 0);
+    setChallengeErrors(cartValidationResult);
+
     setCart([]);
     setCheckoutCart([]);
     router.push("/result");
   }, [
-    setIsSuccessful,
     filter,
     firstName,
     lastName,
@@ -114,6 +120,8 @@ const CheckoutPage: NextPage = () => {
     zipCode,
     checkoutCart,
     isDiscountApplied,
+    setIsSuccessful,
+    setChallengeErrors,
     setCart,
     setCheckoutCart,
     router,
@@ -243,7 +251,7 @@ const CheckoutPage: NextPage = () => {
                 <span className={s.subtotal}>
                   Subtotal
                   <span className={s.price}>
-                    {"  "}${subtotal}
+                    {"  "}${Number(subtotal).toFixed(2)}
                   </span>
                 </span>
                 <span className={s.subtotal}>

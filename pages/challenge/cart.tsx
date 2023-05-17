@@ -74,7 +74,7 @@ const CartPage: NextPage = () => {
                           <span>${item.price}</span>
                         </div>
                         <span className={s.total}>
-                          ${item.price * item.quantity}
+                          ${Number(item.price * item.quantity).toFixed(2)}
                         </span>
                       </div>
                       <div className={s.buttons}>
@@ -151,7 +151,7 @@ const CartPage: NextPage = () => {
                       />
                     </div>
                     <span className={classNames(s.total, s.right)}>
-                      ${item.price * item.quantity}
+                      ${Number(item.price * item.quantity).toFixed(2)}
                     </span>
                   </Fragment>
                 ))}
@@ -163,10 +163,12 @@ const CartPage: NextPage = () => {
                 Subtotal
                 <span className={s.subtotalSum}>
                   {"  "}$
-                  {cart.reduce(
-                    (sum, item) => sum + item.price * item.quantity,
-                    0
-                  )}
+                  {Number(
+                    cart.reduce(
+                      (sum, item) => sum + item.price * item.quantity,
+                      0
+                    )
+                  ).toFixed(2)}
                 </span>
               </span>
               <span className={s.disclaimer}>

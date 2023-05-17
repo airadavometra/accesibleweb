@@ -23,10 +23,13 @@ const ResultPage: NextPage = () => {
   }>();
 
   const router = useRouter();
-  const { filter, isSuccessful } = useChallengeStore((state) => ({
-    filter: state.filter,
-    isSuccessful: state.isSuccessful,
-  }));
+  const { filter, isSuccessful, challengeErrors } = useChallengeStore(
+    (state) => ({
+      filter: state.filter,
+      isSuccessful: state.isSuccessful,
+      challengeErrors: state.challengeErrors,
+    })
+  );
 
   useEffect(() => {
     if (router.isReady) {
@@ -47,6 +50,16 @@ const ResultPage: NextPage = () => {
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
         <h1 className={s.title}>{data.title} result</h1>
+        {challengeErrors?.length > 0 && (
+          <section className={s.errors}>
+            <h2 className={s.errorsTitle}>You&apos;ve made some mistakes:</h2>
+            <ul>
+              {challengeErrors.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        )}
         <section className={s.gridSection}>
           <p className={s.text}>
             {isSuccessful ? SUCCESSFUL_RESULT : UNSUCCESSFUL_RESULT}
