@@ -9,7 +9,7 @@ import { Categories } from "@/components/challenge/accessible/Categories/Categor
 import { Category } from "@/types/category";
 import { Quote } from "@/components/challenge/accessible/Quote/Quote";
 import { DayOffer } from "@/components/challenge/accessible/DayOffer/DayOffer";
-import { products } from "@/data/challenge/products";
+import { accessibleProducts } from "@/data/challenge/accessibleProducts";
 import { challengeMap } from "@/data/challenge/challenge";
 import { Product } from "@/types/challenge/product";
 import { Challenge } from "@/types/challenge/challenge";
@@ -57,9 +57,9 @@ const ChallengeHome = () => {
       if (data) {
         setChallenge(data);
         setBestsellers(
-          products.filter((p) => data?.bestsellerIds.includes(p.id))
+          accessibleProducts.filter((p) => data?.bestsellerIds.includes(p.id))
         );
-        setDayOffer(products.find((p) => data?.dayOfferId === p.id));
+        setDayOffer(accessibleProducts.find((p) => data?.dayOfferId === p.id));
         return;
       }
     }

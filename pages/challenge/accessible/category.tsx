@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import s from "@/styles/challenge/accessible/Category.module.css";
 import { Category } from "@/types/challenge/category";
-import { products } from "@/data/challenge/products";
+import { accessibleProducts } from "@/data/challenge/accessibleProducts";
 import { Product } from "@/types/challenge/product";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { ProductsGrid } from "@/components/challenge/accessible/ProductsGrid/ProductsGrid";
@@ -52,7 +52,7 @@ const CategoryPage: NextPage = () => {
 
       const data = filter ? challengeMap[filter] : undefined;
 
-      const filteredProducts = products.filter(
+      const filteredProducts = accessibleProducts.filter(
         (item) =>
           item.category === categoryValue && data?.productIds.includes(item.id)
       );

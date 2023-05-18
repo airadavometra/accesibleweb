@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import s from "@/styles/challenge/accessible/Product.module.css";
 import { Bestsellers } from "@/components/challenge/accessible/Bestsellers/Bestsellers";
-import { products } from "@/data/challenge/products";
+import { accessibleProducts } from "@/data/challenge/accessibleProducts";
 import { ProductInfo } from "@/components/challenge/accessible/ProductInfo/ProductInfo";
 import { Product } from "@/types/challenge/product";
 import { challengeMap } from "@/data/challenge/challenge";
@@ -42,14 +42,16 @@ const ProductPage: NextPage = () => {
         return;
       }
 
-      const foundProduct = products.find((item) => item.id === productId);
+      const foundProduct = accessibleProducts.find(
+        (item) => item.id === productId
+      );
 
       setProduct(foundProduct);
 
       const data = filter ? challengeMap[filter] : undefined;
       if (data) {
         setBestsellers(
-          products.filter((p) => data?.bestsellerIds.includes(p.id))
+          accessibleProducts.filter((p) => data?.bestsellerIds.includes(p.id))
         );
       }
     }
