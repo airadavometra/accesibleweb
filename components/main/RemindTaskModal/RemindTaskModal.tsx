@@ -2,7 +2,7 @@ import { Dialog } from "@headlessui/react";
 import s from "./RemindTaskModal.module.css";
 import { useChallengeStore } from "@/state/useChallenge";
 import { challengeMap } from "@/data/challenge/challenge";
-import { Button } from "../Button/Button";
+import { Button } from "@/components/main/Button/Button";
 
 type RemindTaskModalProps = {
   isOpen: boolean;

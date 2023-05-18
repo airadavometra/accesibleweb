@@ -1,6 +1,6 @@
 import { Dialog } from "@headlessui/react";
 import s from "./ConfirmPayModal.module.css";
-import { Button } from "../Button/Button";
+import { Button } from "@/components/main/Button/Button";
 
 type ConfirmPayModalProps = {
   isOpen: boolean;

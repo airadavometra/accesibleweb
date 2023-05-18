@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { Input } from "@/components/challenge/accessible/Input/Input";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { challengeMap } from "@/data/challenge/challenge";
-import { ConfirmPayModal } from "@/components/challenge/accessible/ConfirmPayModal/ConfirmPayModal";
+import { ConfirmPayModal } from "@/components/main/ConfirmPayModal/ConfirmPayModal";
 import { Challenge } from "@/types/challenge/challenge";
 import { validateResult } from "@/utils/validateResult";
 

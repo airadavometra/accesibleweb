@@ -1,8 +1,8 @@
 import { Dialog } from "@headlessui/react";
 import s from "./EndChallengeModal.module.css";
-import { Button } from "../Button/Button";
 import { useRouter } from "next/router";
 import { useChallengeStore } from "@/state/useChallenge";
+import { Button } from "@/components/main/Button/Button";
 
 type EndChallengeModalProps = {
   isOpen: boolean;

@@ -1,12 +1,9 @@
 import { PageHead } from "@/components/PageHead/PageHead";
 import { NavigationItem } from "@/types/navigationItem";
 import { ReactNode, useEffect, useState } from "react";
-import { StickyBanner } from "../StickyBanner/StickyBanner";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import s from "./Layout.module.css";
-import { RemindTaskModal } from "../RemindTaskModal/RemindTaskModal";
-import { EndChallengeModal } from "../EndChallengeModal/EndChallengeModal";
 import { useChallengeStore } from "@/state/useChallenge";
 import classNames from "classnames";
 import { colorBlindnessModes } from "@/filters/colorBlindnessModes";
@@ -14,6 +11,9 @@ import { simulateTremor } from "@/filters/tremorSimulator";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Cursor } from "@/icons/Cursor";
 import { simulateDyslexia } from "@/filters/dyslexiaSimulator";
+import { StickyBanner } from "@/components/main/StickyBanner/StickyBanner";
+import { EndChallengeModal } from "@/components/main/EndChallengeModal/EndChallengeModal";
+import { RemindTaskModal } from "@/components/main/RemindTaskModal/RemindTaskModal";
 
 export const navigation: NavigationItem[] = [
   { id: 0, title: "Fruits", path: "/challenge/category?category=fruits" },

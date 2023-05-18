@@ -1,4 +1,4 @@
-import { Button } from "../Button/Button";
+import { Button } from "@/components/main/Button/Button";
 import s from "./StickyBanner.module.css";
 
 type StickeHeaderProps = {
@@ -17,12 +17,14 @@ export const StickyBanner = ({
         text="Remind task"
         onClick={onRemindTask}
         type="secondary"
+        className={s.button}
       />
       <Button
         id="service-remind-task"
         text="End challenge"
         onClick={onEndChallenge}
         type="primary"
+        className={s.button}
       />
     </div>
   );

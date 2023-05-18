@@ -3,6 +3,7 @@ import s from "./Button.module.css";
 import Link from "next/link";
 
 type ButtonProps = {
+  id?: string;
   text: string;
   href?: string;
   onClick?: () => void;
@@ -11,6 +12,7 @@ type ButtonProps = {
 };
 
 export const Button = ({
+  id,
   text,
   href,
   onClick,
@@ -18,14 +20,18 @@ export const Button = ({
   type,
 }: ButtonProps) => {
   return href ? (
-    <Link href={href} className={classNames(s[type], className)}>
+    <Link id={id} href={href} className={classNames(s[type], className)}>
       {text}
       <div aria-hidden="true" className={s.hidden}>
         {text}
       </div>
     </Link>
   ) : (
-    <button className={classNames(s[type], className)} onClick={onClick}>
+    <button
+      id={id}
+      className={classNames(s[type], className)}
+      onClick={onClick}
+    >
       <>
         {text}
         <div aria-hidden="true" className={s.hidden}>

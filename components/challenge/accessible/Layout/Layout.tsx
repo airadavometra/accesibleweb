@@ -1,12 +1,12 @@
 import { PageHead } from "@/components/PageHead/PageHead";
 import { NavigationItem } from "@/types/navigationItem";
 import { ReactNode, useEffect, useState } from "react";
-import { StickyBanner } from "@/components/challenge/accessible/StickyBanner/StickyBanner";
+import { StickyBanner } from "@/components/main/StickyBanner/StickyBanner";
 import { Footer } from "@/components/challenge/accessible/Footer/Footer";
 import { Header } from "@/components/challenge/accessible/Header/Header";
 import s from "./Layout.module.css";
-import { RemindTaskModal } from "@/components/challenge/accessible/RemindTaskModal/RemindTaskModal";
-import { EndChallengeModal } from "@/components/challenge/accessible/EndChallengeModal/EndChallengeModal";
+import { RemindTaskModal } from "@/components/main/RemindTaskModal/RemindTaskModal";
+import { EndChallengeModal } from "@/components/main/EndChallengeModal/EndChallengeModal";
 import { useChallengeStore } from "@/state/useChallenge";
 import classNames from "classnames";
 import { colorBlindnessModes } from "@/filters/colorBlindnessModes";
