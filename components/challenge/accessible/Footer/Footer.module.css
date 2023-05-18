@@ -74,6 +74,7 @@
   padding: 0.5rem 1rem;
   border: 1px solid white;
   font-family: var(--challenge-font);
+  cursor: default;
 }
 .rights {
   font-family: var(--challenge-font);
