@@ -6,7 +6,7 @@ import { Category } from "@/types/challenge/category";
 import { products } from "@/data/challenge/products";
 import { Product } from "@/types/challenge/product";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
-import { ProductsGrid } from "@/components/challenge/ProductsGrid/ProductsGrid";
+import { ProductsGrid } from "@/components/challenge/accessible/ProductsGrid/ProductsGrid";
 import { useChallengeStore } from "@/state/useChallenge";
 import { challengeMap } from "@/data/challenge/challenge";
 

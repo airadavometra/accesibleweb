@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import s from "@/styles/challenge/Checkout.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { useChallengeStore } from "@/state/useChallenge";
-import { Button } from "@/components/challenge/Button/Button";
+import { Button } from "@/components/challenge/accessible/Button/Button";
 import { useRouter } from "next/router";
-import { Input } from "@/components/challenge/Input/Input";
+import { Input } from "@/components/challenge/accessible/Input/Input";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { challengeMap } from "@/data/challenge/challenge";
-import { ConfirmPayModal } from "@/components/challenge/ConfirmPayModal/ConfirmPayModal";
+import { ConfirmPayModal } from "@/components/challenge/accessible/ConfirmPayModal/ConfirmPayModal";
 import { Challenge } from "@/types/challenge/challenge";
 import { validateResult } from "@/utils/validateResult";
 
@@ -129,7 +129,7 @@ const CheckoutPage: NextPage = () => {
 
   const onBackToCartClick = useCallback(() => {
     setCheckoutCart([]);
-    router.push("/challenge/cart");
+    router.push("/challenge/accessible/cart");
   }, [setCheckoutCart, router]);
 
   return (
@@ -142,7 +142,8 @@ const CheckoutPage: NextPage = () => {
               <div className={s.section}>
                 <h2 className={s.sectionTitle}>Contact information</h2>
                 <Input
-                  placeholder="First name"
+                  label="First name"
+                  placeholder="John"
                   color="black"
                   value={firstName}
                   onChange={(newValue?: string) => setFirstName(newValue)}
@@ -150,7 +151,8 @@ const CheckoutPage: NextPage = () => {
                   required
                 />
                 <Input
-                  placeholder="Last name"
+                  label="Last name"
+                  placeholder="Doe"
                   color="black"
                   value={lastName}
                   onChange={(newValue?: string) => setLastName(newValue)}
@@ -159,7 +161,8 @@ const CheckoutPage: NextPage = () => {
                 />
                 <div className={s.inputGroup}>
                   <Input
-                    placeholder="Email"
+                    label="Email"
+                    placeholder="example@gmail.com"
                     color="black"
                     value={email}
                     onChange={(newValue?: string) => setEmail(newValue)}
@@ -167,7 +170,8 @@ const CheckoutPage: NextPage = () => {
                     required
                   />
                   <Input
-                    placeholder="Phone (optional)"
+                    label="Phone (optional)"
+                    placeholder="+12345678900"
                     color="black"
                     value={phone}
                     onChange={(newValue?: string) => setPhone(newValue)}
@@ -178,7 +182,8 @@ const CheckoutPage: NextPage = () => {
               <div className={s.section}>
                 <h2 className={s.sectionTitle}>Shipping address</h2>
                 <Input
-                  placeholder="Address"
+                  label="Address"
+                  placeholder="Nieuwezijds Voorburgwal 147"
                   color="black"
                   value={address}
                   onChange={(newValue?: string) => setAddress(newValue)}
@@ -186,7 +191,8 @@ const CheckoutPage: NextPage = () => {
                   required
                 />
                 <Input
-                  placeholder="Apartment, suite, etc (optional)"
+                  label="Apartment, suite, etc (optional)"
+                  placeholder="234"
                   color="black"
                   value={apartment}
                   onChange={(newValue?: string) => setApartment(newValue)}
@@ -194,7 +200,8 @@ const CheckoutPage: NextPage = () => {
                 />
                 <div className={s.inputGroup}>
                   <Input
-                    placeholder="Country"
+                    label="Country"
+                    placeholder="The Netherlands"
                     color="black"
                     value={country}
                     onChange={(newValue?: string) => setCountry(newValue)}
@@ -202,7 +209,8 @@ const CheckoutPage: NextPage = () => {
                     required
                   />
                   <Input
-                    placeholder="City"
+                    label="City"
+                    placeholder="Amsterdam"
                     color="black"
                     value={city}
                     onChange={(newValue?: string) => setCity(newValue)}
@@ -212,7 +220,8 @@ const CheckoutPage: NextPage = () => {
                 </div>
                 <div className={s.inputGroup}>
                   <Input
-                    placeholder="Region"
+                    label="Region"
+                    placeholder="North Holland"
                     color="black"
                     value={region}
                     onChange={(newValue?: string) => setRegion(newValue)}
@@ -220,7 +229,8 @@ const CheckoutPage: NextPage = () => {
                     required
                   />
                   <Input
-                    placeholder="ZIP code"
+                    label="ZIP code"
+                    placeholder="1012 RJ"
                     color="black"
                     value={zipCode}
                     onChange={(newValue?: string) => setZipCode(newValue)}
@@ -234,7 +244,8 @@ const CheckoutPage: NextPage = () => {
               <div className={s.section}>
                 <h2 className={s.sectionTitle}>Order details</h2>
                 <Input
-                  placeholder="Discount code"
+                  label="Discount code"
+                  placeholder="SALE20"
                   color="black"
                   value={discountCode}
                   onChange={(newValue?: string) => setDiscountCode(newValue)}

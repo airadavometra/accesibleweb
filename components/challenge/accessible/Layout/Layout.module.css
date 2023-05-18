@@ -1,0 +1,94 @@
+.layout {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  position: relative;
+}
+
+.filter {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.blurred {
+  animation: pulse 5s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    backdrop-filter: blur(3px);
+  }
+  25% {
+    backdrop-filter: blur(4px);
+  }
+  50% {
+    backdrop-filter: blur(3px);
+  }
+  75% {
+    backdrop-filter: blur(2px);
+  }
+  100% {
+    backdrop-filter: blur(3px);
+  }
+}
+
+.blindness {
+  background-color: #80808090;
+  backdrop-filter: blur(100px);
+}
+
+.protanopia {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#protanopia");
+  filter: url("../../../../filters/colorBlindness.svg#protanopia");
+  color-interpolation-filters: sRGB;
+}
+.protanomaly {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#protanomaly");
+  filter: url("../../../../filters/colorBlindness.svg#protanomaly");
+  color-interpolation-filters: sRGB;
+}
+.deuteranopia {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#deuteranopia");
+  filter: url("../../../../filters/colorBlindness.svg#deuteranopia");
+  color-interpolation-filters: sRGB;
+}
+.deuteranomaly {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#deuteranomaly");
+  filter: url("../../../../filters/colorBlindness.svg#deuteranomaly");
+  color-interpolation-filters: sRGB;
+}
+.tritanopia {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#tritanopia");
+  filter: url("../../../../filters/colorBlindness.svg#tritanopia");
+  color-interpolation-filters: sRGB;
+}
+.tritanomaly {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#tritanomaly");
+  filter: url("../../../../filters/colorBlindness.svg#tritanomaly");
+  color-interpolation-filters: sRGB;
+}
+.achromatopsia {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#achromatopsia");
+  filter: url("../../../../filters/colorBlindness.svg#achromatopsia");
+  color-interpolation-filters: sRGB;
+}
+.achromatomaly {
+  backdrop-filter: url("../../../../filters/colorBlindness.svg#achromatomaly");
+  filter: url("../../../../filters/colorBlindness.svg#achromatomaly");
+  color-interpolation-filters: sRGB;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  transition: margin 0.2s;
+  pointer-events: none;
+}
+.tremorLayout,
+.tremorLayout * {
+  cursor: none !important;
+}

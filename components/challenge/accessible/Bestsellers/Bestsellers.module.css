@@ -1,0 +1,12 @@
+.bestsellers {
+  width: 100%;
+}
+.widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title {
+  font-size: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+  font-weight: 500;
+}

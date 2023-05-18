@@ -2,11 +2,11 @@ import type { NextPage } from "next";
 import s from "@/styles/challenge/Cart.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { useChallengeStore } from "@/state/useChallenge";
-import { EmptyState } from "@/components/challenge/EmptyState/EmptyState";
+import { EmptyState } from "@/components/challenge/accessible/EmptyState/EmptyState";
 import Link from "next/link";
 import Image from "next/image";
-import { QuantityButton } from "@/components/challenge/QuantityButton/QuantityButton";
-import { Button } from "@/components/challenge/Button/Button";
+import { QuantityButton } from "@/components/challenge/accessible/QuantityButton/QuantityButton";
+import { Button } from "@/components/challenge/accessible/Button/Button";
 import classNames from "classnames";
 import { Delete } from "@/icons/Delete";
 import { useRouter } from "next/router";
@@ -47,7 +47,10 @@ const CartPage: NextPage = () => {
           <>
             <div className={s.titleContainer}>
               <h1 className={s.title}>Your cart</h1>
-              <Link href="/challenge" className={s.continueShoppingLink}>
+              <Link
+                href="/challenge/accessible"
+                className={s.continueShoppingLink}
+              >
                 Continue shopping
               </Link>
             </div>
@@ -179,7 +182,7 @@ const CartPage: NextPage = () => {
                 type="primary"
                 onClick={() => {
                   setCheckoutCart(cart);
-                  router.push("/challenge/checkout");
+                  router.push("/challenge/accessible/checkout");
                 }}
               />
             </section>

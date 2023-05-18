@@ -1,0 +1,65 @@
+.main {
+  width: 100%;
+}
+.widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.content {
+  display: flex;
+}
+.section {
+  width: 100%;
+  max-width: 700px;
+}
+.imageContainer {
+  height: fit-content;
+  aspect-ratio: 1/1;
+  border: 1px solid black;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.descriptionSection {
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.name {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.price {
+  font-family: var(--challenge-font);
+  font-size: 1.25rem;
+}
+.quantityButtonTitle {
+  font-family: var(--challenge-font);
+  font-size: 0.85rem;
+}
+.description {
+  font-family: var(--challenge-font);
+}
+
+@media (max-width: 48rem) {
+  .content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .descriptionSection {
+    padding: 0;
+    gap: 1rem;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+}

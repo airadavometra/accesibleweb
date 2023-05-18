@@ -1,14 +1,14 @@
-import { Bestsellers } from "@/components/challenge/Bestsellers/Bestsellers";
-import { Hero } from "@/components/challenge/Hero/Hero";
+import { Bestsellers } from "@/components/challenge/accessible/Bestsellers/Bestsellers";
+import { Hero } from "@/components/challenge/accessible/Hero/Hero";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import s from "@/styles/challenge/Home.module.css";
-import { Banner } from "@/components/challenge/Banner/Banner";
-import { Categories } from "@/components/challenge/Categories/Categories";
+import { Banner } from "@/components/challenge/accessible/Banner/Banner";
+import { Categories } from "@/components/challenge/accessible/Categories/Categories";
 import { Category } from "@/types/category";
-import { Quote } from "@/components/challenge/Quote/Quote";
-import { DayOffer } from "@/components/challenge/DayOffer/DayOffer";
+import { Quote } from "@/components/challenge/accessible/Quote/Quote";
+import { DayOffer } from "@/components/challenge/accessible/DayOffer/DayOffer";
 import { products } from "@/data/challenge/products";
 import { challengeMap } from "@/data/challenge/challenge";
 import { Product } from "@/types/challenge/product";
@@ -18,17 +18,17 @@ export const categories: Category[] = [
   {
     imgSrc: "/fruits.png",
     title: "Fruits",
-    path: "/challenge/category?category=fruits",
+    path: "/challenge/accessible/category?category=fruits",
   },
   {
     imgSrc: "/vegetables.png",
     title: "Vegetables",
-    path: "/challenge/category?category=vegetables",
+    path: "/challenge/accessible/category?category=vegetables",
   },
   {
     imgSrc: "/combos.png",
     title: "Combo",
-    path: "/challenge/category?category=combo",
+    path: "/challenge/accessible/category?category=combo",
   },
 ];
 
