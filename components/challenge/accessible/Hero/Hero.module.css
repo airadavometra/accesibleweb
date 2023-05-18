@@ -29,7 +29,7 @@
   border-left: none;
 }
 .title {
-  font-size: 4rem;
+  font-size: clamp(3rem, 1.2222rem + 3.7037vw, 4rem);
 }
 .description {
   max-width: 410px;
@@ -43,7 +43,14 @@
   border: none;
   outline: 1px solid white;
   font-family: var(--challenge-font);
+  transition: font-weight 100ms ease-in-out;
 }
+.link:hover,
+.link:focus,
+.link.selected {
+  font-weight: 700;
+}
+
 @media (max-width: 48rem) {
   .widthContainer {
     flex-direction: column;
@@ -52,8 +59,5 @@
     padding: 2rem 1rem;
     border: 1px solid black;
     border-top: none;
-  }
-  .title {
-    font-size: 3rem;
   }
 }

@@ -1,0 +1,133 @@
+.main {
+  width: 100%;
+}
+.widthContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.title {
+  font-size: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+}
+.continueShoppingLink {
+  font-family: var(--challenge-font);
+}
+.continueShoppingLink:hover,
+.continueShoppingLink:focus {
+  text-decoration: underline;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 3rem 0;
+}
+.right {
+  justify-self: end;
+}
+.gridHeader {
+  font-family: var(--challenge-font);
+  text-transform: uppercase;
+  color: black;
+  opacity: 0.5;
+}
+.product {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.imageContainer {
+  width: 100%;
+  max-width: 150px;
+  height: fit-content;
+  aspect-ratio: 1/1;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.productName {
+  font-weight: 600;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 1.25rem;
+  fill: black;
+}
+.total {
+  align-self: center;
+}
+.border {
+  height: 1px;
+  border-bottom: 1px solid #0000001a;
+}
+.subtotalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+.subtotal {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.subtotalSum {
+  font-family: var(--challenge-font);
+  font-weight: 400;
+}
+.disclaimer {
+  font-family: var(--challenge-font);
+}
+
+@media (max-width: 48rem) {
+  .continueShoppingLink {
+    text-decoration: underline;
+  }
+  .subtotalContainer {
+    align-items: center;
+  }
+  .mobileCart {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .tableHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cartItem {
+    display: flex;
+    gap: 1rem;
+  }
+  .productInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .interactiveContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}

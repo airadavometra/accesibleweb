@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import s from "@/styles/challenge/Category.module.css";
+import s from "@/styles/challenge/accessible/Category.module.css";
 import { Category } from "@/types/challenge/category";
 import { products } from "@/data/challenge/products";
 import { Product } from "@/types/challenge/product";

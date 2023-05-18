@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "@/styles/challenge/Cart.module.css";
+import s from "@/styles/challenge/accessible/Cart.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { useChallengeStore } from "@/state/useChallenge";
 import { EmptyState } from "@/components/challenge/accessible/EmptyState/EmptyState";

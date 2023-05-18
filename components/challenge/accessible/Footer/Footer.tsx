@@ -39,7 +39,7 @@ export const Footer = ({ navigation }: FooterProps) => {
             </section>
           </div>
           <section className={s.mailSection}>
-            <h6 className={s.title}>We send delicious emails.</h6>
+            <h6 className={s.title}>We send delicious emails</h6>
             <Input
               label="Enter your email and subscribe"
               placeholder="example@gmail.com"

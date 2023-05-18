@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "@/styles/challenge/Checkout.module.css";
+import s from "@/styles/challenge/accessible/Checkout.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { useChallengeStore } from "@/state/useChallenge";
 import { Button } from "@/components/challenge/accessible/Button/Button";

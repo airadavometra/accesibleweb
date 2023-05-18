@@ -4,6 +4,10 @@
   flex-direction: column;
   gap: 6px;
 }
+.inputWrapper:hover > .label,
+.inputWrapper:focus > .label {
+  color: var(--input-color);
+}
 .white {
   --input-color: #fff;
   --input-placeholder-color: #fff8;
@@ -11,7 +15,7 @@
 }
 .black {
   --input-color: #000;
-  --input-placeholder-color: #0008;
+  --input-placeholder-color: #0009;
   --input-border-color: #000;
 }
 .label {
@@ -32,6 +36,7 @@
   border: none;
   color: var(--input-color);
   font-family: var(--challenge-font);
+  cursor: pointer;
 }
 .input::placeholder {
   color: var(--input-placeholder-color);

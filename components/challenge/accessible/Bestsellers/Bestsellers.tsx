@@ -1,6 +1,5 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { Product as ProductType } from "@/types/challenge/product";
-import { ProductLink } from "../ProductLink/ProductLink";
 import s from "./Bestsellers.module.css";
 import { ProductsGrid } from "../ProductsGrid/ProductsGrid";
 

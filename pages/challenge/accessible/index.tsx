@@ -3,7 +3,7 @@ import { Hero } from "@/components/challenge/accessible/Hero/Hero";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import s from "@/styles/challenge/Home.module.css";
+import s from "@/styles/challenge/accessible/Home.module.css";
 import { Banner } from "@/components/challenge/accessible/Banner/Banner";
 import { Categories } from "@/components/challenge/accessible/Categories/Categories";
 import { Category } from "@/types/category";

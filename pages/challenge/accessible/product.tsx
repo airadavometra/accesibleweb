@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import s from "@/styles/challenge/Product.module.css";
+import s from "@/styles/challenge/accessible/Product.module.css";
 import { Bestsellers } from "@/components/challenge/accessible/Bestsellers/Bestsellers";
 import { products } from "@/data/challenge/products";
 import { ProductInfo } from "@/components/challenge/accessible/ProductInfo/ProductInfo";
