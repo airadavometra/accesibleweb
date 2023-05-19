@@ -1,19 +1,23 @@
-.primary {
+.buttonContainer {
   padding: 12px 32px;
-  color: white;
-  background-color: black;
-  border: none;
-  outline: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  outline: 1px solid var(--text-color);
   font-family: var(--challenge-font);
-  transition: font-weight 100ms ease-in-out;
+}
+.primary {
+  --background-color: black;
+  --text-color: white;
 }
 .secondary {
-  padding: 12px 32px;
-  color: black;
-  background-color: white;
+  --background-color: white;
+  --text-color: black;
+}
+.button {
   border: none;
-  outline: 1px solid black;
-  font-family: var(--challenge-font);
 }
 .icon {
   padding: 16px;

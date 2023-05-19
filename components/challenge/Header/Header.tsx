@@ -41,7 +41,6 @@ export const Header = ({ navigation }: HeaderProps) => {
             <Cart />
             <span className={s.cartCount}>{cartCount}</span>
           </div>
-          <VisuallyHidden>Cart</VisuallyHidden>
         </Link>
       </WidthContainer>
     </header>

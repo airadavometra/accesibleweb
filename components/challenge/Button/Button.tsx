@@ -21,21 +21,19 @@ export const Button = ({
   type,
 }: ButtonProps) => {
   return (
-    <button
-      id={id}
-      className={classNames(s[type], className)}
-      onClick={onClick}
-    >
-      {type === "icon" ? (
-        <>{icon}</>
-      ) : (
-        <>
-          {text}
-          <div aria-hidden="true" className={s.hidden}>
+    <div className={classNames(s.buttonContainer, s[type], className)}>
+      <button id={id} className={s.button} onClick={onClick}>
+        {type === "icon" ? (
+          <>{icon}</>
+        ) : (
+          <>
             {text}
-          </div>
-        </>
-      )}
-    </button>
+            <div aria-hidden="true" className={s.hidden}>
+              {text}
+            </div>
+          </>
+        )}
+      </button>
+    </div>
   );
 };

@@ -3,11 +3,11 @@
   border: 1px solid black;
 }
 .quantityButton {
-  padding: 12px 16px;
+  margin: 12px 16px;
   font-family: var(--challenge-font);
 }
 .quantity {
-  padding: 12px 1rem;
+  margin: 12px 16px;
 }
 .disabled {
   opacity: 0.5;
