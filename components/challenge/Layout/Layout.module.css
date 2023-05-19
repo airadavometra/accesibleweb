@@ -3,7 +3,7 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 64px;
   position: relative;
 }
 

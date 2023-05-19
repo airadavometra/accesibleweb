@@ -9,11 +9,11 @@
   background: transparent;
   border: none;
   font-family: var(--challenge-font);
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 .input::placeholder {
   font-family: var(--challenge-font);
-  font-size: 0.85rem;
+  font-size: 14px;
 }
 .white {
   color: #fff8;
