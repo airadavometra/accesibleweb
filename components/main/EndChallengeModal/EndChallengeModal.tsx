@@ -14,10 +14,18 @@ export const EndChallengeModal = ({
   onClose,
 }: EndChallengeModalProps) => {
   const router = useRouter();
-  const setIsSuccessful = useChallengeStore((state) => state.setIsSuccessful);
+  const { setIsSuccessful, setCart, setCheckoutCart } = useChallengeStore(
+    (state) => ({
+      setIsSuccessful: state.setIsSuccessful,
+      setCart: state.setCart,
+      setCheckoutCart: state.setCheckoutCart,
+    })
+  );
 
   const endChallenge = () => {
     setIsSuccessful(false);
+    setCart([]);
+    setCheckoutCart([]);
     router.push("/result");
   };
 
