@@ -52,8 +52,6 @@ export const challengeMap = {
       "Buy a combo for mustard soup",
       "Use a discount code to save some money (optional)",
     ],
-    disclaimer:
-      "To successfully complete the challenge and gain the intended experience, you need to use a computer, not mobile device. Good luck with the challenge!",
     productIds: [
       9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 33, 34, 35, 36, 37, 38, 39, 40, 49,
       55, 56, 57, 58,
@@ -86,8 +84,6 @@ export const challengeMap = {
       "Buy a combo for mushroom soup",
       "Use a discount code to save some money (optional)",
     ],
-    disclaimer:
-      "To successfully complete the challenge and gain the intended experience, you need to enable the screen reader feature. Good luck with the challenge!",
     productIds: [
       5, 6, 9, 10, 16, 17, 18, 19, 24, 25, 26, 40, 41, 42, 43, 44, 51, 52, 59,
       60,
@@ -156,8 +152,6 @@ export const challengeMap = {
       "Buy a combo for vegetarian lasagna",
       "Use a discount code to save some money (optional)",
     ],
-    disclaimer:
-      "We're very sorry, this challenge doesn't work in Safari and on iOS. But we're working on it! For now, to successfully complete the challenge and gain the intended experience, please use other browsers (i.e. Chrome or Firefox).",
     productIds: [
       5, 9, 10, 11, 12, 20, 21, 22, 23, 33, 34, 41, 42, 43, 44, 45, 46, 47, 48,
       49, 50, 55, 56, 59, 60,

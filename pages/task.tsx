@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import s from "../styles/Task.module.css";
 import { Button } from "@/components/main/Button/Button";
+import Link from "next/link";
 
 const getFilterValue = (filter?: string | string[]): Filter | undefined => {
   if (filter && typeof filter === "string") {
@@ -27,6 +28,77 @@ const getFilterValue = (filter?: string | string[]): Filter | undefined => {
   }
   return undefined;
 };
+
+const TremorDisclamer = () => (
+  <section className={s.disclaimer}>
+    <h2 className={s.disclaimerTitle}>Please note:</h2>
+    <p>
+      To successfully complete the challenge and gain the intended experience,
+      you need to use a computer, not mobile device. Good luck with the
+      challenge!
+    </p>
+  </section>
+);
+
+const BlindnessDisclamer = () => (
+  <section className={s.disclaimer}>
+    <h2 className={s.disclaimerTitle}>Please note:</h2>
+    <p>
+      To successfully complete the challenge and gain the intended experience,
+      you need to enable the screen reader feature. See how to do it on{" "}
+      <Link
+        className={s.disclamerLink}
+        href={
+          "https://support.apple.com/guide/voiceover/turn-voiceover-on-or-off-vo2682/mac#:~:text=Choose%20Apple%20menu%20%3E%20System%20Settings,turn%20VoiceOver%20on%20or%20off."
+        }
+      >
+        MacOS
+      </Link>
+      ,{" "}
+      <Link
+        className={s.disclamerLink}
+        href={
+          "https://support.microsoft.com/en-us/windows/chapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6"
+        }
+      >
+        Windows
+      </Link>{" "}
+      or{" "}
+      <Link
+        className={s.disclamerLink}
+        href={
+          "https://help.ubuntu.com/stable/ubuntu-help/a11y-screen-reader.html.en"
+        }
+      >
+        Linux
+      </Link>
+      . Good luck with the challenge!
+    </p>
+  </section>
+);
+
+const ColourBlindnessDisclamer = () => (
+  <section className={s.disclaimer}>
+    <h2 className={s.disclaimerTitle}>Please note:</h2>
+    <p>
+      We&apos;re very sorry, this challenge doesn&apos;t work in Safari and on
+      iOS. But we&apos;re working on it! For now, to successfully complete the
+      challenge and gain the intended experience, please use other browsers
+      (i.e.{" "}
+      <Link className={s.disclamerLink} href={"https://www.google.com/chrome/"}>
+        Chrome
+      </Link>{" "}
+      or{" "}
+      <Link
+        className={s.disclamerLink}
+        href={"https://www.mozilla.org/en-US/firefox/new/"}
+      >
+        Firefox
+      </Link>
+      ).
+    </p>
+  </section>
+);
 
 const TaskPage: NextPage = () => {
   const [data, setData] = useState<{
@@ -64,12 +136,9 @@ const TaskPage: NextPage = () => {
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
         <h1 className={s.title}>{data.title}</h1>
-        {data.disclaimer && (
-          <section className={s.disclaimer}>
-            <h2 className={s.disclaimerTitle}>Please note:</h2>
-            <p>{data.disclaimer}</p>
-          </section>
-        )}
+        {filter === "tremor" && <TremorDisclamer />}
+        {filter === "blindness" && <BlindnessDisclamer />}
+        {filter === "colourblindness" && <ColourBlindnessDisclamer />}
         <section className={s.problemSection}>
           {data.problem.map((p, index) => (
             <p key={index} className={s.text}>

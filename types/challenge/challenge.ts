@@ -2,7 +2,6 @@ export type Challenge = {
   title: string;
   problem: string[];
   challengeSteps: string[];
-  disclaimer?: string;
   productIds: number[];
   dayOfferId: number;
   bestsellerIds: number[];
