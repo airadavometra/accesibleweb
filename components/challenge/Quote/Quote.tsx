@@ -18,7 +18,7 @@ export const Quote = ({ imgSrc, text, author }: QuoteProps) => {
           <span className={s.author}>{`- ${author}`}</span>
         </div>
         <div className={classNames(s.section, s.imageContainer)}>
-          <Image className={s.image} src={imgSrc} alt="quote background" fill />
+          <Image className={s.image} src={imgSrc} alt="" fill />
         </div>
       </WidthContainer>
     </section>

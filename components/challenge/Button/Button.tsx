@@ -27,10 +27,7 @@ export const Button = ({
       onClick={onClick}
     >
       {type === "icon" ? (
-        <>
-          {icon}
-          <VisuallyHidden>{text}</VisuallyHidden>
-        </>
+        <>{icon}</>
       ) : (
         <>
           {text}

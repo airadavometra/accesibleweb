@@ -14,12 +14,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
         {categories.map((category) => (
           <Link key={category.title} href={category.path} className={s.item}>
             <div className={s.imageContainer}>
-              <Image
-                className={s.image}
-                src={category.imgSrc}
-                alt={category.title}
-                fill
-              />
+              <Image className={s.image} src={category.imgSrc} alt="" fill />
             </div>
             <div className={s.link}>
               <span>{category.title}</span>

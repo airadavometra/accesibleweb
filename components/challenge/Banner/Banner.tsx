@@ -13,7 +13,7 @@ export const Banner = ({ imgSrc, text }: BannerProps) => {
         className={s.background}
         fill
         src={imgSrc}
-        alt="banner background"
+        alt=""
         aria-hidden="true"
       />
       <div className={s.gradient} />

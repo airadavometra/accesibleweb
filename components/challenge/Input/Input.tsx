@@ -12,7 +12,6 @@ type InputProps = {
   buttonIcon?: ReactNode;
   color: "black" | "white";
   value?: string;
-  type: HTMLInputTypeAttribute;
   required?: boolean;
   onChange: (newValue?: string) => void;
 };
@@ -23,7 +22,6 @@ export const Input = ({
   buttonIcon,
   color,
   value,
-  type,
   required,
   onChange,
 }: InputProps) => {
@@ -36,7 +34,6 @@ export const Input = ({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.target.value)
         }
-        type={type}
         required={required}
       />
       {buttonAction && buttonIcon && (

@@ -14,12 +14,7 @@ export const ProductLink = ({ product }: ProductLinkProps) => {
       className={s.container}
     >
       <div className={s.imageContainer}>
-        <Image
-          className={s.image}
-          fill
-          src={product.imgSrc}
-          alt={product.name}
-        />
+        <Image className={s.image} fill src={product.imgSrc} alt="" />
       </div>
       <span className={s.name}>{product.name}</span>
       <span className={s.price}>

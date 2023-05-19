@@ -10,12 +10,7 @@ export const Hero = () => {
     <section className={s.hero}>
       <WidthContainer className={s.widthContainer}>
         <div className={classNames(s.section, s.imageContainer)}>
-          <Image
-            className={s.image}
-            src="/hero.png"
-            alt="fruits and veggies"
-            fill
-          />
+          <Image className={s.image} src="/hero.png" alt="" fill />
         </div>
         <div className={classNames(s.section, s.descriptionSection)}>
           <h1 className={s.title}>Take a bite</h1>

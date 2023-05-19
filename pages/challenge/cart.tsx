@@ -63,7 +63,7 @@ const CartPage: NextPage = () => {
                       <Image
                         className={s.image}
                         src={item.imgSrc}
-                        alt={item.name}
+                        alt=""
                         fill
                       />
                     </div>
@@ -117,7 +117,7 @@ const CartPage: NextPage = () => {
                         <Image
                           className={s.image}
                           src={item.imgSrc}
-                          alt={item.name}
+                          alt=""
                           fill
                         />
                       </div>

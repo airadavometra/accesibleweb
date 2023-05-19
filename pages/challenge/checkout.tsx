@@ -146,7 +146,6 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={firstName}
                   onChange={(newValue?: string) => setFirstName(newValue)}
-                  type={"text"}
                   required
                 />
                 <Input
@@ -154,7 +153,6 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={lastName}
                   onChange={(newValue?: string) => setLastName(newValue)}
-                  type={"text"}
                   required
                 />
                 <div className={s.inputGroup}>
@@ -163,7 +161,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={email}
                     onChange={(newValue?: string) => setEmail(newValue)}
-                    type={"email"}
                     required
                   />
                   <Input
@@ -171,7 +168,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={phone}
                     onChange={(newValue?: string) => setPhone(newValue)}
-                    type={"tel"}
                   />
                 </div>
               </div>
@@ -182,7 +178,6 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={address}
                   onChange={(newValue?: string) => setAddress(newValue)}
-                  type={"text"}
                   required
                 />
                 <Input
@@ -190,7 +185,6 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={apartment}
                   onChange={(newValue?: string) => setApartment(newValue)}
-                  type={"text"}
                 />
                 <div className={s.inputGroup}>
                   <Input
@@ -198,7 +192,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={country}
                     onChange={(newValue?: string) => setCountry(newValue)}
-                    type={"text"}
                     required
                   />
                   <Input
@@ -206,7 +199,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={city}
                     onChange={(newValue?: string) => setCity(newValue)}
-                    type={"text"}
                     required
                   />
                 </div>
@@ -216,7 +208,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={region}
                     onChange={(newValue?: string) => setRegion(newValue)}
-                    type={"text"}
                     required
                   />
                   <Input
@@ -224,7 +215,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={zipCode}
                     onChange={(newValue?: string) => setZipCode(newValue)}
-                    type={"text"}
                     required
                   />
                 </div>
@@ -238,7 +228,6 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={discountCode}
                   onChange={(newValue?: string) => setDiscountCode(newValue)}
-                  type={"text"}
                 />
                 {discountCode !== undefined &&
                   discountCode !== "" &&
