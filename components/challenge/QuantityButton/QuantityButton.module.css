@@ -1,14 +1,17 @@
 .quantityButtonContainer {
   width: fit-content;
+  display: flex;
   border: 1px solid black;
 }
 .quantityButton {
   margin: 12px 16px;
   font-family: var(--challenge-font);
+  cursor: pointer;
 }
 .quantity {
   margin: 12px 16px;
 }
 .disabled {
   opacity: 0.5;
+  pointer-events: none;
 }

@@ -10,11 +10,11 @@ type BestsellersProps = {
 
 export const Bestsellers = ({ products }: BestsellersProps) => {
   return (
-    <section className={s.bestsellers}>
+    <div className={s.bestsellers}>
       <WidthContainer className={s.widthContainer}>
-        <h2 className={s.title}>Meet our bestsellers</h2>
+        <div className={s.title}>Meet our bestsellers</div>
         <ProductsGrid products={products} />
       </WidthContainer>
-    </section>
+    </div>
   );
 };

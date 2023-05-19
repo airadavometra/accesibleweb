@@ -19,9 +19,9 @@ export const ProductLink = ({ product }: ProductLinkProps) => {
       >
         {product.name}
       </Link>
-      <span className={s.price}>
+      <div className={s.price}>
         ${product.price} / {product.unit}
-      </span>
+      </div>
     </div>
   );
 };

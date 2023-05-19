@@ -8,7 +8,7 @@ type BannerProps = {
 
 export const Banner = ({ imgSrc, text }: BannerProps) => {
   return (
-    <section className={s.container}>
+    <div className={s.container}>
       <Image
         className={s.background}
         fill
@@ -17,7 +17,7 @@ export const Banner = ({ imgSrc, text }: BannerProps) => {
         aria-hidden="true"
       />
       <div className={s.gradient} />
-      <p className={s.text}>{text}</p>
-    </section>
+      <div className={s.text}>{text}</div>
+    </div>
   );
 };

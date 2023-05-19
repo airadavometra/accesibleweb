@@ -39,23 +39,23 @@ const CartPage: NextPage = () => {
   const isMobile = useMediaQuery("(max-width: 48rem)");
 
   return (
-    <main className={s.main}>
+    <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
         {cart.length === 0 ? (
           <EmptyState text="Your cart is empty" />
         ) : (
           <>
             <div className={s.titleContainer}>
-              <h1 className={s.title}>Your cart</h1>
+              <div className={s.title}>Your cart</div>
               <Link href="/challenge" className={s.continueShoppingLink}>
                 Continue shopping
               </Link>
             </div>
             {isMobile ? (
-              <section className={s.mobileCart}>
+              <div className={s.mobileCart}>
                 <div className={s.tableHeader}>
-                  <span className={s.gridHeader}>product</span>
-                  <span className={s.gridHeader}>total</span>
+                  <div className={s.gridHeader}>product</div>
+                  <div className={s.gridHeader}>total</div>
                 </div>
                 {cart.map((item) => (
                   <div key={item.id} className={s.cartItem}>
@@ -70,12 +70,12 @@ const CartPage: NextPage = () => {
                     <div className={s.interactiveContainer}>
                       <div className={s.productInfoContainer}>
                         <div className={s.productInfo}>
-                          <span className={s.productName}>{item.name}</span>
-                          <span>${item.price}</span>
+                          <div className={s.productName}>{item.name}</div>
+                          <div>${item.price}</div>
                         </div>
-                        <span className={s.total}>
+                        <div className={s.total}>
                           ${Number(item.price * item.quantity).toFixed(2)}
-                        </span>
+                        </div>
                       </div>
                       <div className={s.buttons}>
                         <QuantityButton
@@ -104,12 +104,12 @@ const CartPage: NextPage = () => {
                     </div>
                   </div>
                 ))}
-              </section>
+              </div>
             ) : (
-              <section className={s.grid}>
-                <span className={s.gridHeader}>product</span>
-                <span className={s.gridHeader}>quantity</span>
-                <span className={classNames(s.gridHeader, s.right)}>total</span>
+              <div className={s.grid}>
+                <div className={s.gridHeader}>product</div>
+                <div className={s.gridHeader}>quantity</div>
+                <div className={classNames(s.gridHeader, s.right)}>total</div>
                 {cart.map((item) => (
                   <Fragment key={item.id}>
                     <div className={s.product}>
@@ -122,8 +122,8 @@ const CartPage: NextPage = () => {
                         />
                       </div>
                       <div className={s.productInfo}>
-                        <span className={s.productName}>{item.name}</span>
-                        <span>${item.price}</span>
+                        <div className={s.productName}>{item.name}</div>
+                        <div>${item.price}</div>
                       </div>
                     </div>
                     <div className={s.buttons}>
@@ -132,7 +132,7 @@ const CartPage: NextPage = () => {
                         disabled={
                           item.availableQuantity === item.quantity
                             ? "increase"
-                            : item.quantity === 0
+                            : item.quantity === 1
                             ? "decrease"
                             : "none"
                         }
@@ -150,18 +150,18 @@ const CartPage: NextPage = () => {
                         icon={<Delete className={s.icon} />}
                       />
                     </div>
-                    <span className={classNames(s.total, s.right)}>
+                    <div className={classNames(s.total, s.right)}>
                       ${Number(item.price * item.quantity).toFixed(2)}
-                    </span>
+                    </div>
                   </Fragment>
                 ))}
-              </section>
+              </div>
             )}
             <div className={s.border} />
-            <section className={s.subtotalContainer}>
-              <span className={s.subtotal}>
+            <div className={s.subtotalContainer}>
+              <div className={s.subtotal}>
                 Subtotal
-                <span className={s.subtotalSum}>
+                <div className={s.subtotalSum}>
                   {"  "}$
                   {Number(
                     cart.reduce(
@@ -169,11 +169,11 @@ const CartPage: NextPage = () => {
                       0
                     )
                   ).toFixed(2)}
-                </span>
-              </span>
-              <span className={s.disclaimer}>
+                </div>
+              </div>
+              <div className={s.disclaimer}>
                 Taxes and shipping calculated at checkout
-              </span>
+              </div>
               <Button
                 text="Check out"
                 type="primary"
@@ -182,11 +182,11 @@ const CartPage: NextPage = () => {
                   router.push("/challenge/checkout");
                 }}
               />
-            </section>
+            </div>
           </>
         )}
       </WidthContainer>
-    </main>
+    </div>
   );
 };
 

@@ -21,18 +21,18 @@ export const DayOffer = ({ product }: DayOfferProps) => {
   }));
 
   return (
-    <section className={s.main}>
+    <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
-        <h2 className={s.title}>Best deal today</h2>
+        <div className={s.title}>Best deal today</div>
         <div className={s.content}>
           <div className={classNames(s.section, s.imageContainer)}>
             <Image className={s.image} src={product.imgSrc} alt="" fill />
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
-            <h3 className={s.name}>{product.name}</h3>
-            <span className={s.price}>
+            <div className={s.name}>{product.name}</div>
+            <div className={s.price}>
               ${product.price} / {product.unit}
-            </span>
+            </div>
             <Button
               text="Add to cart"
               onClick={() => {
@@ -53,12 +53,12 @@ export const DayOffer = ({ product }: DayOfferProps) => {
               className={s.link}
               href={`/challenge/product?product=${product.id}`}
             >
-              <span>View full details</span>
+              <div>View full details</div>
               <SendArrow className={s.arrow} />
             </Link>
           </div>
         </div>
       </WidthContainer>
-    </section>
+    </div>
   );
 };

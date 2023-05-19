@@ -69,7 +69,7 @@ const ChallengeHome = () => {
   }, [filter]);
 
   return (
-    <main className={s.main}>
+    <div className={s.main}>
       <Hero />
       <Bestsellers products={bestsetters} />
       <Banner
@@ -87,7 +87,7 @@ const ChallengeHome = () => {
         text={`${challenge?.discount}% off with ${challenge?.promocode}. Enjoy delicious groceries at discounted prices. Shop now!`}
       />
       {dayOffer && <DayOffer product={dayOffer} />}
-    </main>
+    </div>
   );
 };
 

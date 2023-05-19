@@ -15,6 +15,7 @@
 }
 .title {
   font-size: 48px;
+  font-weight: 700;
 }
 .continueShoppingLink {
   font-family: var(--challenge-font);
@@ -85,6 +86,7 @@
   font-weight: 500;
 }
 .subtotalSum {
+  display: inline;
   font-family: var(--challenge-font);
   font-weight: 400;
 }

@@ -18,6 +18,7 @@
 }
 .button {
   border: none;
+  cursor: pointer;
 }
 .icon {
   padding: 16px;

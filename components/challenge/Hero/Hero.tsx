@@ -7,22 +7,22 @@ import Link from "next/link";
 
 export const Hero = () => {
   return (
-    <section className={s.hero}>
+    <div className={s.hero}>
       <WidthContainer className={s.widthContainer}>
         <div className={classNames(s.section, s.imageContainer)}>
           <Image className={s.image} src="/hero.png" alt="" fill />
         </div>
         <div className={classNames(s.section, s.descriptionSection)}>
-          <h1 className={s.title}>Take a bite</h1>
-          <p className={s.description}>
+          <div className={s.title}>Take a bite</div>
+          <div className={s.description}>
             Here fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. <br /> Taste the difference, fuel your life.
-          </p>
+          </div>
           <Link className={s.link} href="/challenge/category?category=fruits">
             Go shopping
           </Link>
         </div>
       </WidthContainer>
-    </section>
+    </div>
   );
 };

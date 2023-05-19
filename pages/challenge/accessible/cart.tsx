@@ -86,7 +86,7 @@ const CartPage: NextPage = () => {
                           disabled={
                             item.availableQuantity === item.quantity
                               ? "increase"
-                              : item.quantity === 0
+                              : item.quantity === 1
                               ? "decrease"
                               : "none"
                           }

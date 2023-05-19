@@ -14,32 +14,30 @@ export const Footer = ({ navigation }: FooterProps) => {
   const [email, setEmail] = useState<string>();
 
   return (
-    <footer className={s.footer}>
+    <div className={s.footer}>
       <WidthContainer className={s.widthContainer}>
         <div className={s.footerContent}>
           <div className={s.linksAndMission}>
-            <section className={s.linksSection}>
-              <h6 className={s.title}>Quick links</h6>
-              <ul className={s.navigation}>
+            <div className={s.linksSection}>
+              <div className={s.title}>Quick links</div>
+              <div className={s.navigation}>
                 {navigation.map(({ id, title, path }) => (
-                  <li key={id}>
-                    <Link href={path} className={s.link}>
-                      {title}
-                    </Link>
-                  </li>
+                  <Link key={id} href={path} className={s.link}>
+                    {title}
+                  </Link>
                 ))}
-              </ul>
-            </section>
-            <section className={s.missionSection}>
-              <h6 className={s.title}>Our mission</h6>
-              <p className={s.mission}>
+              </div>
+            </div>
+            <div className={s.missionSection}>
+              <div className={s.title}>Our mission</div>
+              <div className={s.mission}>
                 We offer fresh, organic fruits and vegetables with sustainable,
                 eco-conscious values.
-              </p>
-            </section>
+              </div>
+            </div>
           </div>
-          <section className={s.mailSection}>
-            <h6 className={s.title}>We send delicious emails.</h6>
+          <div className={s.mailSection}>
+            <div className={s.title}>We send delicious emails.</div>
             <Input
               placeholder="Email"
               buttonAction="Subscribe"
@@ -48,13 +46,13 @@ export const Footer = ({ navigation }: FooterProps) => {
               value={email}
               onChange={(newValue?: string) => setEmail(newValue)}
             />
-          </section>
+          </div>
         </div>
         <div className={s.logoAndRights}>
           <div className={s.logo}>fresh</div>
-          <span className={s.rights}>© 2023, all rights reserved</span>
+          <div className={s.rights}>© 2023, all rights reserved</div>
         </div>
       </WidthContainer>
-    </footer>
+    </div>
   );
 };

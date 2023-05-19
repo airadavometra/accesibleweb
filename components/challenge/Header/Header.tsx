@@ -20,29 +20,25 @@ export const Header = ({ navigation }: HeaderProps) => {
   );
 
   return (
-    <header className={s.header}>
+    <div className={s.header}>
       <WidthContainer className={s.widthContainer}>
         <Link href="/challenge" className={s.logo}>
           fresh
         </Link>
-        <nav>
-          <ul className={s.navigation}>
-            {navigation.map(({ id, title, path }) => (
-              <li className={s.linkContainer} key={id}>
-                <Link href={path} className={s.link}>
-                  {title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className={s.navigation}>
+          {navigation.map(({ id, title, path }) => (
+            <Link key={id} href={path} className={s.link}>
+              {title}
+            </Link>
+          ))}
+        </div>
         <Link href={"/challenge/cart"} className={s.cartButton}>
           <div className={s.cartContainer}>
             <Cart />
-            <span className={s.cartCount}>{cartCount}</span>
+            <div className={s.cartCount}>{cartCount}</div>
           </div>
         </Link>
       </WidthContainer>
-    </header>
+    </div>
   );
 };

@@ -9,6 +9,7 @@
 }
 .title {
   font-size: 48px;
+  font-weight: 700;
 }
 .form {
   display: flex;
@@ -54,6 +55,7 @@
   font-weight: 600;
 }
 .price {
+  display: inline;
   font-family: var(--challenge-font);
   font-weight: 400;
 }

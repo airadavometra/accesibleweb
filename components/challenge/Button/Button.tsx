@@ -22,7 +22,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <div className={classNames(s.buttonContainer, s[type], className)}>
-      <button id={id} className={s.button} onClick={onClick}>
+      <div id={id} className={s.button} onClick={onClick} role="button">
         {type === "icon" ? (
           <>{icon}</>
         ) : (
@@ -33,7 +33,7 @@ export const Button = ({
             </div>
           </>
         )}
-      </button>
+      </div>
     </div>
   );
 };

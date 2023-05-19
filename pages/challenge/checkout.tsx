@@ -134,13 +134,13 @@ const CheckoutPage: NextPage = () => {
 
   return (
     <>
-      <main className={s.main}>
+      <div className={s.main}>
         <WidthContainer className={s.widthContainer}>
-          <h1 className={s.title}>Your order</h1>
+          <div className={s.title}>Your order</div>
           <div className={s.form}>
             <div className={s.group}>
               <div className={s.section}>
-                <h2 className={s.sectionTitle}>Contact information</h2>
+                <div className={s.sectionTitle}>Contact information</div>
                 <Input
                   placeholder="First name"
                   color="black"
@@ -172,7 +172,7 @@ const CheckoutPage: NextPage = () => {
                 </div>
               </div>
               <div className={s.section}>
-                <h2 className={s.sectionTitle}>Shipping address</h2>
+                <div className={s.sectionTitle}>Shipping address</div>
                 <Input
                   placeholder="Address"
                   color="black"
@@ -222,7 +222,7 @@ const CheckoutPage: NextPage = () => {
             </div>
             <div className={s.group}>
               <div className={s.section}>
-                <h2 className={s.sectionTitle}>Order details</h2>
+                <div className={s.sectionTitle}>Order details</div>
                 <Input
                   placeholder="Discount code"
                   color="black"
@@ -232,38 +232,36 @@ const CheckoutPage: NextPage = () => {
                 {discountCode !== undefined &&
                   discountCode !== "" &&
                   !isDiscountApplied && (
-                    <span className={s.errorMessage}>
-                      Invalid discount code
-                    </span>
+                    <div className={s.errorMessage}>Invalid discount code</div>
                   )}
                 <div className={s.border} />
-                <span className={s.subtotal}>
+                <div className={s.subtotal}>
                   Subtotal
-                  <span className={s.price}>
+                  <div className={s.price}>
                     {"  "}${Number(subtotal).toFixed(2)}
-                  </span>
-                </span>
-                <span className={s.subtotal}>
+                  </div>
+                </div>
+                <div className={s.subtotal}>
                   Shipping
-                  <span className={s.price}>
+                  <div className={s.price}>
                     {"  "}${challenge?.deliveryPrice || 0}
-                  </span>
-                </span>
+                  </div>
+                </div>
                 {isDiscountApplied && (
-                  <span className={s.subtotal}>
+                  <div className={s.subtotal}>
                     Discount
-                    <span className={s.price}>
+                    <div className={s.price}>
                       {"  "}-{challenge?.discount || 0}%
-                    </span>
-                  </span>
+                    </div>
+                  </div>
                 )}
                 <div className={s.border} />
-                <span className={s.total}>
+                <div className={s.total}>
                   Total
-                  <span className={s.price}>
+                  <div className={s.price}>
                     {"  "}${total}
-                  </span>
-                </span>
+                  </div>
+                </div>
               </div>
               <div className={s.buttonsGroup}>
                 <Button
@@ -280,7 +278,7 @@ const CheckoutPage: NextPage = () => {
             </div>
           </div>
         </WidthContainer>
-      </main>
+      </div>
       {isConfirmModalOpen && (
         <ConfirmPayModal
           isOpen={isConfirmModalOpen}

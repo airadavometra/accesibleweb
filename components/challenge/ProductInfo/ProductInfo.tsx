@@ -30,19 +30,19 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
   );
 
   return (
-    <section className={s.main}>
+    <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
         <div className={s.content}>
           <div className={classNames(s.section, s.imageContainer)}>
             <Image className={s.image} src={product.imgSrc} alt="" fill />
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
-            <h3 className={s.name}>{product.name}</h3>
-            <span className={s.price}>
+            <div className={s.name}>{product.name}</div>
+            <div className={s.price}>
               ${product.price} / {product.unit}
-            </span>
+            </div>
             <div>
-              <span className={s.quantityButtonTitle}>Quantity</span>
+              <div className={s.quantityButtonTitle}>Quantity</div>
               <QuantityButton
                 quantity={quantity}
                 disabled={
@@ -73,10 +73,10 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
               }}
               type="primary"
             />
-            <p className={s.description}>{product.description}</p>
+            <div className={s.description}>{product.description}</div>
           </div>
         </div>
       </WidthContainer>
-    </section>
+    </div>
   );
 };

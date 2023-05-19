@@ -9,7 +9,7 @@ type CategoriesProps = { categories: Category[] };
 
 export const Categories = ({ categories }: CategoriesProps) => {
   return (
-    <section className={s.categories}>
+    <div className={s.categories}>
       <WidthContainer className={s.widthContainer}>
         {categories.map((category) => (
           <div key={category.title} className={s.item}>
@@ -23,6 +23,6 @@ export const Categories = ({ categories }: CategoriesProps) => {
           </div>
         ))}
       </WidthContainer>
-    </section>
+    </div>
   );
 };

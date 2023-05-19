@@ -8,7 +8,7 @@ type EmptyStateProps = {
 export const EmptyState = ({ text }: EmptyStateProps) => {
   return (
     <div className={s.container}>
-      <span className={s.text}>{text}</span>
+      <div className={s.text}>{text}</div>
       <Link href="/challenge" className={s.link}>
         Continue shopping
       </Link>

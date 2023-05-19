@@ -63,16 +63,16 @@ const CategoryPage: NextPage = () => {
   }, [categoryUrl, filter, router]);
 
   return (
-    <main className={s.main}>
+    <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
-        <h1 className={s.title}>{category}</h1>
+        <div className={s.title}>{category}</div>
         <div className={s.categoryInfoContainer}>
-          <span>Organic, non-GMO, local.</span>
-          <span>{categoryProducts.length} products</span>
+          <div>Organic, non-GMO, local.</div>
+          <div>{categoryProducts.length} products</div>
         </div>
         <ProductsGrid products={categoryProducts} />
       </WidthContainer>
-    </main>
+    </div>
   );
 };
 
