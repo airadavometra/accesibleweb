@@ -42,7 +42,6 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
               ${product.price} / {product.unit}
             </div>
             <div>
-              <div className={s.quantityButtonTitle}>Quantity</div>
               <QuantityButton
                 quantity={quantity}
                 disabled={

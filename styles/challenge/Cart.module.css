@@ -60,6 +60,9 @@
 .productName {
   font-weight: 600;
 }
+.price {
+  color: #0008;
+}
 .buttons {
   display: flex;
   align-items: center;

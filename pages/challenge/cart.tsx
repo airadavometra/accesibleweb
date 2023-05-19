@@ -123,7 +123,7 @@ const CartPage: NextPage = () => {
                       </div>
                       <div className={s.productInfo}>
                         <div className={s.productName}>{item.name}</div>
-                        <div>${item.price}</div>
+                        <div className={s.price}>${item.price}</div>
                       </div>
                     </div>
                     <div className={s.buttons}>

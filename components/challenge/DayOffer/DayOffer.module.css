@@ -41,6 +41,7 @@
 .price {
   font-family: var(--challenge-font);
   font-size: 20px;
+  color: #0008;
 }
 .link {
   display: flex;
