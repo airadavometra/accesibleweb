@@ -58,11 +58,13 @@ const CheckoutPage: NextPage = () => {
 
   const total = useMemo(
     () =>
-      Number(
-        (challenge?.deliveryPrice || 0) +
-          subtotal * ((100 - (challenge?.discount || 0)) / 100)
-      ).toFixed(2),
-    [challenge?.deliveryPrice, challenge?.discount, subtotal]
+      isDiscountApplied
+        ? Number(
+            (challenge?.deliveryPrice || 0) +
+              subtotal * ((100 - (challenge?.discount || 0)) / 100)
+          ).toFixed(2)
+        : Number((challenge?.deliveryPrice || 0) + subtotal).toFixed(2),
+    [challenge?.deliveryPrice, challenge?.discount, subtotal, isDiscountApplied]
   );
 
   useEffect(() => {
@@ -107,6 +109,7 @@ const CheckoutPage: NextPage = () => {
 
     setCart([]);
     setCheckoutCart([]);
+    setIsDiscountApplied(false);
     router.push("/result");
   }, [
     filter,
@@ -124,6 +127,7 @@ const CheckoutPage: NextPage = () => {
     setChallengeErrors,
     setCart,
     setCheckoutCart,
+    setIsDiscountApplied,
     router,
   ]);
 
@@ -253,11 +257,11 @@ const CheckoutPage: NextPage = () => {
                 />
                 {discountCode !== undefined &&
                   discountCode !== "" &&
-                  !isDiscountApplied && (
-                    <span className={s.errorMessage}>
-                      Invalid discount code
-                    </span>
-                  )}
+                  (isDiscountApplied ? (
+                    <div className={s.errorMessage}>Discount applied</div>
+                  ) : (
+                    <div className={s.errorMessage}>Invalid discount code</div>
+                  ))}
                 <div className={s.border} />
                 <span className={s.subtotal}>
                   Subtotal

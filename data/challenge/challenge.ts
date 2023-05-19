@@ -141,7 +141,7 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You live alone",
-      "You have $18 budget limit",
+      "You have $19 budget limit",
       "Buy 2 kg of yellow apples",
       "Buy an orange paprika pepper",
       "Buy 1 kg of pink tomatoes",
@@ -159,7 +159,7 @@ export const challengeMap = {
     deliveryPrice: 0.89,
     promocode: "COLORFREE10",
     discount: 10,
-    budgetLimit: 18,
+    budgetLimit: 19,
     cart: [
       { productId: 23, quantity: 2 },
       { productId: 44, quantity: 1 },

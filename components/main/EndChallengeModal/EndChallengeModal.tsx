@@ -14,18 +14,19 @@ export const EndChallengeModal = ({
   onClose,
 }: EndChallengeModalProps) => {
   const router = useRouter();
-  const { setIsSuccessful, setCart, setCheckoutCart } = useChallengeStore(
-    (state) => ({
+  const { setIsSuccessful, setCart, setCheckoutCart, setIsDiscountApplied } =
+    useChallengeStore((state) => ({
       setIsSuccessful: state.setIsSuccessful,
       setCart: state.setCart,
       setCheckoutCart: state.setCheckoutCart,
-    })
-  );
+      setIsDiscountApplied: state.setIsDiscountApplied,
+    }));
 
   const endChallenge = () => {
     setIsSuccessful(false);
     setCart([]);
     setCheckoutCart([]);
+    setIsDiscountApplied(false);
     router.push("/result");
   };
 
