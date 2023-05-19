@@ -89,6 +89,9 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+.secondLevelListItem {
+  text-transform: capitalize;
+}
 
 @media (max-width: 48rem) {
   .description {

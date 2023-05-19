@@ -27,10 +27,14 @@ export const challengeMap = {
     discount: 20,
     budgetLimit: 19,
     cart: [
-      { productId: 4, quantity: 2 },
-      { productId: 5, quantity: 1 },
-      { productId: 25, quantity: 1 },
-      { productId: 52, quantity: 1 },
+      { productId: 4, quantity: 2, displayName: "Cara Cara oranges" },
+      { productId: 5, quantity: 1, displayName: "bananas" },
+      { productId: 25, quantity: 1, displayName: "sweet potatoes" },
+      {
+        productId: 52,
+        quantity: 1,
+        displayName: "tomato soup (4 person)",
+      },
     ],
   } as Challenge,
   tremor: {
@@ -61,10 +65,10 @@ export const challengeMap = {
     discount: 10,
     budgetLimit: 15,
     cart: [
-      { productId: 16, quantity: 1 },
-      { productId: 33, quantity: 1 },
-      { productId: 40, quantity: 2 },
-      { productId: 57, quantity: 1 },
+      { productId: 16, quantity: 1, displayName: "nectarines" },
+      { productId: 33, quantity: 1, displayName: "chinese cabbage" },
+      { productId: 40, quantity: 2, displayName: "cucumbers" },
+      { productId: 57, quantity: 1, displayName: "mustard soup (2 person)" },
     ],
   } as Challenge,
   blindness: {
@@ -95,10 +99,10 @@ export const challengeMap = {
     discount: 15,
     budgetLimit: 16,
     cart: [
-      { productId: 43, quantity: 1 },
-      { productId: 6, quantity: 2 },
-      { productId: 24, quantity: 1 },
-      { productId: 60, quantity: 1 },
+      { productId: 43, quantity: 1, displayName: "pomegranates" },
+      { productId: 6, quantity: 2, displayName: "aubergine" },
+      { productId: 24, quantity: 1, displayName: "green paprika" },
+      { productId: 60, quantity: 1, displayName: "mushroom soup (4 person)" },
     ],
   } as Challenge,
   dyslexia: {
@@ -127,10 +131,14 @@ export const challengeMap = {
     discount: 20,
     budgetLimit: 17,
     cart: [
-      { productId: 7, quantity: 2 },
-      { productId: 19, quantity: 1 },
-      { productId: 22, quantity: 1 },
-      { productId: 53, quantity: 1 },
+      { productId: 7, quantity: 2, displayName: "grapefruits" },
+      { productId: 19, quantity: 1, displayName: "persimmons" },
+      { productId: 22, quantity: 1, displayName: "Red Delicious apples" },
+      {
+        productId: 53,
+        quantity: 1,
+        displayName: "vegetarian borsch (2 person)",
+      },
     ],
   } as Challenge,
   colourblindness: {
@@ -143,7 +151,7 @@ export const challengeMap = {
       "You live alone",
       "You have $19 budget limit",
       "Buy 2 kg of yellow apples",
-      "Buy an orange paprika pepper",
+      "Buy an orange paprika",
       "Buy 1 kg of pink tomatoes",
       "Buy a combo for vegetarian lasagna",
       "Use a discount code to save some money (optional)",
@@ -161,10 +169,14 @@ export const challengeMap = {
     discount: 10,
     budgetLimit: 19,
     cart: [
-      { productId: 23, quantity: 2 },
-      { productId: 44, quantity: 1 },
-      { productId: 45, quantity: 1 },
-      { productId: 55, quantity: 1 },
+      { productId: 23, quantity: 2, displayName: "yellow apples" },
+      { productId: 44, quantity: 1, displayName: "orange paprika" },
+      { productId: 45, quantity: 1, displayName: "pink tomatoes" },
+      {
+        productId: 55,
+        quantity: 1,
+        displayName: "vegetarian lasagna (2 person)",
+      },
     ],
   } as Challenge,
 };

@@ -9,8 +9,10 @@ type ChallengeStore = {
   setFilter: (filter?: Filter) => void;
   isSuccessful: boolean;
   setIsSuccessful: (value: boolean) => void;
-  challengeErrors: string[];
-  setChallengeErrors: (errors: string[]) => void;
+  challengeErrors: Array<{ message: string; items: string[] }>;
+  setChallengeErrors: (
+    errors: Array<{ message: string; items: string[] }>
+  ) => void;
   cart: CartProduct[];
   setCart: (Cart: CartProduct[]) => void;
   addProduct: (product: Product, quantity: number) => void;

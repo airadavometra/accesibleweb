@@ -54,8 +54,19 @@ const ResultPage: NextPage = () => {
           <section className={s.errors}>
             <h2 className={s.errorsTitle}>You&apos;ve made some mistakes:</h2>
             <ul>
-              {challengeErrors.map((item, index) => (
-                <li key={index}>{item}</li>
+              {challengeErrors.map((err, index) => (
+                <li key={index}>
+                  {err.message}
+                  {err.items.length > 0 && (
+                    <ol>
+                      {err.items.map((item, index) => (
+                        <li key={index} className={s.secondLevelListItem}>
+                          {item}
+                        </li>
+                      ))}
+                    </ol>
+                  )}
+                </li>
               ))}
             </ul>
           </section>

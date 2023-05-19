@@ -2,12 +2,6 @@ import { challengeMap } from "@/data/challenge/challenge";
 import { CartProduct } from "@/state/useChallenge";
 import { Filter } from "@/types/filter";
 
-const errorMessages = {
-  "exceeded-limit": "You've gone over your set budget limit",
-  "cart-not-full": "Not all the required items we added to your cart",
-  "missing-inputs": "Some delivery information is missing",
-};
-
 const isInputEmpty = (value: string | undefined) =>
   value === undefined || value === "";
 
@@ -23,48 +17,105 @@ export const validateResult = (
   zipCode: string | undefined,
   cart: CartProduct[],
   isDiscountApplied: boolean
-): string[] => {
+): Array<{ message: string; items: string[] }> => {
   const data = filter ? challengeMap[filter] : undefined;
 
-  const errors: string[] = [];
-
-  if (
-    isInputEmpty(firstName) ||
-    isInputEmpty(lastName) ||
-    isInputEmpty(email) ||
-    isInputEmpty(address) ||
-    isInputEmpty(country) ||
-    isInputEmpty(city) ||
-    isInputEmpty(region) ||
-    isInputEmpty(zipCode)
-  ) {
-    errors.push(errorMessages["missing-inputs"]);
-  }
+  const errors: Array<{ message: string; items: string[] }> = [];
 
   if (data) {
-    const allItemsAreInCart = data.cart.every(
-      (item) =>
-        cart.find(
-          (c) => c.id === item.productId && c.quantity === item.quantity
-        ) !== undefined
-    );
-
-    if (!allItemsAreInCart) {
-      errors.push(errorMessages["cart-not-full"]);
-    }
-
     const subtotal = cart.reduce(
       (sum, item) => sum + item.price * item.quantity,
       0
     );
-    const limitIsEnough =
-      (isDiscountApplied
-        ? data.deliveryPrice + subtotal * ((100 - data.discount) / 100)
-        : data.deliveryPrice + subtotal) <= data.budgetLimit;
+    const total = isDiscountApplied
+      ? data.deliveryPrice + subtotal * ((100 - data.discount) / 100)
+      : data.deliveryPrice + subtotal;
 
-    if (!limitIsEnough) {
-      errors.push(errorMessages["exceeded-limit"]);
+    if (total > data.budgetLimit) {
+      errors.push({
+        message: `Your budget limit was $${
+          data.budgetLimit
+        }, but you spent $${Number(total).toFixed(2)}`,
+        items: [],
+      });
+    }
+
+    const missingProducts: string[] = [];
+
+    data.cart.forEach((item) => {
+      if (
+        cart.find(
+          (c) => c.id === item.productId && c.quantity === item.quantity
+        ) === undefined
+      ) {
+        missingProducts.push(item.displayName);
+      }
+    });
+
+    if (missingProducts.length > 0) {
+      errors.push({
+        message: "Some required products are missing: ",
+        items: missingProducts,
+      });
     }
   }
+
+  const missingInputs = validateInputs(
+    firstName,
+    lastName,
+    email,
+    address,
+    country,
+    city,
+    region,
+    zipCode
+  );
+
+  if (missingInputs.length > 0) {
+    errors.push({
+      message: "Some delivery information is missing: ",
+      items: missingInputs,
+    });
+  }
+
   return errors;
+};
+
+const validateInputs = (
+  firstName: string | undefined,
+  lastName: string | undefined,
+  email: string | undefined,
+  address: string | undefined,
+  country: string | undefined,
+  city: string | undefined,
+  region: string | undefined,
+  zipCode: string | undefined
+): string[] => {
+  const missingData: string[] = [];
+
+  if (isInputEmpty(firstName)) {
+    missingData.push("first name");
+  }
+  if (isInputEmpty(lastName)) {
+    missingData.push("last name");
+  }
+  if (isInputEmpty(email)) {
+    missingData.push("email");
+  }
+  if (isInputEmpty(address)) {
+    missingData.push("address");
+  }
+  if (isInputEmpty(country)) {
+    missingData.push("country");
+  }
+  if (isInputEmpty(city)) {
+    missingData.push("city");
+  }
+  if (isInputEmpty(region)) {
+    missingData.push("region");
+  }
+  if (isInputEmpty(zipCode)) {
+    missingData.push("zip code");
+  }
+  return missingData;
 };

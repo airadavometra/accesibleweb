@@ -10,5 +10,5 @@ export type Challenge = {
   promocode: string;
   discount: number;
   budgetLimit: number;
-  cart: Array<{ productId: number; quantity: number }>;
+  cart: Array<{ productId: number; quantity: number; displayName: string }>;
 };
