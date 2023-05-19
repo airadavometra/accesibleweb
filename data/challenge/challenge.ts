@@ -149,7 +149,7 @@ export const challengeMap = {
       "Use a discount code to save some money (optional)",
     ],
     disclaimer:
-      "This challenge doesn't work in Safari and on iOS. Sorry, we're working on this! To successfully complete the challenge and gain the intended experience, please use other browsers (i.e. Chrome or Firefox).",
+      "We're very sorry, this challenge doesn't work in Safari and on iOS. But we're working on it! For now, to successfully complete the challenge and gain the intended experience, please use other browsers (i.e. Chrome or Firefox).",
     productIds: [
       5, 9, 10, 11, 12, 13, 14, 18, 19, 33, 34, 35, 36, 45, 46, 47, 48, 49, 50,
       55, 56, 59, 60,

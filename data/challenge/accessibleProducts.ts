@@ -52,7 +52,8 @@ export const accessibleProducts: Product[] = [
     price: 2.19,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy our ripe bananas, which are creamy and naturally sweet. They're full of good things like potassium, vitamins, and natural sugars that give you energy. You can blend them in smoothies, bake them in desserts, or just eat them as a quick snack. Try our top-quality bananas and you'll get a tropical taste with every bite.",
     availableQuantity: 10,
   },
   {
@@ -62,7 +63,8 @@ export const accessibleProducts: Product[] = [
     price: 2.55,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy our high-quality pomegranates, known for their shiny seeds and rich, tangy taste. Inside, you'll find red seeds packed with antioxidants, vitamins, and nutrients that are good for your health. You can use them on salads and desserts, juice them, or just eat the seeds. Try our hand-picked pomegranates today and experience their unique flavor and health benefits.",
     availableQuantity: 10,
   },
   {
@@ -72,7 +74,8 @@ export const accessibleProducts: Product[] = [
     price: 1.19,
     unit: "1 each",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy our great grapefruits, known for their mix of sour and slightly sweet taste. They're juicy, pink inside, and packed with vitamin C, antioxidants, and other healthy nutrients. You can snack on them, use them in salads, or add them to your meals and drinks. Taste our high-quality grapefruits today for a burst of fresh flavor.",
     availableQuantity: 10,
   },
   {
@@ -82,7 +85,8 @@ export const accessibleProducts: Product[] = [
     price: 1.99,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy our local pears, picked from the best nearby orchards for their quality and taste. They're soft, sweet, and full of fiber, vitamins, and antioxidants, making them a healthy snack. They have a fresh, natural taste with a bit of honey and vanilla flavor. Eat them as they are, add them to salads, or pair them with cheese and wine. Try our high-quality pears today, grown sustainably and supporting local farms.",
     availableQuantity: 10,
   },
   {
@@ -92,7 +96,8 @@ export const accessibleProducts: Product[] = [
     price: 2.49,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Try our high-quality kiwis, small fruits with a bright green inside, tiny black seeds, and a sweet-sour taste. They're covered in brown skin and full of vitamin C, antioxidants, and minerals that are good for you. You can snack on them, add them to fruit salads, or use them in smoothies and desserts. Enjoy our hand-picked kiwis today for their great taste and health benefits",
     availableQuantity: 10,
   },
   {
@@ -102,7 +107,8 @@ export const accessibleProducts: Product[] = [
     price: 0.69,
     unit: "1 each",
     category: "fruits",
-    description: "",
+    description:
+      "Use our top-quality limes to add a sour kick to your cooking. These small, green fruits are juicy and full of vitamin C and antioxidants, so they're good for your health. You can use them in many meals, drinks, and desserts. From fresh cocktails to tasty marinades, our limes can make any dish more exciting. Try our hand-picked limes today and add some zest to your kitchen.",
     availableQuantity: 10,
   },
   {
@@ -112,7 +118,8 @@ export const accessibleProducts: Product[] = [
     price: 0.69,
     unit: "1 each",
     category: "fruits",
-    description: "",
+    description:
+      "Try our top-quality lemons, picked for their bright yellow color and juicy insides. These sour fruits are great in many recipes, from drinks and sauces to desserts and marinades. They're full of vitamin C, antioxidants, and other healthy nutrients. Taste our ripe lemons today and see how they can make your meals more exciting and improve your health.",
     availableQuantity: 10,
   },
   {
@@ -122,7 +129,8 @@ export const accessibleProducts: Product[] = [
     price: 3.39,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Try our high-quality lychees, known for their sweet, floral taste and juicy insides. Under the rough, pink-red shell, you'll find clear, grape-like flesh. They're full of vitamin C, antioxidants, and minerals, making them both healthy and tasty. Eat them as they are or add them to fruit salads, drinks, or desserts. Taste our hand-picked lychees today and enjoy their unique, sweet flavor.",
     availableQuantity: 10,
   },
   {
@@ -132,7 +140,8 @@ export const accessibleProducts: Product[] = [
     price: 1.75,
     unit: "1 each",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy our juicy mangos, picked when they're just right for the best flavor and smooth texture. They're sweet with a bit of citrus and peach flavor. Full of vitamins, antioxidants, and nutrients, they're a healthy and tasty treat. Eat them as they are or use them in smoothies, fruit salads, or desserts. Try our top-quality mangos today for a tropical taste.",
     availableQuantity: 10,
   },
   {
@@ -142,7 +151,8 @@ export const accessibleProducts: Product[] = [
     price: 2.85,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy our top-quality mandarins, small citrus fruits known for their bright color, easy-to-peel skin, and sweet-sour taste. They're juicy and full of vitamin C, antioxidants, and nutrients that are good for your health. Perfect for a snack, our hand-picked mandarins are loved by kids and adults. Add them to salads, desserts, or drinks for a citrusy kick. Try our mandarins today for their simple, refreshing flavor.",
     availableQuantity: 10,
   },
   {
@@ -152,7 +162,8 @@ export const accessibleProducts: Product[] = [
     price: 3.89,
     unit: "250 gr",
     category: "fruits",
-    description: "",
+    description:
+      "Delight in our high-quality passion fruits. Their sweet-sour taste and enticing aroma create a true tropical experience. Hidden in their purple shell, you'll find a vibrant pulp full of nutritious seeds. They're great for your health, too. Enjoy them as is, or add their exotic flair to your dishes. Taste our hand-picked passion fruits today for a thrilling flavor journey.",
     availableQuantity: 10,
   },
   {
@@ -162,7 +173,8 @@ export const accessibleProducts: Product[] = [
     price: 5.99,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Relish the sweetness of our top-quality nectarines. These juicy fruits have a sweet and sour balance, like peaches, but with their own unique twist. Hand-picked when ripe, they're full of vitamins, antioxidants, and nutrients that are good for your health. Eat them fresh, grilled, or baked into desserts for a taste of summer. Try our tasty nectarines today for their irresistible flavor.",
     availableQuantity: 10,
   },
   {
@@ -172,7 +184,8 @@ export const accessibleProducts: Product[] = [
     price: 3.79,
     unit: "1 each",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy the tropical taste of our high-quality papayas. These sweet fruits have a soft texture and a flavor similar to melon. Inside their bright skin, you'll find soft flesh with small edible seeds. They're full of vitamin C, antioxidants, and nutrients that are good for you. Eat them fresh, in smoothies, salads, or as a breakfast topping. Try our papayas today for a delightful fruit experience.",
     availableQuantity: 10,
   },
   {
@@ -182,7 +195,8 @@ export const accessibleProducts: Product[] = [
     price: 6.29,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Enjoy the delightful taste of our top-quality peaches, perfect summer fruits known for their fuzzy skin and juicy insides. Hand-picked when ripe, they have a balance of sweet and sour flavors that you'll love. They're full of vitamins, antioxidants, and nutrients, making them healthy, too. Eat them fresh, grilled, or baked into desserts like pies for a real taste of summer. Try our juicy peaches today for their classic flavor.",
     availableQuantity: 10,
   },
   {
@@ -192,7 +206,8 @@ export const accessibleProducts: Product[] = [
     price: 3.59,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Experience the unique flavor of our top-quality persimmons. Known for their bright color, smooth texture, and sweet taste, our hand-picked persimmons are full of vitamins, antioxidants, and nutrients. You can enjoy them fresh, in salads, or baked into desserts. Try our delicious persimmons today for a new and delightful flavor experience.",
     availableQuantity: 10,
   },
   {
@@ -202,7 +217,8 @@ export const accessibleProducts: Product[] = [
     price: 1.74,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Indulge in the joy of biting into our crisp, local apples. Freshly picked from nearby farms, they burst with a delightful mix of sweet and tart flavors. Perfect for eating raw, baking, or juicing, they nourish your body with healthy nutrients. Plus, every purchase helps support our hardworking local farmers. Let the taste of these apples bring a smile to your day.",
     availableQuantity: 10,
   },
   {
@@ -212,7 +228,8 @@ export const accessibleProducts: Product[] = [
     price: 3.29,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Experience the zesty delight of our premium Granny Smith apples. Bright green, with a firm texture, these apples deliver a satisfying crunch and an excitingly tart flavor. Perfect for eating fresh, adding a sprinkle of salt, or baking into a delicious pie, they'll fill your body with beneficial nutrients. Let these vibrant apples add a burst of joy and a fresh tang to your day.",
     availableQuantity: 10,
   },
   {
@@ -222,7 +239,8 @@ export const accessibleProducts: Product[] = [
     price: 3.89,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Relish the sweet nostalgia of our premium Red Delicious apples. Famous for their deep red color and elegant shape, these fruits burst with a tender, juicy sweetness that's simply irresistible. Perfect for enjoying fresh, tossing in salads, or sweetening baked treats, they're not just delicious but also packed with essential nutrients. Let our beautiful Red Delicious apples add a touch of timeless charm to your day.",
     availableQuantity: 10,
   },
   {
@@ -232,7 +250,8 @@ export const accessibleProducts: Product[] = [
     price: 3.37,
     unit: "1 kg",
     category: "fruits",
-    description: "",
+    description:
+      "Taste the magic of our premium Opal apples. Known for their beautiful golden color and delightfully sweet flavor, these apples have a crisp, juicy bite that's hard to resist. Ideal for snacking, pairing with cheese, or blending in smoothies, they're both delicious and nutritious. Let our gorgeous Opal apples add a touch of sparkle to your day.",
     availableQuantity: 10,
   },
   {
@@ -242,7 +261,8 @@ export const accessibleProducts: Product[] = [
     price: 0.92,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Meet our premium aubergines: versatile veggies with a deep purple skin and creamy inside. Whether grilled, baked, or roasted, they have a mild and slightly sweet taste. Besides their delicious flavor, they're packed with vitamins, fiber, and antioxidants for your health. Enjoy them in vegan dishes, pasta sauces, or as grilled side dishes. Add some aubergine to your kitchen and explore their many cooking uses.",
     availableQuantity: 10,
   },
   {
@@ -252,7 +272,8 @@ export const accessibleProducts: Product[] = [
     price: 2.99,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Experience the warm, comforting flavor of our premium sweet potatoes. Known for their orange flesh and natural sweetness, these versatile veggies can be mashed, baked, or roasted. Full of vitamins and fiber, sweet potatoes offer health benefits alongside their delicious taste. Enjoy them in a range of dishes from stews to pies, adding a cozy touch to your meals.",
     availableQuantity: 10,
   },
   {
@@ -262,7 +283,8 @@ export const accessibleProducts: Product[] = [
     price: 2.99,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Dive into the crisp and delicate flavor of our high-quality hand-picked asparagus. Besides being a tasty treat, they're rich in vitamins, fiber, and antioxidants, contributing to your health. Enjoy them grilled, steamed, or in your favorite salads and pasta dishes. Let our exceptional asparagus elevate your culinary experiences.",
     availableQuantity: 10,
   },
   {
@@ -272,7 +294,8 @@ export const accessibleProducts: Product[] = [
     price: 0.69,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy our top-quality zucchini, known for its juicy flesh and subtle sweetness. With its glossy green skin, it's perfect in many dishes and is full of healthy vitamins, fiber, and antioxidants. Grill, sauté, roast or bake it to add a fresh touch to your meals with our exceptional zucchini.",
     availableQuantity: 10,
   },
   {
@@ -282,7 +305,8 @@ export const accessibleProducts: Product[] = [
     price: 1.29,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Our locally-grown white cabbage is fresh, crunchy, and slightly sweet. It's full of healthy vitamins, fiber, and antioxidants. Enjoy it in salads, as a side dish, or pickled. By choosing our cabbage, you're supporting local farmers and sustainable farming. Try our tasty white cabbage today.",
     availableQuantity: 10,
   },
   {
@@ -292,7 +316,8 @@ export const accessibleProducts: Product[] = [
     price: 3.48,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Try our fresh, locally-grown broccoli with its vibrant green color and crunchy texture. It's healthy, packed with vitamins, fiber, and antioxidants. It's great steamed, roasted, or stir-fried, in salads, or in soups. Choosing our broccoli means supporting local farmers and sustainable agriculture. Enjoy our tasty broccoli today!",
     availableQuantity: 10,
   },
   {
@@ -302,7 +327,8 @@ export const accessibleProducts: Product[] = [
     price: 2.39,
     unit: "350 gr",
     category: "vegetables",
-    description: "",
+    description:
+      "Discover the rich flavor of our premium Brussels sprouts. These mini delights, handpicked for freshness, have a unique, slightly bitter yet nutty flavor that's a hit with various spices. They're nutrient-rich, offering health benefits alongside their great taste. Roast, sauté, fry, or add them to salads and pasta dishes. Elevate your meals with our exceptional Brussels sprouts today!",
     availableQuantity: 10,
   },
   {
@@ -312,7 +338,8 @@ export const accessibleProducts: Product[] = [
     price: 1.89,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Relish our locally-grown red cabbage's bold taste and vibrant color. Freshly handpicked, these nutrient-rich veggies shine in salads, side dishes, or pickles. Choosing them supports local farms and sustainability. Brighten your meals with our red cabbage today!",
     availableQuantity: 10,
   },
   {
@@ -322,7 +349,8 @@ export const accessibleProducts: Product[] = [
     price: 1.45,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy the refreshing crunch and unique flavor of our premium bok choy. Handpicked at peak freshness and brimming with nutrients, it shines stir-fried, sautéed, or in soups. Add an exotic touch to your meals with our exceptional bok choy today!",
     availableQuantity: 10,
   },
   {
@@ -332,7 +360,8 @@ export const accessibleProducts: Product[] = [
     price: 2.19,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Savor the crisp texture and gentle sweetness of our premium Chinese cabbage. Packed with nutrients and handpicked at the perfect moment, this cabbage shines stir-fried, sautéed, or pickled. Enhance your meals with our exceptional Chinese cabbage today!",
     availableQuantity: 10,
   },
   {
@@ -342,7 +371,8 @@ export const accessibleProducts: Product[] = [
     price: 2.44,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Relish the mild flavor and smooth texture of our premium cauliflower. Packed with vitamins, fiber, and antioxidants, it's a delight roasted, grilled, or mashed. Add our exceptional cauliflower to your meals and explore its countless culinary possibilities today.",
     availableQuantity: 10,
   },
   {
@@ -352,7 +382,8 @@ export const accessibleProducts: Product[] = [
     price: 1.84,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Experience the comforting flavor and hearty texture of our locally-grown potatoes. Brimming with vitamins, fiber, and essential minerals, they shine in various preparations like roasted, boiled, or mashed. Opt for our exceptional potatoes, support local farmers, and add a touch of wholesome warmth to your meals.",
     availableQuantity: 10,
   },
   {
@@ -362,7 +393,8 @@ export const accessibleProducts: Product[] = [
     price: 2.19,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Relish the earthy flavor and robust texture of our locally-grown red potatoes, renowned for their vibrant skin and creamy flesh. Rich in nutrients, they're delightful roasted, boiled, or mashed. Choose our exceptional red potatoes, support local farming, and add a burst of color and wholesomeness to your meals.",
     availableQuantity: 10,
   },
   {
@@ -372,7 +404,8 @@ export const accessibleProducts: Product[] = [
     price: 1.89,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Experience the sweet, buttery flavor and juicy texture of our premium sweet corn, loved for its versatile culinary uses. Brimming with vitamins and nutrients, enjoy it grilled, boiled, or as a vibrant addition to salads and soups. Choosing our exceptional sweet corn not only adds a touch of summer sweetness to your meals but also supports sustainable farming.",
     availableQuantity: 10,
   },
   {
@@ -382,7 +415,8 @@ export const accessibleProducts: Product[] = [
     price: 2.89,
     unit: "2 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy the rich taste of our locally-grown onions. Picked fresh, they add a unique crunch and flavor to your meals. Besides being tasty, they're rich in vitamins and antioxidants. Using our onions supports local farmers and promotes sustainable agriculture.",
     availableQuantity: 10,
   },
   {
@@ -392,7 +426,8 @@ export const accessibleProducts: Product[] = [
     price: 2.09,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy the sweet flavor of our locally-grown carrots. Handpicked for freshness, they offer a crunchy texture and pair well with various seasonings. Besides being tasty, they're packed with vitamins and fiber, contributing to your health. Choosing our carrots supports local farming and sustainability.",
     availableQuantity: 10,
   },
   {
@@ -402,7 +437,8 @@ export const accessibleProducts: Product[] = [
     price: 0.89,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Relish the crisp and refreshing taste of our premium cucumbers. Handpicked at peak ripeness, they offer a crunch and a slightly sweet flavor, perfect for salads or snacks. Packed with vitamins and fiber, these cucumbers are as nutritious as they are delicious. Choosing our cucumbers supports sustainable farming, adding freshness to your meals.",
     availableQuantity: 10,
   },
   {
