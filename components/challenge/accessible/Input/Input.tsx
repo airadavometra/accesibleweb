@@ -47,7 +47,12 @@ export const Input = ({
           required={required}
         />
         {buttonAction && buttonIcon && (
-          <Button text={buttonAction} type="icon" icon={buttonIcon} />
+          <Button
+            text={buttonAction}
+            type="icon"
+            icon={buttonIcon}
+            className={s.arrow}
+          />
         )}
       </div>
     </div>

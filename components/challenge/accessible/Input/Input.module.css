@@ -8,10 +8,19 @@
 .inputWrapper:focus > .label {
   color: var(--input-color);
 }
+.inputWrapper:hover > .inputContainer,
+.inputWrapper:focus > .inputContainer {
+  outline: 1px solid var(--input-border-color);
+  border-color: var(--input-border-color);
+}
+.arrow:hover > svg,
+.arrow:focus > svg {
+  opacity: 1;
+}
 .white {
   --input-color: #fff;
   --input-placeholder-color: #fff8;
-  --input-border-color: #fff8;
+  --input-border-color: #fff;
 }
 .black {
   --input-color: #000;
@@ -26,7 +35,7 @@
   width: 100%;
   display: flex;
   color: var(--input-color);
-  border: 1px solid var(--input-border-color);
+  border: 1px solid var(--input-placeholder-color);
 }
 .input {
   padding-left: 16px;
