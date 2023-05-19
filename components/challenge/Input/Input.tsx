@@ -22,15 +22,14 @@ export const Input = ({
 }: InputProps) => {
   return (
     <div className={classNames(s.inputContainer, s[color])}>
-      <div
+      <input
         className={classNames(s.input, s[`${color}Input`])}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.target.value)
         }
-        contentEditable
-      >
-        {value === undefined || value === "" ? placeholder : value}
-      </div>
+        value={value}
+        placeholder={placeholder}
+      />
       {buttonAction && buttonIcon && (
         <Button text={buttonAction} type="icon" icon={buttonIcon} />
       )}
