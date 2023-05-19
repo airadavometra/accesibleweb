@@ -9,7 +9,7 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You have a family of 3 people",
-      "You have $18 budget limit",
+      "You have $19 budget limit",
       "Buy 2 kg of Cara Cara oranges",
       "Buy 1 kg of bananas",
       "Buy 1 kg of sweet potatoes",
@@ -25,7 +25,7 @@ export const challengeMap = {
     deliveryPrice: 1.09,
     promocode: "BLURRY20",
     discount: 20,
-    budgetLimit: 18,
+    budgetLimit: 19,
     cart: [
       { productId: 4, quantity: 2 },
       { productId: 5, quantity: 1 },
@@ -41,7 +41,7 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You live alone",
-      "You have $16 budget limit",
+      "You have $15 budget limit",
       "Buy 1 kg of nectarines",
       "Buy a chinese cabbage",
       "Buy 2 kg of cucumbers",
@@ -59,7 +59,7 @@ export const challengeMap = {
     deliveryPrice: 0.99,
     promocode: "STEADY10",
     discount: 10,
-    budgetLimit: 16,
+    budgetLimit: 15,
     cart: [
       { productId: 16, quantity: 1 },
       { productId: 33, quantity: 1 },
@@ -109,7 +109,7 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You have a family of 2 people",
-      "You have $16 budget limit",
+      "You have $17 budget limit",
       "Buy 2 grapefruits",
       "Buy 1 kg of persimmons",
       "Buy 1 kg of Red Delicious apples",
@@ -125,7 +125,7 @@ export const challengeMap = {
     deliveryPrice: 1.19,
     promocode: "READABLE20",
     discount: 20,
-    budgetLimit: 15,
+    budgetLimit: 17,
     cart: [
       { productId: 7, quantity: 2 },
       { productId: 19, quantity: 1 },
