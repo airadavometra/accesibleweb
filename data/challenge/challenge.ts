@@ -117,7 +117,7 @@ export const challengeMap = {
       "Use a discount code to save some money (optional)",
     ],
     productIds: [
-      5, 6, 7, 8, 13, 14, 15, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+      5, 6, 7, 8, 13, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
       32, 33, 34, 35, 53, 54, 57, 58,
     ],
     dayOfferId: 17,
