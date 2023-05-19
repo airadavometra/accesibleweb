@@ -146,14 +146,12 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={firstName}
                   onChange={(newValue?: string) => setFirstName(newValue)}
-                  required
                 />
                 <Input
                   placeholder="Last name"
                   color="black"
                   value={lastName}
                   onChange={(newValue?: string) => setLastName(newValue)}
-                  required
                 />
                 <div className={s.inputGroup}>
                   <Input
@@ -161,7 +159,6 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={email}
                     onChange={(newValue?: string) => setEmail(newValue)}
-                    required
                   />
                   <Input
                     placeholder="Phone (optional)"
@@ -178,7 +175,6 @@ const CheckoutPage: NextPage = () => {
                   color="black"
                   value={address}
                   onChange={(newValue?: string) => setAddress(newValue)}
-                  required
                 />
                 <Input
                   placeholder="Apartment, suite, etc (optional)"
@@ -192,14 +188,12 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={country}
                     onChange={(newValue?: string) => setCountry(newValue)}
-                    required
                   />
                   <Input
                     placeholder="City"
                     color="black"
                     value={city}
                     onChange={(newValue?: string) => setCity(newValue)}
-                    required
                   />
                 </div>
                 <div className={s.inputGroup}>
@@ -208,14 +202,12 @@ const CheckoutPage: NextPage = () => {
                     color="black"
                     value={region}
                     onChange={(newValue?: string) => setRegion(newValue)}
-                    required
                   />
                   <Input
                     placeholder="ZIP code"
                     color="black"
                     value={zipCode}
                     onChange={(newValue?: string) => setZipCode(newValue)}
-                    required
                   />
                 </div>
               </div>
