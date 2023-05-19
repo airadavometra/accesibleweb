@@ -448,7 +448,8 @@ export const accessibleProducts: Product[] = [
     price: 1.39,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy the sweet and slightly spicy flavor of our premium red paprika. Picked at their peak, they have a delightful crunch that goes well with many dishes. Packed with vitamins and nutrients, they offer health benefits too. Enjoy them in various ways, from grilling to adding them raw in salads. Choosing our red paprika supports sustainable farming and enriches your meals.",
     availableQuantity: 10,
   },
   {
@@ -458,7 +459,8 @@ export const accessibleProducts: Product[] = [
     price: 1.35,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Taste the sweet, tangy flavor of our yellow paprika. These veggies are picked fresh, have a nice crunch, and go well with many foods. They're packed with good nutrients and offer health benefits. Use them roasted or raw in your dishes. Choosing our yellow paprika supports sustainable farming and adds flavor to your meals.",
     availableQuantity: 10,
   },
   {
@@ -468,7 +470,8 @@ export const accessibleProducts: Product[] = [
     price: 1.29,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy the fresh, slightly bitter taste of our green paprika. These veggies are handpicked, crunchy, and mix well with many foods. They're full of vitamins and fiber, promoting good health. You can roast them or add them raw to salads. Choosing our green paprika helps sustainable farming and adds a fresh touch to your meals.",
     availableQuantity: 10,
   },
   {
@@ -478,7 +481,8 @@ export const accessibleProducts: Product[] = [
     price: 1.29,
     unit: "1 each",
     category: "vegetables",
-    description: "",
+    description:
+      "Our orange paprika is mildly sweet and tangy, perfect for many dishes. Handpicked and full of vitamins and fiber, it's a healthy choice. You can enjoy it roasted, grilled, or raw in salads. By choosing our orange paprika, you support sustainable farming while adding sweetness to your meals.",
     availableQuantity: 10,
   },
   {
@@ -488,7 +492,8 @@ export const accessibleProducts: Product[] = [
     price: 4.19,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Our premium pink tomatoes are juicy and sweet. Handpicked at their ripest, they're perfect in sandwiches, salads, or roasted dishes. Full of vitamins, fiber, and minerals, these tomatoes not only taste great but also offer health benefits. By choosing them, you support sustainable farming and add color to your meals. Explore their endless culinary uses today.",
     availableQuantity: 10,
   },
   {
@@ -498,7 +503,8 @@ export const accessibleProducts: Product[] = [
     price: 3.39,
     unit: "1 kg",
     category: "vegetables",
-    description: "",
+    description:
+      "Our premium cherry tomatoes are sweet, juicy, and perfect for a snack. Picked when perfectly ripe, they're delicious in salads, or roasted in dishes. Full of vitamins, fiber, and minerals, they're not just tasty but also healthy. Choosing our cherry tomatoes supports sustainable farming and adds freshness to your meals. Enjoy their many uses today.",
     availableQuantity: 10,
   },
   {
@@ -508,7 +514,8 @@ export const accessibleProducts: Product[] = [
     price: 2.19,
     unit: "500 gr",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy our premium yellow tomatoes, picked at perfect ripeness for a sweet, slightly tangy taste. They're great in sandwiches, salads, or roasted in dishes. Packed with vitamins, fiber, and minerals, they're tasty and healthy. Choosing our yellow tomatoes supports responsible farming and adds a sunny touch to your meals. Try them today and boost your cooking experience.",
     availableQuantity: 10,
   },
   {
@@ -518,7 +525,8 @@ export const accessibleProducts: Product[] = [
     price: 1.24,
     unit: "250 gr",
     category: "vegetables",
-    description: "",
+    description:
+      "Try our locally-grown tomatoes, full of rich, juicy flavor. Picked at peak ripeness, they're perfect for sandwiches, salads, or roasted in dishes. They're full of vitamins, fiber, and minerals, so they're good for you too. Choosing our tomatoes supports local farmers and sustainable farming. Add them to your meals today for a tasty, wholesome touch.",
     availableQuantity: 10,
   },
   {
@@ -528,7 +536,8 @@ export const accessibleProducts: Product[] = [
     price: 0.89,
     unit: "250 gr",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy our crunchy, slightly spicy locally-grown radishes. Picked at just the right time, they're perfect in salads, pickles, or sautéed in dishes. They're packed with vitamins, fiber, and minerals, making them healthy too. Choosing our radishes supports local farmers and sustainable farming. Try our radishes today for a crisp, tasty addition to your meals.",
     availableQuantity: 10,
   },
   {
@@ -538,7 +547,8 @@ export const accessibleProducts: Product[] = [
     price: 0.99,
     unit: "500 gr",
     category: "vegetables",
-    description: "",
+    description:
+      "Enjoy the earthy and slightly sweet taste of our locally-grown beets. Handpicked from nearby farms, these beets are full of vitamins, fiber, and minerals. You can roast them, boil them, or add them to salads and sandwiches. By choosing our beets, you're supporting local farmers and sustainable farming. Try our delicious beets today to add color and nutrition to your meals.",
     availableQuantity: 10,
   },
   {
@@ -548,7 +558,8 @@ export const accessibleProducts: Product[] = [
     price: 4.29,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our tomato soup pack comes with everything you need to make tasty tomato soup. It includes fresh tomatoes, onions, garlic, herbs, spices, and cream. We've made sure that all the ingredients are fresh. Plus, there are easy instructions to follow, so anyone can make it, whether you're a beginner or an expert. Make a yummy dinner or entertain guests with our tomato soup pack. Enjoy the warmth of homemade tomato soup today.",
     availableQuantity: 10,
   },
   {
@@ -558,7 +569,8 @@ export const accessibleProducts: Product[] = [
     price: 6.89,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our tomato soup pack comes with everything you need to make tasty tomato soup. It includes fresh tomatoes, onions, garlic, herbs, spices, and cream. We've made sure that all the ingredients are fresh. Plus, there are easy instructions to follow, so anyone can make it, whether you're a beginner or an expert. Make a yummy dinner or entertain guests with our tomato soup pack. Enjoy the warmth of homemade tomato soup today.",
     availableQuantity: 10,
   },
   {
@@ -568,7 +580,8 @@ export const accessibleProducts: Product[] = [
     price: 5.69,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our vegetarian borscht pack makes it easy to cook a tasty Eastern European soup. It includes fresh beets, carrots, onions, potatoes, garlic, dill, and sour cream for a hearty soup. All ingredients are handpicked for quality. The pack comes with simple instructions, so it's great for beginners or experienced cooks. Use this pack for a family dinner or for guests. Enjoy the comfort of homemade vegetarian borscht today.",
     availableQuantity: 10,
   },
   {
@@ -578,7 +591,8 @@ export const accessibleProducts: Product[] = [
     price: 8.74,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our vegetarian borscht pack makes it easy to cook a tasty Eastern European soup. It includes fresh beets, carrots, onions, potatoes, garlic, dill, and sour cream for a hearty soup. All ingredients are handpicked for quality. The pack comes with simple instructions, so it's great for beginners or experienced cooks. Use this pack for a family dinner or for guests. Enjoy the comfort of homemade vegetarian borscht today.",
     availableQuantity: 10,
   },
   {
@@ -588,7 +602,8 @@ export const accessibleProducts: Product[] = [
     price: 5.49,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our vegetarian lasagna pack gives you everything you need to cook a delicious Italian meal. It comes with fresh lasagna sheets, tomato sauce, onions, garlic, mushrooms, ricotta and mozzarella cheese, and herbs and spices. All the ingredients are carefully chosen and packed for freshness. Simple cooking instructions are included, making it great for both new and skilled cooks. Perfect for a family meal or for guests, this pack helps you make a tasty homemade vegetarian lasagna.",
     availableQuantity: 10,
   },
   {
@@ -598,7 +613,8 @@ export const accessibleProducts: Product[] = [
     price: 8.29,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our vegetarian lasagna pack gives you everything you need to cook a delicious Italian meal. It comes with fresh lasagna sheets, tomato sauce, onions, garlic, mushrooms, ricotta and mozzarella cheese, and herbs and spices. All the ingredients are carefully chosen and packed for freshness. Simple cooking instructions are included, making it great for both new and skilled cooks. Perfect for a family meal or for guests, this pack helps you make a tasty homemade vegetarian lasagna.",
     availableQuantity: 10,
   },
   {
@@ -608,7 +624,8 @@ export const accessibleProducts: Product[] = [
     price: 4.29,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our mustard soup pack gives you everything you need to make a tasty European-style soup. It includes vegetable broth, heavy cream, onions, garlic, Dijon mustard, and a mix of herbs and spices. The pack comes with easy instructions, making it great for both beginner and experienced cooks. Enjoy the tangy taste of this classic soup with our pack.",
     availableQuantity: 10,
   },
   {
@@ -618,7 +635,8 @@ export const accessibleProducts: Product[] = [
     price: 6.89,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Our mustard soup pack gives you everything you need to make a tasty European-style soup. It includes vegetable broth, heavy cream, onions, garlic, Dijon mustard, and a mix of herbs and spices. The pack comes with easy instructions, making it great for both beginner and experienced cooks. Enjoy the tangy taste of this classic soup with our pack.",
     availableQuantity: 10,
   },
   {
@@ -628,7 +646,8 @@ export const accessibleProducts: Product[] = [
     price: 4.29,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Enjoy the tasty and easy-to-make mushroom soup with our ingredient pack. It includes fresh mushrooms, onions, garlic, vegetable broth, and cream. All items are fresh and handpicked. Follow the included simple instructions to make a delicious meal for family or guests. Try our mushroom soup pack for a comforting homemade meal.",
     availableQuantity: 10,
   },
   {
@@ -638,7 +657,8 @@ export const accessibleProducts: Product[] = [
     price: 6.89,
     unit: "1 each",
     category: "combo",
-    description: "",
+    description:
+      "Enjoy the tasty and easy-to-make mushroom soup with our ingredient pack. It includes fresh mushrooms, onions, garlic, vegetable broth, and cream. All items are fresh and handpicked. Follow the included simple instructions to make a delicious meal for family or guests. Try our mushroom soup pack for a comforting homemade meal.",
     availableQuantity: 10,
   },
 ];
