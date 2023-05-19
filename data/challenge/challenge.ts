@@ -83,7 +83,7 @@ export const challengeMap = {
       "Use a discount code to save some money (optional)",
     ],
     disclaimer:
-      "To successfully complete the challenge and gain the intended experience, you need to enable the voice-over feature. Good luck with the challenge!",
+      "To successfully complete the challenge and gain the intended experience, you need to enable the screen reader feature. Good luck with the challenge!",
     productIds: [
       5, 6, 9, 10, 16, 17, 18, 19, 24, 25, 26, 40, 41, 42, 43, 44, 51, 52, 59,
       60,
@@ -141,9 +141,9 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You live alone",
-      "You have $16 budget limit",
-      "Buy 2 lemons",
-      "Buy a mango",
+      "You have $18 budget limit",
+      "Buy 2 kg of yellow apples",
+      "Buy an orange paprika pepper",
       "Buy 1 kg of pink tomatoes",
       "Buy a combo for vegetarian lasagna",
       "Use a discount code to save some money (optional)",
@@ -151,18 +151,18 @@ export const challengeMap = {
     disclaimer:
       "We're very sorry, this challenge doesn't work in Safari and on iOS. But we're working on it! For now, to successfully complete the challenge and gain the intended experience, please use other browsers (i.e. Chrome or Firefox).",
     productIds: [
-      5, 9, 10, 11, 12, 13, 14, 18, 19, 33, 34, 35, 36, 45, 46, 47, 48, 49, 50,
-      55, 56, 59, 60,
+      5, 9, 10, 11, 12, 20, 21, 22, 23, 33, 34, 41, 42, 43, 44, 45, 46, 47, 48,
+      49, 50, 55, 56, 59, 60,
     ],
     dayOfferId: 19,
     bestsellerIds: [9, 10, 33, 35],
     deliveryPrice: 0.89,
     promocode: "COLORFREE10",
     discount: 10,
-    budgetLimit: 15,
+    budgetLimit: 18,
     cart: [
-      { productId: 11, quantity: 2 },
-      { productId: 13, quantity: 1 },
+      { productId: 23, quantity: 2 },
+      { productId: 44, quantity: 1 },
       { productId: 45, quantity: 1 },
       { productId: 55, quantity: 1 },
     ],
