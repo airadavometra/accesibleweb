@@ -45,7 +45,7 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You live alone",
-      "You have $15 budget limit",
+      "You have $16 budget limit",
       "Buy 1 kg of nectarines",
       "Buy a chinese cabbage",
       "Buy 2 kg of cucumbers",
@@ -61,7 +61,7 @@ export const challengeMap = {
     deliveryPrice: 0.99,
     promocode: "STEADY10",
     discount: 10,
-    budgetLimit: 15,
+    budgetLimit: 16,
     cart: [
       { productId: 16, quantity: 1, displayName: "nectarines" },
       { productId: 33, quantity: 1, displayName: "chinese cabbage" },
