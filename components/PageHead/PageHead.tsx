@@ -4,7 +4,7 @@ import React from "react";
 
 // TODO description and share image
 
-const description = `Access denied?`;
+const description = `A non-commercial project focused on web accessibility that creates an engaging, interactive experience that allows to face the challenges that people with different abilities have in the web. It is an educational tool for both people involved in web development and the broader public.`;
 
 export const PageHead = () => (
   <>
@@ -16,7 +16,7 @@ export const PageHead = () => (
         content="width=device-width, initial-scale=1"
         key="viewport"
       />
-      <meta name="keywords" content="Access denied?" />
+      <meta name="keywords" content="accessibility UI UX web" />
       <meta property="og:title" content="Access denied?" />
       <meta property="og:image" content="/share.png" />
     </NextHead>
