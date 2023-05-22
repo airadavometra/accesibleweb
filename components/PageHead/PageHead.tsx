@@ -8,7 +8,7 @@ export const PageHead = () => (
       <title>Access denied?</title>
       <meta
         name="description"
-        content="This project focuses on highlighting the importance of web accessibility through interactive experiences. It educates about the online challenges faced by people with diverse abilities, emphasizing that websites should be inherently accessible."
+        content="This project spotlights web accessibility with interactive experiences. It educates on challenges faced by diverse users, urging inherent website accessibility."
       />
       <meta
         name="viewport"
@@ -25,7 +25,7 @@ export const PageHead = () => (
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="og:description"
-        content="This project focuses on highlighting the importance of web accessibility through interactive experiences. It educates about the online challenges faced by people with diverse abilities, emphasizing that websites should be inherently accessible."
+        content="This project spotlights web accessibility with interactive experiences. It educates on challenges faced by diverse users, urging inherent website accessibility."
       />
     </NextHead>
     {process.env.NODE_ENV === "production" &&
