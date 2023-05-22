@@ -7,6 +7,8 @@ export type CartProduct = Product & { quantity: number };
 type ChallengeStore = {
   filter?: Filter;
   setFilter: (filter?: Filter) => void;
+  colourBlindnessFilter?: string;
+  setColourBlindnessFilter: (colourBlindnessFilter?: string) => void;
   isSuccessful: boolean;
   setIsSuccessful: (value: boolean) => void;
   challengeErrors: Array<{ message: string; items: string[] }>;
@@ -27,6 +29,9 @@ type ChallengeStore = {
 export const useChallengeStore = create<ChallengeStore>()((set) => ({
   filter: undefined,
   setFilter: (filter) => set(() => ({ filter: filter })),
+  colourBlindnessFilter: undefined,
+  setColourBlindnessFilter: (colourBlindnessFilter) =>
+    set(() => ({ colourBlindnessFilter: colourBlindnessFilter })),
   isSuccessful: false,
   setIsSuccessful: (value: boolean) => set({ isSuccessful: value }),
   challengeErrors: [],

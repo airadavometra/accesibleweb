@@ -52,7 +52,10 @@ export const Layout = ({ children }: LayoutProps) => {
     "(hover: none) and (pointer: coarse)"
   );
 
-  const filter = useChallengeStore((state) => state.filter);
+  const { filter, colourBlindnessFilter } = useChallengeStore((state) => ({
+    filter: state.filter,
+    colourBlindnessFilter: state.colourBlindnessFilter,
+  }));
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -78,6 +81,7 @@ export const Layout = ({ children }: LayoutProps) => {
         }
         case "colourblindness": {
           const randomMode =
+            colourBlindnessFilter ??
             colorBlindnessModes[
               Math.floor(Math.random() * colorBlindnessModes.length)
             ];
@@ -102,7 +106,7 @@ export const Layout = ({ children }: LayoutProps) => {
         }
       }
     }
-  }, [filter]);
+  }, [colourBlindnessFilter, filter]);
 
   useEffect(() => {
     if (isTremorMode) {

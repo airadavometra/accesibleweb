@@ -44,7 +44,10 @@ export const Layout = ({ children }: LayoutProps) => {
     "(hover: none) and (pointer: coarse)"
   );
 
-  const filter = useChallengeStore((state) => state.filter);
+  const { filter, setColourBlindnessFilter } = useChallengeStore((state) => ({
+    filter: state.filter,
+    setColourBlindnessFilter: state.setColourBlindnessFilter,
+  }));
 
   useEffect(() => {
     const body = document.getElementsByTagName("body")[0];
@@ -82,6 +85,7 @@ export const Layout = ({ children }: LayoutProps) => {
             );
 
           setColorBlindnessMode(randomMode);
+          setColourBlindnessFilter(randomMode);
           break;
         }
         case "dyslexia": {
@@ -94,7 +98,7 @@ export const Layout = ({ children }: LayoutProps) => {
         }
       }
     }
-  }, [filter]);
+  }, [filter, setColourBlindnessFilter]);
 
   useEffect(() => {
     if (isTremorMode) {
