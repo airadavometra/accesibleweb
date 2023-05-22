@@ -2,15 +2,14 @@ import NextHead from "next/head";
 import Script from "next/script";
 import React from "react";
 
-// TODO description and share image
-
-const description = `A non-commercial project focused on web accessibility that creates an engaging, interactive experience that allows to face the challenges that people with different abilities have in the web. It is an educational tool for both people involved in web development and the broader public.`;
-
 export const PageHead = () => (
   <>
     <NextHead>
       <title>Access denied?</title>
-      <meta name="description" content={description} />
+      <meta
+        name="description"
+        content="This project focuses on highlighting the importance of web accessibility through interactive experiences. It educates about the online challenges faced by people with diverse abilities, emphasizing that websites should be inherently accessible."
+      />
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
