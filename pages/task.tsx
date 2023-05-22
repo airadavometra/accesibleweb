@@ -77,29 +77,6 @@ const BlindnessDisclamer = () => (
   </section>
 );
 
-const ColourBlindnessDisclamer = () => (
-  <section className={s.disclaimer}>
-    <h2 className={s.disclaimerTitle}>Please note:</h2>
-    <p>
-      We&apos;re very sorry, this challenge doesn&apos;t work in Safari and on
-      iOS. But we&apos;re working on it! For now, to successfully complete the
-      challenge and gain the intended experience, please use other browsers
-      (i.e.{" "}
-      <Link className={s.disclamerLink} href={"https://www.google.com/chrome/"}>
-        Chrome
-      </Link>{" "}
-      or{" "}
-      <Link
-        className={s.disclamerLink}
-        href={"https://www.mozilla.org/en-US/firefox/new/"}
-      >
-        Firefox
-      </Link>
-      ).
-    </p>
-  </section>
-);
-
 const TaskPage: NextPage = () => {
   const [data, setData] = useState<{
     title: string;
@@ -138,7 +115,6 @@ const TaskPage: NextPage = () => {
         <h1 className={s.title}>{data.title}</h1>
         {filter === "tremor" && <TremorDisclamer />}
         {filter === "blindness" && <BlindnessDisclamer />}
-        {filter === "colourblindness" && <ColourBlindnessDisclamer />}
         <section className={s.problemSection}>
           {data.problem.map((p, index) => (
             <p key={index} className={s.text}>

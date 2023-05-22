@@ -6,6 +6,9 @@
   gap: 4rem;
   position: relative;
 }
+.layout img {
+  filter: var(--colour-blindness-filter);
+}
 
 .filter {
   position: absolute;
@@ -39,45 +42,29 @@
   backdrop-filter: blur(100px);
 }
 
-.protanopia {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#protanopia");
-  filter: url("../../../../filters/colorBlindness.svg#protanopia");
-  color-interpolation-filters: sRGB;
+.protanopiaLayout {
+  --colour-blindness-filter: url(#protanopia);
 }
-.protanomaly {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#protanomaly");
-  filter: url("../../../../filters/colorBlindness.svg#protanomaly");
-  color-interpolation-filters: sRGB;
+.protanomalyLayout {
+  --colour-blindness-filter: url(#protanomaly);
 }
-.deuteranopia {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#deuteranopia");
-  filter: url("../../../../filters/colorBlindness.svg#deuteranopia");
-  color-interpolation-filters: sRGB;
+.deuteranopiaLayout {
+  --colour-blindness-filter: url(#deuteranopia);
 }
-.deuteranomaly {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#deuteranomaly");
-  filter: url("../../../../filters/colorBlindness.svg#deuteranomaly");
-  color-interpolation-filters: sRGB;
+.deuteranomalyLayout {
+  --colour-blindness-filter: url(#deuteranomaly);
 }
-.tritanopia {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#tritanopia");
-  filter: url("../../../../filters/colorBlindness.svg#tritanopia");
-  color-interpolation-filters: sRGB;
+.tritanopiaLayout {
+  --colour-blindness-filter: url(#tritanopia);
 }
-.tritanomaly {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#tritanomaly");
-  filter: url("../../../../filters/colorBlindness.svg#tritanomaly");
-  color-interpolation-filters: sRGB;
+.tritanomalyLayout {
+  --colour-blindness-filter: url(#tritanomaly);
 }
-.achromatopsia {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#achromatopsia");
-  filter: url("../../../../filters/colorBlindness.svg#achromatopsia");
-  color-interpolation-filters: sRGB;
+.achromatopsiaLayout {
+  --colour-blindness-filter: url(#achromatopsia);
 }
-.achromatomaly {
-  backdrop-filter: url("../../../../filters/colorBlindness.svg#achromatomaly");
-  filter: url("../../../../filters/colorBlindness.svg#achromatomaly");
-  color-interpolation-filters: sRGB;
+.achromatomalyLayout {
+  --colour-blindness-filter: url(#achromatomaly);
 }
 
 .cursor {
