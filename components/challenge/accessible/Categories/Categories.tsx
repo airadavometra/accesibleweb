@@ -15,6 +15,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
           <Link key={category.title} href={category.path} className={s.item}>
             <div className={s.imageContainer}>
               <Image
+                aria-hidden
                 className={s.image}
                 src={category.imgSrc}
                 alt={category.title}

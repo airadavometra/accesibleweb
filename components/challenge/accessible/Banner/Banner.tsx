@@ -10,11 +10,11 @@ export const Banner = ({ imgSrc, text }: BannerProps) => {
   return (
     <section className={s.container}>
       <Image
+        aria-hidden
         className={s.background}
         fill
         src={imgSrc}
         alt="banner background"
-        aria-hidden="true"
       />
       <div className={s.gradient} />
       <p className={s.text}>{text}</p>

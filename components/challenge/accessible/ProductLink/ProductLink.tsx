@@ -15,6 +15,7 @@ export const ProductLink = ({ product }: ProductLinkProps) => {
     >
       <div className={s.imageContainer}>
         <Image
+          aria-hidden
           className={s.image}
           fill
           src={product.imgSrc}

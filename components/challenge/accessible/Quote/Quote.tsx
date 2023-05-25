@@ -14,11 +14,17 @@ export const Quote = ({ imgSrc, text, author }: QuoteProps) => {
     <section className={s.quote}>
       <WidthContainer className={s.widthContainer}>
         <div className={classNames(s.section, s.quoteSection)}>
-          <p className={s.text}>{`"${text}"`}</p>
+          <q className={s.text}>{text}</q>
           <span className={s.author}>{`- ${author}`}</span>
         </div>
         <div className={classNames(s.section, s.imageContainer)}>
-          <Image className={s.image} src={imgSrc} alt="background" fill />
+          <Image
+            aria-hidden
+            className={s.image}
+            src={imgSrc}
+            alt="background"
+            fill
+          />
         </div>
       </WidthContainer>
     </section>
