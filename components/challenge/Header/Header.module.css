@@ -34,6 +34,7 @@
   margin-left: auto;
 }
 .cartContainer {
+  width: 20px;
   position: relative;
 }
 .cartCount {

@@ -7,14 +7,11 @@ const isInputEmpty = (value: string | undefined) =>
 
 export const validateResult = (
   filter: Filter | undefined,
-  firstName: string | undefined,
-  lastName: string | undefined,
+  name: string | undefined,
   email: string | undefined,
   address: string | undefined,
   country: string | undefined,
   city: string | undefined,
-  region: string | undefined,
-  zipCode: string | undefined,
   cart: CartProduct[],
   isDiscountApplied: boolean
 ): Array<{ message: string; items: string[] }> => {
@@ -60,16 +57,7 @@ export const validateResult = (
     }
   }
 
-  const missingInputs = validateInputs(
-    firstName,
-    lastName,
-    email,
-    address,
-    country,
-    city,
-    region,
-    zipCode
-  );
+  const missingInputs = validateInputs(name, email, address, country, city);
 
   if (missingInputs.length > 0) {
     errors.push({
@@ -82,22 +70,16 @@ export const validateResult = (
 };
 
 const validateInputs = (
-  firstName: string | undefined,
-  lastName: string | undefined,
+  name: string | undefined,
   email: string | undefined,
   address: string | undefined,
   country: string | undefined,
-  city: string | undefined,
-  region: string | undefined,
-  zipCode: string | undefined
+  city: string | undefined
 ): string[] => {
   const missingData: string[] = [];
 
-  if (isInputEmpty(firstName)) {
-    missingData.push("first name");
-  }
-  if (isInputEmpty(lastName)) {
-    missingData.push("last name");
+  if (isInputEmpty(name)) {
+    missingData.push("name");
   }
   if (isInputEmpty(email)) {
     missingData.push("email");
@@ -110,12 +92,6 @@ const validateInputs = (
   }
   if (isInputEmpty(city)) {
     missingData.push("city");
-  }
-  if (isInputEmpty(region)) {
-    missingData.push("region");
-  }
-  if (isInputEmpty(zipCode)) {
-    missingData.push("zip code");
   }
   return missingData;
 };
