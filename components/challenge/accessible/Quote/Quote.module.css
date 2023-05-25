@@ -33,11 +33,12 @@
 }
 .text {
   max-width: 740px;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
   font-weight: 600;
 }
 .author {
   font-family: var(--challenge-font);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
   text-transform: uppercase;
 }
 

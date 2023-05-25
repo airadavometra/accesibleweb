@@ -16,4 +16,5 @@
   justify-content: space-between;
   align-items: center;
   font-family: var(--challenge-font);
+  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
 }

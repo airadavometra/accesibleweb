@@ -5,6 +5,7 @@
 .quantityButton {
   padding: 0.75rem 1rem;
   font-family: var(--challenge-font);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
   transition: transform 200ms ease-in-out;
 }
 .quantityButton:hover,
@@ -14,6 +15,7 @@
 .quantity {
   padding: 0.75rem 1rem;
   cursor: pointer;
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .disabled {
   opacity: 0.5;

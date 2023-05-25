@@ -46,7 +46,7 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
             <span className={s.price}>
               ${product.price} / {product.unit}
             </span>
-            <div>
+            <div className={s.quantityButtonContainer}>
               <span className={s.quantityButtonTitle}>Quantity</span>
               <QuantityButton
                 quantity={quantity}

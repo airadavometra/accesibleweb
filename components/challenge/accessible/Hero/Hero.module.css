@@ -35,6 +35,7 @@
   max-width: 410px;
   text-align: center;
   font-family: var(--challenge-font);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .link {
   padding: 0.75rem 2rem;
@@ -43,6 +44,7 @@
   border: none;
   outline: 1px solid white;
   font-family: var(--challenge-font);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
   transition: font-weight 100ms ease-in-out;
 }
 .link:hover,

@@ -20,7 +20,9 @@
 }
 .name {
   font-weight: 600;
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .price {
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
   font-family: var(--challenge-font);
 }
