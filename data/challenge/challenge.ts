@@ -95,9 +95,9 @@ export const challengeMap = {
     discount: 15,
     budgetLimit: 16,
     cart: [
-      { productId: 43, quantity: 1, displayName: "pomegranates" },
-      { productId: 6, quantity: 2, displayName: "aubergine" },
-      { productId: 24, quantity: 1, displayName: "green paprika" },
+      { productId: 6, quantity: 1, displayName: "pomegranates" },
+      { productId: 24, quantity: 2, displayName: "aubergine" },
+      { productId: 42, quantity: 1, displayName: "yellow paprika" },
       { productId: 60, quantity: 1, displayName: "mushroom soup (4 person)" },
     ],
   } as Challenge,
