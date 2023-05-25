@@ -1,17 +1,23 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { SendArrow } from "@/icons/SendArrow";
 import { NavigationItem } from "@/types/navigationItem";
-import Link from "next/link";
 import s from "./Footer.module.css";
 import { Input } from "../Input/Input";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 type FooterProps = {
   navigation: NavigationItem[];
 };
 
 export const Footer = ({ navigation }: FooterProps) => {
+  const router = useRouter();
+
   const [email, setEmail] = useState<string>();
+
+  const onCategoryClick = (path: string) => {
+    router.push(path);
+  };
 
   return (
     <div className={s.footer}>
@@ -22,9 +28,14 @@ export const Footer = ({ navigation }: FooterProps) => {
               <div className={s.title}>Quick links</div>
               <div className={s.navigation}>
                 {navigation.map(({ id, title, path }) => (
-                  <Link key={id} href={path} className={s.link}>
+                  <div
+                    key={id}
+                    role="link"
+                    onClick={() => onCategoryClick(path)}
+                    className={s.link}
+                  >
                     {title}
-                  </Link>
+                  </div>
                 ))}
               </div>
             </div>

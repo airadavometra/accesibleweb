@@ -3,7 +3,6 @@ import { SendArrow } from "@/icons/SendArrow";
 import { Product } from "@/types/challenge/product";
 import classNames from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "../Button/Button";
 import s from "./DayOffer.module.css";
 import { useChallengeStore } from "@/state/useChallenge";
@@ -15,10 +14,15 @@ type DayOfferProps = {
 
 export const DayOffer = ({ product }: DayOfferProps) => {
   const router = useRouter();
+
   const { addProduct, setCheckoutCart } = useChallengeStore((state) => ({
     addProduct: state.addProduct,
     setCheckoutCart: state.setCheckoutCart,
   }));
+
+  const onViewDetailsClick = () => {
+    router.push(`/challenge/product?product=${product.id}`);
+  };
 
   return (
     <div className={s.main}>
@@ -49,13 +53,10 @@ export const DayOffer = ({ product }: DayOfferProps) => {
               }}
               type="primary"
             />
-            <Link
-              className={s.link}
-              href={`/challenge/product?product=${product.id}`}
-            >
+            <div role="link" onClick={onViewDetailsClick} className={s.link}>
               <div>View full details</div>
               <SendArrow className={s.arrow} />
-            </Link>
+            </div>
           </div>
         </div>
       </WidthContainer>

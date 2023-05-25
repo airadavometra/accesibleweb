@@ -3,7 +3,6 @@ import s from "@/styles/challenge/Cart.module.css";
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import { useChallengeStore } from "@/state/useChallenge";
 import { EmptyState } from "@/components/challenge/EmptyState/EmptyState";
-import Link from "next/link";
 import Image from "next/image";
 import { QuantityButton } from "@/components/challenge/QuantityButton/QuantityButton";
 import { Button } from "@/components/challenge/Button/Button";
@@ -38,6 +37,10 @@ const CartPage: NextPage = () => {
 
   const isMobile = useMediaQuery("(max-width: 48rem)");
 
+  const onContinueShoppingList = () => {
+    router.push("/challenge");
+  };
+
   return (
     <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
@@ -47,9 +50,13 @@ const CartPage: NextPage = () => {
           <>
             <div className={s.titleContainer}>
               <div className={s.title}>Your cart</div>
-              <Link href="/challenge" className={s.continueShoppingLink}>
+              <div
+                role="link"
+                onClick={onContinueShoppingList}
+                className={s.continueShoppingLink}
+              >
                 Continue shopping
-              </Link>
+              </div>
             </div>
             {isMobile ? (
               <div className={s.mobileCart}>

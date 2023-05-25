@@ -19,6 +19,7 @@
 }
 .continueShoppingLink {
   font-family: var(--challenge-font);
+  cursor: pointer;
 }
 .grid {
   display: grid;

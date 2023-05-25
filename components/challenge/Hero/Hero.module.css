@@ -44,6 +44,7 @@
   border: none;
   outline: 1px solid white;
   font-family: var(--challenge-font);
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .widthContainer {

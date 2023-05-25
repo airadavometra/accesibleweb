@@ -147,7 +147,7 @@ export const Layout = ({ children }: LayoutProps) => {
           <div className={classNames(s.filter, s.blindness)} aria-hidden />
         )}
         {colorBlindnessMode && (
-          <svg style={{ position: "absolute" }}>
+          <svg style={{ width: 0, height: 0, position: "absolute" }}>
             <defs>
               <filter id="protanopia">
                 <feColorMatrix

@@ -1,11 +1,16 @@
 import WidthContainer from "@/components/WidthContainer/WidthContainer";
 import classNames from "classnames";
 import Image from "next/image";
-import { Button } from "../Button/Button";
 import s from "./Hero.module.css";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Hero = () => {
+  const router = useRouter();
+
+  const onClick = () => {
+    router.push("/challenge/category?category=fruits");
+  };
+
   return (
     <div className={s.hero}>
       <WidthContainer className={s.widthContainer}>
@@ -18,9 +23,9 @@ export const Hero = () => {
             Here fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. <br /> Taste the difference, fuel your life.
           </div>
-          <Link className={s.link} href="/challenge/category?category=fruits">
+          <div role="link" onClick={onClick} className={s.link}>
             Go shopping
-          </Link>
+          </div>
         </div>
       </WidthContainer>
     </div>

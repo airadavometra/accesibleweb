@@ -16,6 +16,7 @@
 }
 .name {
   font-weight: 600;
+  cursor: pointer;
 }
 .price {
   font-family: var(--challenge-font);

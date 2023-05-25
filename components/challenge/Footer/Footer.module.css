@@ -18,6 +18,9 @@
   display: flex;
   gap: 128px;
 }
+.link {
+  cursor: pointer;
+}
 .linksSection,
 .missionSection,
 .mailSection {
