@@ -76,7 +76,10 @@ const CartPage: NextPage = () => {
                           <span className={s.productName}>{item.name}</span>
                           <span>${item.price}</span>
                         </div>
-                        <span className={s.total}>
+                        <span
+                          aria-label={"total product price"}
+                          className={s.total}
+                        >
                           ${Number(item.price * item.quantity).toFixed(2)}
                         </span>
                       </div>
@@ -153,7 +156,10 @@ const CartPage: NextPage = () => {
                         icon={<Delete className={s.icon} />}
                       />
                     </div>
-                    <span className={classNames(s.total, s.right)}>
+                    <span
+                      aria-label={"total product price"}
+                      className={classNames(s.total, s.right)}
+                    >
                       ${Number(item.price * item.quantity).toFixed(2)}
                     </span>
                   </Fragment>

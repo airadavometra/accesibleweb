@@ -40,7 +40,11 @@ export const Header = ({ navigation }: HeaderProps) => {
             ))}
           </ul>
         </nav>
-        <Link href={"/challenge/accessible/cart"} className={s.cartButton}>
+        <Link
+          aria-label={`Cart, ${cartCount} items`}
+          href={"/challenge/accessible/cart"}
+          className={s.cartButton}
+        >
           <div className={s.cartContainer}>
             <Cart />
             <span className={s.cartCount}>{cartCount}</span>

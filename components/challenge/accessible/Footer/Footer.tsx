@@ -53,7 +53,9 @@ export const Footer = ({ navigation }: FooterProps) => {
           </section>
         </div>
         <div className={s.logoAndRights}>
-          <div className={s.logo}>fresh</div>
+          <div aria-hidden className={s.logo}>
+            fresh
+          </div>
           <span className={s.rights}>© 2023, all rights reserved</span>
         </div>
       </WidthContainer>
