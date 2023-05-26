@@ -22,7 +22,11 @@ export const Header = ({ navigation }: HeaderProps) => {
   return (
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
-        <Link href="/challenge/accessible" className={s.logo}>
+        <Link
+          aria-label="home page"
+          href="/challenge/accessible"
+          className={s.logo}
+        >
           fresh
         </Link>
         <nav>
