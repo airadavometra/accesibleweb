@@ -51,6 +51,8 @@ const BlindnessDisclamer = () => (
         href={
           "https://support.apple.com/guide/voiceover/turn-voiceover-on-or-off-vo2682/mac#:~:text=Choose%20Apple%20menu%20%3E%20System%20Settings,turn%20VoiceOver%20on%20or%20off."
         }
+        target="_blank"
+        rel="noopener noreferrer"
       >
         MacOS
       </Link>
@@ -60,6 +62,8 @@ const BlindnessDisclamer = () => (
         href={
           "https://support.microsoft.com/en-us/windows/chapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6"
         }
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Windows
       </Link>{" "}
@@ -69,6 +73,8 @@ const BlindnessDisclamer = () => (
         href={
           "https://help.ubuntu.com/stable/ubuntu-help/a11y-screen-reader.html.en"
         }
+        target="_blank"
+        rel="noopener noreferrer"
       >
         Linux
       </Link>
