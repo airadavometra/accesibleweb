@@ -33,7 +33,7 @@ export const challengeMap = {
       {
         productId: 52,
         quantity: 1,
-        displayName: "tomato soup (4 person)",
+        displayName: "tomato soup for 4 person",
       },
     ],
   } as Challenge,
@@ -66,7 +66,7 @@ export const challengeMap = {
       { productId: 16, quantity: 1, displayName: "nectarines" },
       { productId: 33, quantity: 1, displayName: "chinese cabbage" },
       { productId: 40, quantity: 2, displayName: "cucumbers" },
-      { productId: 57, quantity: 1, displayName: "mustard soup (2 person)" },
+      { productId: 57, quantity: 1, displayName: "mustard soup for 2 person" },
     ],
   } as Challenge,
   blindness: {
@@ -98,7 +98,7 @@ export const challengeMap = {
       { productId: 6, quantity: 1, displayName: "pomegranates" },
       { productId: 24, quantity: 2, displayName: "aubergine" },
       { productId: 42, quantity: 1, displayName: "yellow paprika" },
-      { productId: 60, quantity: 1, displayName: "mushroom soup (4 person)" },
+      { productId: 60, quantity: 1, displayName: "mushroom soup for 4 person" },
     ],
   } as Challenge,
   dyslexia: {
@@ -110,9 +110,9 @@ export const challengeMap = {
     challengeSteps: [
       "You have a family of 2 people",
       "You have $17 budget limit",
-      "Buy 2 grapefruits",
-      "Buy 1 kg of persimmons",
+      "Buy 2 kg of juicy oranges",
       "Buy 1 kg of Red Delicious apples",
+      "Buy 1 kg of local tomatoes",
       "Buy a combo for vegetarian borsch",
       "Use a discount code to save some money (optional)",
     ],
@@ -127,13 +127,13 @@ export const challengeMap = {
     discount: 20,
     budgetLimit: 17,
     cart: [
-      { productId: 7, quantity: 2, displayName: "grapefruits" },
-      { productId: 19, quantity: 1, displayName: "persimmons" },
+      { productId: 3, quantity: 2, displayName: "juicy oranges" },
       { productId: 22, quantity: 1, displayName: "Red Delicious apples" },
+      { productId: 48, quantity: 1, displayName: "local tomatoes" },
       {
         productId: 53,
         quantity: 1,
-        displayName: "vegetarian borsch (2 person)",
+        displayName: "vegetarian borsch for 2 person",
       },
     ],
   } as Challenge,
@@ -146,7 +146,7 @@ export const challengeMap = {
     challengeSteps: [
       "You live alone",
       "You have $19 budget limit",
-      "Buy 2 kg of yellow apples",
+      "Buy 2 kg of Opal apples",
       "Buy an orange paprika",
       "Buy 1 kg of pink tomatoes",
       "Buy a combo for vegetarian lasagna",
@@ -163,13 +163,13 @@ export const challengeMap = {
     discount: 10,
     budgetLimit: 19,
     cart: [
-      { productId: 23, quantity: 2, displayName: "yellow apples" },
+      { productId: 23, quantity: 2, displayName: "Opal apples" },
       { productId: 44, quantity: 1, displayName: "orange paprika" },
       { productId: 45, quantity: 1, displayName: "pink tomatoes" },
       {
         productId: 55,
         quantity: 1,
-        displayName: "vegetarian lasagna (2 person)",
+        displayName: "vegetarian lasagna for 2 person",
       },
     ],
   } as Challenge,

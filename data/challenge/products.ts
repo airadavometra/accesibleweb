@@ -9,7 +9,7 @@ export const products: Product[] = [
     unit: "1 kg",
     category: "fruits",
     description:
-      "Indulge in the zesty, sun-kissed goodness of our fresh, juicy oranges. Bursting with sweet and tangy flavor, these citrus gems are packed with immune-boosting vitamin C and essential nutrients that promote overall health. Perfect for juicing, snacking, or adding a bright twist to your culinary creations, our oranges are the epitome of freshness and vitality. Add a touch of sunshine to your cart with our premium, hand-selected oranges today.",
+      "Indulge in the zesty, sun-kissed goodness of our fresh oranges. Bursting with sweet and tangy flavor, these citrus gems are packed with immune-boosting vitamin C and essential nutrients that promote overall health. Perfect for juicing, snacking, or adding a bright twist to your culinary creations, our oranges are the epitome of freshness and vitality. Add a touch of sunshine to your cart with our premium, hand-selected oranges today.",
     availableQuantity: 10,
   },
   {
@@ -554,7 +554,7 @@ export const products: Product[] = [
   {
     id: 51,
     imgSrc: "/tomatosoup.png",
-    name: "Tomato soup (2 person)",
+    name: "Tomato soup",
     price: 4.29,
     unit: "1 each",
     category: "combo",
@@ -565,7 +565,7 @@ export const products: Product[] = [
   {
     id: 52,
     imgSrc: "/tomatosoup.png",
-    name: "Tomato soup (4 person)",
+    name: "Tomato soup",
     price: 6.89,
     unit: "1 each",
     category: "combo",
@@ -576,7 +576,7 @@ export const products: Product[] = [
   {
     id: 53,
     imgSrc: "/borsch.png",
-    name: "Vegetarian borsch (2 person)",
+    name: "Vegetarian borsch",
     price: 5.69,
     unit: "1 each",
     category: "combo",
@@ -587,7 +587,7 @@ export const products: Product[] = [
   {
     id: 54,
     imgSrc: "/borsch.png",
-    name: "Vegetarian borsch (4 person)",
+    name: "Vegetarian borsch",
     price: 8.74,
     unit: "1 each",
     category: "combo",
@@ -598,7 +598,7 @@ export const products: Product[] = [
   {
     id: 55,
     imgSrc: "/lasagna.png",
-    name: "Vegetarian lasagna (2 person)",
+    name: "Vegetarian lasagna",
     price: 5.49,
     unit: "1 each",
     category: "combo",
@@ -609,7 +609,7 @@ export const products: Product[] = [
   {
     id: 56,
     imgSrc: "/lasagna.png",
-    name: "Vegetarian lasagna (4 person)",
+    name: "Vegetarian lasagna",
     price: 8.29,
     unit: "1 each",
     category: "combo",
@@ -620,7 +620,7 @@ export const products: Product[] = [
   {
     id: 57,
     imgSrc: "/mustardsoup.png",
-    name: "Mustard soup (2 person)",
+    name: "Mustard soup",
     price: 4.29,
     unit: "1 each",
     category: "combo",
@@ -631,7 +631,7 @@ export const products: Product[] = [
   {
     id: 58,
     imgSrc: "/mustardsoup.png",
-    name: "Mustard soup (4 person)",
+    name: "Mustard soup",
     price: 6.89,
     unit: "1 each",
     category: "combo",
@@ -642,7 +642,7 @@ export const products: Product[] = [
   {
     id: 59,
     imgSrc: "/mushroomsoup.png",
-    name: "Mushroom soup (2 person)",
+    name: "Mushroom soup",
     price: 4.29,
     unit: "1 each",
     category: "combo",
@@ -653,7 +653,7 @@ export const products: Product[] = [
   {
     id: 60,
     imgSrc: "/mushroomsoup.png",
-    name: "Mushroom soup (4 person)",
+    name: "Mushroom soup",
     price: 6.89,
     unit: "1 each",
     category: "combo",
