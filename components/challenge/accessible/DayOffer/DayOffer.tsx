@@ -8,6 +8,7 @@ import { Button } from "../Button/Button";
 import s from "./DayOffer.module.css";
 import { useChallengeStore } from "@/state/useChallenge";
 import { useRouter } from "next/router";
+import { showAddToCartNotification } from "@/utils/showAddToCartNotification";
 
 type DayOfferProps = {
   product: Product;
@@ -42,7 +43,7 @@ export const DayOffer = ({ product }: DayOfferProps) => {
               text="Add to cart"
               onClick={() => {
                 addProduct(product, 1);
-                router.push("/challenge/accessible/cart");
+                showAddToCartNotification(product.name, 1);
               }}
               type="secondary"
             />

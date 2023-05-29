@@ -8,6 +8,7 @@ import { useCallback, useState } from "react";
 import { useRouter } from "next/router";
 import { useChallengeStore } from "@/state/useChallenge";
 import { QuantityButton } from "../QuantityButton/QuantityButton";
+import { showAddToCartNotification } from "@/utils/showAddToCartNotification";
 
 type ProductInfoProps = {
   product: Product;
@@ -67,7 +68,10 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
             </div>
             <Button
               text={"Add to cart"}
-              onClick={() => onAddProductClick(product, quantity)}
+              onClick={() => {
+                onAddProductClick(product, quantity);
+                showAddToCartNotification(product.name, quantity);
+              }}
               type="secondary"
             />
             <Button

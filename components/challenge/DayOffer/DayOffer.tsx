@@ -41,7 +41,6 @@ export const DayOffer = ({ product }: DayOfferProps) => {
               text="Add to cart"
               onClick={() => {
                 addProduct(product, 1);
-                router.push("/challenge/cart");
               }}
               type="secondary"
             />
