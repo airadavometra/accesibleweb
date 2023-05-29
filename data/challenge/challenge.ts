@@ -109,7 +109,7 @@ export const challengeMap = {
     ],
     challengeSteps: [
       "You have a family of 2 people",
-      "You have $17 budget limit",
+      "You have $15 budget limit",
       "Buy 2 kg of juicy oranges",
       "Buy 1 kg of Red Delicious apples",
       "Buy 1 kg of local tomatoes",
@@ -117,15 +117,15 @@ export const challengeMap = {
       "Use a discount code to save some money (optional)",
     ],
     productIds: [
-      5, 6, 7, 8, 13, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
-      32, 33, 34, 35, 53, 54, 57, 58,
+      1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
+      29, 30, 31, 32, 33, 34, 35, 45, 46, 47, 48, 53, 54, 57, 58,
     ],
     dayOfferId: 17,
     bestsellerIds: [6, 14, 28, 31],
     deliveryPrice: 1.19,
     promocode: "READABLE20",
     discount: 20,
-    budgetLimit: 17,
+    budgetLimit: 15,
     cart: [
       { productId: 3, quantity: 2, displayName: "juicy oranges" },
       { productId: 22, quantity: 1, displayName: "Red Delicious apples" },
