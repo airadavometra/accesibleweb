@@ -10,6 +10,7 @@ import { challengeMap } from "@/data/challenge/challenge";
 import { ConfirmPayModal } from "@/components/main/ConfirmPayModal/ConfirmPayModal";
 import { Challenge } from "@/types/challenge/challenge";
 import { validateResult } from "@/utils/validateResult";
+import Image from "next/image";
 
 const CheckoutPage: NextPage = () => {
   const router = useRouter();
@@ -200,6 +201,26 @@ const CheckoutPage: NextPage = () => {
             <div className={s.group}>
               <div className={s.section}>
                 <h2 className={s.sectionTitle}>Order details</h2>
+                <div className={s.products}>
+                  {checkoutCart.map((item) => (
+                    <div key={item.id} className={s.productContainer}>
+                      <div className={s.imageContainer}>
+                        <Image
+                          className={s.image}
+                          src={item.imgSrc}
+                          alt={item.name}
+                          fill
+                        />
+                      </div>
+                      <div className={s.productInfo}>
+                        <span className={s.productName}>{item.name}</span>
+                        <span>
+                          ${item.price} x {item.quantity}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
                 <Input
                   label="Discount code"
                   placeholder="SALE20"

@@ -13,6 +13,6 @@ export const showAddToCartNotification = (
       border: "1px solid black",
       borderRadius: "0px",
     },
-    duration: 4000,
+    duration: 3000,
   });
 };

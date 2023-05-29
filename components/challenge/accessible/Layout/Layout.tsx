@@ -14,6 +14,7 @@ import { simulateTremor } from "@/filters/tremorSimulator";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Cursor } from "@/icons/Cursor";
 import { simulateDyslexia } from "@/filters/dyslexiaSimulator";
+import { Toaster } from "react-hot-toast";
 
 export const navigation: NavigationItem[] = [
   {
@@ -140,6 +141,14 @@ export const Layout = ({ children }: LayoutProps) => {
         <Header navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
+        <Toaster
+          position="top-right"
+          containerStyle={{
+            position: "absolute",
+            zIndex: "unset",
+            filter: "blur(0)",
+          }}
+        />
         {isBlurredVisionMode && (
           <div className={classNames(s.filter, s.blurred)} aria-hidden />
         )}

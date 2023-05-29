@@ -5,6 +5,7 @@
   flex-direction: column;
   gap: 4rem;
   position: relative;
+  z-index: 1;
 }
 .layout img {
   filter: var(--colour-blindness-filter);
