@@ -16,7 +16,6 @@ export const StickyBanner = ({
 
   return (
     <div className={s.stickyHeader}>
-      <span>{isAccessible ? "Accessible" : "Not accessible"}</span>
       <Button
         id="service-remind-task"
         text="Remind task"
