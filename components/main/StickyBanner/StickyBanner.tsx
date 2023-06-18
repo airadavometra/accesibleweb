@@ -1,5 +1,6 @@
 import { Button } from "@/components/main/Button/Button";
 import s from "./StickyBanner.module.css";
+import { useRouter } from "next/router";
 
 type StickeHeaderProps = {
   onRemindTask: () => void;
@@ -10,8 +11,12 @@ export const StickyBanner = ({
   onRemindTask,
   onEndChallenge,
 }: StickeHeaderProps) => {
+  const router = useRouter();
+  const isAccessible = router.pathname.startsWith("/challenge/accessible");
+
   return (
     <div className={s.stickyHeader}>
+      <span>{isAccessible ? "Accessible" : "Not accessible"}</span>
       <Button
         id="service-remind-task"
         text="Remind task"
