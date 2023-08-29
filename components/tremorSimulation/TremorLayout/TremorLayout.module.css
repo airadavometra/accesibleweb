@@ -1,0 +1,12 @@
+.cursor {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  transition: margin 0.2s;
+  pointer-events: none;
+}
+.tremorLayout,
+.tremorLayout * {
+  cursor: none !important;
+}

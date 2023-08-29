@@ -1,0 +1,22 @@
+.quantityButtonContainer {
+  width: fit-content;
+  border: 1px solid black;
+}
+.quantityButton {
+  padding: 0.75rem 1rem;
+  font-family: var(--simulation-font);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  transition: transform 200ms ease-in-out;
+}
+.quantityButton:hover,
+.quantityButton:focus {
+  transform: scale(1.6);
+}
+.quantity {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+}
+.disabled {
+  opacity: 0.5;
+}

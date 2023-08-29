@@ -1,8 +1,7 @@
-import { NotificationToast } from "@/components/challenge/accessible/NotificationToast/NotificationToast";
-import { CheckCircle } from "@/icons/CheckCircle";
+import { NotificationToast } from "@/components/accessible/NotificationToast/NotificationToast";
 import toast from "react-hot-toast";
 
-export const showAddToCartNotification = (
+export const showAccessibleAddToCartNotification = (
   productName: string,
   amount: number
 ) => {

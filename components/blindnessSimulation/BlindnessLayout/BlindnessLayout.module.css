@@ -1,0 +1,7 @@
+.blindness {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-color: #80808090;
+  backdrop-filter: blur(100px);
+}
