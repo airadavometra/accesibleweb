@@ -8,7 +8,7 @@ import { useCallback, useState } from "react";
 import { useRouter } from "next/router";
 import { useSimulationStore } from "@/state/useSimulation";
 import { QuantityButton } from "../QuantityButton/QuantityButton";
-import { showAccessibleAddToCartNotification } from "@/utils/showAccessibleAddToCartNotification";
+import { showAccessibleAddToCartNotification } from "@/utils/showAddToCartNotification";
 
 type ProductInfoProps = {
   product: Product;

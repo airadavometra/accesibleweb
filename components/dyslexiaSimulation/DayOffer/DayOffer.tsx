@@ -8,7 +8,7 @@ import { Button } from "../Button/Button";
 import s from "./DayOffer.module.css";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useRouter } from "next/router";
-import { showAccessibleAddToCartNotification } from "@/utils/showAccessibleAddToCartNotification";
+import { showAccessibleAddToCartNotification } from "@/utils/showAddToCartNotification";
 
 type DayOfferProps = {
   product: Product;
