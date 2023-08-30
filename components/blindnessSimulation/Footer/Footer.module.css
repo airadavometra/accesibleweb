@@ -27,7 +27,7 @@
   gap: 1.5rem;
 }
 .title {
-  font-size: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
   font-weight: 600;
   white-space: nowrap;
 }
@@ -38,7 +38,7 @@
   gap: 0.75rem;
   list-style-type: none;
   font-family: var(--simulation-font);
-  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
 }
 .link:hover,
 .link:focus,
@@ -47,7 +47,7 @@
 }
 .mission {
   font-family: var(--simulation-font);
-  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
 }
 .inputContainer {
   display: flex;
@@ -83,7 +83,7 @@
   font-size: 0.85rem;
 }
 .arrow {
-  width: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  width: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   fill: white;
   opacity: 0.5;
 }

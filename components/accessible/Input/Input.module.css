@@ -29,7 +29,7 @@
 }
 .label {
   font-weight: 600;
-  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   color: var(--input-placeholder-color);
 }
 .inputContainer {
@@ -51,5 +51,5 @@
 .input::placeholder {
   color: var(--input-placeholder-color);
   font-family: var(--simulation-font);
-  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
 }

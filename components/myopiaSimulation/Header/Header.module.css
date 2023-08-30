@@ -31,7 +31,7 @@
   align-items: center;
 }
 .link {
-  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
 }
 .link:hover,
 .link:focus,
@@ -62,7 +62,7 @@
   position: absolute;
   bottom: -1rem;
   left: 1rem;
-  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   font-weight: 600;
   color: white;
   background-color: black;
