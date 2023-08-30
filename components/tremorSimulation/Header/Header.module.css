@@ -38,35 +38,28 @@
 .link.selected {
   text-decoration: underline;
 }
-.cartButton {
-  padding: 0.75rem;
+.cartLink {
+  width: fit-content;
+  height: fit-content;
   margin-left: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid black;
+  font-size: clamp(0.8rem, 0.4444rem + 0.7407vw, 1rem);
   transition: transform 200ms ease-in-out;
 }
-.cartButton:hover,
-.cartButton:focus,
+.cartLink svg {
+  width: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+}
+
 .logo:hover,
-.logo:focus {
+.logo:focus,
+.cartLink:hover,
+.cartLink:focus,
+.cartLink.selected {
   transform: scale(1.1);
-}
-.cartContainer {
-  width: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
-  position: relative;
-}
-.cartCount {
-  width: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
-  height: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: -1rem;
-  left: 1rem;
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-  font-weight: 600;
-  color: white;
-  background-color: black;
-  border-radius: 100%;
 }
 
 @media (max-width: 48rem) {

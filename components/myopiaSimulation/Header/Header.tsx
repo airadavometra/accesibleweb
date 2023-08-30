@@ -6,6 +6,7 @@ import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useMemo } from "react";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type HeaderProps = {
   isAccessible: boolean;
@@ -14,6 +15,8 @@ type HeaderProps = {
 
 export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   const cart = useSimulationStore((state) => state.cart);
+
+  const isMobile = useMediaQuery("(max-width: 48rem)");
 
   const cartCount = useMemo(
     () => cart.reduce((sum, item) => sum + item.quantity, 0),
@@ -44,13 +47,11 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
         <Link
           aria-label={`Cart, ${cartCount} items`}
           href={isAccessible ? "/myopia/accessible/cart" : "/myopia/cart"}
-          className={s.cartButton}
+          className={s.cartLink}
         >
-          <div className={s.cartContainer}>
-            <Cart />
-            <span className={s.cartCount}>{cartCount}</span>
-          </div>
-          <VisuallyHidden>Cart</VisuallyHidden>
+          <Cart />
+          <span>{isMobile ? cartCount : `Cart: ${cartCount}`}</span>
+          {isMobile && <VisuallyHidden>Cart</VisuallyHidden>}
         </Link>
       </WidthContainer>
     </header>

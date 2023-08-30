@@ -1,10 +1,12 @@
+import { VisuallyHidden } from "@/components/common/VisuallyHidden/VisuallyHidden";
 import { Cart } from "@/icons/Cart";
 import { NavigationItem } from "@/types/navigationItem";
+import Link from "next/link";
+import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useMemo } from "react";
-import { useRouter } from "next/router";
-import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type HeaderProps = {
   isAccessible: boolean;
@@ -12,60 +14,54 @@ type HeaderProps = {
 };
 
 export const Header = ({ isAccessible, navigation }: HeaderProps) => {
-  const router = useRouter();
-
   const cart = useSimulationStore((state) => state.cart);
+
+  const isMobile = useMediaQuery("(max-width: 48rem)");
 
   const cartCount = useMemo(
     () => cart.reduce((sum, item) => sum + item.quantity, 0),
     [cart]
   );
 
-  const onLogoClick = () => {
-    router.push(
-      isAccessible
-        ? "/color-blindness/accessible/cart"
-        : "/color-blindness/cart"
-    );
-  };
-
-  const onCategoryClick = (path: string) => {
-    router.push(path);
-  };
-
-  const onCartClick = () => {
-    router.push(
-      isAccessible
-        ? "/color-blindness/accessible/cart"
-        : "/color-blindness/cart"
-    );
-  };
-
   return (
-    <div className={s.header}>
+    <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
-        <div role="link" onClick={onLogoClick} className={s.logo}>
+        <Link
+          aria-label="home page"
+          href={
+            isAccessible
+              ? "/color-blindness/accessible/main"
+              : "/color-blindness/main"
+          }
+          className={s.logo}
+        >
           fresh
-        </div>
-        <div className={s.navigation}>
-          {navigation.map(({ id, title, path }) => (
-            <div
-              key={id}
-              role="link"
-              onClick={() => onCategoryClick(path)}
-              className={s.link}
-            >
-              {title}
-            </div>
-          ))}
-        </div>
-        <div role="link" onClick={onCartClick} className={s.cartButton}>
-          <div className={s.cartContainer}>
-            <Cart />
-            <div className={s.cartCount}>{cartCount}</div>
-          </div>
-        </div>
+        </Link>
+        <nav>
+          <ul className={s.navigation}>
+            {navigation.map(({ id, title, path }) => (
+              <li className={s.linkContainer} key={id}>
+                <Link href={path} className={s.link}>
+                  {title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <Link
+          aria-label={`Cart, ${cartCount} items`}
+          href={
+            isAccessible
+              ? "/color-blindness/accessible/cart"
+              : "/color-blindness/cart"
+          }
+          className={s.cartLink}
+        >
+          <Cart />
+          <span>{isMobile ? cartCount : `Cart: ${cartCount}`}</span>
+          {isMobile && <VisuallyHidden>Cart</VisuallyHidden>}
+        </Link>
       </WidthContainer>
-    </div>
+    </header>
   );
 };
