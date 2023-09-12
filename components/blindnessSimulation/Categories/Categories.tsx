@@ -2,23 +2,33 @@ import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { SendArrow } from "@/icons/SendArrow";
 import { Category } from "@/types/category";
 import Image from "next/image";
-import Link from "next/link";
 import s from "./Categories.module.css";
+import { useRouter } from "next/router";
 
 type CategoriesProps = { categories: Category[] };
 
 export const Categories = ({ categories }: CategoriesProps) => {
+  const router = useRouter();
+
+  const onCategoryClick = (path: string) => {
+    router.push(path);
+  };
+
   return (
-    <section className={s.categories}>
+    <div className={s.categories}>
       <WidthContainer className={s.widthContainer}>
         {categories.map((category) => (
-          <Link key={category.title} href={category.path} className={s.item}>
+          <div
+            key={category.title}
+            onClick={() => onCategoryClick(category.path)}
+            className={s.item}
+          >
             <div className={s.imageContainer}>
               <Image
                 aria-hidden
                 className={s.image}
                 src={category.imgSrc}
-                alt={category.title}
+                alt=""
                 fill
               />
             </div>
@@ -26,9 +36,9 @@ export const Categories = ({ categories }: CategoriesProps) => {
               <span>{category.title}</span>
               <SendArrow className={s.arrow} />
             </div>
-          </Link>
+          </div>
         ))}
       </WidthContainer>
-    </section>
+    </div>
   );
 };

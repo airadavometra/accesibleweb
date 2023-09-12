@@ -44,10 +44,10 @@ const ProductPage: NextPage = () => {
   }, [productUrl, router]);
 
   return (
-    <main className={s.main}>
+    <div className={s.main}>
       {product ? <ProductInfo product={product} /> : "oops"}
       <Bestsellers products={bestsetters} />
-    </main>
+    </div>
   );
 };
 

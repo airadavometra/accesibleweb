@@ -3,7 +3,6 @@ import { SendArrow } from "@/icons/SendArrow";
 import { Product } from "@/types/simulation/product";
 import classNames from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "../Button/Button";
 import s from "./DayOffer.module.css";
 import { useSimulationStore } from "@/state/useSimulation";
@@ -21,50 +20,46 @@ export const DayOffer = ({ product }: DayOfferProps) => {
     setCheckoutCart: state.setCheckoutCart,
   }));
 
+  const onViewDetailsClick = () => {
+    router.push(`/blindness/product?product=${product.id}`);
+  };
+
+  const onAddToCartClick = () => {
+    addProduct(product, 1);
+    showAccessibleAddToCartNotification(product.name, 1);
+  };
+
+  const onBuyNowClick = () => {
+    setCheckoutCart([{ ...product, quantity: 1 }]);
+    router.push("/blindness/checkout");
+  };
+
   return (
-    <section className={s.main}>
+    <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
-        <h2 className={s.title}>Best deal today</h2>
+        <div className={s.title}>Best deal today</div>
         <div className={s.content}>
           <div className={classNames(s.section, s.imageContainer)}>
-            <Image
-              className={s.image}
-              src={product.imgSrc}
-              alt={product.name}
-              fill
-            />
+            <Image className={s.image} src={product.imgSrc} alt="" fill />
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
-            <h3 className={s.name}>{product.name}</h3>
+            <div className={s.name}>{product.name}</div>
             <span className={s.price}>
               ${product.price} / {product.unit}
             </span>
             <Button
               text="Add to cart"
-              onClick={() => {
-                addProduct(product, 1);
-                showAccessibleAddToCartNotification(product.name, 1);
-              }}
+              onClick={onAddToCartClick}
               type="secondary"
             />
-            <Button
-              text="Buy it now"
-              onClick={() => {
-                setCheckoutCart([{ ...product, quantity: 1 }]);
-                router.push("/blindness/checkout");
-              }}
-              type="primary"
-            />
-            <Link
-              className={s.link}
-              href={`/blindness/product?product=${product.id}`}
-            >
+            <Button text="Buy it now" onClick={onBuyNowClick} type="primary" />
+            <div className={s.link} onClick={onViewDetailsClick}>
               <span>View full details</span>
               <SendArrow className={s.arrow} />
-            </Link>
+            </div>
           </div>
         </div>
       </WidthContainer>
-    </section>
+    </div>
   );
 };

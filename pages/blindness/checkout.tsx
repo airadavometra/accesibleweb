@@ -74,78 +74,61 @@ const CheckoutPage: NextPage = () => {
 
   return (
     <>
-      <main className={s.main}>
+      <div className={s.main}>
         <WidthContainer className={s.widthContainer}>
-          <h1 className={s.title}>Your order</h1>
+          <div className={s.title}>Your order</div>
           <div className={s.form}>
             <div className={s.group}>
               <div className={s.section}>
-                <h2 className={s.sectionTitle}>Contact information</h2>
+                <div className={s.sectionTitle}>Contact information</div>
                 <Input
-                  label="First name"
-                  placeholder="John Doe"
+                  placeholder="First name"
                   color="black"
                   value={name}
                   onChange={(newValue?: string) => setName(newValue)}
-                  type={"text"}
-                  required
                 />
                 <div className={s.inputGroup}>
                   <Input
-                    label="Email"
-                    placeholder="example@gmail.com"
+                    placeholder="Email"
                     color="black"
                     value={email}
                     onChange={(newValue?: string) => setEmail(newValue)}
-                    type={"email"}
-                    required
                   />
                   <Input
-                    label="Phone (optional)"
-                    placeholder="+12345678900"
+                    placeholder="Phone (optional)"
                     color="black"
                     value={phone}
                     onChange={(newValue?: string) => setPhone(newValue)}
-                    type={"tel"}
                   />
                 </div>
               </div>
               <div className={s.section}>
-                <h2 className={s.sectionTitle}>Shipping address</h2>
+                <div className={s.sectionTitle}>Shipping address</div>
                 <Input
-                  label="Address"
-                  placeholder="Nieuwezijds Voorburgwal 147"
+                  placeholder="Address"
                   color="black"
                   value={address}
                   onChange={(newValue?: string) => setAddress(newValue)}
-                  type={"text"}
-                  required
                 />
                 <div className={s.inputGroup}>
                   <Input
-                    label="Country"
-                    placeholder="The Netherlands"
+                    placeholder="Country"
                     color="black"
                     value={country}
                     onChange={(newValue?: string) => setCountry(newValue)}
-                    type={"text"}
-                    required
                   />
                   <Input
-                    label="City"
-                    placeholder="Amsterdam"
+                    placeholder="City"
                     color="black"
                     value={city}
                     onChange={(newValue?: string) => setCity(newValue)}
-                    type={"text"}
-                    required
                   />
                 </div>
               </div>
             </div>
             <div className={s.group}>
               <div className={s.section}>
-                <h2 className={s.sectionTitle}>Order details</h2>
+                <div className={s.sectionTitle}>Order details</div>
                 <div className={s.products}>
                   {checkoutCart.map((item) => (
                     <div key={item.id} className={s.productContainer}>
@@ -153,7 +136,7 @@ const CheckoutPage: NextPage = () => {
                         <Image
                           className={s.image}
                           src={item.imgSrc}
-                          alt={item.name}
+                          alt=""
                           fill
                         />
                       </div>
@@ -167,12 +150,10 @@ const CheckoutPage: NextPage = () => {
                   ))}
                 </div>
                 <Input
-                  label="Discount code"
-                  placeholder="SALE20"
+                  placeholder="Discount code"
                   color="black"
                   value={discountCode}
                   onChange={(newValue?: string) => setDiscountCode(newValue)}
-                  type={"text"}
                 />
                 {discountCode !== undefined &&
                   discountCode !== "" &&
@@ -225,7 +206,7 @@ const CheckoutPage: NextPage = () => {
             </div>
           </div>
         </WidthContainer>
-      </main>
+      </div>
       {isConfirmModalOpen && (
         <ConfirmPayModal
           isOpen={isConfirmModalOpen}

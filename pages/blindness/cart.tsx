@@ -11,7 +11,6 @@ import { Delete } from "@/icons/Delete";
 import { useRouter } from "next/router";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { Fragment } from "react";
-import Link from "next/link";
 
 const CartPage: NextPage = () => {
   const router = useRouter();
@@ -31,20 +30,23 @@ const CartPage: NextPage = () => {
   };
 
   return (
-    <main className={s.main}>
+    <div className={s.main}>
       <WidthContainer className={s.widthContainer}>
         {cart.length === 0 ? (
           <EmptyState text="Your cart is empty" />
         ) : (
           <>
             <div className={s.titleContainer}>
-              <h1 className={s.title}>Your cart</h1>
-              <Link href="/blindness/main" className={s.continueShoppingLink}>
+              <div className={s.title}>Your cart</div>
+              <div
+                onClick={onContinueShoppingList}
+                className={s.continueShoppingLink}
+              >
                 Continue shopping
-              </Link>
+              </div>
             </div>
             {isMobile ? (
-              <section className={s.mobileCart}>
+              <div className={s.mobileCart}>
                 <div className={s.tableHeader}>
                   <span className={s.gridHeader}>product</span>
                   <span className={s.gridHeader}>total</span>
@@ -55,7 +57,7 @@ const CartPage: NextPage = () => {
                       <Image
                         className={s.image}
                         src={item.imgSrc}
-                        alt={item.name}
+                        alt=""
                         fill
                       />
                     </div>
@@ -65,10 +67,7 @@ const CartPage: NextPage = () => {
                           <span className={s.productName}>{item.name}</span>
                           <span>${item.price}</span>
                         </div>
-                        <span
-                          aria-label={"total product price"}
-                          className={s.total}
-                        >
+                        <span className={s.total}>
                           ${Number(item.price * item.quantity).toFixed(2)}
                         </span>
                       </div>
@@ -99,9 +98,9 @@ const CartPage: NextPage = () => {
                     </div>
                   </div>
                 ))}
-              </section>
+              </div>
             ) : (
-              <section className={s.grid}>
+              <div className={s.grid}>
                 <span className={s.gridHeader}>product</span>
                 <span className={s.gridHeader}>quantity</span>
                 <span className={classNames(s.gridHeader, s.right)}>total</span>
@@ -112,7 +111,7 @@ const CartPage: NextPage = () => {
                         <Image
                           className={s.image}
                           src={item.imgSrc}
-                          alt={item.name}
+                          alt=""
                           fill
                         />
                       </div>
@@ -145,18 +144,15 @@ const CartPage: NextPage = () => {
                         icon={<Delete className={s.icon} />}
                       />
                     </div>
-                    <span
-                      aria-label={"total product price"}
-                      className={classNames(s.total, s.right)}
-                    >
+                    <span className={classNames(s.total, s.right)}>
                       ${Number(item.price * item.quantity).toFixed(2)}
                     </span>
                   </Fragment>
                 ))}
-              </section>
+              </div>
             )}
             <div className={s.border} />
-            <section className={s.subtotalContainer}>
+            <div className={s.subtotalContainer}>
               <span className={s.subtotal}>
                 Subtotal
                 <span className={s.subtotalSum}>
@@ -180,11 +176,11 @@ const CartPage: NextPage = () => {
                   router.push("/blindness/checkout");
                 }}
               />
-            </section>
+            </div>
           </>
         )}
       </WidthContainer>
-    </main>
+    </div>
   );
 };
 

@@ -16,27 +16,23 @@ export const QuantityButton = ({
 }: QuantityButtonProps) => {
   return (
     <div className={s.quantityButtonContainer}>
-      <button
-        aria-label="remove one unit"
+      <div
         className={classNames(s.quantityButton, {
           [s.disabled]: disabled === "decrease",
         })}
         onClick={decrease}
-        disabled={disabled === "decrease"}
       >
         -
-      </button>
+      </div>
       <span className={s.quantity}>{quantity}</span>
-      <button
-        aria-label="add one more unit"
+      <div
         className={classNames(s.quantityButton, {
           [s.disabled]: disabled === "increase",
         })}
         onClick={increase}
-        disabled={disabled === "increase"}
       >
         +
-      </button>
+      </div>
     </div>
   );
 };

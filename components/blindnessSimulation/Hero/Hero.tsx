@@ -2,31 +2,31 @@ import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import classNames from "classnames";
 import Image from "next/image";
 import s from "./Hero.module.css";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Hero = () => {
+  const router = useRouter();
+
+  const onClick = () => {
+    router.push("/blindness/category?category=fruits");
+  };
   return (
-    <section className={s.hero}>
+    <div className={s.hero}>
       <WidthContainer className={s.widthContainer}>
         <div className={classNames(s.section, s.imageContainer)}>
-          <Image
-            className={s.image}
-            src="/hero.png"
-            alt="fruits and veggies"
-            fill
-          />
+          <Image className={s.image} src="/hero.png" alt="" fill />
         </div>
         <div className={classNames(s.section, s.descriptionSection)}>
-          <h1 className={s.title}>Take a bite</h1>
-          <p className={s.description}>
+          <div className={s.title}>Take a bite</div>
+          <div className={s.description}>
             Here fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. <br /> Taste the difference, fuel your life.
-          </p>
-          <Link className={s.link} href="/blindness/category?category=fruits">
+          </div>
+          <div onClick={onClick} className={s.link}>
             Go shopping
-          </Link>
+          </div>
         </div>
       </WidthContainer>
-    </section>
+    </div>
   );
 };

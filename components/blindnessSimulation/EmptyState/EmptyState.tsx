@@ -1,17 +1,22 @@
+import { useRouter } from "next/router";
 import s from "./EmptyState.module.css";
-import Link from "next/link";
 
 type EmptyStateProps = {
   text: string;
 };
 
 export const EmptyState = ({ text }: EmptyStateProps) => {
+  const router = useRouter();
+
+  const onContinueShoppingClick = () => {
+    router.push("/blindness/main");
+  };
   return (
     <div className={s.container}>
       <span className={s.text}>{text}</span>
-      <Link href="/blindness/main" className={s.link}>
+      <div onClick={onContinueShoppingClick} className={s.link}>
         Continue shopping
-      </Link>
+      </div>
     </div>
   );
 };

@@ -46,7 +46,7 @@ const MainPage = () => {
   useEffect(() => setChallengeErrors([]), [setChallengeErrors]);
 
   return (
-    <main className={s.main}>
+    <div className={s.main}>
       <Hero />
       <Bestsellers products={bestsetters} />
       <Banner
@@ -64,7 +64,7 @@ const MainPage = () => {
         text={`${data.discount}% off with ${data.promocode}. Enjoy delicious groceries at discounted prices. Shop now!`}
       />
       {dayOffer && <DayOffer product={dayOffer} />}
-    </main>
+    </div>
   );
 };
 

@@ -21,16 +21,9 @@ export const Button = ({
   type,
 }: ButtonProps) => {
   return (
-    <button
-      id={id}
-      className={classNames(s[type], className)}
-      onClick={onClick}
-    >
+    <div id={id} className={classNames(s[type], className)} onClick={onClick}>
       {type === "icon" ? (
-        <>
-          {icon}
-          <VisuallyHidden>{text}</VisuallyHidden>
-        </>
+        icon
       ) : (
         <>
           {text}
@@ -39,6 +32,6 @@ export const Button = ({
           </div>
         </>
       )}
-    </button>
+    </div>
   );
 };

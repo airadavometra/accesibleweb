@@ -11,22 +11,16 @@ type QuoteProps = {
 
 export const Quote = ({ imgSrc, text, author }: QuoteProps) => {
   return (
-    <section className={s.quote}>
+    <div className={s.quote}>
       <WidthContainer className={s.widthContainer}>
         <div className={classNames(s.section, s.quoteSection)}>
-          <q className={s.text}>{text}</q>
+          <div className={s.text}>{text}</div>
           <span className={s.author}>{`- ${author}`}</span>
         </div>
         <div className={classNames(s.section, s.imageContainer)}>
-          <Image
-            aria-hidden
-            className={s.image}
-            src={imgSrc}
-            alt="background"
-            fill
-          />
+          <Image aria-hidden className={s.image} src={imgSrc} alt="" fill />
         </div>
       </WidthContainer>
-    </section>
+    </div>
   );
 };
