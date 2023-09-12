@@ -2,7 +2,7 @@ import { Bestsellers } from "@/components/tremorSimulation/Bestsellers/Bestselle
 import { Hero } from "@/components/tremorSimulation/Hero/Hero";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useEffect } from "react";
-import s from "@/styles/simulation/Home.module.css";
+import s from "@/styles/simulation/tremor/Home.module.css";
 import { Banner } from "@/components/tremorSimulation/Banner/Banner";
 import { Categories } from "@/components/tremorSimulation/Categories/Categories";
 import { Category } from "@/types/category";

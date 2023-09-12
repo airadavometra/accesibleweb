@@ -1,12 +1,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 12px;
   align-items: center;
-}
-.container:hover > .name,
-.container:focus > .name {
-  text-decoration: underline;
 }
 .imageContainer {
   width: 100%;
@@ -20,9 +16,9 @@
 }
 .name {
   font-weight: 600;
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
 }
 .price {
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
   font-family: var(--simulation-font);
 }

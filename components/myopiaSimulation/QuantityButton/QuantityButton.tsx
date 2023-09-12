@@ -17,7 +17,6 @@ export const QuantityButton = ({
   return (
     <div className={s.quantityButtonContainer}>
       <button
-        aria-label="remove one unit"
         className={classNames(s.quantityButton, {
           [s.disabled]: disabled === "decrease",
         })}
@@ -28,7 +27,6 @@ export const QuantityButton = ({
       </button>
       <span className={s.quantity}>{quantity}</span>
       <button
-        aria-label="add one more unit"
         className={classNames(s.quantityButton, {
           [s.disabled]: disabled === "increase",
         })}

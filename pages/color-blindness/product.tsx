@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import s from "@/styles/simulation/Product.module.css";
+import s from "@/styles/simulation/color-blindness/Product.module.css";
 import { Bestsellers } from "@/components/colorBlindnessSimulation/Bestsellers/Bestsellers";
 import { products } from "@/data/products";
 import { ProductInfo } from "@/components/colorBlindnessSimulation/ProductInfo/ProductInfo";

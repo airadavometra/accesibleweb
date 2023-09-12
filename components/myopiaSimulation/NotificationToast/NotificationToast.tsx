@@ -6,7 +6,7 @@ type NotificationToastProps = {
   amount: number;
 };
 
-export const NotificationToast = ({
+export const MyopiaNotificationToast = ({
   productName,
   amount,
 }: NotificationToastProps) => {

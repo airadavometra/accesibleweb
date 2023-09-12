@@ -19,7 +19,7 @@ export const ProductLink = ({ product }: ProductLinkProps) => {
           className={s.image}
           fill
           src={product.imgSrc}
-          alt={product.name}
+          alt=""
         />
       </div>
       <span className={s.name}>{product.name}</span>

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "@/styles/simulation/Cart.module.css";
+import s from "@/styles/simulation/myopia/Cart.module.css";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { useSimulationStore } from "@/state/useSimulation";
 import { EmptyState } from "@/components/myopiaSimulation/EmptyState/EmptyState";
@@ -55,7 +55,7 @@ const CartPage: NextPage = () => {
                       <Image
                         className={s.image}
                         src={item.imgSrc}
-                        alt={item.name}
+                        alt=""
                         fill
                       />
                     </div>
@@ -65,10 +65,7 @@ const CartPage: NextPage = () => {
                           <span className={s.productName}>{item.name}</span>
                           <span>${item.price}</span>
                         </div>
-                        <span
-                          aria-label={"total product price"}
-                          className={s.total}
-                        >
+                        <span className={s.total}>
                           ${Number(item.price * item.quantity).toFixed(2)}
                         </span>
                       </div>
@@ -112,7 +109,7 @@ const CartPage: NextPage = () => {
                         <Image
                           className={s.image}
                           src={item.imgSrc}
-                          alt={item.name}
+                          alt=""
                           fill
                         />
                       </div>
@@ -145,10 +142,7 @@ const CartPage: NextPage = () => {
                         icon={<Delete className={s.icon} />}
                       />
                     </div>
-                    <span
-                      aria-label={"total product price"}
-                      className={classNames(s.total, s.right)}
-                    >
+                    <span className={classNames(s.total, s.right)}>
                       ${Number(item.price * item.quantity).toFixed(2)}
                     </span>
                   </Fragment>

@@ -2,7 +2,7 @@ import { Bestsellers } from "@/components/dyslexiaSimulation/Bestsellers/Bestsel
 import { Hero } from "@/components/dyslexiaSimulation/Hero/Hero";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useEffect } from "react";
-import s from "@/styles/simulation/Home.module.css";
+import s from "@/styles/simulation/dyslexia/Home.module.css";
 import { Banner } from "@/components/dyslexiaSimulation/Banner/Banner";
 import { Categories } from "@/components/dyslexiaSimulation/Categories/Categories";
 import { Category } from "@/types/category";

@@ -2,7 +2,7 @@ import { Bestsellers } from "@/components/colorBlindnessSimulation/Bestsellers/B
 import { Hero } from "@/components/colorBlindnessSimulation/Hero/Hero";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useEffect } from "react";
-import s from "@/styles/simulation/Home.module.css";
+import s from "@/styles/simulation/color-blindness/Home.module.css";
 import { Banner } from "@/components/colorBlindnessSimulation/Banner/Banner";
 import { Categories } from "@/components/colorBlindnessSimulation/Categories/Categories";
 import { Category } from "@/types/category";

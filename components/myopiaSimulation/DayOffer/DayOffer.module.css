@@ -4,10 +4,10 @@
 .widthContainer {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 32px;
 }
 .title {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 500;
 }
 .content {
@@ -29,41 +29,37 @@
   height: unset !important;
 }
 .descriptionSection {
-  padding-left: 4rem;
+  padding-left: 64px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
 .name {
-  font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
+  font-size: 24px;
   font-weight: 600;
 }
 .price {
   font-family: var(--simulation-font);
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
 }
 .link {
   display: flex;
-  gap: 0.75rem;
+  gap: 12px;
   font-family: var(--simulation-font);
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-}
-.link:hover,
-.link:focus {
-  text-decoration: underline;
+  font-size: 16px;
 }
 .arrow {
-  width: 1rem;
+  width: 16px;
   fill: black;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .content {
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
   }
   .descriptionSection {
     padding: 0;
-    gap: 1rem;
+    gap: 16px;
   }
 }

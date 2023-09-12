@@ -4,19 +4,6 @@
   flex-direction: column;
   gap: 6px;
 }
-.inputWrapper:hover > .label,
-.inputWrapper:focus > .label {
-  color: var(--input-color);
-}
-.inputWrapper:hover > .inputContainer,
-.inputWrapper:focus > .inputContainer {
-  outline: 1px solid var(--input-border-color);
-  border-color: var(--input-border-color);
-}
-.arrow:hover > svg,
-.arrow:focus > svg {
-  opacity: 1;
-}
 .white {
   --input-color: #fff;
   --input-placeholder-color: #fff8;
@@ -29,7 +16,7 @@
 }
 .label {
   font-weight: 600;
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
   color: var(--input-placeholder-color);
 }
 .inputContainer {
@@ -51,5 +38,5 @@
 .input::placeholder {
   color: var(--input-placeholder-color);
   font-family: var(--simulation-font);
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
 }

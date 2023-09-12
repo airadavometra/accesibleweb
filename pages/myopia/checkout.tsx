@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "@/styles/simulation/Checkout.module.css";
+import s from "@/styles/simulation/myopia/Checkout.module.css";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { useSimulationStore } from "@/state/useSimulation";
 import { Button } from "@/components/myopiaSimulation/Button/Button";
@@ -153,7 +153,7 @@ const CheckoutPage: NextPage = () => {
                         <Image
                           className={s.image}
                           src={item.imgSrc}
-                          alt={item.name}
+                          alt=""
                           fill
                         />
                       </div>

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "@/styles/simulation/Checkout.module.css";
+import s from "@/styles/simulation/color-blindness/Checkout.module.css";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { useSimulationStore } from "@/state/useSimulation";
 import { Button } from "@/components/colorBlindnessSimulation/Button/Button";

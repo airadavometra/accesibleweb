@@ -1,4 +1,3 @@
-import { VisuallyHidden } from "@/components/common/VisuallyHidden/VisuallyHidden";
 import { Cart } from "@/icons/Cart";
 import { NavigationItem } from "@/types/navigationItem";
 import Link from "next/link";
@@ -16,7 +15,7 @@ type HeaderProps = {
 export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   const cart = useSimulationStore((state) => state.cart);
 
-  const isMobile = useMediaQuery("(max-width: 48rem)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const cartCount = useMemo(
     () => cart.reduce((sum, item) => sum + item.quantity, 0),
@@ -27,7 +26,6 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
         <Link
-          aria-label="home page"
           href={isAccessible ? "/myopia/accessible/main" : "/myopia/main"}
           className={s.logo}
         >
@@ -45,13 +43,11 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
           </ul>
         </nav>
         <Link
-          aria-label={`Cart, ${cartCount} items`}
           href={isAccessible ? "/myopia/accessible/cart" : "/myopia/cart"}
           className={s.cartLink}
         >
           <Cart />
           <span>{isMobile ? cartCount : `Cart: ${cartCount}`}</span>
-          {isMobile && <VisuallyHidden>Cart</VisuallyHidden>}
         </Link>
       </WidthContainer>
     </header>

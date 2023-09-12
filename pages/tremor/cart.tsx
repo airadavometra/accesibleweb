@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "@/styles/simulation/Cart.module.css";
+import s from "@/styles/simulation/tremor/Cart.module.css";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { useSimulationStore } from "@/state/useSimulation";
 import { EmptyState } from "@/components/tremorSimulation/EmptyState/EmptyState";

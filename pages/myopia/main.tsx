@@ -2,7 +2,7 @@ import { Bestsellers } from "@/components/myopiaSimulation/Bestsellers/Bestselle
 import { Hero } from "@/components/myopiaSimulation/Hero/Hero";
 import { useSimulationStore } from "@/state/useSimulation";
 import { useEffect } from "react";
-import s from "@/styles/simulation/Home.module.css";
+import s from "@/styles/simulation/myopia/Home.module.css";
 import { Banner } from "@/components/myopiaSimulation/Banner/Banner";
 import { Categories } from "@/components/myopiaSimulation/Categories/Categories";
 import { Category } from "@/types/category";

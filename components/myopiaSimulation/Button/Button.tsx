@@ -1,4 +1,3 @@
-import { VisuallyHidden } from "@/components/common/VisuallyHidden/VisuallyHidden";
 import classNames from "classnames";
 import { ReactNode } from "react";
 import s from "./Button.module.css";
@@ -27,10 +26,7 @@ export const Button = ({
       onClick={onClick}
     >
       {type === "icon" ? (
-        <>
-          {icon}
-          <VisuallyHidden>{text}</VisuallyHidden>
-        </>
+        icon
       ) : (
         <>
           {text}
