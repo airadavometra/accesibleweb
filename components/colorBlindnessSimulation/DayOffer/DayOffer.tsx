@@ -27,12 +27,7 @@ export const DayOffer = ({ product }: DayOfferProps) => {
         <h2 className={s.title}>Best deal today</h2>
         <div className={s.content}>
           <div className={classNames(s.section, s.imageContainer)}>
-            <Image
-              className={s.image}
-              src={product.imgSrc}
-              alt={product.name}
-              fill
-            />
+            <Image className={s.image} src={product.imgSrc} alt="" fill />
           </div>
           <div className={classNames(s.section, s.descriptionSection)}>
             <h3 className={s.name}>{product.name}</h3>

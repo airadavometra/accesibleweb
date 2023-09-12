@@ -18,7 +18,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
                 aria-hidden
                 className={s.image}
                 src={category.imgSrc}
-                alt={category.title}
+                alt=""
                 fill
               />
             </div>
