@@ -22,7 +22,7 @@ export const Hero = ({ path }: HeroProps) => {
         </div>
         <div className={classNames(s.section, s.descriptionSection)}>
           <h1 className={s.title}>Take a bite</h1>
-          <p className={s.accessibleDescription}>
+          <p className={s.description}>
             Here fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. <br /> Taste the difference, fuel your life.
           </p>

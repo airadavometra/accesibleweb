@@ -24,27 +24,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 48px;
   border: 1px solid black;
   border-left: none;
 }
 .title {
-  font-size: clamp(3rem, 1.2222rem + 3.7037vw, 4rem);
+  font-size: 48px;
 }
 .description {
   max-width: 410px;
   text-align: center;
   font-family: var(--simulation-font);
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
 }
 .link {
-  padding: 0.75rem 2rem;
+  padding: 12px 32px;
   color: white;
   background-color: black;
   border: none;
   outline: 1px solid white;
   font-family: var(--simulation-font);
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
   transition: font-weight 100ms ease-in-out;
 }
 .link:hover,
@@ -53,12 +53,12 @@
   font-weight: 700;
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .widthContainer {
     flex-direction: column;
   }
   .descriptionSection {
-    padding: 2rem 1rem;
+    padding: 32px 16px;
     border: 1px solid black;
     border-top: none;
   }

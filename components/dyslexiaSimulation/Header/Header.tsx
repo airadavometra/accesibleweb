@@ -16,7 +16,7 @@ type HeaderProps = {
 export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   const cart = useSimulationStore((state) => state.cart);
 
-  const isMobile = useMediaQuery("(max-width: 48rem)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const cartCount = useMemo(
     () => cart.reduce((sum, item) => sum + item.quantity, 0),
@@ -46,7 +46,7 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
         </nav>
         <Link
           aria-label={`Cart, ${cartCount} items`}
-          href={isAccessible ? "/myopia/accessible/cart" : "/myopia/cart"}
+          href={isAccessible ? "/dyslexia/accessible/cart" : "/dyslexia/cart"}
           className={s.cartLink}
         >
           <Cart />

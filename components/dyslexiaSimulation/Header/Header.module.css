@@ -1,18 +1,18 @@
 .header {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 24px 0;
   display: flex;
 }
 .widthContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 48px;
 }
 .logo {
   width: fit-content;
   height: fit-content;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border: 1px solid black;
   font-family: var(--simulation-font);
   transition: transform 200ms ease-in-out;
@@ -21,7 +21,7 @@
   padding: 0;
   display: flex;
   align-items: center;
-  gap: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
+  gap: 24px;
   list-style-type: none;
   font-family: var(--simulation-font);
 }
@@ -31,7 +31,7 @@
   align-items: center;
 }
 .link {
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
 }
 .link:hover,
 .link:focus,
@@ -42,16 +42,16 @@
   width: fit-content;
   height: fit-content;
   margin-left: auto;
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   display: flex;
   gap: 12px;
   align-items: center;
   border: 1px solid black;
-  font-size: clamp(0.8rem, 0.4444rem + 0.7407vw, 1rem);
+  font-size: 14px;
   transition: transform 200ms ease-in-out;
 }
 .cartLink svg {
-  width: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  width: 16px;
 }
 
 .logo:hover,
@@ -62,9 +62,9 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .header {
-    padding: 0.5rem 0;
+    padding: 8px 0;
   }
   .logo {
     display: none;

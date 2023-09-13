@@ -5,7 +5,7 @@
   gap: 16px;
   color: black;
   font-family: var(--font);
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: 16px;
 }
 .toast > svg {
   flex-shrink: 0;

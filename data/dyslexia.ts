@@ -1,7 +1,7 @@
 import { Simulation } from "@/types/simulation/simulation";
 
 export const data: Simulation = {
-  path: "tremor",
+  path: "dyslexia",
   title: "Dyslexia challenge",
   problem: [
     "Dyslexia, potentially affecting between 5% to 17% of the population, create difficulties with reading and understanding online content. It's crucial to remember that not just dyslexia, but factors like language proficiency, education, or even tiredness and distractions can make it complicated.",
