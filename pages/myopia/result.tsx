@@ -82,10 +82,10 @@ const ResultPage: NextPage = () => {
           <div className={s.group}>
             <h2>And try other challenges:</h2>
             <ul className={s.otherChallengesList}>
-              <li key={"myopia"} className={s.listItem}>
+              <li key={"tremor"} className={s.listItem}>
                 <Arrow className={s.arrow} />
-                <Link href={"/myopia"} className={s.link}>
-                  Myopia
+                <Link href={"/tremor"} className={s.link}>
+                  Tremor
                 </Link>
               </li>
               <li key={"blindness"} className={s.listItem}>

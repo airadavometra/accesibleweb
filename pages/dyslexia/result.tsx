@@ -94,10 +94,10 @@ const ResultPage: NextPage = () => {
                   Blindness
                 </Link>
               </li>
-              <li key={"dyslexia"} className={s.listItem}>
+              <li key={"tremor"} className={s.listItem}>
                 <Arrow className={s.arrow} />
-                <Link href={"/dyslexia"} className={s.link}>
-                  Dyslexia
+                <Link href={"/tremor"} className={s.link}>
+                  Tremor
                 </Link>
               </li>
               <li key={"color-blindness"} className={s.listItem}>
