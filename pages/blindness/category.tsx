@@ -8,24 +8,7 @@ import { Product } from "@/types/simulation/product";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { ProductsGrid } from "@/components/blindnessSimulation/ProductsGrid/ProductsGrid";
 import { data } from "@/data/blindness";
-
-const getCategoryValue = (
-  category?: string | string[]
-): Category | undefined => {
-  if (category && typeof category === "string") {
-    switch (category) {
-      case "fruits":
-        return "fruits";
-      case "vegetables":
-        return "vegetables";
-      case "combo":
-        return "combo";
-      default:
-        return undefined;
-    }
-  }
-  return undefined;
-};
+import { getCategoryValue } from "@/utils/getCategoryFromURL";
 
 const CategoryPage: NextPage = () => {
   const router = useRouter();

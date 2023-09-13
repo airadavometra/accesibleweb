@@ -3,9 +3,12 @@ import { NavigationItem } from "@/types/navigationItem";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 import { useSimulationStore } from "@/state/useSimulation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useRouter } from "next/router";
+import { Category } from "@/types/simulation/category";
+import { getCategoryValue } from "@/utils/getCategoryFromURL";
+import classNames from "classnames";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -13,6 +16,23 @@ type HeaderProps = {
 
 export const Header = ({ navigation }: HeaderProps) => {
   const router = useRouter();
+
+  const { category: categoryUrl } = router.query;
+
+  const [category, setCategory] = useState<Category>();
+
+  useEffect(() => {
+    if (router.isReady) {
+      const categoryValue = getCategoryValue(categoryUrl);
+
+      if (categoryValue === undefined) {
+        router.push("/404");
+        return;
+      }
+
+      setCategory(categoryValue);
+    }
+  }, [categoryUrl, router]);
 
   const cart = useSimulationStore((state) => state.cart);
 
@@ -44,7 +64,12 @@ export const Header = ({ navigation }: HeaderProps) => {
           <div className={s.navigation}>
             {navigation.map(({ id, title, path }) => (
               <div className={s.linkContainer} key={id}>
-                <div onClick={() => onCategoryClick(path)} className={s.link}>
+                <div
+                  onClick={() => onCategoryClick(path)}
+                  className={classNames(s.link, {
+                    [s.selected]: category === title.toLowerCase(),
+                  })}
+                >
                   {title}
                 </div>
               </div>

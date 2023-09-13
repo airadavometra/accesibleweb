@@ -5,8 +5,12 @@ import Link from "next/link";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 import { useSimulationStore } from "@/state/useSimulation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { useRouter } from "next/router";
+import { getCategoryValue } from "@/utils/getCategoryFromURL";
+import { Category } from "@/types/simulation/category";
+import classNames from "classnames";
 
 type HeaderProps = {
   path: string;
@@ -14,6 +18,25 @@ type HeaderProps = {
 };
 
 export const AccessibleHeader = ({ path, navigation }: HeaderProps) => {
+  const router = useRouter();
+
+  const { category: categoryUrl } = router.query;
+
+  const [category, setCategory] = useState<Category>();
+
+  useEffect(() => {
+    if (router.isReady) {
+      const categoryValue = getCategoryValue(categoryUrl);
+
+      if (categoryValue === undefined) {
+        router.push("/404");
+        return;
+      }
+
+      setCategory(categoryValue);
+    }
+  }, [categoryUrl, router]);
+
   const cart = useSimulationStore((state) => state.cart);
 
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -37,7 +60,12 @@ export const AccessibleHeader = ({ path, navigation }: HeaderProps) => {
           <ul className={s.navigation}>
             {navigation.map(({ id, title, path }) => (
               <li className={s.linkContainer} key={id}>
-                <Link href={path} className={s.link}>
+                <Link
+                  href={path}
+                  className={classNames(s.link, {
+                    [s.selected]: category === title.toLowerCase(),
+                  })}
+                >
                   {title}
                 </Link>
               </li>
