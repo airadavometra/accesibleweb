@@ -26,10 +26,6 @@ const CartPage: NextPage = () => {
 
   const isMobile = useMediaQuery("(max-width: 48rem)");
 
-  const onContinueShoppingList = () => {
-    router.push("/tremor/main");
-  };
-
   return (
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
@@ -39,9 +35,9 @@ const CartPage: NextPage = () => {
           <>
             <div className={s.titleContainer}>
               <h1 className={s.title}>Your cart</h1>
-              <Link href="/tremor" className={s.continueShoppingLink}>
-                Continue shopping
-              </Link>
+              <div className={s.continueShoppingLink}>
+                <Link href="/tremor">Continue shopping</Link>
+              </div>
             </div>
             {isMobile ? (
               <section className={s.mobileCart}>

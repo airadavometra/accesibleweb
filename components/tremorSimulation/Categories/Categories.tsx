@@ -12,7 +12,7 @@ export const Categories = ({ categories }: CategoriesProps) => {
     <section className={s.categories}>
       <WidthContainer className={s.widthContainer}>
         {categories.map((category) => (
-          <Link key={category.title} href={category.path} className={s.item}>
+          <div key={category.title} className={s.item}>
             <div className={s.imageContainer}>
               <Image
                 aria-hidden
@@ -23,10 +23,10 @@ export const Categories = ({ categories }: CategoriesProps) => {
               />
             </div>
             <div className={s.link}>
-              <span>{category.title}</span>
+              <Link href={category.path}>{category.title}</Link>
               <SendArrow className={s.arrow} />
             </div>
-          </Link>
+          </div>
         ))}
       </WidthContainer>
     </section>

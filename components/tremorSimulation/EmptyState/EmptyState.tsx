@@ -9,9 +9,9 @@ export const EmptyState = ({ text }: EmptyStateProps) => {
   return (
     <div className={s.container}>
       <span className={s.text}>{text}</span>
-      <Link href="/tremor/main" className={s.link}>
-        Continue shopping
-      </Link>
+      <div className={s.link}>
+        <Link href="/tremor/main">Continue shopping</Link>
+      </div>
     </div>
   );
 };

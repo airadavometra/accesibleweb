@@ -21,24 +21,22 @@ export const Button = ({
   type,
 }: ButtonProps) => {
   return (
-    <button
-      id={id}
-      className={classNames(s[type], className)}
-      onClick={onClick}
-    >
-      {type === "icon" ? (
-        <>
-          {icon}
-          <VisuallyHidden>{text}</VisuallyHidden>
-        </>
-      ) : (
-        <>
-          {text}
-          <div aria-hidden="true" className={s.hidden}>
+    <div className={classNames(s[type], className)}>
+      <button id={id} onClick={onClick}>
+        {type === "icon" ? (
+          <>
+            {icon}
+            <VisuallyHidden>{text}</VisuallyHidden>
+          </>
+        ) : (
+          <>
             {text}
-          </div>
-        </>
-      )}
-    </button>
+            <div aria-hidden="true" className={s.hidden}>
+              {text}
+            </div>
+          </>
+        )}
+      </button>
+    </div>
   );
 };

@@ -9,10 +9,7 @@ type ProductLinkProps = {
 
 export const ProductLink = ({ product }: ProductLinkProps) => {
   return (
-    <Link
-      href={`/tremor/product?product=${product.id}`}
-      className={s.container}
-    >
+    <div className={s.container}>
       <div className={s.imageContainer}>
         <Image
           aria-hidden
@@ -22,10 +19,12 @@ export const ProductLink = ({ product }: ProductLinkProps) => {
           alt={product.name}
         />
       </div>
-      <span className={s.name}>{product.name}</span>
+      <Link href={`/tremor/product?product=${product.id}`} className={s.name}>
+        {product.name}
+      </Link>
       <span className={s.price}>
         ${product.price} / {product.unit}
       </span>
-    </Link>
+    </div>
   );
 };

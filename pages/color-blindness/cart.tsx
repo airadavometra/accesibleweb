@@ -26,10 +26,6 @@ const CartPage: NextPage = () => {
 
   const isMobile = useMediaQuery("(max-width: 48rem)");
 
-  const onContinueShoppingList = () => {
-    router.push("/color-blindness/main");
-  };
-
   return (
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>

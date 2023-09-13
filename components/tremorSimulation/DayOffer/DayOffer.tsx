@@ -55,13 +55,12 @@ export const DayOffer = ({ product }: DayOfferProps) => {
               }}
               type="primary"
             />
-            <Link
-              className={s.link}
-              href={`/tremor/product?product=${product.id}`}
-            >
-              <span>View full details</span>
+            <div className={s.link}>
+              <Link href={`/tremor/product?product=${product.id}`}>
+                View full details
+              </Link>
               <SendArrow className={s.arrow} />
-            </Link>
+            </div>
           </div>
         </div>
       </WidthContainer>

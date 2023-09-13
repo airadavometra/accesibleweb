@@ -16,7 +16,7 @@ type HeaderProps = {
 export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   const cart = useSimulationStore((state) => state.cart);
 
-  const isMobile = useMediaQuery("(max-width: 48rem)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const cartCount = useMemo(
     () => cart.reduce((sum, item) => sum + item.quantity, 0),
@@ -26,13 +26,14 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   return (
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
-        <Link
-          aria-label="home page"
-          href={isAccessible ? "/tremor/accessible/main" : "/tremor/main"}
-          className={s.logo}
-        >
-          fresh
-        </Link>
+        <div className={s.logo}>
+          <Link
+            aria-label="home page"
+            href={isAccessible ? "/tremor/accessible/main" : "/tremor/main"}
+          >
+            fresh
+          </Link>
+        </div>
         <nav>
           <ul className={s.navigation}>
             {navigation.map(({ id, title, path }) => (
@@ -44,15 +45,16 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
             ))}
           </ul>
         </nav>
-        <Link
-          aria-label={`Cart, ${cartCount} items`}
-          href={isAccessible ? "/myopia/accessible/cart" : "/myopia/cart"}
-          className={s.cartLink}
-        >
+        <div className={s.cartLink}>
           <Cart />
-          <span>{isMobile ? cartCount : `Cart: ${cartCount}`}</span>
-          {isMobile && <VisuallyHidden>Cart</VisuallyHidden>}
-        </Link>
+          <Link
+            aria-label={`Cart, ${cartCount} items`}
+            href={isAccessible ? "/tremor/accessible/cart" : "/tremor/cart"}
+          >
+            <span>{isMobile ? cartCount : `Cart: ${cartCount}`}</span>
+            {isMobile && <VisuallyHidden>Cart</VisuallyHidden>}
+          </Link>
+        </div>
       </WidthContainer>
     </header>
   );

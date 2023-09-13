@@ -22,9 +22,9 @@ export const Hero = () => {
             Here fresh, organic fruits and vegetables meet sustainable,
             eco-conscious values. <br /> Taste the difference, fuel your life.
           </p>
-          <Link className={s.link} href="/tremor/category?category=fruits">
-            Go shopping
-          </Link>
+          <div className={s.link}>
+            <Link href="/tremor/category?category=fruits">Go shopping</Link>
+          </div>
         </div>
       </WidthContainer>
     </section>
