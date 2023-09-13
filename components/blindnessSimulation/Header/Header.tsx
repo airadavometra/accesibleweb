@@ -8,11 +8,10 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { useRouter } from "next/router";
 
 type HeaderProps = {
-  isAccessible: boolean;
   navigation: NavigationItem[];
 };
 
-export const Header = ({ isAccessible, navigation }: HeaderProps) => {
+export const Header = ({ navigation }: HeaderProps) => {
   const router = useRouter();
 
   const cart = useSimulationStore((state) => state.cart);
@@ -24,9 +23,7 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
     [cart]
   );
   const onLogoClick = () => {
-    isAccessible
-      ? router.push("/blindness/accessible/main")
-      : router.push("/blindness/main");
+    router.push("/blindness/main");
   };
 
   const onCategoryClick = (path: string) => {
@@ -34,9 +31,7 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   };
 
   const onCartClick = () => {
-    isAccessible
-      ? router.push("/blindness/accessible/cart")
-      : router.push("/blindness/cart");
+    router.push("/blindness/cart");
   };
 
   return (

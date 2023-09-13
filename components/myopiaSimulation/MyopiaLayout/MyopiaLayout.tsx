@@ -5,6 +5,8 @@ import { data } from "@/data/myopia";
 import { getSimulationNavigation } from "@/utils/getSimulationNavigation";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
+import { AccessibleHeader } from "@/components/accessible/Header/Header";
+import { AccessibleFooter } from "@/components/accessible/Footer/Footer";
 
 type MyopiaLayoutProps = {
   isAccessible: boolean;
@@ -27,9 +29,17 @@ export const MyopiaLayout = ({ isAccessible, children }: MyopiaLayoutProps) => {
   return (
     <>
       <Layout data={data}>
-        <Header navigation={navigation} isAccessible={isAccessible} />
+        {isAccessible ? (
+          <AccessibleHeader path={data.path} navigation={navigation} />
+        ) : (
+          <Header navigation={navigation} />
+        )}
         {children}
-        <Footer navigation={navigation} />
+        {isAccessible ? (
+          <AccessibleFooter navigation={navigation} />
+        ) : (
+          <Footer navigation={navigation} />
+        )}
       </Layout>
       <div className={s.myopia} aria-hidden />
     </>

@@ -9,6 +9,8 @@ import { getSimulationNavigation } from "@/utils/getSimulationNavigation";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { Layout } from "@/components/common/SimulationLayout/SimulationLayout";
+import { AccessibleHeader } from "@/components/accessible/Header/Header";
+import { AccessibleFooter } from "@/components/accessible/Footer/Footer";
 
 type TremorLayoutProps = {
   isAccessible: boolean;
@@ -40,9 +42,17 @@ export const TremorLayout = ({ isAccessible, children }: TremorLayoutProps) => {
   return (
     <>
       <Layout data={data} className={s.tremorLayout}>
-        <Header navigation={navigation} isAccessible={isAccessible} />
+        {isAccessible ? (
+          <AccessibleHeader path={data.path} navigation={navigation} />
+        ) : (
+          <Header navigation={navigation} />
+        )}
         {children}
-        <Footer navigation={navigation} />
+        {isAccessible ? (
+          <AccessibleFooter navigation={navigation} />
+        ) : (
+          <Footer navigation={navigation} />
+        )}
       </Layout>
       {!isMobileTouchScreen && (
         <Cursor className={classNames(s.cursor, "cursor")} aria-hidden />

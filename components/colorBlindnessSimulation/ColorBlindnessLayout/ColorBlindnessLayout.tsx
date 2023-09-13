@@ -6,6 +6,8 @@ import { data } from "@/data/colorBlindness";
 import { getSimulationNavigation } from "@/utils/getSimulationNavigation";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
+import { AccessibleHeader } from "@/components/accessible/Header/Header";
+import { AccessibleFooter } from "@/components/accessible/Footer/Footer";
 
 type ColorBlindnessLayoutProps = {
   isAccessible: boolean;
@@ -44,9 +46,17 @@ export const ColorBlindnessLayout = ({
   return (
     <>
       <Layout className={s[`${colorBlindnessMode}Layout`]} data={data}>
-        <Header navigation={navigation} isAccessible={isAccessible} />
+        {isAccessible ? (
+          <AccessibleHeader path={data.path} navigation={navigation} />
+        ) : (
+          <Header navigation={navigation} />
+        )}
         {children}
-        <Footer navigation={navigation} />
+        {isAccessible ? (
+          <AccessibleFooter navigation={navigation} />
+        ) : (
+          <Footer navigation={navigation} />
+        )}
       </Layout>
       <svg style={{ width: 0, height: 0, position: "absolute" }}>
         <defs>

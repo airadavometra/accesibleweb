@@ -9,13 +9,14 @@ import { useMemo } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 type HeaderProps = {
+  path: string;
   navigation: NavigationItem[];
 };
 
-export const Header = ({ navigation }: HeaderProps) => {
+export const AccessibleHeader = ({ path, navigation }: HeaderProps) => {
   const cart = useSimulationStore((state) => state.cart);
 
-  const isMobile = useMediaQuery("(max-width: 48rem)");
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const cartCount = useMemo(
     () => cart.reduce((sum, item) => sum + item.quantity, 0),
@@ -27,7 +28,7 @@ export const Header = ({ navigation }: HeaderProps) => {
       <WidthContainer className={s.widthContainer}>
         <Link
           aria-label="home page"
-          href={"/color-blindness/main"}
+          href={`/${path}/accessible/main`}
           className={s.logo}
         >
           fresh
@@ -45,7 +46,7 @@ export const Header = ({ navigation }: HeaderProps) => {
         </nav>
         <Link
           aria-label={`Cart, ${cartCount} items`}
-          href={"/color-blindness/cart"}
+          href={`/${path}/accessible/cart`}
           className={s.cartLink}
         >
           <Cart />

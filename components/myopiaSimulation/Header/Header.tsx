@@ -8,11 +8,10 @@ import { useMemo } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 type HeaderProps = {
-  isAccessible: boolean;
   navigation: NavigationItem[];
 };
 
-export const Header = ({ isAccessible, navigation }: HeaderProps) => {
+export const Header = ({ navigation }: HeaderProps) => {
   const cart = useSimulationStore((state) => state.cart);
 
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -25,10 +24,7 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
   return (
     <header className={s.header}>
       <WidthContainer className={s.widthContainer}>
-        <Link
-          href={isAccessible ? "/myopia/accessible/main" : "/myopia/main"}
-          className={s.logo}
-        >
+        <Link href={"/myopia/main"} className={s.logo}>
           fresh
         </Link>
         <nav>
@@ -42,10 +38,7 @@ export const Header = ({ isAccessible, navigation }: HeaderProps) => {
             ))}
           </ul>
         </nav>
-        <Link
-          href={isAccessible ? "/myopia/accessible/cart" : "/myopia/cart"}
-          className={s.cartLink}
-        >
+        <Link href={"/myopia/cart"} className={s.cartLink}>
           <Cart />
           <span>{isMobile ? cartCount : `Cart: ${cartCount}`}</span>
         </Link>
