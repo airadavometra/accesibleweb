@@ -1,20 +1,20 @@
 import { WithClassName } from "@/types/withClassName";
 
-export const Cart = ({ className }: WithClassName) => {
+export const Exit = ({ className }: WithClassName) => {
   return (
     <svg
       className={className}
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
     >
-      <circle cx="9" cy="21" r="1" />
-      <circle cx="20" cy="21" r="1" />
-      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+      <polyline points="16 17 21 12 16 7"></polyline>
+      <line x1="21" y1="12" x2="9" y2="12"></line>
     </svg>
   );
 };

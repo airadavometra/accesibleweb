@@ -25,14 +25,7 @@ export const Header = ({ navigation }: HeaderProps) => {
 
   useEffect(() => {
     if (router.isReady) {
-      const categoryValue = getCategoryValue(categoryUrl);
-
-      if (categoryValue === undefined) {
-        router.push("/404");
-        return;
-      }
-
-      setCategory(categoryValue);
+      setCategory(getCategoryValue(categoryUrl));
     }
   }, [categoryUrl, router]);
 
