@@ -1,7 +1,5 @@
 import { Bestsellers } from "@/components/accessible/Bestsellers/Bestsellers";
 import { Hero } from "@/components/accessible/Hero/Hero";
-import { useSimulationStore } from "@/state/useSimulation";
-import { useEffect } from "react";
 import s from "@/styles/simulation/accessible/Home.module.css";
 import { Banner } from "@/components/accessible/Banner/Banner";
 import { Categories } from "@/components/accessible/Categories/Categories";
@@ -38,12 +36,6 @@ const dayOffer: Product | undefined = products.find(
 );
 
 const ChallengeHome = () => {
-  const { setChallengeErrors } = useSimulationStore((state) => ({
-    setChallengeErrors: state.setChallengeErrors,
-  }));
-
-  useEffect(() => setChallengeErrors([]), [setChallengeErrors]);
-
   return (
     <main className={s.main}>
       <Hero path="myopia" />

@@ -16,16 +16,14 @@ export const EndChallengeModal = ({
   onClose,
 }: EndChallengeModalProps) => {
   const router = useRouter();
-  const { setIsSuccessful, setCart, setCheckoutCart, setIsDiscountApplied } =
+  const {  setCart, setCheckoutCart, setIsDiscountApplied } =
     useSimulationStore((state) => ({
-      setIsSuccessful: state.setIsSuccessful,
       setCart: state.setCart,
       setCheckoutCart: state.setCheckoutCart,
       setIsDiscountApplied: state.setIsDiscountApplied,
     }));
 
   const endChallenge = () => {
-    setIsSuccessful(false);
     setCart([]);
     setCheckoutCart([]);
     setIsDiscountApplied(false);

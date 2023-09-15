@@ -7,14 +7,10 @@ import { EyeClosed } from "@/icons/EyeClosed";
 import { Exit } from "@/icons/Exit";
 
 type StickeHeaderProps = {
-  onRemindTask: () => void;
   onEndChallenge: () => void;
 };
 
-export const StickyBanner = ({
-  onRemindTask,
-  onEndChallenge,
-}: StickeHeaderProps) => {
+export const StickyBanner = ({ onEndChallenge }: StickeHeaderProps) => {
   const router = useRouter();
   const isAccessible = router.pathname.includes("/accessible");
 
@@ -40,7 +36,7 @@ export const StickyBanner = ({
         </div>
         <Button
           id="service-remind-task"
-          text="End challenge"
+          text="Exit simulation"
           onClick={onEndChallenge}
           type="primary"
           className={s.button}

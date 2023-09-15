@@ -4,12 +4,6 @@ import { create } from "zustand";
 export type CartProduct = Product & { quantity: number };
 
 type SimulationStore = {
-  isSuccessful: boolean;
-  setIsSuccessful: (value: boolean) => void;
-  challengeErrors: Array<{ message: string; items: string[] }>;
-  setChallengeErrors: (
-    errors: Array<{ message: string; items: string[] }>
-  ) => void;
   cart: CartProduct[];
   setCart: (Cart: CartProduct[]) => void;
   addProduct: (product: Product, quantity: number) => void;
@@ -22,10 +16,6 @@ type SimulationStore = {
 };
 
 export const useSimulationStore = create<SimulationStore>()((set) => ({
-  isSuccessful: false,
-  setIsSuccessful: (value: boolean) => set({ isSuccessful: value }),
-  challengeErrors: [],
-  setChallengeErrors: (errors) => set(() => ({ challengeErrors: errors })),
   cart: [],
   setCart: (Cart) => set(() => ({ cart: Cart })),
   addProduct: (product, quantity) =>

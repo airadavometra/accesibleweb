@@ -1,53 +1,18 @@
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import type { NextPage } from "next";
 import s from "@/styles/Result.module.css";
-import { useSimulationStore } from "@/state/useSimulation";
 import { Button } from "@/components/mainLanding/Button/Button";
 import Link from "next/link";
 import { Arrow } from "@/icons/Arrow";
 import classnames from "classnames";
 
-const SUCCESSFUL_RESULT =
-  "Congratulations on successfully completing the challenge! We hope this experience gave you a deeper understanding of the difficulties individuals with different abilities face while navigating the web. Remember that for many, such obstacles are part of their everyday online experience.";
-
-const UNSUCCESSFUL_RESULT =
-  "Although the challenge wasn't successfully completed, it's designed not to rate you but to replicate the daily web navigation difficulties faced by individuals with different abilities. Your experience today proves the urgent need for a more accessible online environment.";
-
 const ResultPage: NextPage = () => {
-  const { isSuccessful, challengeErrors } = useSimulationStore((state) => ({
-    isSuccessful: state.isSuccessful,
-    challengeErrors: state.challengeErrors,
-  }));
-
   return (
     <main className={s.main}>
       <WidthContainer className={s.widthContainer}>
         <h1 className={s.title}>Dyslexia result</h1>
-        {challengeErrors?.length > 0 && (
-          <section className={s.errors}>
-            <h2 className={s.errorsTitle}>You&apos;ve made some mistakes:</h2>
-            <ul>
-              {challengeErrors.map((err, index) => (
-                <li key={index}>
-                  {err.message}
-                  {err.items.length > 0 && (
-                    <ol>
-                      {err.items.map((item, index) => (
-                        <li key={index} className={s.secondLevelListItem}>
-                          {item}
-                        </li>
-                      ))}
-                    </ol>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
         <section className={s.gridSection}>
-          <p className={s.text}>
-            {isSuccessful ? SUCCESSFUL_RESULT : UNSUCCESSFUL_RESULT}
-          </p>
+          <p className={s.text}>Some message? </p>
           <p className={s.text}>
             By designing websites with inclusivity and adaptability in mind, we
             can create a more equitable digital space. This not only benefits

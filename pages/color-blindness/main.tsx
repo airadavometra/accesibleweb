@@ -1,7 +1,5 @@
 import { Bestsellers } from "@/components/colorBlindnessSimulation/Bestsellers/Bestsellers";
 import { Hero } from "@/components/colorBlindnessSimulation/Hero/Hero";
-import { useSimulationStore } from "@/state/useSimulation";
-import { useEffect } from "react";
 import s from "@/styles/simulation/color-blindness/Home.module.css";
 import { Banner } from "@/components/colorBlindnessSimulation/Banner/Banner";
 import { Categories } from "@/components/colorBlindnessSimulation/Categories/Categories";
@@ -39,12 +37,6 @@ const dayOffer: Product | undefined = products.find(
 );
 
 const MainPage = () => {
-  const { setChallengeErrors } = useSimulationStore((state) => ({
-    setChallengeErrors: state.setChallengeErrors,
-  }));
-
-  useEffect(() => setChallengeErrors([]), [setChallengeErrors]);
-
   return (
     <main className={s.main}>
       <Hero />

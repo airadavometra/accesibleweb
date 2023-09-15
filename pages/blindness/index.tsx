@@ -66,13 +66,6 @@ const TaskPage: NextPage = () => {
             help your imagination and make you feel like if you had this
             disability. And you simply need to do shopping:
           </p>
-          <ul>
-            {data.challengeSteps.map((step, index) => (
-              <li key={index} className={s.text}>
-                {step}
-              </li>
-            ))}
-          </ul>
           <p className={s.text}>
             Your task is to fill your cart with the items on your shopping list.
             Feel free to add additional items to your order, but remember to
