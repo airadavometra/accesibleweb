@@ -1,0 +1,23 @@
+.myopia {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  animation: pulse 5s infinite ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    backdrop-filter: blur(3px);
+  }
+  25% {
+    backdrop-filter: blur(4px);
+  }
+  50% {
+    backdrop-filter: blur(3px);
+  }
+  75% {
+    backdrop-filter: blur(2px);
+  }
+  100% {
+    backdrop-filter: blur(3px);
+  }
+}

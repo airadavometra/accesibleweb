@@ -1,0 +1,12 @@
+.bestsellers {
+  width: 100%;
+}
+.widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 500;
+}

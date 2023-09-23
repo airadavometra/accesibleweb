@@ -1,0 +1,18 @@
+.toast {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: black;
+  font-family: var(--font);
+  font-size: 16px;
+}
+.toast > svg {
+  flex-shrink: 0;
+}
+.text {
+  display: inline;
+}
+.bold {
+  font-weight: 600;
+}

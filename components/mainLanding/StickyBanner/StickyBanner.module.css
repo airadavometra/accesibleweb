@@ -1,0 +1,36 @@
+.stickyHeader {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--color);
+  z-index: 2;
+}
+.widthContainer {
+  padding: 1rem 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.accessibleLabelContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.eyeIcon {
+  width: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+}
+.accessibleLabel {
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: default;
+}
+.button {
+  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+}
+@media (max-width: 48rem) {
+  .stickyHeader {
+    gap: 1rem;
+  }
+}

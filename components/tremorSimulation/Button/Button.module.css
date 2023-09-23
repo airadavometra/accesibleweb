@@ -1,0 +1,36 @@
+.primary {
+  padding: 12px 32px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  border: none;
+  outline: 1px solid white;
+  font-family: var(--simulation-font);
+  font-size: 16px;
+  transition: font-weight 100ms ease-in-out;
+}
+.secondary {
+  padding: 12px 32px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  background-color: white;
+  border: none;
+  outline: 1px solid black;
+  font-family: var(--simulation-font);
+  font-size: 16px;
+  transition: font-weight 100ms ease-in-out;
+}
+.icon {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  transition: transform 300ms ease-in-out;
+}
+
+.hidden {
+  height: 0;
+  visibility: hidden;
+  font-weight: 700;
+}

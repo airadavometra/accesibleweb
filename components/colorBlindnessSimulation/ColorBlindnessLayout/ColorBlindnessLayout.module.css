@@ -1,0 +1,24 @@
+.protanopiaLayout {
+  --color-blindness-filter: url(#protanopia);
+}
+.protanomalyLayout {
+  --color-blindness-filter: url(#protanomaly);
+}
+.deuteranopiaLayout {
+  --color-blindness-filter: url(#deuteranopia);
+}
+.deuteranomalyLayout {
+  --color-blindness-filter: url(#deuteranomaly);
+}
+.tritanopiaLayout {
+  --color-blindness-filter: url(#tritanopia);
+}
+.tritanomalyLayout {
+  --color-blindness-filter: url(#tritanomaly);
+}
+.achromatopsiaLayout {
+  --color-blindness-filter: url(#achromatopsia);
+}
+.achromatomalyLayout {
+  --color-blindness-filter: url(#achromatomaly);
+}

@@ -1,0 +1,18 @@
+.quantityButtonContainer {
+  width: fit-content;
+  border: 1px solid black;
+}
+.quantityButton {
+  padding: 12px 16px;
+  font-family: var(--simulation-font);
+  font-size: 16px;
+  transition: transform 200ms ease-in-out;
+}
+.quantity {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.disabled {
+  opacity: 0.5;
+}

@@ -1,0 +1,68 @@
+.main {
+  width: 100%;
+}
+.widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.title {
+  font-size: 32px;
+  font-weight: 500;
+}
+.content {
+  display: flex;
+}
+.section {
+  width: 100%;
+  max-width: 700px;
+}
+.imageContainer {
+  height: fit-content;
+  aspect-ratio: 1/1;
+  border: 1px solid black;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.descriptionSection {
+  padding-left: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 600;
+}
+.price {
+  font-family: var(--simulation-font);
+  font-size: 16px;
+}
+.quantityButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.quantityButtonTitle {
+  font-family: var(--simulation-font);
+  font-size: 16px;
+}
+.description {
+  font-family: var(--simulation-font);
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .descriptionSection {
+    padding: 0;
+    gap: 16px;
+  }
+}

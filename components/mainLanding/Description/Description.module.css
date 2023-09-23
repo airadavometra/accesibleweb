@@ -1,0 +1,35 @@
+.description {
+  padding-top: 6rem;
+}
+.widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.descriptionHeading {
+  font-family: var(--title-font);
+  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  word-spacing: 1rem;
+}
+.descriptionContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: min(4rem, 96px);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+}
+.descriptionColumn {
+  display: flex;
+  flex-direction: column;
+  gap: min(2rem, 32px);
+}
+@media (max-width: 48rem) {
+  .descriptionContent {
+    grid-template-columns: 1fr;
+    gap: min(2rem, 32px);
+  }
+  .descriptionHeading {
+    word-spacing: revert;
+  }
+}

@@ -1,4 +1,4 @@
-import { WithClassName } from "@/types/common";
+import { WithClassName } from "@/types/withClassName";
 
 export const Blob6 = ({ className }: WithClassName) => {
   return (

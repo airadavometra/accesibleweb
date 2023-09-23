@@ -1,0 +1,43 @@
+.primary {
+  padding: 0.75rem 2rem;
+  color: white;
+  background-color: black;
+  border: none;
+  outline: 1px solid white;
+  font-family: var(--simulation-font);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  transition: font-weight 100ms ease-in-out;
+}
+.secondary {
+  padding: 0.75rem 2rem;
+  color: black;
+  background-color: white;
+  border: none;
+  outline: 1px solid black;
+  font-family: var(--simulation-font);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  transition: font-weight 100ms ease-in-out;
+}
+.primary:hover,
+.primary:focus,
+.primary.selected,
+.secondary:hover,
+.secondary:focus,
+.secondary.selected {
+  font-weight: 700;
+}
+.icon {
+  padding: 1rem;
+  transition: transform 300ms ease-in-out;
+}
+.icon:hover > svg,
+.icon:focus > svg,
+.icon.selected > svg {
+  transform: scale(1.3);
+}
+
+.hidden {
+  height: 0;
+  visibility: hidden;
+  font-weight: 700;
+}

@@ -23,18 +23,18 @@
   font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
 }
 .text {
-  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
 }
 .disclaimer {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   border: 1px solid black;
 }
 .disclaimerTitle {
-  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
 }
 .disclamerLink {
   width: fit-content;

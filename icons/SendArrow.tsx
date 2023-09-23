@@ -1,4 +1,4 @@
-import { WithClassName } from "@/types/common";
+import { WithClassName } from "@/types/withClassName";
 
 export const SendArrow = ({ className }: WithClassName) => {
   return (
