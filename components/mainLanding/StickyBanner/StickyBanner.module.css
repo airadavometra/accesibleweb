@@ -2,7 +2,7 @@
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: var(--color);
+  background-color: var(--accent-color);
   z-index: 2;
 }
 .widthContainer {

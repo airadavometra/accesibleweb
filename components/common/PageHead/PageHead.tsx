@@ -31,11 +31,10 @@ export const PageHead = () => (
     {process.env.NODE_ENV === "production" &&
       process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID && <GoogleAnalytics />}
     <Script id="select-color">
-      {`const colors = [ '#DCF179', '#A2DAE9', '#ADBCF1', '#EAB7EC' ]; 
+      {`const colors = [ '#A5D2FF', '#DCF179', '#FFC3E4', '#FFD371' ]; 
       const randomColor = colors[Math.floor( Math.random() * colors.length)]; 
       const r = document.querySelector(':root'); 
-      r.style.setProperty('--color', randomColor); 
-      r.style.setProperty('--color-transparent', randomColor + "cc");`}
+      r.style.setProperty('--accent-color', randomColor);`}
     </Script>
   </>
 );

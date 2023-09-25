@@ -25,7 +25,7 @@ export const BlindnessLayout = ({
       body.style.backgroundColor = "white";
     }
     return () => {
-      body.style.backgroundColor = "var(--color)";
+      body.style.backgroundColor = "var(--accent-color)";
     };
   }, []);
 

@@ -8,17 +8,17 @@ import { PageHead } from "../../common/PageHead/PageHead";
 import s from "./Layout.module.css";
 
 const navigation: NavigationItem[] = [
-  { id: 0, title: "about", path: "/#about" },
-  { id: 1, title: "simulations", path: "/#simulations" },
+  { id: 0, title: "simulations", path: "/#simulations" },
+  { id: 1, title: "checklist", path: "/checklist" },
 ];
 
 const mobileNavigation: NavigationItem[] = [
-  { id: 0, title: "about", path: "/#about" },
-  { id: 2, title: "blurred vision", path: "/myopia" },
-  { id: 3, title: "tremor", path: "/tremor" },
-  { id: 4, title: "blindness", path: "/blindness" },
-  { id: 5, title: "dyslexia", path: "/dyslexia" },
-  { id: 6, title: "color blindness", path: "/color-blindness" },
+  { id: 0, title: "blurred vision", path: "/myopia" },
+  { id: 1, title: "tremor", path: "/tremor" },
+  { id: 2, title: "blindness", path: "/blindness" },
+  { id: 3, title: "dyslexia", path: "/dyslexia" },
+  { id: 4, title: "color blindness", path: "/color-blindness" },
+  { id: 5, title: "checklist", path: "/checklist" },
 ];
 
 type LayoutProps = {

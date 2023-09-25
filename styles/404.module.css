@@ -11,7 +11,7 @@
   margin: auto;
   position: absolute;
   inset: 0;
-  color: var(--color);
+  color: var(--accent-color);
   font-family: var(--title-font);
   font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
   font-weight: 700;

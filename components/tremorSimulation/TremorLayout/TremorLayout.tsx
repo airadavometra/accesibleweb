@@ -30,7 +30,7 @@ export const TremorLayout = ({ isAccessible, children }: TremorLayoutProps) => {
       body.style.backgroundColor = "white";
     }
     return () => {
-      body.style.backgroundColor = "var(--color)";
+      body.style.backgroundColor = "var(--accent-color)";
     };
   }, []);
 

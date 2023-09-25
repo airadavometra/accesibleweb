@@ -39,7 +39,7 @@ export const ColorBlindnessLayout = ({
 
     setColorBlindnessMode(randomMode);
     return () => {
-      body.style.backgroundColor = "var(--color)";
+      body.style.backgroundColor = "var(--accent-color)";
     };
   }, []);
 

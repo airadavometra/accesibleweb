@@ -7,6 +7,7 @@ import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import s from "./Header.module.css";
 import { AccessibilityMan } from "@/icons/AccessibilityMan";
 import { VisuallyHidden } from "@/components/common/VisuallyHidden/VisuallyHidden";
+import { HeaderWave } from "@/icons/Header";
 
 type HeaderProps = {
   navigation: NavigationItem[];
@@ -17,6 +18,7 @@ type HeaderProps = {
 const Header = ({ navigation, onOpenMenu, onMenuItemClick }: HeaderProps) => {
   return (
     <header className={s.header}>
+      <HeaderWave className={s.headerWave} />
       <WidthContainer className={s.widthContainer}>
         <Link className={s.logo} href={"/"}>
           <AccessibilityMan />

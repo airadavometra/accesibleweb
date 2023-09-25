@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  color: var(--color);
+  color: var(--accent-color);
   background-color: black;
   font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   text-align: center;
@@ -19,7 +19,7 @@
   justify-content: center;
   gap: 1rem;
   color: black;
-  background-color: var(--color);
+  background-color: var(--accent-color);
   font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
   text-align: center;
   border: none;

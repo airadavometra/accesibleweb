@@ -22,7 +22,7 @@ export const MyopiaLayout = ({ isAccessible, children }: MyopiaLayoutProps) => {
       body.style.backgroundColor = "white";
     }
     return () => {
-      body.style.backgroundColor = "var(--color)";
+      body.style.backgroundColor = "var(--accent-color)";
     };
   }, []);
 

@@ -27,7 +27,7 @@
 }
 .link {
   display: block;
-  color: var(--color);
+  color: var(--accent-color);
   font-family: var(--title-font);
   font-size: clamp(2.5rem, -0.1667rem + 5.5556vw, 4rem);
   font-weight: 900;

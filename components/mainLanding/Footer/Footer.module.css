@@ -17,7 +17,7 @@
   justify-content: space-between;
   font-size: clamp(0.75rem, 0.3056rem + 0.9259vw, 1rem);
   font-weight: 600;
-  color: var(--color);
+  color: var(--accent-color);
 }
 
 .heart {
@@ -44,7 +44,7 @@
   width: 100%;
   height: 2px;
   border-radius: 2px;
-  background-color: var(--color);
+  background-color: var(--accent-color);
   bottom: 0;
   left: 0;
   transform-origin: right;
