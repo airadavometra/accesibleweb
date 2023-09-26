@@ -1,6 +1,6 @@
 import { WithClassName } from "@/types/withClassName";
 
-export const Blob4 = ({ className }: WithClassName) => {
+export const Blob2Big = ({ className }: WithClassName) => {
   return (
     <svg
       className={className}
@@ -8,8 +8,8 @@ export const Blob4 = ({ className }: WithClassName) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <filter id="inset-shadow">
-        <feOffset dx="0" dy="4" />
-        <feGaussianBlur stdDeviation="16" result="offset-blur" />
+        <feOffset dx="80" dy="8" />
+        <feGaussianBlur stdDeviation="32" result="offset-blur" />
         <feComposite
           operator="out"
           in="SourceGraphic"
@@ -27,7 +27,7 @@ export const Blob4 = ({ className }: WithClassName) => {
       <g filter="url(#inset-shadow)">
         <path
           fill="currentColor"
-          d="M59.5,-48.3C74.8,-28.3,83.3,-3.7,78.3,17.9C73.4,39.4,55.1,57.9,32.6,69.2C10.2,80.5,-16.3,84.8,-38.4,75.7C-60.5,66.6,-78.2,44.3,-82.3,20.5C-86.4,-3.3,-76.9,-28.5,-60.9,-48.7C-44.9,-68.8,-22.5,-83.8,-0.2,-83.7C22.1,-83.6,44.2,-68.2,59.5,-48.3Z"
+          d="M47.5,-72.6C60.6,-65.4,69.9,-50.7,77.6,-35.1C85.3,-19.4,91.5,-2.7,88.9,12.5C86.3,27.7,74.9,41.3,62.4,52C50,62.7,36.5,70.4,22,74.5C7.6,78.5,-7.8,78.8,-22.8,75.4C-37.7,72,-52.1,64.8,-62.8,53.7C-73.6,42.6,-80.7,27.6,-81.2,12.7C-81.7,-2.2,-75.7,-17,-68.6,-30.8C-61.4,-44.5,-53.2,-57.2,-41.6,-65.1C-30,-73.1,-15,-76.2,1.1,-77.9C17.1,-79.6,34.3,-79.8,47.5,-72.6Z"
           transform="translate(100 100)"
         />
       </g>

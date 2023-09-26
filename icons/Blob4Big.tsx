@@ -1,6 +1,6 @@
 import { WithClassName } from "@/types/withClassName";
 
-export const Blob4 = ({ className }: WithClassName) => {
+export const Blob4Big = ({ className }: WithClassName) => {
   return (
     <svg
       className={className}
@@ -8,8 +8,8 @@ export const Blob4 = ({ className }: WithClassName) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <filter id="inset-shadow">
-        <feOffset dx="0" dy="4" />
-        <feGaussianBlur stdDeviation="16" result="offset-blur" />
+        <feOffset dx="8" dy="8" />
+        <feGaussianBlur stdDeviation="32" result="offset-blur" />
         <feComposite
           operator="out"
           in="SourceGraphic"

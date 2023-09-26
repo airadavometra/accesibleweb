@@ -13,6 +13,11 @@ import s from "./Blobs.module.css";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { blobLinkVariants } from "@/motions/homePage";
+import { Blob1Big } from "@/icons/Blob1Big";
+import { Blob6Big } from "@/icons/Blob6Big";
+import { Blob4Big } from "@/icons/Blob4Big";
+import { Blob3Big } from "@/icons/Blob3Big";
+import { Blob2Big } from "@/icons/Blob2Big";
 
 export default function Blobs() {
   return (
@@ -20,7 +25,7 @@ export default function Blobs() {
       <div className={classnames(s.blobsGroup, s.right)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
-            <Blob1 />
+            <Blob1Big className={s.blob} />
           </BlobAnimated>
           <motion.div
             variants={blobLinkVariants}
@@ -33,19 +38,19 @@ export default function Blobs() {
           </motion.div>
         </div>
         <BlobSmall top={"55%"} left={"-10%"} size={"l"}>
-          <Blob5 />
+          <Blob5 className={s.blob} />
         </BlobSmall>
         <BlobSmall bottom={"25%"} left={"-5%"} size={"m"}>
-          <Blob7 />
+          <Blob7 className={s.blob} />
         </BlobSmall>
         <BlobSmall bottom={"5%"} right={"12%"} size={"s"}>
-          <Blob8 />
+          <Blob8 className={s.blob} />
         </BlobSmall>
       </div>
       <div className={classnames(s.blobsGroup, s.left)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
-            <Blob2 />
+            <Blob2Big className={s.blob} />
           </BlobAnimated>
           <motion.div
             variants={blobLinkVariants}
@@ -58,19 +63,19 @@ export default function Blobs() {
           </motion.div>
         </div>
         <BlobSmall top={"10%"} right={"15%"} size={"s"}>
-          <Blob5 />
+          <Blob5 className={s.blob} />
         </BlobSmall>
         <BlobSmall bottom={"15%"} right={"5%"} size={"s"}>
-          <Blob7 />
+          <Blob7 className={s.blob} />
         </BlobSmall>
         <BlobSmall bottom={"0%"} right={"5%"} size={"l"}>
-          <Blob8 />
+          <Blob8 className={s.blob} />
         </BlobSmall>
       </div>
       <div className={classnames(s.blobsGroup, s.right)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
-            <Blob3 />
+            <Blob3Big className={s.blob} />
           </BlobAnimated>
           <motion.div
             variants={blobLinkVariants}
@@ -83,13 +88,13 @@ export default function Blobs() {
           </motion.div>
         </div>
         <BlobSmall top={"35%"} left={"-15%"} size={"xl"}>
-          <Blob1 />
+          <Blob1 className={s.blob} />
         </BlobSmall>
       </div>
       <div className={classnames(s.blobsGroup, s.left)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
-            <Blob4 />
+            <Blob4Big className={s.blob} />
           </BlobAnimated>
           <motion.div
             variants={blobLinkVariants}
@@ -102,25 +107,25 @@ export default function Blobs() {
           </motion.div>
         </div>
         <BlobSmall top={"-12%"} left={"30%"} size={"s"}>
-          <Blob6 />
+          <Blob6 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"-10%"} left={"35%"} size={"l"}>
-          <Blob1 />
+          <Blob1 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"-5%"} left={"28%"} size={"m"}>
-          <Blob8 />
+          <Blob8 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"35%"} right={"0%"} size={"s"}>
-          <Blob5 />
+          <Blob5 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"40%"} right={"-5%"} size={"m"}>
-          <Blob7 />
+          <Blob7 className={s.blob} />
         </BlobSmall>
       </div>
       <div className={classnames(s.blobsGroup, s.right)}>
         <div className={s.mainBlobWrapper}>
           <BlobAnimated>
-            <Blob6 />
+            <Blob6Big className={s.blob} />
           </BlobAnimated>
           <motion.div
             variants={blobLinkVariants}
@@ -133,25 +138,25 @@ export default function Blobs() {
           </motion.div>
         </div>
         <BlobSmall top={"-2%"} right={"40%"} size={"s"}>
-          <Blob5 />
+          <Blob5 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"0%"} right={"25%"} size={"l"}>
-          <Blob7 />
+          <Blob7 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"-10%"} right={"30%"} size={"m"}>
-          <Blob8 />
+          <Blob8 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"20%"} left={"-5%"} size={"s"}>
-          <Blob1 />
+          <Blob1 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"40%"} left={"-15%"} size={"s"}>
-          <Blob8 />
+          <Blob8 className={s.blob} />
         </BlobSmall>
         <BlobSmall top={"45%"} left={"-20%"} size={"m"}>
-          <Blob5 />
+          <Blob5 className={s.blob} />
         </BlobSmall>
         <BlobSmall bottom={"20%"} left={"-5%"} size={"xl"}>
-          <Blob7 />
+          <Blob7 className={s.blob} />
         </BlobSmall>
       </div>
     </section>
