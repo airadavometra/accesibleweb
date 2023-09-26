@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import { PageHead } from "../../common/PageHead/PageHead";
 import s from "./Layout.module.css";
+import Footer from "../Footer/Footer";
 
 const navigation: NavigationItem[] = [
   { id: 0, title: "simulations", path: "/#simulations" },
@@ -68,6 +69,7 @@ export const Layout = ({ children }: LayoutProps) => {
           onMenuItemClick={onMenuItemClick}
         />
         {children}
+        <Footer />
       </div>
       <AnimatePresence mode="wait">
         {isMenuOpen && (

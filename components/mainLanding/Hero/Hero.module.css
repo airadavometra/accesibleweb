@@ -1,50 +1,113 @@
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
   font-family: var(--title-font);
-  font-size: clamp(6rem, -4.6667rem + 22.2222vw, 12rem);
+  line-height: 1.25;
   text-transform: uppercase;
-  overflow: hidden;
-  cursor: default;
 }
-.boldHeroText {
-  font-weight: 900;
-  cursor: default;
-  user-select: none;
-}
-.runningTextContainer {
+.textContainer {
   width: 100%;
-  margin-top: -8rem;
+  margin-top: 5rem;
   display: flex;
-  transform: skewY(-5deg);
+  flex-direction: column;
+  gap: 4rem;
 }
-.runningLeft {
-  margin-top: 4rem;
+.leftPiece {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+.rightPiece {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.withWhitespace {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+.extraSmall {
+  font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
+}
+.small {
+  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
+}
+.medium {
+  font-size: clamp(3rem, -2.3333rem + 11.1111vw, 6rem);
+}
+.bold {
+  font-weight: 900;
+}
+.big {
+  font-size: clamp(4rem, -3.1111rem + 14.8148vw, 8rem);
+}
+.highlighted {
+  padding: 0 1rem;
+  position: relative;
+}
+.highlighted::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+.scrollDown {
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+}
+.blobContainer {
+  position: relative;
+}
+.blob {
+  width: 72px;
+  color: var(--accent-color);
+}
+.arrow {
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  transform: rotate(90deg);
 }
 
 @media (max-width: 48rem) {
-  .runningLeft {
-    margin-top: 8rem;
+  .withWhitespace {
+    gap: 0.5rem;
   }
-}
-
-@keyframes running-animation {
-  from {
-    transform: translateX(-50%);
+  .extraSmall {
+    font-size: clamp(0.75rem, 0.4286rem + 1.6071vw, 1.2rem);
   }
-  to {
-    transform: translateX(0%);
+  .small {
+    font-size: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .runningText {
-    animation: running-animation 25s linear infinite;
+  .medium {
+    font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2rem);
   }
-  .runningLeft {
-    animation-direction: reverse;
+  .big {
+    font-size: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
+  }
+  .highlighted {
+    padding: 0 0.5rem;
+  }
+  .blob {
+    width: 48px;
+  }
+  .arrow {
+    width: 24px;
+    height: 24px;
   }
 }
