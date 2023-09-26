@@ -1,13 +1,34 @@
-<svg
+import { WithClassName } from "@/types/withClassName";
+
+export const FooterWave = ({ className }: WithClassName) => {
+  return (
+    <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1400 480"
     >
-      <g transform="translate(700,240) scale(1,-1) translate(-700,-240)">
-        <linearGradient id="lg-0.15207961874640508" x1="0" x2="1" y1="0" y2="0">
-          <stop stop-color="#000000" offset="0"></stop>
-          <stop stop-color="#000000" offset="1"></stop>
-        </linearGradient>
-        <path d="" fill="url(#lg-0.15207961874640508)" opacity="1">
+      <filter id="inset-shadow">
+        <feOffset dx="0" dy="4" />
+        <feGaussianBlur stdDeviation="8" result="offset-blur" />
+        <feComposite
+          operator="out"
+          in="SourceGraphic"
+          in2="offset-blur"
+          result="inverse"
+        />
+        <feFlood
+          flood-color="var(--text-color)"
+          flood-opacity=".15"
+          result="color"
+        />
+        <feComposite operator="in" in="color" in2="inverse" result="shadow" />
+        <feComposite operator="over" in="shadow" in2="SourceGraphic" />
+      </filter>
+      <g
+        filter="url(#inset-shadow)"
+        transform="translate(700,240) scale(1,-1) translate(-700,-240)"
+      >
+        <path d="" fill="currentColor" opacity="1">
           <animate
             attributeName="d"
             dur="12.5s"
@@ -21,3 +42,5 @@
         </path>
       </g>
     </svg>
+  );
+};

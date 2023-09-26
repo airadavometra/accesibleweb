@@ -2,22 +2,19 @@ import Link from "next/link";
 import s from "./Footer.module.css";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import { Heart } from "@/icons/Heart";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import { FooterWave } from "@/icons/FooterWave";
 
 const Footer = () => {
+  const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduced)");
+
   return (
     <footer className={s.footer}>
-      <picture>
-        <source
-          className={s.background}
-          srcSet="/wave.svg"
-          media="(prefers-reduced-motion: no-preference)"
-        />
-        <img
-          className={s.background}
-          src="/footer.svg"
-          alt="footer background"
-        />
-      </picture>
+      {reducedMotion ? (
+        <FooterWave className={s.footerWave} />
+      ) : (
+        <FooterWave className={s.footerWave} />
+      )}
       <WidthContainer className={s.textContainer}>
         <div>
           <span className={s.transparent}>

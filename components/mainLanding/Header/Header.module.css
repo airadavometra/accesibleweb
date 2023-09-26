@@ -2,9 +2,13 @@
   width: 100%;
   position: relative;
   font-family: var(--title-font);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
 }
 .widthContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,14 +52,11 @@
 }
 .headerWave {
   min-width: 1400px;
-  position: absolute;
-  inset: 0;
-  z-index: -1;
   color: var(--accent-color);
 }
 @media (max-width: 48rem) {
-  .header {
-    padding: min(1rem, 24px) 0;
+  .widthContainer {
+    padding: min(1rem, 24px);
   }
   .navigation {
     display: none;
