@@ -3,10 +3,5 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  gap: 400px;
-}
-@media (max-width: 48rem) {
-  .main {
-    gap: 200px;
-  }
+  gap: 200px;
 }

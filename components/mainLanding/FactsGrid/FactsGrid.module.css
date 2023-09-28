@@ -24,23 +24,27 @@
   background-clip: text;
 }
 .tilesContainer {
-  display: grid;
-  grid-auto-rows: 1fr;
-  gap: clamp(1.2rem, -0.2222rem + 2.963vw, 2rem);
-}
-.tilesRow {
   display: flex;
+  flex-wrap: wrap;
   gap: clamp(1.2rem, -0.2222rem + 2.963vw, 2rem);
 }
 .tileWrapper {
-  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 43rem;
   padding: 8px;
   border-radius: 12px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) inset;
   background-color: var(--accent-color);
 }
+.tileWrapperMedium {
+  flex-basis: 26rem;
+}
+.tileWrapperMedium2 {
+  flex-basis: 21rem;
+}
 .tileWrapperSmall {
-  width: 60%;
+  flex-basis: 18rem;
 }
 .tile {
   width: 100%;
@@ -94,14 +98,22 @@
   white-space: nowrap;
 }
 @media (max-width: 48rem) {
-  .tilesContainer {
-    grid-auto-rows: auto;
+  .tileWrapper {
+    flex-basis: 23rem;
   }
-  .tilesRow {
-    flex-wrap: wrap;
+  .tileWrapperMedium {
+    flex-basis: 23rem;
   }
-  .tileWrapper,
+  .tileWrapperMedium2 {
+    flex-basis: 19rem;
+  }
   .tileWrapperSmall {
-    width: fit-content;
+    flex-basis: 14rem;
+  }
+  .tileContentInRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
   }
 }
