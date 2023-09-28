@@ -59,6 +59,9 @@
   gap: 0.5rem;
   line-height: 1.25;
 }
+.tileContentBigGap {
+  gap: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+}
 .hugeText {
   font-size: clamp(2.25rem, -3.5278rem + 12.037vw, 5.5rem);
   font-weight: 700;
@@ -67,10 +70,29 @@
   font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
   font-weight: 700;
 }
+.bigText {
+  font-size: clamp(1.75rem, -0.9167rem + 5.5556vw, 3.25rem);
+}
+.meduimText {
+  font-size: clamp(1.2rem, -0.2222rem + 2.963vw, 2rem);
+}
+.meduimText2 {
+  font-size: clamp(1.5rem, 0.1667rem + 2.7778vw, 2.25rem);
+}
+.smallText {
+  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+}
+.quoteName {
+  font-size: clamp(0.85rem, 0.1389rem + 1.4815vw, 1.25rem);
+  font-weight: 600;
+  color: #898989;
+}
 .boldText {
   font-weight: 700;
 }
-
+.noWrap {
+  white-space: nowrap;
+}
 @media (max-width: 48rem) {
   .tilesContainer {
     grid-auto-rows: auto;

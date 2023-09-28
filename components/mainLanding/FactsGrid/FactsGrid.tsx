@@ -21,31 +21,10 @@ export default function FactsGrid() {
                   <span className={classNames(s.hugeText, s.boldText)}>
                     96,3%
                   </span>
-                  <span
-                    style={{
-                      fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                    }}
-                  >
-                    of websites
-                  </span>
-                  <span
-                    style={{
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                      }}
-                    >
-                      are{" "}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "clamp(1.2rem, -0.2222rem + 2.963vw, 2rem)",
-                        fontWeight: 700,
-                      }}
-                    >
+                  <span className={s.smallText}>of websites</span>
+                  <span className={s.noWrap}>
+                    <span className={s.smallText}>are </span>
+                    <span className={classNames(s.meduimText, s.boldText)}>
                       innaccessible
                     </span>
                   </span>
@@ -54,74 +33,34 @@ export default function FactsGrid() {
             </div>
             <div className={s.tileWrapper}>
               <div className={classNames(s.tile, s.white)}>
-                <div
-                  className={s.tileContent}
-                  style={{ gap: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)" }}
-                >
+                <div className={classNames(s.tileContent, s.tileContentBigGap)}>
                   <div style={{ display: "flex", flexDirection: "column" }}>
-                    <span
-                      style={{
-                        fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                      }}
-                    >
+                    <span className={s.smallText}>
                       “Good accessibility is about compliance,
                     </span>
                     <span>
-                      <span
-                        style={{
-                          fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                          fontWeight: 700,
-                        }}
-                      >
+                      <span className={classNames(s.smallText, s.boldText)}>
                         great{" "}
                       </span>
-                      <span
-                        style={{
-                          fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                        }}
-                      >
+                      <span className={s.smallText}>
                         accessibility is about empathy.”
                       </span>
                     </span>
                   </div>
-                  <span
-                    style={{
-                      fontSize: "clamp(0.85rem, 0.1389rem + 1.4815vw, 1.25rem)",
-                      fontWeight: 600,
-                      color: "#898989",
-                    }}
-                  >
-                    — Sheri Byrne-Haber
-                  </span>
+                  <span className={s.quoteName}>— Sheri Byrne-Haber</span>
                 </div>
               </div>
             </div>
             <div className={classNames(s.tileWrapper, s.tileWrapperSmall)}>
               <div className={classNames(s.tile, s.white)}>
                 <div className={s.tileContent}>
-                  <span
-                    style={{
-                      fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
+                  <span className={classNames(s.smallText, s.noWrap)}>
                     We all experience
                   </span>
-                  <span
-                    style={{
-                      fontSize: "clamp(1.5rem, 0.1667rem + 2.7778vw, 2.25rem)",
-                      fontWeight: 700,
-                    }}
-                  >
+                  <span className={classNames(s.meduimText2, s.boldText)}>
                     situational <br /> disability
                   </span>
-                  <span
-                    style={{
-                      fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                    }}
-                  >
-                    once in a while
-                  </span>
+                  <span className={s.smallText}>once in a while</span>
                 </div>
               </div>
             </div>
@@ -130,29 +69,10 @@ export default function FactsGrid() {
             <div className={classNames(s.tileWrapper, s.tileWrapperSmall)}>
               <div className={classNames(s.tile, s.white)}>
                 <div className={s.tileContent}>
-                  <span
-                    style={{
-                      fontSize: "clamp(1.5rem, 0.1667rem + 2.7778vw, 2.25rem)",
-                    }}
-                  >
-                    Accessibility
-                  </span>
+                  <span className={s.meduimText2}>Accessibility</span>
                   <span>
-                    <span
-                      style={{
-                        fontSize:
-                          "clamp(1.5rem, 0.1667rem + 2.7778vw, 2.25rem)",
-                      }}
-                    >
-                      is a{" "}
-                    </span>
-                    <span
-                      style={{
-                        fontSize:
-                          "clamp(1.75rem, -0.9167rem + 5.5556vw, 3.25rem)",
-                        fontWeight: 700,
-                      }}
-                    >
+                    <span className={s.meduimText2}>is a </span>
+                    <span className={classNames(s.bigText, s.boldText)}>
                       civil right
                     </span>
                   </span>
@@ -171,37 +91,13 @@ export default function FactsGrid() {
                       billion people
                     </span>
                   </span>
-                  <span
-                    style={{
-                      fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                    }}
-                  >
-                    experience disability.
-                  </span>
+                  <span className={s.smallText}>experience disability.</span>
                   <span>
-                    <span
-                      style={{
-                        fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                      }}
-                    >
-                      This is{" "}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "clamp(1.2rem, -0.2222rem + 2.963vw, 2rem)",
-                        fontWeight: 700,
-                      }}
-                    >
+                    <span className={s.smallText}>This is </span>
+                    <span className={classNames(s.meduimText, s.boldText)}>
                       every 6th
                     </span>
-                    <span
-                      style={{
-                        fontSize: "clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem)",
-                      }}
-                    >
-                      {" "}
-                      person.
-                    </span>
+                    <span className={s.smallText}> person.</span>
                   </span>
                 </div>
               </div>
