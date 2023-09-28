@@ -17,8 +17,8 @@ export const Blob2Big = ({ className }: WithClassName) => {
           result="inverse"
         />
         <feFlood
-          flood-color="var(--text-color)"
-          flood-opacity=".25"
+          floodColor="var(--text-color)"
+          floodOpacity=".25"
           result="color"
         />
         <feComposite operator="in" in="color" in2="inverse" result="shadow" />

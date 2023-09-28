@@ -10,3 +10,9 @@ export const blobLinkVariants = {
     transition: { type: "spring", stiffness: 100 },
   },
 };
+export const scrollDownVariants = {
+  hover: {
+    scale: 1.1,
+    transition: { type: "spring", stiffness: 100 },
+  },
+};

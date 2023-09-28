@@ -17,8 +17,8 @@ export const FooterWave = ({ className }: WithClassName) => {
           result="inverse"
         />
         <feFlood
-          flood-color="var(--text-color)"
-          flood-opacity=".15"
+          floodColor="var(--text-color)"
+          floodOpacity=".15"
           result="color"
         />
         <feComposite operator="in" in="color" in2="inverse" result="shadow" />

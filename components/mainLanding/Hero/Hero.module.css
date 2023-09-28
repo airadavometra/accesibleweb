@@ -1,18 +1,16 @@
 .hero {
   width: 100%;
-  height: 80vh;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 8rem;
   font-family: var(--title-font);
   line-height: 1.25;
   text-transform: uppercase;
 }
 .textContainer {
   width: 100%;
-  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -27,11 +25,6 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-.withWhitespace {
-  display: flex;
-  align-items: baseline;
-  gap: 1.5rem;
 }
 .extraSmall {
   font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
@@ -60,6 +53,7 @@
   position: absolute;
   inset: 0;
   background-color: var(--accent-color);
+  border-radius: 2px;
   transform: skewX(-15deg);
   z-index: -1;
 }
@@ -85,9 +79,6 @@
 }
 
 @media (max-width: 48rem) {
-  .withWhitespace {
-    gap: 0.5rem;
-  }
   .extraSmall {
     font-size: clamp(0.75rem, 0.4286rem + 1.6071vw, 1.2rem);
   }
