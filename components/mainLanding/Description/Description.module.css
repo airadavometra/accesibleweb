@@ -1,4 +1,117 @@
-.description {
-}
 .widthContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.title {
+  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
+  font-weight: 900;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.highlighted {
+  margin: 0 -1rem;
+  padding: 0 1rem;
+  position: relative;
+}
+.highlighted::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+  font-size: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+}
+.cardsSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+}
+.descriptionTitle {
+  font-size: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+}
+.boldText {
+  font-weight: 600;
+}
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.cardOuter {
+  align-self: stretch;
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) inset;
+  background-color: var(--accent-color);
+}
+.cardInner {
+  width: 100%;
+  height: 100%;
+  /* padding: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem); */
+  padding: 16px 24px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+  border-radius: 6px;
+  background-color: var(--background-color);
+}
+.cardText {
+  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+  line-height: 1.25;
+}
+.arrow {
+  flex-shrink: 0;
+  width: clamp(3rem, -0.5556rem + 7.4074vw, 5rem);
+  color: var(--accent-color);
+}
+.arrow path {
+  stroke-width: 5px;
+}
+.cardTitleContainer {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+}
+.blobContainer {
+  flex-shrink: 0;
+  width: 72px;
+  position: relative;
+}
+.icon {
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  color: var(--text-color);
+  z-index: 2;
+}
+.blob {
+  width: 72px;
+  color: var(--accent-color);
+}
+.blobRotated {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 48rem) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
 }

@@ -6,13 +6,13 @@ export default function FactsGrid() {
   return (
     <section className={s.description} id="facts">
       <WidthContainer className={s.widthContainer}>
-        <div className={s.headerContainer}>
+        <h2 className={s.headerContainer}>
           <span className={s.header}>being empathetic</span>
           <span className={s.header}>
             is <span className={classNames(s.header, s.colored)}>the key</span>
           </span>
           <span className={s.header}>to accessible web</span>
-        </div>
+        </h2>
         <div className={s.tilesContainer}>
           <div className={classNames(s.tileWrapper, s.tileWrapperSmall)}>
             <div className={s.tile}>

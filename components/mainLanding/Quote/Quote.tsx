@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Quote() {
   return (
-    <section>
+    <section className={s.quoteSection}>
       <WidthContainer className={s.widthContainer}>
         <div className={s.quoteContainer}>
           <QuotationMark className={s.quotationMarkIcon} />
