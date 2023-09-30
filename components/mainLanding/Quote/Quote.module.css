@@ -1,0 +1,28 @@
+.quoteContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1.2rem, -0.2222rem + 2.963vw, 2rem);
+}
+.quotationMarkIcon {
+  flex-shrink: 0;
+  width: clamp(3rem, -0.5556rem + 7.4074vw, 5rem);
+  color: var(--accent-color);
+}
+.quoteTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.quoteText {
+  font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
+}
+.boldText {
+  font-weight: 700;
+}
+.author {
+  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+}
+.link {
+  font-weight: 600;
+  text-decoration: underline;
+}

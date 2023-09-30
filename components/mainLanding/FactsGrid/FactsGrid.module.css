@@ -111,6 +111,7 @@
     flex-basis: 14rem;
   }
   .tileContentInRow {
+    height: fit-content;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;

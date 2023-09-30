@@ -2,6 +2,7 @@ import Blobs from "@/components/mainLanding/Blobs/Blobs";
 import Description from "@/components/mainLanding/Description/Description";
 import FactsGrid from "@/components/mainLanding/FactsGrid/FactsGrid";
 import Hero from "@/components/mainLanding/Hero/Hero";
+import Quote from "@/components/mainLanding/Quote/Quote";
 import s from "@/styles/Home.module.css";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <main className={s.main}>
         <Hero />
         <FactsGrid />
+        <Quote />
         <Description />
         <Blobs />
       </main>
