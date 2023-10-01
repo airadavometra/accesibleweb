@@ -5,3 +5,11 @@
   flex-direction: column;
   gap: 200px;
 }
+@media (max-width: 48rem) {
+  .main {
+    gap: 80px;
+  }
+  .arrow {
+    transform: rotate(90deg);
+  }
+}

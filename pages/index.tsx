@@ -1,4 +1,5 @@
 import Blobs from "@/components/mainLanding/Blobs/Blobs";
+import ChecklistAds from "@/components/mainLanding/ChecklistAds/ChecklistAds";
 import Description from "@/components/mainLanding/Description/Description";
 import FactsGrid from "@/components/mainLanding/FactsGrid/FactsGrid";
 import Hero from "@/components/mainLanding/Hero/Hero";
@@ -14,6 +15,7 @@ export default function Home() {
         <Quote />
         <Description />
         <Blobs />
+        <ChecklistAds />
       </main>
     </>
   );
