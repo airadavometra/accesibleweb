@@ -1,7 +1,7 @@
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import type { NextPage } from "next";
 import s from "@/styles/Result.module.css";
-import { Button } from "@/components/mainLanding/Button/Button";
+import { ButtonOld } from "@/components/mainLanding/ButtonOld/ButtonOld";
 import Link from "next/link";
 import { Arrow } from "@/icons/Arrow";
 import classnames from "classnames";
@@ -32,12 +32,12 @@ const ResultPage: NextPage = () => {
               </p>
             </div>
             <div className={s.group}>
-              <Button
+              <ButtonOld
                 text={"Try accessible version"}
                 type={"primary"}
                 href="/myopia/accessible/main"
               />
-              <Button
+              <ButtonOld
                 text={"Or try the broken one again"}
                 type={"secondary"}
                 href="/myopia/main"

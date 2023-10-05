@@ -1,6 +1,6 @@
 import { Dialog } from "@headlessui/react";
 import s from "./ConfirmPayModal.module.css";
-import { Button } from "@/components/mainLanding/Button/Button";
+import { ButtonOld } from "@/components/mainLanding/ButtonOld/ButtonOld";
 
 type ConfirmPayModalProps = {
   isOpen: boolean;
@@ -28,13 +28,13 @@ export const ConfirmPayModal = ({
           <br /> Your cart is going to be validated now.
         </Dialog.Description>
         <div className={s.buttonsGroup}>
-          <Button
+          <ButtonOld
             id="service-confirm-pay"
             onClick={onOk}
             text={"OK"}
             type={"primary"}
           />
-          <Button
+          <ButtonOld
             id="service-not-conform-pay"
             onClick={onClose}
             text={"Cancel"}

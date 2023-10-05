@@ -2,7 +2,7 @@ import { Dialog } from "@headlessui/react";
 import s from "./EndChallengeModal.module.css";
 import { useRouter } from "next/router";
 import { useSimulationStore } from "@/state/useSimulation";
-import { Button } from "@/components/mainLanding/Button/Button";
+import { ButtonOld } from "@/components/mainLanding/ButtonOld/ButtonOld";
 
 type EndChallengeModalProps = {
   resultPagePath: string;
@@ -16,12 +16,13 @@ export const EndChallengeModal = ({
   onClose,
 }: EndChallengeModalProps) => {
   const router = useRouter();
-  const {  setCart, setCheckoutCart, setIsDiscountApplied } =
-    useSimulationStore((state) => ({
+  const { setCart, setCheckoutCart, setIsDiscountApplied } = useSimulationStore(
+    (state) => ({
       setCart: state.setCart,
       setCheckoutCart: state.setCheckoutCart,
       setIsDiscountApplied: state.setIsDiscountApplied,
-    }));
+    })
+  );
 
   const endChallenge = () => {
     setCart([]);
@@ -37,13 +38,13 @@ export const EndChallengeModal = ({
           You want to end the challenge?
         </Dialog.Title>
         <div className={s.buttonsGroup}>
-          <Button
+          <ButtonOld
             id="service-end-challenge"
             onClick={endChallenge}
             text={"Yes"}
             type={"primary"}
           />
-          <Button
+          <ButtonOld
             id="service-continue-challenge"
             onClick={onClose}
             text={"No"}

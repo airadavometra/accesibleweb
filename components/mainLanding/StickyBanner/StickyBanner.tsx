@@ -1,4 +1,4 @@
-import { Button } from "@/components/mainLanding/Button/Button";
+import { ButtonOld } from "@/components/mainLanding/ButtonOld/ButtonOld";
 import s from "./StickyBanner.module.css";
 import { useRouter } from "next/router";
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
@@ -34,7 +34,7 @@ export const StickyBanner = ({ onEndChallenge }: StickeHeaderProps) => {
             </>
           )}
         </div>
-        <Button
+        <ButtonOld
           id="service-remind-task"
           text="Exit simulation"
           onClick={onEndChallenge}

@@ -1,7 +1,7 @@
 import WidthContainer from "@/components/common/WidthContainer/WidthContainer";
 import type { NextPage } from "next";
 import s from "@/styles/Task.module.css";
-import { Button } from "@/components/mainLanding/Button/Button";
+import { ButtonOld } from "@/components/mainLanding/ButtonOld/ButtonOld";
 import { data } from "@/data/tremor";
 
 const TaskPage: NextPage = () => {
@@ -41,7 +41,7 @@ const TaskPage: NextPage = () => {
             contents and delivery information will be validated at this stage.
           </p>
         </section>
-        <Button
+        <ButtonOld
           text={"OK, let's try"}
           type={"primary"}
           href="/tremor/main"

@@ -6,42 +6,44 @@ import { ReactNode } from "react";
 type ButtonProps = {
   id?: string;
   text: string;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
   href?: string;
+  type: "primary" | "secondary";
   onClick?: () => void;
   className?: string;
-  type: "primary" | "secondary";
-  icon?: ReactNode;
 };
 
 export const Button = ({
   id,
   text,
+  iconLeft,
+  iconRight,
   href,
   onClick,
   className,
   type,
-  icon,
 }: ButtonProps) => {
-  return href ? (
-    <Link href={href} className={classNames(s[type], className)}>
-      <div id={id}>
-        {text}
+  const buttonContent = (
+    <div id={id} className={classNames(s.inner, s[type])}>
+      {iconLeft}
+      <div className={s.textContainer}>
+        <span className={s.text}>{text}</span>
         <div aria-hidden="true" className={s.hidden}>
           {text}
         </div>
       </div>
+      {iconRight}
+    </div>
+  );
+
+  return href ? (
+    <Link href={href} className={classNames(s.wrapper, className)}>
+      {buttonContent}
     </Link>
   ) : (
-    <button className={classNames(s[type], className)} onClick={onClick}>
-      <>
-        <div id={id}>
-          {text}
-          <div aria-hidden="true" className={s.hidden}>
-            {text}
-          </div>
-        </div>
-        {icon}
-      </>
+    <button className={classNames(s.wrapper, className)} onClick={onClick}>
+      {buttonContent}
     </button>
   );
 };
