@@ -1,79 +1,80 @@
 .widthContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   gap: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
 }
+.descriptionColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+}
 .title {
-  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
-  font-weight: 700;
-  line-height: 1.25;
-}
-.highlighted {
-  margin: 0 -1rem;
-  padding: 0 1rem;
-  position: relative;
-  font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
-  font-weight: 400;
-}
-.highlighted::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  inset: 0;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  transform: skewX(-15deg);
-  z-index: -1;
-}
-.adviceList {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
-  list-style-type: none;
-}
-.advice {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: nowrap;
-}
-.adviceIconContainer {
-  flex-shrink: 0;
-  width: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
-  position: relative;
-}
-.adviceIconBlob {
-  width: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
-  color: var(--accent-color);
-}
-.adviceIconBlobRotated {
-  transform: rotate(-90deg);
-}
-.adviceIcon {
-  width: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
-  margin: auto;
-  position: absolute;
-  inset: 0;
-  color: var(--text-color);
-  z-index: 2;
-}
-.adviceText {
-  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
-}
-.linkContainer {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-.moreRecommendations {
   font-size: clamp(1.5rem, -0.2778rem + 3.7037vw, 2.5rem);
   font-weight: 600;
+  line-height: 1.25;
 }
-.link {
-  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
+.titleBigger {
+  font-size: clamp(1.75rem, -0.9167rem + 5.5556vw, 3.25rem);
+}
+.titleBold {
   font-weight: 900;
-  text-decoration: underline;
+  white-space: nowrap;
+}
+.titleColored {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: transparent;
+  text-shadow: 0px 0px 3px var(--accent-color);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+.description {
+  font-size: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+}
+
+.cardContent {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+}
+.imageContainer {
+  width: clamp(3rem, -2.3333rem + 11.1111vw, 6rem);
+  height: fit-content;
+  aspect-ratio: 1/1;
+}
+.image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+.extensionName {
+  font-size: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+.extensionNameBold {
+  font-variant: all-small-caps;
+  font-weight: 700;
+}
+.rating {
+  display: flex;
+  gap: 10px;
+}
+.starIcon {
+  width: 36px;
+  color: var(--accent-color);
+}
+@media (max-width: 48rem) {
+  .widthContainer {
+    flex-wrap: wrap;
+  }
+  .descriptionColumn {
+    order: 2;
+  }
 }
