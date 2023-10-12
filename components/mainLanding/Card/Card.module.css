@@ -5,6 +5,9 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset;
   background-color: var(--accent-color);
 }
+.cardOuter .filled {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) inset;
+}
 .cardInner {
   width: 100%;
   height: fit-content;
@@ -15,9 +18,9 @@
   align-items: center;
   border-radius: 6px;
 }
-.filled {
+.cardInner .filled {
   background-color: transparent;
 }
-.border {
+.cardInner .border {
   background-color: var(--background-color);
 }

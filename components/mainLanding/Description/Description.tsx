@@ -5,6 +5,7 @@ import { Arrow } from "@/icons/Arrow";
 import { Blob4 } from "@/icons/Blob4";
 import { EyeClosed } from "@/icons/EyeClosed";
 import { EyeOpen } from "@/icons/EyeOpen";
+import { Card } from "../Card/Card";
 
 export default function Description() {
   return (
@@ -24,8 +25,8 @@ export default function Description() {
               Every simulation has 2 parts:
             </h3>
             <div className={s.cardsContainer}>
-              <div className={s.cardOuter}>
-                <div className={s.cardInner}>
+              <Card style={"border"}>
+                <div className={s.cardContent}>
                   <div className={s.cardTitleContainer}>
                     <div className={s.blobContainer}>
                       <EyeClosed className={s.icon} />
@@ -41,10 +42,10 @@ export default function Description() {
                     your journey
                   </span>
                 </div>
-              </div>
+              </Card>
               <Arrow className={s.arrow} />
-              <div className={s.cardOuter}>
-                <div className={s.cardInner}>
+              <Card style={"border"}>
+                <div className={s.cardContent}>
                   <div className={s.cardTitleContainer}>
                     <div className={s.blobContainer}>
                       <EyeOpen className={s.icon} />
@@ -60,7 +61,7 @@ export default function Description() {
                     previous part
                   </span>
                 </div>
-              </div>
+              </Card>
             </div>
           </div>
           <p>

@@ -34,8 +34,11 @@
   flex-basis: 43rem;
   padding: 8px;
   border-radius: 12px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) inset;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15) inset;
   background-color: var(--accent-color);
+}
+.tileWrapperFilled {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15) inset;
 }
 .tileWrapperMedium {
   flex-basis: 26rem;

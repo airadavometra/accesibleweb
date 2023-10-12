@@ -9,7 +9,7 @@ type CardProps = {
 
 export const Card = ({ style, children }: CardProps) => {
   return (
-    <div className={s.cardOuter}>
+    <div className={classNames(s.cardOuter, s[style])}>
       <div className={classNames(s.cardInner, s[style])}>{children}</div>
     </div>
   );

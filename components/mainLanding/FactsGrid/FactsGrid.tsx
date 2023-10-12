@@ -14,7 +14,13 @@ export default function FactsGrid() {
           <span className={s.header}>to accessible web</span>
         </h2>
         <div className={s.tilesContainer}>
-          <div className={classNames(s.tileWrapper, s.tileWrapperSmall)}>
+          <div
+            className={classNames(
+              s.tileWrapper,
+              s.tileWrapperSmall,
+              s.tileWrapperFilled
+            )}
+          >
             <div className={s.tile}>
               <div className={classNames(s.tileContent, s.tileContentInRow)}>
                 <span className={classNames(s.hugeText, s.boldText)}>
@@ -76,7 +82,7 @@ export default function FactsGrid() {
               </div>
             </div>
           </div>
-          <div className={s.tileWrapper}>
+          <div className={classNames(s.tileWrapper, s.tileWrapperFilled)}>
             <div className={s.tile}>
               <div className={s.tileContent}>
                 <span>
