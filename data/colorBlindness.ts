@@ -2,7 +2,7 @@ import { Simulation } from "@/types/simulation/simulation";
 
 export const data: Simulation = {
   path: "color-blindness",
-  title: "Color blindness challenge",
+  title: "Color blindness",
   problem: [
     "Color blindness, affecting roughly 1 in 12 men and 1 in 200 women worldwide, casts unique challenges in online exploration. Even situational factors like screen glare, bright sunlight or a dim screen can momentarily disrupt color perception, leading to potential digital misunderstandings.",
     "Despite the prevalence of color blindness and situations impacting color perception, many websites are not designed to help these users. The reliance on color to convey information, poor color contrast, and lack of alternative cues can make a website difficult to use for these individuals.",

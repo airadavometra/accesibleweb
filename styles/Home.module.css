@@ -7,7 +7,7 @@
 }
 @media (max-width: 48rem) {
   .main {
-    gap: 80px;
+    gap: 128px;
   }
   .arrow {
     transform: rotate(90deg);

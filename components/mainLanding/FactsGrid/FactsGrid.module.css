@@ -101,6 +101,12 @@
   white-space: nowrap;
 }
 @media (max-width: 48rem) {
+  .widthContainer {
+    gap: 1.5rem;
+  }
+  .header {
+    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+  }
   .tileWrapper {
     flex-basis: 23rem;
   }
@@ -112,6 +118,24 @@
   }
   .tileWrapperSmall {
     flex-basis: 14rem;
+  }
+  .hugeText {
+    font-size: clamp(3rem, 3rem + 1.0417vw, 3.5rem);
+  }
+  .hugeText2 {
+    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+  }
+  .bigText {
+    font-size: clamp(2rem, 2rem + 0.5208vw, 2.25rem);
+  }
+  .meduimText {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .meduimText2 {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .smallText {
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
   }
   .tileContentInRow {
     height: fit-content;

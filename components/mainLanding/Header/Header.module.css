@@ -63,6 +63,15 @@
     display: none;
   }
   .menuButton {
+    font-size: 1.2rem;
     display: block;
+  }
+  .logo {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+  }
+  .headerWave {
+    min-width: 1200px;
   }
 }

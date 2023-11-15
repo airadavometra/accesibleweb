@@ -42,3 +42,23 @@
 .button {
   margin-top: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
 }
+@media (max-width: 48rem) {
+  .widthContainer {
+    margin-bottom: 96px;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .title {
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+  }
+  .highlighted {
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .text {
+    text-align: start;
+  }
+}

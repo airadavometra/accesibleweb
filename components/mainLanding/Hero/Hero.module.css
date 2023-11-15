@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8rem;
+  gap: 128px;
   font-family: var(--title-font);
   line-height: 1.25;
   text-transform: uppercase;
@@ -79,26 +79,33 @@
 }
 
 @media (max-width: 48rem) {
+  .hero {
+    padding: 0;
+    padding-top: 6rem;
+  }
   .extraSmall {
-    font-size: clamp(0.75rem, 0.4286rem + 1.6071vw, 1.2rem);
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
   }
   .small {
-    font-size: clamp(1rem, 0.6429rem + 1.7857vw, 1.5rem);
+    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
   }
   .medium {
-    font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2rem);
+    font-size: clamp(2rem, 2rem + 0.5208vw, 2.25rem);
   }
   .big {
-    font-size: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
+    font-size: clamp(2.25rem, 2.25rem + 0.5208vw, 2.5rem);
   }
   .highlighted {
     padding: 0 0.5rem;
   }
-  .blob {
-    width: 48px;
-  }
   .arrow {
     width: 24px;
     height: 24px;
+  }
+  .scrollDown {
+    font-size: clamp(0.875rem, 0.875rem + 0.2604vw, 1rem);
+  }
+  .blob {
+    width: 48px;
   }
 }

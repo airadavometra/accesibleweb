@@ -26,3 +26,11 @@
 .borderInner {
   background-color: var(--background-color);
 }
+@media (max-width: 48rem) {
+  .cardOuter {
+    width: 100%;
+  }
+  .cardInner {
+    padding: 12px 16px;
+  }
+}

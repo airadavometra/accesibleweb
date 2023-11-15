@@ -1,13 +1,20 @@
 .main {
-  padding: 3rem 0;
+  padding: min(12rem, 192px) 0;
 }
 .widthContainer {
   display: flex;
   flex-direction: column;
-  gap: min(3rem, 48px);
+  gap: min(4rem, 64px);
 }
 .title {
-  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
+  font-size: clamp(3rem, -2.3333rem + 11.1111vw, 6rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: min(12rem, 192px);
 }
 .problemSection {
   display: grid;
@@ -24,6 +31,11 @@
 }
 .text {
   font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+}
+.taskDescription {
+  display: flex;
+  flex-direction: column;
+  gap: min(4rem, 64px);
 }
 .disclaimer {
   padding: 1.5rem;
@@ -63,9 +75,13 @@
   transform: scaleX(1);
 }
 .button {
+  align-self: center;
   width: fit-content;
 }
 @media (max-width: 48rem) {
+  .main {
+    padding: min(4rem, 64px) 0;
+  }
   .button {
     width: unset;
   }

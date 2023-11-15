@@ -2,7 +2,7 @@ import { Simulation } from "@/types/simulation/simulation";
 
 export const data: Simulation = {
   path: "myopia",
-  title: "Blurred vision challenge",
+  title: "Blurred vision",
   problem: [
     "According to the World Health Organization, at least 2.2 billion people have some vision impairment and this number is continually growing. People may also experience temporary blurred vision because of fatigue, certain medications, migraines, diabetes and many other reasons.",
     "Unfortunately, many websites lack essential accessibility accommodations like adjustable font sizes, high-contrast color schemes, and alternative text descriptions for images. These missing features create a frustrating and often inaccessible browsing experience.",

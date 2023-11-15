@@ -29,3 +29,11 @@
   font-weight: 600;
   text-decoration: underline;
 }
+@media (max-width: 48rem) {
+  .quoteSection {
+    margin: 0;
+  }
+  .quoteText {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+}

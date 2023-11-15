@@ -48,10 +48,10 @@
 }
 
 @media (max-width: 48rem) {
-  .blobsGroup:first-child {
-    margin-top: 8rem;
-  }
   .blobsGroup:not(:first-child) {
     margin-top: 0;
+  }
+  .link {
+    font-size: clamp(2rem, 2rem + 0.5208vw, 2.25rem);
   }
 }

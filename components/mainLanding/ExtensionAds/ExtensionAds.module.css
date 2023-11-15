@@ -73,8 +73,29 @@
 @media (max-width: 48rem) {
   .widthContainer {
     flex-wrap: wrap;
+    gap: 1rem;
   }
   .descriptionColumn {
     order: 2;
+    gap: 1rem;
+  }
+  .extensionName {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+    line-height: 1;
+  }
+  .rating {
+    gap: 6px;
+  }
+  .starIcon {
+    width: 20px;
+  }
+  .title {
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .titleBigger {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .description {
+    font-size: 1rem;
   }
 }

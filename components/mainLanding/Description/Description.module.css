@@ -97,10 +97,41 @@
 }
 
 @media (max-width: 48rem) {
+  .widthContainer {
+    gap: 1rem;
+  }
+  .title {
+    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+  }
+  .highlighted {
+    margin: 0 -0.5rem;
+    padding: 0 0.5rem;
+  }
+  .descriptionContainer {
+    gap: 1rem;
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .descriptionTitle {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .cardsSection {
+    gap: 1rem;
+  }
   .cardsContainer {
     flex-direction: column;
+    gap: 8px;
   }
   .arrow {
     transform: rotate(90deg);
+  }
+  .blobContainer {
+    width: 64px;
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+  .cardContent {
+    gap: 1rem;
   }
 }
