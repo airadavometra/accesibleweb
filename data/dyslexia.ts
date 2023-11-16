@@ -3,10 +3,6 @@ import { Simulation } from "@/types/simulation/simulation";
 export const data: Simulation = {
   path: "dyslexia",
   title: "Dyslexia",
-  problem: [
-    "Dyslexia, potentially affecting between 5% to 17% of the population, create difficulties with reading and understanding online content. It's crucial to remember that not just dyslexia, but factors like language proficiency, education, or even tiredness and distractions can make it complicated.",
-    "It's a concerning reality that individuals with dyslexia or comparable reading challenges are often overlooked in website design. Features such as dense blocks of text, complex fonts, low contrast between text and background, and a lack of diverse content forms can create significant accessibility barriers on many websites.",
-  ],
   productIds: [
     1, 2, 3, 4, 5, 6, 7, 8, 13, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
     30, 31, 32, 33, 34, 35, 45, 46, 47, 48, 53, 54, 57, 58,

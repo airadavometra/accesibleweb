@@ -1,5 +1,5 @@
 .main {
-  padding: min(12rem, 192px) 0;
+  padding-top: min(12rem, 192px);
 }
 .widthContainer {
   display: flex;
@@ -14,78 +14,181 @@
 .contentContainer {
   display: flex;
   flex-direction: column;
-  gap: min(12rem, 192px);
+  gap: min(4rem, 64px);
 }
 .problemSection {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 3rem;
+  margin-bottom: min(8rem, 128px);
+}
+.problemsList {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
+}
+.bold {
+  font-weight: 700;
+}
+.big {
+  font-size: clamp(1.5rem, 1.0556rem + 0.9259vw, 1.75rem);
+}
+.problemItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+}
+.problemIconContainer {
+  flex-shrink: 0;
+  width: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+  position: relative;
+}
+.problemIcon {
+  width: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  color: var(--text-color);
+  z-index: 2;
+}
+.problemIconBlob {
+  width: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+  color: var(--accent-color);
+}
+.problemIconBlobRotated45 {
+  transform: rotate(45deg);
+}
+.problemIconBlobRotated90 {
+  transform: rotate(90deg);
+}
+.problemIconBlobRotated135 {
+  transform: rotate(-45deg);
 }
 .descriptionSection {
   display: flex;
   flex-direction: column;
-  gap: min(1rem, 24px);
+  gap: min(3rem, 48px);
 }
 .subtitle {
-  font-size: clamp(1.5rem, -1.1667rem + 5.5556vw, 3rem);
+  font-size: clamp(2rem, 1.5556rem + 0.9259vw, 2.25rem);
 }
 .text {
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
 }
 .taskDescription {
   display: flex;
   flex-direction: column;
   gap: min(4rem, 64px);
 }
-.disclaimer {
-  padding: 1.5rem;
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.disclaimerContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-  border: 1px solid black;
+}
+.disclaimer {
+  font-size: clamp(1.125rem, 0.9028rem + 0.463vw, 1.25rem);
+}
+.warningIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--accent-color);
 }
 .disclaimerTitle {
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
 }
-.disclamerLink {
+.disclaimerLink {
   width: fit-content;
   height: fit-content;
   display: inline-block;
   white-space: nowrap;
   position: relative;
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: underline;
   opacity: 1;
-}
-.disclamerLink:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: black;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-.disclamerLink:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
 }
 .button {
   align-self: center;
   width: fit-content;
 }
+.highlighted {
+  margin: 0 -0.2em;
+  padding: 0 0.2em;
+  position: relative;
+  font-weight: 700;
+}
+.highlighted::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+.checklist {
+  margin-top: min(16rem, 256px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: min(0.25rem, 4px);
+}
+.checklistText {
+  font-size: clamp(2.25rem, 1.8056rem + 0.9259vw, 2.5rem);
+  font-weight: 600;
+}
+.checklistLink {
+  font-size: clamp(3.25rem, 2.8056rem + 0.9259vw, 3.5rem);
+  font-weight: 900;
+  text-decoration: underline;
+}
 @media (max-width: 48rem) {
   .main {
     padding: min(4rem, 64px) 0;
   }
-  .button {
-    width: unset;
+  .title {
+    font-size: clamp(2.25rem, 2.25rem + 0.5208vw, 2.5rem);
   }
   .problemSection {
-    grid-template-columns: 1fr;
+    margin-bottom: min(1rem, 16px);
+  }
+  .problemsList {
+    gap: 0.75rem;
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .text {
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .disclaimerContainer {
+    padding: 12px 8px;
+  }
+  .stepsContainer {
+    gap: 0.75rem;
+  }
+  .descriptionSection {
+    gap: 1.5rem;
+  }
+  .subtitle {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .checklist {
+    margin-top: min(5rem, 80px);
+  }
+  .checklistText {
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .checklistLink {
+    font-size: clamp(1.75rem, 1.75rem + 0.5208vw, 2rem);
   }
 }
