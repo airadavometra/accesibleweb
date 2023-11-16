@@ -1,5 +1,4 @@
 .cardOuter {
-  height: fit-content;
   padding: 8px;
   border-radius: 12px;
   background-color: var(--accent-color);
@@ -12,7 +11,7 @@
 }
 .cardInner {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   /* padding: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem); */
   padding: 24px;
   display: flex;
