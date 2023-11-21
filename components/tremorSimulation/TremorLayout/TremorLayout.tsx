@@ -11,6 +11,7 @@ import { Footer } from "../Footer/Footer";
 import { Layout } from "@/components/common/SimulationLayout/SimulationLayout";
 import { AccessibleHeader } from "@/components/accessible/Header/Header";
 import { AccessibleFooter } from "@/components/accessible/Footer/Footer";
+import { useBackground } from "@/hooks/useBackground";
 
 type TremorLayoutProps = {
   isAccessible: boolean;
@@ -24,15 +25,7 @@ export const TremorLayout = ({ isAccessible, children }: TremorLayoutProps) => {
 
   const navigation = getSimulationNavigation(data.path, isAccessible);
 
-  useEffect(() => {
-    const body = document.getElementsByTagName("body")[0];
-    if (body) {
-      body.style.backgroundColor = "white";
-    }
-    return () => {
-      body.style.backgroundColor = "var(--accent-color)";
-    };
-  }, []);
+  useBackground();
 
   useEffect(() => {
     const stopTremorSimulation = simulateTremor();

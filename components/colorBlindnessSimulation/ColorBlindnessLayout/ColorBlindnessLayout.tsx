@@ -8,6 +8,7 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { AccessibleHeader } from "@/components/accessible/Header/Header";
 import { AccessibleFooter } from "@/components/accessible/Footer/Footer";
+import { useBackground } from "@/hooks/useBackground";
 
 type ColorBlindnessLayoutProps = {
   isAccessible: boolean;
@@ -22,12 +23,9 @@ export const ColorBlindnessLayout = ({
 
   const navigation = getSimulationNavigation(data.path, isAccessible);
 
-  useEffect(() => {
-    const body = document.getElementsByTagName("body")[0];
-    if (body) {
-      body.style.backgroundColor = "white";
-    }
+  useBackground();
 
+  useEffect(() => {
     const randomMode =
       colorBlindnessModes[
         Math.floor(Math.random() * colorBlindnessModes.length)
@@ -38,9 +36,6 @@ export const ColorBlindnessLayout = ({
       ?.style.setProperty("--color-blindness-filter", `url(#${randomMode})`);
 
     setColorBlindnessMode(randomMode);
-    return () => {
-      body.style.backgroundColor = "var(--accent-color)";
-    };
   }, []);
 
   return (

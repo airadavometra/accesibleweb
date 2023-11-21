@@ -1,103 +1,141 @@
 .main {
-  padding: 3rem 0;
+  padding-top: min(12rem, 192px);
+  display: flex;
+  flex-direction: column;
+  gap: min(6rem, 96px);
 }
 .widthContainer {
   display: flex;
   flex-direction: column;
-  gap: min(3rem, 48px);
-}
-
-.errors {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-  border: 1px solid black;
-}
-.errorsTitle {
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-}
-
-.description {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: min(4rem, 96px) 1rem;
+  gap: min(4rem, 64px);
 }
 .title {
-  font-size: clamp(2rem, -1.5556rem + 7.4074vw, 4rem);
+  font-size: clamp(3rem, -2.3333rem + 11.1111vw, 6rem);
+  font-weight: 700;
+  line-height: 1.25;
 }
-.text {
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-}
-.gridSection {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem 3rem;
-}
-
-.group {
+.sections {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: min(8rem, 128px);
 }
-.accessibleGroup {
-  gap: 1.5rem;
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: min(1.5rem, 24px);
 }
-.otherChallenges {
-  gap: min(3rem, 48px);
+.text {
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
 }
-.otherChallengesList {
+.boldText {
+  font-weight: 600;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: min(2rem, 32px);
+}
+.sectionTitle {
+  font-size: clamp(1.75rem, 1.75rem + 0.5208vw, 2rem);
+  font-weight: 700;
+}
+.list {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: min(1.5rem, 24px);
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
   list-style: none;
-}
-.link {
-  width: fit-content;
-  height: fit-content;
-  display: inline-block;
-  white-space: nowrap;
-  position: relative;
-  text-transform: capitalize;
-  font-size: clamp(1rem, 0.6444rem + 0.7407vw, 1.2rem);
-}
-.link:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  border-radius: 2px;
-  background-color: black;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
-}
-.link:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
 }
 .listItem {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: min(1rem, 16px);
 }
-.arrow {
-  width: 1.5rem;
-  height: 1.5rem;
+.actionIconContainer {
+  flex-shrink: 0;
+  width: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+  position: relative;
 }
-.secondLevelListItem {
-  text-transform: capitalize;
+.actionIcon {
+  width: clamp(1.2rem, 0.6667rem + 1.1111vw, 1.5rem);
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  color: var(--text-color);
+  z-index: 2;
 }
-
+.actionIconBlob {
+  width: clamp(2rem, 0.2222rem + 3.7037vw, 3rem);
+  color: var(--accent-color);
+}
+.actionIconBlobRotated {
+  transform: rotate(45deg);
+}
+.checklistLink {
+  font-size: clamp(2.25rem, 1.8056rem + 0.9259vw, 2.5rem);
+  font-weight: 600;
+}
+.highlighted {
+  margin: 0 -0.2em;
+  padding: 0 0.2em;
+  position: relative;
+  font-weight: 900;
+  text-decoration: underline;
+}
+.highlighted::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transform: skewX(-15deg);
+  z-index: -1;
+}
+.arrowIcon {
+  width: clamp(1.75rem, 1.75rem + 0.5208vw, 2rem);
+  color: var(--text-color);
+}
+.simulationLink {
+  font-weight: 600;
+}
 @media (max-width: 48rem) {
-  .description {
-    grid-template-columns: 1fr;
+  .main {
+    padding: min(4rem, 64px) 0;
+    gap: min(5rem, 80px);
   }
-  .gridSection {
-    grid-template-columns: 1fr;
+  .title {
+    font-size: clamp(2.25rem, 2.25rem + 0.5208vw, 2.5rem);
+  }
+  .sections {
+    gap: min(5rem, 80px);
+  }
+  .descriptionSection {
+    gap: min(0.75rem, 12px);
+  }
+  .text {
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .section {
+    gap: min(1rem, 16px);
+  }
+  .sectionTitle {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .list {
+    gap: 0.75rem;
+    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+  }
+  .listItem {
+    gap: min(0.75rem, 12px);
+  }
+  .checklistLink {
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .arrowIcon {
+    width: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
   }
 }

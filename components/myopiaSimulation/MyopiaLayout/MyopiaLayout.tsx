@@ -7,6 +7,7 @@ import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { AccessibleHeader } from "@/components/accessible/Header/Header";
 import { AccessibleFooter } from "@/components/accessible/Footer/Footer";
+import { useBackground } from "@/hooks/useBackground";
 
 type MyopiaLayoutProps = {
   isAccessible: boolean;
@@ -16,15 +17,7 @@ type MyopiaLayoutProps = {
 export const MyopiaLayout = ({ isAccessible, children }: MyopiaLayoutProps) => {
   const navigation = getSimulationNavigation(data.path, isAccessible);
 
-  useEffect(() => {
-    const body = document.getElementsByTagName("body")[0];
-    if (body) {
-      body.style.backgroundColor = "white";
-    }
-    return () => {
-      body.style.backgroundColor = "var(--accent-color)";
-    };
-  }, []);
+  useBackground();
 
   return (
     <>
