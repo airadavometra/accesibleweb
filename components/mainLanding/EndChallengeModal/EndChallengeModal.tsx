@@ -2,7 +2,7 @@ import { Dialog } from "@headlessui/react";
 import s from "./EndChallengeModal.module.css";
 import { useRouter } from "next/router";
 import { useSimulationStore } from "@/state/useSimulation";
-import { ButtonOld } from "@/components/mainLanding/ButtonOld/ButtonOld";
+import { Button } from "../Button/Button";
 
 type EndChallengeModalProps = {
   resultPagePath: string;
@@ -38,13 +38,13 @@ export const EndChallengeModal = ({
           You want to end the challenge?
         </Dialog.Title>
         <div className={s.buttonsGroup}>
-          <ButtonOld
+          <Button
             id="service-end-challenge"
             onClick={endChallenge}
             text={"Yes"}
             type={"primary"}
           />
-          <ButtonOld
+          <Button
             id="service-continue-challenge"
             onClick={onClose}
             text={"No"}
