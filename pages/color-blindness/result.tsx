@@ -63,7 +63,7 @@ const ResultPage: NextPage = () => {
                 </span>
               </li>
             </ul>
-            <Link href={""} className={s.checklistLink}>
+            <Link href={"/checklist"} className={s.checklistLink}>
               <span>
                 See more recommendations in{" "}
                 <span className={s.highlighted}>
@@ -77,7 +77,7 @@ const ResultPage: NextPage = () => {
             <ul className={s.list}>
               <li>
                 <Link
-                  href={""}
+                  href={"/myopia"}
                   className={classNames(s.listItem, s.simulationLink)}
                 >
                   <Arrow className={s.arrowIcon} />
@@ -86,7 +86,7 @@ const ResultPage: NextPage = () => {
               </li>
               <li>
                 <Link
-                  href={""}
+                  href={"/tremor"}
                   className={classNames(s.listItem, s.simulationLink)}
                 >
                   <Arrow className={s.arrowIcon} />
@@ -95,7 +95,7 @@ const ResultPage: NextPage = () => {
               </li>
               <li>
                 <Link
-                  href={""}
+                  href={"/blindness"}
                   className={classNames(s.listItem, s.simulationLink)}
                 >
                   <Arrow className={s.arrowIcon} />
@@ -104,7 +104,7 @@ const ResultPage: NextPage = () => {
               </li>
               <li>
                 <Link
-                  href={""}
+                  href={"/dyslexia"}
                   className={classNames(s.listItem, s.simulationLink)}
                 >
                   <Arrow className={s.arrowIcon} />
