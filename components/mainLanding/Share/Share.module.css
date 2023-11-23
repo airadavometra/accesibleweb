@@ -51,7 +51,7 @@
   .title {
     align-items: flex-start;
     gap: 0.4rem;
-    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+    font-size: clamp(1.75rem, 1.75rem + 0.5208vw, 2rem);
   }
   .highlighted {
     margin: 0 -0.5rem;

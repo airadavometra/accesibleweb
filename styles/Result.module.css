@@ -108,7 +108,7 @@
     gap: min(5rem, 80px);
   }
   .title {
-    font-size: clamp(2.25rem, 2.25rem + 0.5208vw, 2.5rem);
+    font-size: clamp(2.5rem, 2.5rem + 0.5208vw, 2.75rem);
   }
   .sections {
     gap: min(5rem, 80px);

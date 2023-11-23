@@ -58,7 +58,7 @@
   gap: clamp(1.5rem, 0.6111rem + 1.8519vw, 2rem);
 }
 .cardText {
-  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
   line-height: 1.25;
 }
 .arrow {
@@ -73,6 +73,7 @@
   display: flex;
   align-items: center;
   gap: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+  font-size: clamp(1.5rem, 1.0556rem + 0.9259vw, 1.75rem);
 }
 .blobContainer {
   flex-shrink: 0;
@@ -101,7 +102,7 @@
     gap: 1rem;
   }
   .title {
-    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+    font-size: clamp(1.75rem, 1.75rem + 1.0417vw, 2rem);
   }
   .highlighted {
     margin: 0 -0.5rem;
@@ -109,10 +110,10 @@
   }
   .descriptionContainer {
     gap: 1rem;
-    font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
   }
   .descriptionTitle {
-    font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+    font-size: clamp(1.5rem, 1.5rem + 0.5208vw, 1.75rem);
   }
   .cardsSection {
     gap: 1rem;

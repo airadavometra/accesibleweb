@@ -61,7 +61,7 @@
   z-index: 2;
 }
 .adviceText {
-  font-size: clamp(1rem, 0.1111rem + 1.8519vw, 1.5rem);
+  font-size: clamp(1.25rem, 0.8056rem + 0.9259vw, 1.5rem);
 }
 .linkContainer {
   display: flex;
@@ -79,7 +79,7 @@
 }
 @media (max-width: 48rem) {
   .title {
-    font-size: clamp(1.5rem, 1.5rem + 1.0417vw, 2rem);
+    font-size: clamp(1.75rem, 1.75rem + 0.5208vw, 2rem);
     line-height: 1;
   }
   .highlighted {
@@ -93,10 +93,13 @@
   .advice {
     gap: 0.8rem;
   }
-  .moreRecommendations {
+  .adviceText {
     font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
   }
-  .link {
+  .moreRecommendations {
     font-size: clamp(1.25rem, 1.25rem + 0.5208vw, 1.5rem);
+  }
+  .link {
+    font-size: clamp(1.5rem, 1.5rem + 0.5208vw, 1.75rem);
   }
 }

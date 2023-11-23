@@ -158,7 +158,7 @@
     padding: min(4rem, 64px) 0;
   }
   .title {
-    font-size: clamp(2.25rem, 2.25rem + 0.5208vw, 2.5rem);
+    font-size: clamp(2.5rem, 2.5rem + 0.5208vw, 2.75rem);
   }
   .problemSection {
     margin-bottom: min(1rem, 16px);
@@ -184,11 +184,12 @@
   }
   .checklist {
     margin-top: min(5rem, 80px);
+    align-items: flex-start;
   }
   .checklistText {
     font-size: clamp(1rem, 1rem + 0.5208vw, 1.25rem);
   }
   .checklistLink {
-    font-size: clamp(1.75rem, 1.75rem + 0.5208vw, 2rem);
+    font-size: clamp(1.5rem, 1.5rem + 0.5208vw, 1.75rem);
   }
 }
